@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on taewan&#39;s blog</title>
-    <link>http://taewan.kim/categories/hugo.html</link>
-    <description>Recent content in Hugo on taewan&#39;s blog</description>
+    <title>Syntax Highlight on taewan&#39;s blog</title>
+    <link>http://taewan.kim/categories/syntax-highlight.html</link>
+    <description>Recent content in Syntax Highlight on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Jan 2016 17:19:38 +0900</lastBuildDate>
-    <atom:link href="http://taewan.kim/categories/hugo.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://taewan.kim/categories/syntax-highlight.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Configuration of Syntax Highlight</title>
@@ -95,47 +95,6 @@ public static void main(String args[]){
 &lt;li&gt;테마가 클라이언트 모드를 지원할 경우 highlisht 스타일은 static/css/highlight에서 확인 가능하다.&lt;/li&gt;
 &lt;li&gt;테마가 서버사이드 모드를 지원할 경우 hugo 빌드를 수행하는 곳에는  pygments가 설치되어 있어야 한다.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>taewan.kim을 오픈합니다.</title>
-      <link>http://taewan.kim/blog/2016/01/25/taewan.kim%EC%9D%84-%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4./</link>
-      <pubDate>Mon, 25 Jan 2016 13:09:53 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/01/25/taewan.kim%EC%9D%84-%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4./</guid>
-      <description>&lt;p&gt;안녕하세요 김태완입니다.&lt;/p&gt;
-
-&lt;p&gt;여러 블러그를 떠돌다 이번에 Hugo로 만든 정적 블러그에 정착하기로 했습니다.
-이젠 힘들어서 이 녀석에 최대한 의지할 예정입니다.&lt;/p&gt;
-
-&lt;p&gt;taewan.kim의 구성은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hugo
-
-&lt;ul&gt;
-&lt;li&gt;theme: Hyde-X&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Host: github.io&lt;/li&gt;
-&lt;li&gt;version control
-
-&lt;ul&gt;
-&lt;li&gt;github.com&lt;/li&gt;
-&lt;li&gt;bitbucket.org&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Publishing: Jenkins at AWS&lt;/li&gt;
-&lt;li&gt;Others
-
-&lt;ul&gt;
-&lt;li&gt;Google Analytics&lt;/li&gt;
-&lt;li&gt;Disqus&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;taewan.kim은 기술과 소소한 일상을 주제로 운영될 블러그입니다. 많은 관심 부탁드립니다.&lt;/p&gt;
-
-&lt;p&gt;감사합니다.&lt;/p&gt;
 </description>
     </item>
     
