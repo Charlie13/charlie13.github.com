@@ -10,11 +10,11 @@
     <atom:link href="http://taewan.kim/categories/syntax-highlight.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Configuration of Syntax Highlight</title>
-      <link>http://taewan.kim/blog/2016/01/25/configuration-of-syntax-highlight/</link>
+      <title>Hugo의 Syntax Highlight기능 구성</title>
+      <link>http://taewan.kim/blog/2016/01/25/codehighlight/</link>
       <pubDate>Mon, 25 Jan 2016 17:19:38 +0900</pubDate>
       
-      <guid>http://taewan.kim/blog/2016/01/25/configuration-of-syntax-highlight/</guid>
+      <guid>http://taewan.kim/blog/2016/01/25/codehighlight/</guid>
       <description>
 
 &lt;p&gt;현재 taewan.kim은 블러그 생성 엔진으로 Hugo를 테마로는 Hyde-x를 사용하고 있습니다.

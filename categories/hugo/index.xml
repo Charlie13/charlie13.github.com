@@ -10,11 +10,11 @@
     <atom:link href="http://taewan.kim/categories/hugo.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Configuration of Syntax Highlight</title>
-      <link>http://taewan.kim/blog/2016/01/25/configuration-of-syntax-highlight/</link>
+      <title>Hugo의 Syntax Highlight기능 구성</title>
+      <link>http://taewan.kim/blog/2016/01/25/codehighlight/</link>
       <pubDate>Mon, 25 Jan 2016 17:19:38 +0900</pubDate>
       
-      <guid>http://taewan.kim/blog/2016/01/25/configuration-of-syntax-highlight/</guid>
+      <guid>http://taewan.kim/blog/2016/01/25/codehighlight/</guid>
       <description>
 
 &lt;p&gt;현재 taewan.kim은 블러그 생성 엔진으로 Hugo를 테마로는 Hyde-x를 사용하고 있습니다.
@@ -105,10 +105,10 @@ public static void main(String args[]){
     
     <item>
       <title>taewan.kim을 오픈합니다.</title>
-      <link>http://taewan.kim/blog/2016/01/25/taewan.kim%EC%9D%84-%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4./</link>
+      <link>http://taewan.kim/blog/2016/01/25/first/</link>
       <pubDate>Mon, 25 Jan 2016 13:09:53 +0900</pubDate>
       
-      <guid>http://taewan.kim/blog/2016/01/25/taewan.kim%EC%9D%84-%EC%98%A4%ED%94%88%ED%95%A9%EB%8B%88%EB%8B%A4./</guid>
+      <guid>http://taewan.kim/blog/2016/01/25/first/</guid>
       <description>&lt;p&gt;안녕하세요 김태완입니다.&lt;/p&gt;
 
 &lt;p&gt;여러 블러그를 떠돌다 이번에 Hugo로 만든 정적 블러그에 정착하기로 했습니다.
