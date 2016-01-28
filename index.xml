@@ -6,8 +6,17 @@
     <description>Recent content on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jan 2016 10:50:36 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2016 13:12:54 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ssh config를 활용한 </title>
+      <link>http://taewan.kim/blog/2016/01/28/ssh_config/</link>
+      <pubDate>Thu, 28 Jan 2016 13:12:54 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/01/28/ssh_config/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JBoss Seam 로고의 의미</title>
@@ -17,7 +26,7 @@
       <guid>http://taewan.kim/blog/2016/01/27/seam_log/</guid>
       <description>
 
-&lt;p&gt;2008~2009년도에는 JBoss Seam에 몰입했던 기시였습니다. 그 당시에 작성했던 글입니다. 오픈소스를 이해할 때 오픈소스의 이름과 로고가 담고 있는 의미를 이해하는 도움이 됩니다. 오픈소스 이름과 로고를 이렇게 해석했구나 라는 사례로 봐 주시면 좋을 것 같습니다. 그럼 2009년으로 들어가 보겠습니다.&lt;/p&gt;
+&lt;p&gt;2008~2009년도에는 JBoss Seam에 몰입했던 기시였습니다. 그 당시에 작성했던 글입니다. 오픈소스를 이해할 때 오픈소스의 이름과 로고가 담고 있는 의미를 이해하는 성움이 됩니다. 오픈소스 이름과 로고를 이렇게 해석했구나 라는 사례로 봐 주시면 좋을 것 같습니다. 그럼 2009년으로 들어가 보겠습니다.&lt;/p&gt;
 
 &lt;h1 id=&#34;seam-framework-로고는-어떤-의미일까요:f19f716c8aeb01c785b0b485dd6debca&#34;&gt;Seam Framework 로고는 어떤 의미일까요?&lt;/h1&gt;
 
