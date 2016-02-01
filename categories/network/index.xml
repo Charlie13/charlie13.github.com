@@ -75,7 +75,7 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 &lt;li&gt;이름: vboxnet0&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adpater2.png&#34; alt=&#34;adapter2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adapter2.png&#34; alt=&#34;adapter2&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;새-호스트-전용-네트워크-설정-1:e504ff6a47b9ec67ec6136666189d988&#34;&gt;새 호스트 전용 네트워크 설정&lt;/h3&gt;
 
