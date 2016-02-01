@@ -82,8 +82,9 @@ Host bitbucket.org
     IdentityFile ~/.ssh/id_rsa_@@@@@@@@@@@@
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;위 config에서는 2개의 아마존 서버와 github 및 bitbucket 서버 등 4개의 서버에 대한 ssh 설정이 서버별로 등록되어 있습니다. 위 예제에서 아마존 aws 서버는 다음의 두 가지 방법으로 로그인 할 수 있습니다.
-복수의 인증서를 사용하는 경우에도 ssh 명령을 단순하게 유지할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;위 config에서는 2개의 아마존 서버와 github 및 bitbucket 서버 4개의 서버에 대한 ssh 설정이 서버 별로 등록되어 있습니다.
+위 예제에서 아마존 aws 서버는 다음의 두 가지 방법으로 로그인 할 수 있습니다.
+ssh config 설정을 사용 할 경우 복수의 인증서를 사용하는 상황에서도 ssh 명령을 단순하게 유지할 수 있습니다.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;taewanui-MacBook-Pro:demo taewan$ ssh ubuntu@aws-ubuntu1
 Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-74-generic x86_64)
@@ -154,7 +155,7 @@ Port = 4567
 	Uset admin
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;위와 같이 설정된 상태에서 &amp;ldquo;ssh dev&amp;rdquo;이 실행된다면 다음과 같은 명령과 동일한 명령으로 매핑된다.&lt;/p&gt;
+&lt;p&gt;위와 같이 설정된 상태에서 &amp;ldquo;ssh dev&amp;rdquo;이 실행된다면 다음과 같은 명령으로 변환되어 실행됩니다.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;ssh admin@dev.taewan.kim -i ~/.ssh/id_rsa&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
@@ -174,7 +175,12 @@ Port = 4567
 &lt;h3 id=&#34;일반-설정:0984e7ebd3dce43c74ff94df48f1ae75&#34;&gt;일반 설정&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Hostname: 실제 서버 호스트 명으로 커넥션에 사용된다. 필수 속성은 아니며, 미 설정시 Host 값이 실제 커넥션에 사용된다.&lt;/li&gt;
+&lt;li&gt;Hostname: 연결될 서버 호스트 명으로 사용됨.
+
+&lt;ul&gt;
+&lt;li&gt;선택적 속성&lt;/li&gt;
+&lt;li&gt;미 설정시 Host 값이 Hostname으로 사용됨&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;User: 네트웍 커넥션에 사용되는 계정 명&lt;/li&gt;
 &lt;li&gt;Port: 원격 ssh 데몬이 사용하는 포트, 기본 값=22&lt;/li&gt;
 &lt;/ul&gt;
@@ -182,12 +188,119 @@ Port = 4567
 &lt;h3 id=&#34;네트웍-설정:0984e7ebd3dce43c74ff94df48f1ae75&#34;&gt;네트웍 설정&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;ServerAliveInterval&lt;/li&gt;
-&lt;li&gt;LogLevel&lt;/li&gt;
-&lt;li&gt;StrictHostKeyChecking&lt;/li&gt;
-&lt;li&gt;UserKnownHostsFile&lt;/li&gt;
-&lt;li&gt;VisualHostKey&lt;/li&gt;
-&lt;li&gt;Compression&lt;/li&gt;
+&lt;li&gt;ServerAliveInterval
+
+&lt;ul&gt;
+&lt;li&gt;서버에 테스트 패킷을 전송하는 주기 설정&lt;/li&gt;
+&lt;li&gt;초단위 설정&lt;/li&gt;
+&lt;li&gt;기본 값: 0&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ServerAliveCountMax
+
+&lt;ul&gt;
+&lt;li&gt;서버에 테스트용 패킷을 전송하는 횟수를 설정&lt;/li&gt;
+&lt;li&gt;서버에 추가적인 데이터 전송 없이 ServerAliveInterval의 최대 임계 값을 초과할 경우 커넥션 종료&lt;/li&gt;
+&lt;li&gt;기본값: 3&lt;/li&gt;
+&lt;li&gt;예: ServerAliveInterval 15, ServerAliveCountMax 3
+
+&lt;ul&gt;
+&lt;li&gt;통신없이 45초 결과후 커넥션 종료&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;LogLevel
+
+&lt;ul&gt;
+&lt;li&gt;클라이언트 측의 로그 레벨&lt;/li&gt;
+&lt;li&gt;최소 로그: QUIET&lt;/li&gt;
+&lt;li&gt;최대 로그: DEBUG3&lt;/li&gt;
+&lt;li&gt;설정 가능 값
+
+&lt;ul&gt;
+&lt;li&gt;QUIET&lt;/li&gt;
+&lt;li&gt;FATAL&lt;/li&gt;
+&lt;li&gt;ERROR&lt;/li&gt;
+&lt;li&gt;INFO&lt;/li&gt;
+&lt;li&gt;VERBOSE&lt;/li&gt;
+&lt;li&gt;DEBUG1&lt;/li&gt;
+&lt;li&gt;DEBUG2&lt;/li&gt;
+&lt;li&gt;DEBUG3&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;StrictHostKeyChecking
+
+&lt;ul&gt;
+&lt;li&gt;~/.ssh/known_hosts에 자동으로 호스트를 추가하는 설정&lt;/li&gt;
+&lt;li&gt;기본 설정은 저장을 질문 함&lt;/li&gt;
+&lt;li&gt;비활성 설정: &amp;ldquo;no&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;UserKnownHostsFile
+
+&lt;ul&gt;
+&lt;li&gt;연결된 호스트에 대한 정보를 남기는 파일을 지정하는 설정&lt;/li&gt;
+&lt;li&gt;기본 값: ~/.ssh/known_hosts&lt;/li&gt;
+&lt;li&gt;일반적으로 이 설정을 변경하지 않음&lt;/li&gt;
+&lt;li&gt;StrictHostKeyChecking을 &amp;ldquo;no&amp;rdquo;로 설정할 경우에 이 설정을 &amp;ldquo;/dev/null&amp;rdquo;로 설정ㄱㄷ유&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;VisualHostKey
+
+&lt;ul&gt;
+&lt;li&gt;원격지의 호스트 키를 클라이언트 접속시 출력&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Compression
+
+&lt;ul&gt;
+&lt;li&gt;느린 네트웍 상에서 네트웍 패킷을 압축하는 옵션&lt;/li&gt;
+&lt;li&gt;일반적인 상황에서 사용하지 않음&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;키-지정:0984e7ebd3dce43c74ff94df48f1ae75&#34;&gt;키 지정&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IdentityFile
+
+&lt;ul&gt;
+&lt;li&gt;Host 별로 사용할 키의 위치를 지정&lt;/li&gt;
+&lt;li&gt;기본값: 프로토콜에 따라 결정 됨
+
+&lt;ul&gt;
+&lt;li&gt;~/.ssh/id_rsa&lt;/li&gt;
+&lt;li&gt;~/.ssh/id_dsa&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;multiplexing:0984e7ebd3dce43c74ff94df48f1ae75&#34;&gt;Multiplexing&lt;/h3&gt;
+
+&lt;p&gt;ssh는 하나의 서버에 접속하는 여러 ssh 커넥션을 하나의 TCP 커넥션을 사용하여 연결하는 기능을 제공합니다.
+복수의 SSH 커넥션으로 발생하는 부하를 제거하는 용도로 적합&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ControlMaster
+
+&lt;ul&gt;
+&lt;li&gt;Multiplexing을 허용하는 옵션&lt;/li&gt;
+&lt;li&gt;허용 설정 값: auto&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ControlPath
+
+&lt;ul&gt;
+&lt;li&gt;커넥션을 제어하는 용도로 사용하는 socket 파일 지정&lt;/li&gt;
+&lt;li&gt;/path/to/socket/%r@%h:%p
+
+&lt;ul&gt;
+&lt;li&gt;r: username&lt;/li&gt;
+&lt;li&gt;h: remote host&lt;/li&gt;
+&lt;li&gt;p: port&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ControlPersist
+
+&lt;ul&gt;
+&lt;li&gt;커넥션이 유지해야 할 시간을 초단위로 지정&lt;/li&gt;
+&lt;li&gt;초단위 설정&lt;/li&gt;
+&lt;li&gt;낮은 값을 설정할 경우 불필요한 커넥션 연결 오픈을 방지할 수 있음&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
