@@ -29,11 +29,12 @@
   
   
 
-  <meta name="description" content="">
+  <meta name="description" content="Vagrant는 VM(Virtual Machine) 생성 및 라이프사이클을 관리하는 관리 소프트웨어 입니다. 가상 환경을 쉽고 신속하게 관리하는 용도로 많이 사용되고 있습니다. Vagrant란 무엇인고 알아보고, Vagrant 설정 및 사용법에 대하여 정리해 보겠습니다.">
   <meta name="keywords" content="vagrant,cloud,virtualization">
   
 </head>
 <body class="theme-base-08 layout-reverse">
+
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -95,14 +96,195 @@
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
   </div>
+  <div></div>
+  <div></div>
   <div class="post">
     <h1>Vagrant를 이용한 개발 환경 구성</h1>
-    <span class="post-date">Feb 1, 2016 &middot; 0 minute read &middot; <a href="http://taewan.kim/blog/2016/02/01/vagrant_introduction/#disqus_thread">Comments</a>
+    <span class="post-date">Feb 1, 2016 &middot; 3 minute read &middot; <a href="http://taewan.kim/blog/2016/02/01/vagrant_introduction/#disqus_thread">Comments</a>
     
     <br/>
     <a class="label" href="http://taewan.kim/categories/vagrant">vagrant</a><a class="label" href="http://taewan.kim/categories/cloud">cloud</a><a class="label" href="http://taewan.kim/categories/virtualization">virtualization</a>
     </span>
     
+
+<p>Vagrant는 가상화 인스턴스인 Virtual Machine(VM)을 관리하는 소프트웨어입니다.
+Vagrant는 &ldquo;부랑자&rdquo;/&ldquo;정처없는 사람&rdquo; 이라는 사전적인 의미를 갖습니다.
+Vagrant는 가상화 이미지를 효과적으로 만들고 테스트하는 유연한 환경이라는 의미로 명명된 것으로 생각됩니다.
+앞에서 설명한 것 처럼 Vagrant는 VM을 관리하는 소프트웨어로 여러 가상화 기술을 지원는 고수준 래퍼라고 할 수 있습니다.<br />
+Vagrant가 provider로 지원하는 기술은 다음과 같습니다.
+- VirtualBox
+- Vmware
+- KVM
+- Linux Container</p>
+
+<p>Vagrant의 개발 언어는 루비이며 2016.01 현재 최신 버전은 1.8입니다.
+Vagrant는 초기에 VirtualBox를 근간으로 만들어 졌습니다.
+여기에 버전 1.1부터 VMware와 KVM이 추가되었고, 버전 1.6에서는 Docker 컨테이너가 추가되었습니다.
+Vagrant가 여러 Provider를 지원하기는 하지만, 여전히 기본 Provider는 VirtualBox입니다.</p>
+
+<p>Vagrant가 갖는 주요 특징은 다음과 같습니다.
+* VM의 라이프사이클을 지원하면 간단한 CLI(Command-line Interface) 유틸리티
+* VirtualBox기반으로 가상 머신 생성 자동화
+* Chef와 Puppet을 사용한 프로비저닝 지원
+* SSH 완전 지원
+* VM에 고정 IP 할당 가능
+* 호스트 머신에 포트 포워드 지원
+* box로 이미지 배포
+* 단일 명령으로 가상 머신을 완전히 리빌드</p>
+
+<hr />
+
+<p>설치
+    - virtualbox 설치
+    - vagrant 설치</p>
+
+<p>gem install vagrant
+vagrant box add lucid32 http://&hellip;&hellip;.box
+vagrant init
+vagrant up</p>
+
+<p>&mdash;&mdash;-getting started &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+* Vagrant가 virtualbox를 선호하는 이유
+    * Just Free
+    * 주요 플랫폼
+    * Vagrant에 빌트-인 되어 있음</p>
+
+<p>vagrant init bashincorp/predics64
+vagrant up
+vagrant ssh</p>
+
+<ul>
+<li>&ldquo;Ubuntu 12.04 LTS 64-bit&rdquo; 가상화 구성 완료</li>
+<li>vagrant ssh</li>
+<li>vagrant destroy</li>
+</ul>
+
+<h1 id="vagrant-설정-vagrantfile:5df5018d6687eb59ab586ab578cca973">Vagrant 설정: Vagrantfile</h1>
+
+<ul>
+<li><p>Vagrantfile 을 초기화하는 명령</p>
+
+<ul>
+<li>vagrant init</li>
+</ul></li>
+
+<li><p>Boxes</p>
+
+<ul>
+<li>Vagrant가 빠른 가상머신 복제를 위해 사용하는 기본 이미지</li>
+<li>Vagrantfile에 사용할 box를 지정함</li>
+<li>모든 프로젝트는 Box의 초기 이미지를 클론하여 사용</li>
+<li>원본 이미지를 수정하지 않음</li>
+</ul></li>
+
+<li><p>Box 설치</p>
+
+<ul>
+<li>vagrant box add hashicorp/precise64</li>
+<li><a href="https://atlas.hashicorp.com/boxes/search에서">https://atlas.hashicorp.com/boxes/search에서</a> 다운로드</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="설정:5df5018d6687eb59ab586ab578cca973">설정</h2>
+
+<p>Vagrant.configure(&ldquo;2&rdquo;) do |config|
+  config.vm.box = &ldquo;hashicorp/precise64&rdquo;
+end</p>
+
+<p>HashiCorp&rsquo;s Atlas box catalog: <a href="https://atlas.hashicorp.com/boxes/search">https://atlas.hashicorp.com/boxes/search</a>
+bento</p>
+
+<p>vagrant up
+vagrant ssh
+vagrant destory box 이미지를 제거하지 않음
+vagrant box remove</p>
+
+<hr />
+
+<h2 id="동기화-폴더:5df5018d6687eb59ab586ab578cca973">동기화 폴더</h2>
+
+<p>/vagrant</p>
+
+<pre><code>$ vagrant up
+$ vagrant ssh
+vagrant@precise64:~$ ls /vagrant
+Vagrantfile
+</code></pre>
+
+<pre><code>vagrant@precise64:~$ touch /vagrant/foo
+vagrant@precise64:~$ exit
+$ ls
+foo Vagrantfile
+</code></pre>
+
+<pre><code>VAGRANTFILE_API_VERSION = &quot;2&quot;
+ 
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = &quot;precise32&quot;
+  config.vm.box_url = &quot;http://files.vagrantup.com/precise32.box&quot;
+  # config.vm.network :forwarded_port, guest: 80, host: 8080
+  # config.vm.network :private_network, ip: &quot;192.168.33.10&quot;
+  # config.vm.network :public_network
+  # config.ssh.forward_agent = true
+  config.vm.provider &quot;virtualbox&quot; do |vm|
+        vm.customize [
+               &quot;modifyvm&quot;,:id,
+               &quot;--memory&quot;,&quot;512&quot;,
+               &quot;--name&quot;,&quot;Terry_vagrant0&quot;,
+               &quot;--cpus&quot;,&quot;2&quot;,
+                       ]
+  end
+end
+</code></pre>
+
+<hr />
+
+<h2 id="shared-folder:5df5018d6687eb59ab586ab578cca973">shared folder</h2>
+
+<p>vagrant@precise64:~$ touch /vagrant/foo
+vagrant@precise64:~$ exit
+$ ls
+foo Vagrantfile</p>
+
+<hr />
+
+<h2 id="provisioning:5df5018d6687eb59ab586ab578cca973">provisioning</h2>
+
+<p>#!/usr/bin/env bash</p>
+
+<p>apt-get update
+apt-get install -y apache2
+if ! [ -L /var/www ]; then
+  rm -rf /var/www
+  ln -fs /vagrant /var/www</p>
+
+<h2 id="fi:5df5018d6687eb59ab586ab578cca973">fi</h2>
+
+<p>Vagrant.configure(&ldquo;2&rdquo;) do |config|
+  config.vm.box = &ldquo;hashicorp/precise64&rdquo;
+  config.vm.provision :shell, path: &ldquo;bootstrap.sh&rdquo;</p>
+
+<h2 id="end:5df5018d6687eb59ab586ab578cca973">end</h2>
+
+<p>vagrant 파일 기준 상대 경로</p>
+
+<p>vagrant reload &ndash;provision</p>
+
+<p>Configuration of communications between VMs</p>
+
+<p>Vagrant는
+- VirtualBox
+- VMWare
+- AWS</p>
+
+<p>Provider를 설치한 후
+$ vagrant up &ndash;provider=vmware_fusion
+$ vagrant up &ndash;provider=aws
+&ldquo;vagrant up&rdquo;에서만 provider를 지정하면 옵션을 사용합니다.
+다른 vagrant 명령에서는 provider를 별도로 지정할 필요가 없습니다.</p>
+
   </div>
   <div>
     <hr/>
