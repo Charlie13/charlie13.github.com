@@ -907,6 +907,15 @@ public static void main(String args[]){
     </item>
     
     <item>
+      <title>bitbucket_jenkins_webhook</title>
+      <link>http://taewan.kim/blog/2015/02/03/bitbucket_jenkins_webhook/</link>
+      <pubDate>Tue, 03 Feb 2015 14:01:55 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2015/02/03/bitbucket_jenkins_webhook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>[Vagrant]Guest 인스턴스들 사이의 네트웍 설정</title>
       <link>http://taewan.kim/blog/2015/02/01/vagrant_comm_between_vms/</link>
       <pubDate>Sun, 01 Feb 2015 18:05:10 +0900</pubDate>
