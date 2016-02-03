@@ -22,9 +22,47 @@ Webhooks는 해당 git repository에 push, commtit, tag와 같은 이벤트가 �
 Webhooks 이벤트를 전달받은 CI서버는 해당 프로젝트의 빌드 프로세스를 시작하는 방식으로 Git 레파지토리와 CI 서버를 연동하는 방법입니다.
 Git 레파지토리가 호출하는 Webhooks는 HTTP URL(Restful 서비스)입니다.&lt;/p&gt;
 
-&lt;h2 id=&#34;jenkins의-trigger:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;Jenkins의 trigger&lt;/h2&gt;
+&lt;h2 id=&#34;jenkins의-빌드-트리거:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;Jenkins의 빌드 트리거&lt;/h2&gt;
 
-&lt;p&gt;test&lt;/p&gt;
+&lt;p&gt;Webhooks 기능을 활성화 시키기 위해서 git 서비스에 Jenkins가 제공하는 URL을 등록해야 합니다.
+Jenkins는 Job의 설정화면의 &amp;ldquo;빌드 트리거&amp;rdquo;에서 git서비스에 등록할 URL을 만들수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Jenkins에 로그인하여 대상 Job을 선택한 후 아래 그림과 같이 configuration 메뉴를 클릭합니다.
+&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_1.png&#34; alt=&#34;BigDataLite&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Configuration 화면에서 아래 그림과 같이 상단 메뉴의 &amp;ldquo;Build Triggers&amp;rdquo;를 선택하여 &amp;ldquo;Build Triggers&amp;rdquo; 설정 부분으로 이동합니다.
+&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_2.png&#34; alt=&#34;BigDataLite&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Build Triggers&amp;rdquo;영역에서는 지정한 프로젝트의 url을 확인하고 인증토큰을 설정하는 것을 제공합니다.
+&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_3.png&#34; alt=&#34;BigDataLite&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;위 예제를 통해서 인증토큰 값과 그 아래의 안내 URL을 조합하면 다음과 같은 URL을 만들 수 있습니다.
+- TOKEN_NAME: iloveminsu
+- url: JENKINS_URL/job/build%20for%20taewan.kim%20blog/build?token=TOKEN_NAME
+- JENKINS_URL: &lt;a href=&#34;http://ci.taewan.kim&#34;&gt;http://ci.taewan.kim&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;최종 URL은 다음과 같습니다.
+- &lt;a href=&#34;http://ci.taewan.kim/job/build%20for%20taewan.kim%20blog/build?token=iloveminsu&#34;&gt;http://ci.taewan.kim/job/build%20for%20taewan.kim%20blog/build?token=iloveminsu&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;이 값을 git 서비스의 Webhooks에 등록해야 합니다.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-서비스에-webhook-등록:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;git 서비스에 Webhook 등록&lt;/h2&gt;
+
+&lt;p&gt;github, gitlab 그리고 Bitbucket은 유사한 형태의 Webhook 등록을 지원합니다.&lt;/p&gt;
+
+&lt;h3 id=&#34;github의-webhooks-등록:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;github의 webhooks 등록&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-01.png&#34; alt=&#34;&#34; /&gt;
+
+&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-02.png&#34; alt=&#34;&#34; /&gt;
+
+&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-03.png&#34; alt=&#34;&#34; /&gt;
+
+&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-04.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
 </description>
     </item>
     
