@@ -42,6 +42,23 @@ Vagrant가 여러 Provider를 지원하기는 하지만, 여전히 기본 Provid
 * box로 이미지 배포
 * 단일 명령으로 가상 머신을 완전히 리빌드&lt;/p&gt;
 
+&lt;h2 id=&#34;vagrant-설치:5df5018d6687eb59ab586ab578cca973&#34;&gt;Vagrant 설치&lt;/h2&gt;
+
+&lt;h2 id=&#34;quick-start-in-5-minute:5df5018d6687eb59ab586ab578cca973&#34;&gt;Quick Start in 5 Minute&lt;/h2&gt;
+
+&lt;h2 id=&#34;vagrant-명령어-요약:5df5018d6687eb59ab586ab578cca973&#34;&gt;vagrant 명령어 요약&lt;/h2&gt;
+
+&lt;h2 id=&#34;vagrantfile성-설정하기:5df5018d6687eb59ab586ab578cca973&#34;&gt;VagrantFile성 설정하기&lt;/h2&gt;
+
+&lt;p&gt;###
+###
+###
+###
+###
+###&lt;/p&gt;
+
+&lt;h2 id=&#34;reference:5df5018d6687eb59ab586ab578cca973&#34;&gt;Reference&lt;/h2&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;설치
