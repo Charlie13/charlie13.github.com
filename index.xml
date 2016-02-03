@@ -234,7 +234,8 @@ Oracle Big Data Lite는 오라클의 빅데이터 소프트웨어 (CHD배포본 
 이 이미지의 최신 버전은 4.3.X (2016.01 기준) 입니다.
 Oracle Big Data Lite는 완전한 설정이 반영된 이미지이기 때문에, 사용자는 설치 및 번거로운 작업을 거치지 않고 바로 기능 테스트를 할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/BigDataLite-Initial.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/BigDataLite-Initial.png&#34; alt=&#34;BigDataLite&#34; /&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&#34;호스트에서-가상화-이미지에-접근할-수-있다면:e504ff6a47b9ec67ec6136666189d988&#34;&gt;호스트에서 가상화 이미지에 접근할 수 있다면&amp;hellip;&lt;/h2&gt;
 
@@ -251,11 +252,13 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 
 &lt;p&gt;OS X를 기준으로 메뉴:VirtualBox -&amp;gt; 환경설정 -&amp;gt; 네트워크 텝 -&amp;gt; &amp;ldquo;호스트 전용 네트워크&amp;rdquo;에서 오른쪽의 &amp;ldquo;+&amp;ldquo;아이콘을 선택합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hostonlynetwork.png&#34; alt=&#34;Host Only Networks&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hostonlynetwork.png&#34; alt=&#34;Host Only Networks&#34; /&gt;
+&lt;/p&gt;
 
 &lt;p&gt;&amp;rdquo;+&amp;ldquo;아이콘을 선택하면 &amp;ldquo;vboxnet0&amp;rdquo;가 생성됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vboxnet0.png&#34; alt=&#34;vboxnet0&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vboxnet0.png&#34; alt=&#34;vboxnet0&#34; /&gt;
+&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;vboxnet0&amp;rdquo;를 더블클릭하여 아래와 같이 DHCP 설정을 합니다.&lt;/p&gt;
 
@@ -268,6 +271,7 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/dscp.png&#34; alt=&#34;vboxnet0&#34; /&gt;
+
 위와 같이 설정을 마치고 &amp;ldquo;저장&amp;rdquo;&amp;rdquo; 및 &amp;ldquo;확인&amp;rdquo;&amp;rdquo; 버튼을 클릭하여 네트워크 등록을 완료합니다.&lt;/p&gt;
 
 &lt;h3 id=&#34;guest-os에-adapter-추가-host-only-adapter:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Guest OS에 Adapter 추가 (Host Only Adapter)&lt;/h3&gt;
@@ -280,7 +284,8 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 &lt;li&gt;이름: vboxnet0&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adapter2.png&#34; alt=&#34;adapter2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adapter2.png&#34; alt=&#34;adapter2&#34; /&gt;
+&lt;/p&gt;
 
 &lt;h3 id=&#34;새-호스트-전용-네트워크-설정-1:e504ff6a47b9ec67ec6136666189d988&#34;&gt;새 호스트 전용 네트워크 설정&lt;/h3&gt;
 
@@ -288,7 +293,8 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 terminal 상에서 ifconfig 명령으로 호스트에서 접근 할 IP를 확인할 수 있습니다.
 (192.168.56.101)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/ipcheck.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/ipcheck.png&#34; alt=&#34;ipcheck&#34; /&gt;
+&lt;/p&gt;
 
 &lt;h3 id=&#34;host-os에서-guest-os에-접근:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Host OS에서 Guest OS에 접근&lt;/h3&gt;
 
@@ -310,7 +316,8 @@ Last login: Thu Jan 28 16:00:34 2016 from 192.168.56.1
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hue.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hue.png&#34; alt=&#34;ipcheck&#34; /&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&#34;요약:e504ff6a47b9ec67ec6136666189d988&#34;&gt;요약&lt;/h2&gt;
 
@@ -653,7 +660,8 @@ Port = 4567
 
 &lt;p&gt;처음 Seam을 접할때 Seam이란 의미는 Seamless의 약자가 아닐까? 라는 생각을 했습니다. Seam의 컴포넌트 모델을 보다 보면 다음과 같은 이미지를 연상하게 됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/seamlogo.png&#34; alt=&#34;Seam Logo&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/seamlogo.png&#34; alt=&#34;Seam Logo&#34; /&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&#34;seam-framework-logo는-이런-의미를-담고-있지-않을까요:f19f716c8aeb01c785b0b485dd6debca&#34;&gt;Seam Framework Logo는 이런 의미를 담고 있지 않을까요?&lt;/h2&gt;
 
@@ -752,7 +760,8 @@ public class ManagerAction implements Manager{
 
 &lt;p&gt;이런 의미에서 앞에서 살펴 보았던 Seam Logo 이미지를 다시 한번 살펴 보도록 하겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/seamlogo.png&#34; alt=&#34;Seam Logo&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/seamlogo.png&#34; alt=&#34;Seam Logo&#34; /&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Seam 프레임웍 로고로 사용하는 빗살 무늬 로고는 아마도 두 개의 Tier로 나누어져 있는 컴포넌트를 서로 연결하는 상호작용 할 수 있도록 지원한다는 의미라고 저는 생각하고 있습니다.&lt;/p&gt;
 
