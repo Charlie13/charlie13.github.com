@@ -6,16 +6,26 @@
     <description>Recent content in Ci on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Feb 2015 14:01:55 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 03 Feb 2016 14:01:55 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/categories/ci.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>bitbucket_jenkins_webhook</title>
-      <link>http://taewan.kim/blog/2015/02/03/bitbucket_jenkins_webhook/</link>
-      <pubDate>Tue, 03 Feb 2015 14:01:55 +0900</pubDate>
+      <title>Webhook 연동: bitbucket &#43; jenkins</title>
+      <link>http://taewan.kim/blog/2016/02/03/bitbucket_jenkins_webhook/</link>
+      <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/blog/2015/02/03/bitbucket_jenkins_webhook/</guid>
-      <description></description>
+      <guid>http://taewan.kim/blog/2016/02/03/bitbucket_jenkins_webhook/</guid>
+      <description>
+
+&lt;p&gt;최근에 git 기반의 서비스들(github, bitbucket, gitlab)은 Webhooks 기능을 기본적으로 제공합니다.
+Webhooks는 해당 git repository에 push, commtit, tag와 같은 이벤트가 발생하면 Jenkins와 같은 CI 서버에 이벤트를 전달하는 기능입니다.
+Webhooks 이벤트를 전달받은 CI서버는 해당 프로젝트의 빌드 프로세스를 시작하는 방식으로 Git 레파지토리와 CI 서버를 연동하는 방법입니다.
+Git 레파지토리가 호출하는 Webhooks는 HTTP URL(Restful 서비스)입니다.&lt;/p&gt;
+
+&lt;h2 id=&#34;jenkins의-trigger:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;Jenkins의 trigger&lt;/h2&gt;
+
+&lt;p&gt;test&lt;/p&gt;
+</description>
     </item>
     
   </channel>

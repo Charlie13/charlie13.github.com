@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bitbucket on taewan&#39;s blog</title>
-    <link>http://taewan.kim/categories/bitbucket.html</link>
-    <description>Recent content in Bitbucket on taewan&#39;s blog</description>
+    <title>Gitlab on taewan&#39;s blog</title>
+    <link>http://taewan.kim/categories/gitlab.html</link>
+    <description>Recent content in Gitlab on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Feb 2016 14:01:55 +0900</lastBuildDate>
-    <atom:link href="http://taewan.kim/categories/bitbucket.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://taewan.kim/categories/gitlab.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Webhook 연동: bitbucket &#43; jenkins</title>
