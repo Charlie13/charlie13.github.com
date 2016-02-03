@@ -29,22 +29,19 @@ Jenkins는 Job의 설정화면의 &amp;ldquo;빌드 트리거&amp;rdquo;에서 g
 
 &lt;p&gt;Jenkins에 로그인하여 대상 Job을 선택한 후 아래 그림과 같이 configuration 메뉴를 클릭합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_1.png&#34; alt=&#34;BigDataLite&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_1.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;Configuration 화면에서 아래 그림과 같이 상단 메뉴의 &amp;ldquo;Build Triggers&amp;rdquo;를 선택하여 &amp;ldquo;Build Triggers&amp;rdquo; 설정 부분으로 이동합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_2.png&#34; alt=&#34;BigDataLite&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_2.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&amp;ldquo;Build Triggers&amp;rdquo;영역에서는 지정한 프로젝트의 url을 확인하고 인증토큰을 설정하는 것을 제공합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_3.png&#34; alt=&#34;BigDataLite&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_3.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;위 예제를 통해서 인증토큰 값과 그 아래의 안내 URL을 조합하면 다음과 같은 URL을 만들 수 있습니다.&lt;/p&gt;
 
@@ -68,14 +65,13 @@ Jenkins는 Job의 설정화면의 &amp;ldquo;빌드 트리거&amp;rdquo;에서 g
 
 &lt;h3 id=&#34;github의-webhooks-등록:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;github의 webhooks 등록&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-01.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-02.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-03.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-04.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

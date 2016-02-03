@@ -29,8 +29,7 @@ Oracle Big Data Lite는 오라클의 빅데이터 소프트웨어 (CHD배포본 
 이 이미지의 최신 버전은 4.3.X (2016.01 기준) 입니다.
 Oracle Big Data Lite는 완전한 설정이 반영된 이미지이기 때문에, 사용자는 설치 및 번거로운 작업을 거치지 않고 바로 기능 테스트를 할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/BigDataLite-Initial.png&#34; alt=&#34;BigDataLite&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/BigDataLite-Initial.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;호스트에서-가상화-이미지에-접근할-수-있다면:e504ff6a47b9ec67ec6136666189d988&#34;&gt;호스트에서 가상화 이미지에 접근할 수 있다면&amp;hellip;&lt;/h2&gt;
 
@@ -47,13 +46,11 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 
 &lt;p&gt;OS X를 기준으로 메뉴:VirtualBox -&amp;gt; 환경설정 -&amp;gt; 네트워크 텝 -&amp;gt; &amp;ldquo;호스트 전용 네트워크&amp;rdquo;에서 오른쪽의 &amp;ldquo;+&amp;ldquo;아이콘을 선택합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hostonlynetwork.png&#34; alt=&#34;Host Only Networks&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hostonlynetwork.png&#34; alt=&#34;Host Only Networks&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;rdquo;+&amp;ldquo;아이콘을 선택하면 &amp;ldquo;vboxnet0&amp;rdquo;가 생성됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vboxnet0.png&#34; alt=&#34;vboxnet0&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vboxnet0.png&#34; alt=&#34;vboxnet0&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;vboxnet0&amp;rdquo;를 더블클릭하여 아래와 같이 DHCP 설정을 합니다.&lt;/p&gt;
 
@@ -66,7 +63,6 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/dscp.png&#34; alt=&#34;vboxnet0&#34; /&gt;
-
 위와 같이 설정을 마치고 &amp;ldquo;저장&amp;rdquo;&amp;rdquo; 및 &amp;ldquo;확인&amp;rdquo;&amp;rdquo; 버튼을 클릭하여 네트워크 등록을 완료합니다.&lt;/p&gt;
 
 &lt;h3 id=&#34;guest-os에-adapter-추가-host-only-adapter:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Guest OS에 Adapter 추가 (Host Only Adapter)&lt;/h3&gt;
@@ -79,8 +75,7 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 &lt;li&gt;이름: vboxnet0&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adapter2.png&#34; alt=&#34;adapter2&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adapter2.png&#34; alt=&#34;adapter2&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;새-호스트-전용-네트워크-설정-1:e504ff6a47b9ec67ec6136666189d988&#34;&gt;새 호스트 전용 네트워크 설정&lt;/h3&gt;
 
@@ -88,8 +83,7 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 terminal 상에서 ifconfig 명령으로 호스트에서 접근 할 IP를 확인할 수 있습니다.
 (192.168.56.101)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/ipcheck.png&#34; alt=&#34;ipcheck&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/ipcheck.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;host-os에서-guest-os에-접근:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Host OS에서 Guest OS에 접근&lt;/h3&gt;
 
@@ -111,8 +105,7 @@ Last login: Thu Jan 28 16:00:34 2016 from 192.168.56.1
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hue.png&#34; alt=&#34;ipcheck&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hue.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;요약:e504ff6a47b9ec67ec6136666189d988&#34;&gt;요약&lt;/h2&gt;
 
