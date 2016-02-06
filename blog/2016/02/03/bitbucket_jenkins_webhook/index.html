@@ -85,20 +85,6 @@
 
 
 <div class="content container">
-  <div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8469722754608892"
-     data-ad-slot="5594090168"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </div>
-  <div></div>
-  <div></div>
   <div class="post">
     <h1>Webhook 연동: git 서비스 &#43; jenkins</h1>
     <span class="post-date">Feb 3, 2016 &middot; 2 minute read &middot; <a href="http://taewan.kim/blog/2016/02/03/bitbucket_jenkins_webhook/#disqus_thread">Comments</a>
@@ -120,18 +106,15 @@ Jenkins는 Job의 설정화면의 &ldquo;빌드 트리거&rdquo;에서 git서비
 
 <p>Jenkins에 로그인하여 대상 Job을 선택한 후 아래 그림과 같이 configuration 메뉴를 클릭합니다.</p>
 
-<p><img src="/images/bitbucket/jenkins_config_1.png" alt="BigDataLite" />
-</p>
+<p><img src="/images/bitbucket/jenkins_config_1.png" alt="BigDataLite" /></p>
 
 <p>Configuration 화면에서 아래 그림과 같이 상단 메뉴의 &ldquo;Build Triggers&rdquo;를 선택하여 &ldquo;Build Triggers&rdquo; 설정 부분으로 이동합니다.</p>
 
-<p><img src="/images/bitbucket/jenkins_config_2.png" alt="BigDataLite" />
-</p>
+<p><img src="/images/bitbucket/jenkins_config_2.png" alt="BigDataLite" /></p>
 
 <p>&ldquo;Build Triggers&rdquo;영역에서는 지정한 프로젝트의 url을 확인하고 인증토큰을 설정하는 것을 제공합니다.</p>
 
-<p><img src="/images/bitbucket/jenkins_config_3.png" alt="BigDataLite" />
-</p>
+<p><img src="/images/bitbucket/jenkins_config_3.png" alt="BigDataLite" /></p>
 
 <p>위 예제를 통해서 인증토큰 값과 그 아래의 안내 URL을 조합하면 다음과 같은 URL을 만들 수 있습니다.</p>
 
@@ -156,20 +139,16 @@ Jenkins는 Job의 설정화면의 &ldquo;빌드 트리거&rdquo;에서 git서비
 <h3 id="github의-webhooks-등록:922394644e1f3ee8cce21149fbcc0a54">github의 webhooks 등록</h3>
 
 <p>github에서 webhooks를 설정하기 위해서는 github 레파지토리의 settings 텝을 클릭하여 설정 페이지로 이동해야 합니다.
-<img src="/images/bitbucket/webhook-github-01.png" alt="" />
-</p>
+<img src="/images/bitbucket/webhook-github-01.png" alt="" /></p>
 
 <p>settings 페이지에서 &ldquo;Webhooks &amp; Services&rdquo;로 부터 webhooks으로 이동가능합니다.
-<img src="/images/bitbucket/webhook-github-02.png" alt="" />
-</p>
+<img src="/images/bitbucket/webhook-github-02.png" alt="" /></p>
 
 <p>다음과 같이 &ldquo;Add webhook&rdquo; 버튼을 클릭하여 최종 Webhook 등록 폼으로 이동합니다.
-<img src="/images/bitbucket/webhook-github-03.png" alt="" />
-</p>
+<img src="/images/bitbucket/webhook-github-03.png" alt="" /></p>
 
 <p>등록 폼에서 앞에서 알아낸 최종 URL은 등록하고 이벤트 유형을 선택한 후 저장하면 등록이 완료됩니다.
-<img src="/images/bitbucket/webhook-github-04.png" alt="" />
-</p>
+<img src="/images/bitbucket/webhook-github-04.png" alt="" /></p>
 
 <p>위 예제는 push 이벤트가 발생할 때에만 앞에서 지정한 URL을 호출하는 설정입니다.
 push 이벤트 이외의 다른 이벤트를 지정하고자 할 경우에는 &ldquo;Let me select individual events&rdquo;를 선택하여 복수개의 다른 이벤트를 선택할 수 있습니다.</p>
@@ -179,26 +158,21 @@ push 이벤트 이외의 다른 이벤트를 지정하고자 할 경우에는 &l
 <p>gitlab에서는 프로젝트 settings에서 다음과 같이 설정을 수행합니다.
 프로젝트 메뉴에서 settings를 클릭하면 다음과 같은 설정 페이지로 이동합니다.
 설정 페이지에서 &ldquo;web hooks&rdquo;를 선택하고 앞에서 정리한 URL과 이벤트를 선택하고 &ldquo;Add Web Hook&rdquo;을 클릭하여 등록합니다.
-<img src="/images/bitbucket/gitlab-01.png" alt="" />
-</p>
+<img src="/images/bitbucket/gitlab-01.png" alt="" /></p>
 
 <h3 id="bitbucket의-webhooks-등록:922394644e1f3ee8cce21149fbcc0a54">bitbucket의 webhooks 등록</h3>
 
 <p>bitbucket에서는 다음과 같이 프로젝트 페이지에서 settings 메뉴를 클릭하여 프로젝트 설정 페이지로 이동합니다.
-<img src="/images/bitbucket/bitbucket-01.png" alt="" />
-</p>
+<img src="/images/bitbucket/bitbucket-01.png" alt="" /></p>
 
 <p>프로젝트 설정 페이지에서 webhooks메뉴와 &ldquo;add webhook&rdquo; 버튼을 클릭하여 webhook 등록 페이지로 이동합니다.
-<img src="/images/bitbucket/bitbucket-02.png" alt="" />
-</p>
+<img src="/images/bitbucket/bitbucket-02.png" alt="" /></p>
 
 <p>webhook 등록페이지에서는 제목, URL, 트리거 유형을 선택한 후 &ldquo;Save&rdquo;버튼을 클릭하여 등록을 완료합니다.
-<img src="/images/bitbucket/bitbucket-03.png" alt="" />
-</p>
+<img src="/images/bitbucket/bitbucket-03.png" alt="" /></p>
 
 <p>등록이 정상적으로 완료되었다면 다음과 같이 등록된 webhook을 확인 할 수 있습니다.
-<img src="/images/bitbucket/bitbucket-04.png" alt="" />
-</p>
+<img src="/images/bitbucket/bitbucket-04.png" alt="" /></p>
 
 <h2 id="summary:922394644e1f3ee8cce21149fbcc0a54">Summary</h2>
 
