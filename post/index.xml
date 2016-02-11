@@ -37,26 +37,28 @@ Vagrant의 가장 매력적인 부분은 가상 인스턴스를 만들고 실행
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vagrant/Vagrantup.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vagrant의 사전적인 의미는 &amp;ldquo;부랑자&amp;rdquo;/&amp;ldquo;정처없는 사람&amp;rdquo; 이라는 사전적인 의미를 갖습니다.
-Vagrant는 가상화 이미지를 효과적으로 만들고 테스트하는 유연한 환경이라는 의미로 명명된 것으로 생각됩니다. 쉽게 만들고 쉽게 버릴수 있고 다시 그 상태를 순쉽게 복원할 수 있는 &amp;ldquo;Code as a Infrastructure&amp;rdquo; 개념을 가장 쉽게 반영한 오픈소스 프로젝트입니다.&lt;/p&gt;
+Vagrant는 가상화 이미지를 효과적으로 만들고 테스트하는 유연한 환경이라는 의미에서 명명된 것이라고 생각됩니다. 쉽게 만들고 쉽게 버릴수 있고 다시 그 상태를 쉽게 복원할 수 있는 &amp;ldquo;Code as a Infrastructure&amp;rdquo; 개념을 반영한 오픈소스 프로젝트입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vagrant/vagrant_chilling.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;vagrant-프로젝트:47d9242757fa168a76ca0788ab673199&#34;&gt;Vagrant 프로젝트&lt;/h2&gt;
 
 &lt;p&gt;Vagrant는  2010년 3월에 &amp;ldquo;Mitchell Hashimoto&amp;rdquo;가 시작한 오픈소스 프로젝트입니다.
-2016년 2월 현재 최신 버전은 1.8.1입니다. 개발 언어는 Ruby이며 지원 플랫폼은 Linux, FreeBDS, OS X와 MS Window입니다. Vagrant의 주요 개발사는 HashiCorp입니다. HasiCorp는 샌프란시스코에 위치한 오픈소스 기업으로 2012년에 &amp;ldquo;Mitchell Hashimoto&amp;rdquo;가 설립하였습니다.&lt;/p&gt;
+2016년 2월 현재 최신 버전은 1.8.1입니다. 개발 언어는 Ruby이며 지원 플랫폼은 Linux, FreeBDS, OS X와 MS Window입니다. 2016년 현재 Vagrant의 주요 개발사는 HashiCorp입니다. HasiCorp는 샌프란시스코에 위치한 오픈소스 기업으로 2012년에 &amp;ldquo;Mitchell Hashimoto&amp;rdquo;가 설립하였습니다.&lt;/p&gt;
 
-&lt;p&gt;Vagrant는 최초에 VirtualBox만을 지원하는 형태로 개발되었습니다. 그후 1.1버전 부터 다른 가상화 기술을 지원하기 시작했습니다. VMware와 KVM은 1.1버전에서 지원이 추가되었습니다. 1.6버전부터 Docker를 지원하게 되었습니다.&lt;/p&gt;
+&lt;p&gt;Vagrant는 초기에 VirtualBox만을 지원하는 형태로 개발되었습니다. 그후 1.1버전 부터 다른 가상화 기술을 지원하기 시작했습니다. VMware와 KVM은 1.1버전에서 지원이 추가되었습니다. 1.6버전에서는 Docker를 새롭게 추가하였습니다.&lt;/p&gt;
 
 &lt;h2 id=&#34;vagrant-설치:47d9242757fa168a76ca0788ab673199&#34;&gt;Vagrant 설치&lt;/h2&gt;
 
 &lt;p&gt;앞에서 설명한 것처럼 Vagrant는 여러 가상화 프로바이더를 지원하는 툴입니다.
-따라서 Vagrant를 설치하기 앞서 앞으로 사용할 가상화 프로바이더를 사전에 설치해야 합니다.&lt;/p&gt;
+따라서 Vagrant를 설치하기 전에 사용할 가상화 프로바이더를 사전에 설치해야 합니다.&lt;/p&gt;
 
 &lt;p&gt;Vagrant의 기본 가상화 프로바이더는 VirtualBox입니다.
 VirtaulBox는 오라클가 프리웨어로 제공하는 가상화 기술입니다. 지원하는 운영체제는 Window, OS X, Linux, Solaris입니다. VirtualBox 설치 파일은 &lt;a href=&#34;https://www.virtualbox.org&#34;&gt;https://www.virtualbox.org&lt;/a&gt; 에서 다운받을 수 있습니다. VirtualBox 설치 파일의 크기는 운영체제에 따라 약간의 차이는 있지만 약 100Mb 내외 입니다.&lt;/p&gt;
 
-&lt;p&gt;Vagrant는 Ruby로 개발된 소프트웨어 입니다. 따라서 RubyGem으로 설치 가능합니다. 그러나 Vagrant 프로젝트에서는 RubyGem을 이용한 설치 보다는 Vargant 홈페지이에서 바이너리를 다운로드 하는 것을 권장하고 있습니다. RubyGem을 사용할 경우 이전 버전이 설치될 가능성이 높기 때문입니다. Vagrant 다운로드 URL은 다음과 같습니다.&lt;/p&gt;
+&lt;p&gt;앞에서 설명한 것 처럼 Vagrant는 Ruby로 개발된 소프트웨어 입니다.
+따라서 RubyGem으로 설치 가능합니다.
+그러나 Vagrant 프로젝트에서는 RubyGem을 이용한 설치하는 방법보다 Vargant 홈페지이에서 바이너리를 다운로드 하는 것을 권장하고 있습니다. RubyGem을 사용할 경우 이전 버전이 설치될 가능성이 높기 때문입니다. Vagrant 다운로드 URL은 다음과 같습니다.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.vagrantup.com/downloads.html&#34;&gt;https://www.vagrantup.com/downloads.html&lt;/a&gt;&lt;/li&gt;
@@ -98,9 +100,9 @@ Box를 검색하고 다운로드를 지원하는 &amp;ldquo;Atlas box catalog&am
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vagrant/atlas.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;ldquo;Atlas box catalog&amp;rdquo; 혹은 Box의 URL을 통해서 &amp;ldquo;vagrant box add&amp;rdquo; 명령으로 Box를 다운로드 할 수 있습니다.
+&lt;p&gt;&amp;ldquo;Atlas box catalog&amp;rdquo; 혹은 Box의 URL을 파라미터로 &amp;ldquo;vagrant box add&amp;rdquo; 명령을 이용하여 Box를 다운로드 할 수 있습니다.
 다운받은 기본 Box는 ~/vagrant.d/boxes 디렉터리에 저장됩니다.
-이 디렉터리에는 Box별로 프로바이더 별로 4개의 파일이 저장됩니다.&lt;/p&gt;
+이 디렉터리에 위치한 각 Box는 프로바이더 별로 디렉터리를 구분하여 저장되며, 각 프로바이더 폴더에는 4개의 파일이 저장되어 있는 것을 확인 할 수 있습니다.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;taewan:demo taewan$ vagrant box add  ubuntu/trusty64
 ==&amp;gt; box: Loading metadata for box &#39;ubuntu/trusty64&#39;
