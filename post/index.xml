@@ -17,6 +17,12 @@
       <guid>http://taewan.kim/blog/2016/03/18/prog-problems-01/</guid>
       <description>
 
+&lt;h2 id=&#34;문서상태:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;문서상태&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;현재 작업중&amp;hellip;..&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;시작하며:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;시작하며&lt;/h2&gt;
 
 &lt;p&gt;스위스의 Bern University에서는 Prolog의 교육을 목적으로 99개의 문제와 각 문제에 대한 풀이법을 제공합니다. (&lt;a href=&#34;https://sites.google.com/site/prologsite/&#34;&gt;https://sites.google.com/site/prologsite/&lt;/a&gt;) 이 사이트에서 제공하는 99개의 문제를 풀어가는 과정은 Prolog에대한 이해를 높이고 친숙해지는 가장 효율적인 방법이라고 생각됩니다. 최근에 Scala를 처음 접하는 과정에서 스칼라를 언어적으로 연습하고 연마할 적절한  대상이 부족하다는 아쉬움이 많았습니다. 최근에 Prolog 99을 스칼라 버전으로 변환한 &lt;a href=&#34;http://aperiodic.net을&#34;&gt;http://aperiodic.net을&lt;/a&gt; 발견하였습니다. 이 사이트에서는 Prolog 99을 스칼라 버전으로 변환한 문제와 풀이를 제공합니다. 이 사이트에서 제공하는 스칼라 버전의 Prolog 99은 스칼라 학습 및 연습에 유용하게 사용될 수 있있습니다. 이 문제 풀이는 스칼라에 대한 이해를 높일 수 있는 효과적인 컨텐츠 입니다.&lt;/p&gt;
@@ -39,9 +45,7 @@
 
 &lt;h2 id=&#34;prolog-lists:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;Prolog Lists&lt;/h2&gt;
 
-&lt;p&gt;Prolog Lists는 23개 문제로 구성되면 List를 사용하는 방법에 대한&lt;/p&gt;
-
-&lt;p&gt;##&lt;/p&gt;
+&lt;h3 id=&#34;1-01:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;1.01&lt;/h3&gt;
 </description>
     </item>
     
