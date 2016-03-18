@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercise on taewan&#39;s blog</title>
+    <link>http://taewan.kim/categories/exercise.html</link>
+    <description>Recent content in Exercise on taewan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Mar 2016 01:18:18 +0900</lastBuildDate>
+    <atom:link href="http://taewan.kim/categories/exercise.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Scala Exercises - Series (1)</title>
+      <link>http://taewan.kim/blog/2016/03/18/prog-problems-01/</link>
+      <pubDate>Fri, 18 Mar 2016 01:18:18 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/03/18/prog-problems-01/</guid>
+      <description>
+
+&lt;h2 id=&#34;시작하며:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;시작하며&lt;/h2&gt;
+
+&lt;p&gt;스위스의 Bern University에서는 Prolog의 교육을 목적으로 99개의 문제와 각 문제에 대한 풀이법을 제공합니다. (&lt;a href=&#34;https://sites.google.com/site/prologsite/&#34;&gt;https://sites.google.com/site/prologsite/&lt;/a&gt;) 이 사이트에서 제공하는 99개의 문제를 풀어가는 과정은 Prolog에대한 이해를 높이고 친숙해지는 가장 효율적인 방법이라고 생각됩니다. 최근에 Scala를 처음 접하는 과정에서 스칼라를 언어적으로 연습하고 연마할 적절한  대상이 부족하다는 아쉬움이 많았습니다. 최근에 Prolog 99을 스칼라 버전으로 변환한 &lt;a href=&#34;http://aperiodic.net을&#34;&gt;http://aperiodic.net을&lt;/a&gt; 발견하였습니다. 이 사이트에서는 Prolog 99을 스칼라 버전으로 변환한 문제와 풀이를 제공합니다. 이 사이트에서 제공하는 스칼라 버전의 Prolog 99은 스칼라 학습 및 연습에 유용하게 사용될 수 있있습니다. 이 문제 풀이는 스칼라에 대한 이해를 높일 수 있는 효과적인 컨텐츠 입니다.&lt;/p&gt;
+
+&lt;h3 id=&#34;prolog-problems의-구성:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;Prolog Problems의 구성&lt;/h3&gt;
+
+&lt;p&gt;&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;는 7개의 카테고리 99개 문제로 구성되어 있습니다. 7개의 카테고리는 다음과 같습니다&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Prolog Lists (28개)&lt;/li&gt;
+&lt;li&gt;Arithmetic (11개)&lt;/li&gt;
+&lt;li&gt;Logic and codes (5개)&lt;/li&gt;
+&lt;li&gt;Binary Trees (18개)&lt;/li&gt;
+&lt;li&gt;Multiway Trees (6개)&lt;/li&gt;
+&lt;li&gt;Graphs (11개)&lt;/li&gt;
+&lt;li&gt;Miscellaneous (9개)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;prolog-lists:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;Prolog Lists&lt;/h2&gt;
+
+&lt;p&gt;Prolog Lists는 23개 문제로 구성되면 List를 사용하는 방법에 대한&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

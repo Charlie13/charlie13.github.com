@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Scala Exercises - Series (1) &middot; Taewan Kim</title>
+
+  
+  <link rel="stylesheet" href="http://taewan.kim/css/poole.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/hyde.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/hyde-x.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/highlight/github2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://taewan.kim/touch-icon-144-precomposed.png">
+  <link href="http://taewan.kim/favicon.png" rel="icon">
+
+
+  
+  
+  
+  
+
+  <meta name="description" content="Scala를 익숙하게 사용하기 위한 연습문제 풀이입니다. 함수형 언어인 Prolog는 교육목적으로 99개의 문제를 제공하고 이 문제 풀이를 통해서 언어에 친숙하게 유도하는 과정을 제공합니다. (https://sites.google.com/site/prologsite/prolog-problems) 이 문제를 Scala로 풀이해 보겠습니다. 전체 문제는 99개 이며 7~8개의 씨리즈로 연재하겠습니다. 그중에 첫번째 카테고리인 &#34;Prolog Lists&#34;의 풀이입니다.">
+  <meta name="keywords" content="scala,example,exercise">
+  
+</head>
+<body class="theme-base-08 layout-reverse">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/e0994f88e71e61c3dede3a00e0e3dc00?s=200"
+             alt="gravatar" title="Taewan Kim">
+      
+      <h1>Taewan Kim</h1>
+      <p class="lead">민수아빠..</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/post.html">all</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/bigdata.html">BigData</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/linux.html">Linux</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/cloud.html">cloud</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/hugo.html">hugo</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/taewanme"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      <a href="http://www.facebook.com/alvinkim082"><i class="fa fa-facebook-square fa-3x"></i></a>
+      <a href="https://twitter.com/taewamme"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://taewan.kim/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://taewan.kim/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Scala Exercises - Series (1)</h1>
+    <span class="post-date">Mar 18, 2016 &middot; 1 minute read &middot; <a href="http://taewan.kim/blog/2016/03/18/prog-problems-01/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://taewan.kim/categories/scala.html">scala</a><a class="label" href="http://taewan.kim/categories/example.html">example</a><a class="label" href="http://taewan.kim/categories/exercise.html">exercise</a>
+    </span>
+    
+
+<h2 id="시작하며:da945fcb0d0477d4f89828ad0783ee93">시작하며</h2>
+
+<p>스위스의 Bern University에서는 Prolog의 교육을 목적으로 99개의 문제와 각 문제에 대한 풀이법을 제공합니다. (<a href="https://sites.google.com/site/prologsite/">https://sites.google.com/site/prologsite/</a>) 이 사이트에서 제공하는 99개의 문제를 풀어가는 과정은 Prolog에대한 이해를 높이고 친숙해지는 가장 효율적인 방법이라고 생각됩니다. 최근에 Scala를 처음 접하는 과정에서 스칼라를 언어적으로 연습하고 연마할 적절한  대상이 부족하다는 아쉬움이 많았습니다. 최근에 Prolog 99을 스칼라 버전으로 변환한 <a href="http://aperiodic.net을">http://aperiodic.net을</a> 발견하였습니다. 이 사이트에서는 Prolog 99을 스칼라 버전으로 변환한 문제와 풀이를 제공합니다. 이 사이트에서 제공하는 스칼라 버전의 Prolog 99은 스칼라 학습 및 연습에 유용하게 사용될 수 있있습니다. 이 문제 풀이는 스칼라에 대한 이해를 높일 수 있는 효과적인 컨텐츠 입니다.</p>
+
+<h3 id="prolog-problems의-구성:da945fcb0d0477d4f89828ad0783ee93">Prolog Problems의 구성</h3>
+
+<p>&ldquo;P-99: Ninety-Nine Prolog Problems&rdquo;는 7개의 카테고리 99개 문제로 구성되어 있습니다. 7개의 카테고리는 다음과 같습니다</p>
+
+<ol>
+<li>Prolog Lists (28개)</li>
+<li>Arithmetic (11개)</li>
+<li>Logic and codes (5개)</li>
+<li>Binary Trees (18개)</li>
+<li>Multiway Trees (6개)</li>
+<li>Graphs (11개)</li>
+<li>Miscellaneous (9개)</li>
+</ol>
+
+<hr />
+
+<h2 id="prolog-lists:da945fcb0d0477d4f89828ad0783ee93">Prolog Lists</h2>
+
+<p>Prolog Lists는 23개 문제로 구성되면 List를 사용하는 방법에 대한</p>
+
+<p>##</p>
+
+  </div>
+  <div>
+    <hr/>
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="/images/creative.png" /></a><a href='https://www.facebook.com/alvinkim082' target='_blank'>taewanme</a>의 저작물인 이 저작물은(는) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+    <hr/>
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "taewankim";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+<script type="text/javascript">
+    var disqus_shortname = "taewankim";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://taewan.kim/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-73312251-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+</body>
+</html>
+
