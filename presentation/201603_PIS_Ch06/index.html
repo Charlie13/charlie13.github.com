@@ -119,7 +119,7 @@ task: [#6장 함수형 객체](http://taewan.kim/presentation/201603_PIS_Ch06/)
   - 분수: Rational Number
     - Immutable 속성을 포함하는 개념
   - 분자: Numerator
-  - 분모: Denomimator
+  - 분모: Denominator
 
 - 목표 산출물
 ```scala
@@ -147,12 +147,12 @@ task: [#6장 함수형 객체](http://taewan.kim/presentation/201603_PIS_Ch06/)
 class Rational(n:Int, d:Int)
 ```
 
-다음 Rational 스칼라 버전과 자바 버전
+자바 코드 변환
 
 ```java
 public class Rational{
-  public int n;
-  public int d;
+  private int n;
+  private int d;
 
   pulbic Rational(int n, int d){
     this.n = n;
@@ -179,6 +179,9 @@ task: [#6장 함수형 객체](http://taewan.kim/presentation/201603_PIS_Ch06/)
 - Immutable의 단점
   - 거대한 객체이 경우 객체 생성 비용이 커짐
   - Object Graph
+
+![](http://coreobject.org/technotes/store.012.png)  
+
 ???
 - Immutable은 값이다. 
 - 복제가 빈번하면 부담이 된다.
