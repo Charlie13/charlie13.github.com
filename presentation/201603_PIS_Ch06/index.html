@@ -215,6 +215,49 @@ scala>
 template: default
 layout: true
 
+### 6.2 Rational 생성
+---
+task: [#6장 함수형 객체](http://taewan.kim/presentation/201603_PIS_Ch06/)
+
+# 클래스 파라미터 가시성 정리
+
+- default: getter X, setter X
+```scala
+scala> class Person(name:String)
+defined class Person
+scala> val p = new Person("taewan")
+p: Person = Person@e2d56bf
+scala> p.name
+<console>:13: error: value name is not a member of Person
+```
+- var: getter O, setter O
+```scala
+scala> class Person(var name:String)
+defined class Person
+scala> val p = new Person("taewan")
+p: Person = Person@5e3a8624
+scala> p.name
+res1: String = taewan
+```
+- val: getter O, setter X
+```
+scala> class Person(val name:String)
+defined class Person
+scala> val p = new Person("taewan")
+p: Person = Person@3a883ce7
+scala> p.name
+res2: String = taewan
+```
+
+|유형|getter|setter|
++---+----+----+
+|default|x|x|
+|val|O|X|
+|var|O|X|
+---
+template: default
+layout: true
+
 ### 6.3 toString 메서드 다시 구현하기 
 
 ---
