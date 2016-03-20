@@ -64,7 +64,7 @@ class: center, middle, inverse
 
 # Programming in Scala 6장: 함수형 객체
 
-### 김태완, [taewanme@gmail.com](taewan.kim)
+### 김태완, [taewanme@gmail.com](http://taewan.kim)
 ### Mar, 20, 2016
 
 ---
@@ -219,6 +219,21 @@ layout: true
 ---
 task: [#6장 함수형 객체](http://taewan.kim/presentation/201603_PIS_Ch06/)
 
+# 클래스 파라미터 가시성 정리 (2/2)
+
+- var/val
+- private var/val
+- @BeanProperty val/var
+- private[this] val/var
+- private[classname] val/var
+---
+template: default
+layout: true
+
+### 6.2 Rational 생성
+---
+task: [#6장 함수형 객체](http://taewan.kim/presentation/201603_PIS_Ch06/)
+
 # 클래스 파라미터 가시성 정리
 
 - default: getter X, setter X
@@ -249,11 +264,6 @@ scala> p.name
 res2: String = taewan
 ```
 
-|유형|getter|setter|
-+---+----+----+
-|default|x|x|
-|val|O|X|
-|var|O|X|
 ---
 template: default
 layout: true
