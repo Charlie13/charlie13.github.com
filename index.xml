@@ -131,10 +131,34 @@ res0: Int = 8
 
 &lt;ul&gt;
 &lt;li&gt;Original URL: &lt;a href=&#34;https://www.youtube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Download URL: &lt;a href=&#34;https://ssyoutube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://ssyoutube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;
-&lt;img src=&#34;http://taewan.kim/images/youtube/youtube.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Download URL: &lt;a href=&#34;https://ssyoutube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://ssyoutube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/youtube.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;동영상-반복-재생:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 반복 재생&lt;/h2&gt;
+
+&lt;h3 id=&#34;동영상-url에-repeat-추가:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 URL에 repeat 추가&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Original URL 중 youtube뒤에 repeat을 추가
+
+&lt;ul&gt;
+&lt;li&gt;Original URL: &lt;a href=&#34;https://www.youtube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;반복재생 URL: &lt;a href=&#34;https://www.youtuberepeat.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtuberepeat.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/repeat.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;크롬-브라우저에서-무한-반복-설정:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;크롬 브라우저에서 무한 반복 설정&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;youtube 동영상 위에서 context menu를 수행하여 &amp;ldquo;연속재생&amp;rdquo; 선택&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/chrome-repeat.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
