@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documents on taewan&#39;s blog</title>
+    <link>http://taewan.kim/documents.html</link>
+    <description>Recent content in Documents on taewan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Mar 2016 18:00:54 +0900</lastBuildDate>
+    <atom:link href="http://taewan.kim/documents.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>problem 01</title>
+      <link>http://taewan.kim/documents/prolog99/problem-01.html</link>
+      <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/prolog99/problem-01.html</guid>
+      <description>
+
+&lt;h2 id=&#34;현재-상태:ae225dbb0108137226a4721d51b6129f&#34;&gt;현재 상태&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2016-03-25: 풀이 중&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;문제:ae225dbb0108137226a4721d51b6129f&#34;&gt;문제&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;리스트의 마지막 엘리먼트를 구하시오?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; last(List(1, 1, 2, 3, 5, 8))
+res0: Int = 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;풀이:ae225dbb0108137226a4721d51b6129f&#34;&gt;풀이&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;단순 풀이&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01 {
+  def last[A](list:List[A]):A=list.last
+}
+
+import P01._
+
+var result = last(List(1, 2, 3, 4, 5, 6))
+println(result)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;재귀방식 풀이&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01R{
+  @tailrec
+  def last[A](list:List[A]):A = list match {
+    case h::Nil =&amp;gt; h
+    case _::tail  =&amp;gt; last(tail)
+    case _ =&amp;gt; throw new NoSuchElementException
+  }
+}
+
+import P01R._
+
+var result = last(List(1,2,1,1,2,3,4,5))
+println(result)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem NintyNine4Scala</title>
+      <link>http://taewan.kim/documents/Problem-NintyNine4Scala.html</link>
+      <pubDate>Fri, 25 Mar 2016 17:57:42 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/Problem-NintyNine4Scala.html</guid>
+      <description>
+
+&lt;h2 id=&#34;list:08dbffc5775114b4d4832a173849c143&#34;&gt;List&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-01.html&#34;&gt;01&lt;/a&gt; 리스트의 마지막 엘리먼트를 구하시오?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; last(List(1, 1, 2, 3, 5, 8))
+res0: Int = 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;kkk:08dbffc5775114b4d4832a173849c143&#34;&gt;kkk&lt;/h2&gt;
+
+&lt;h2 id=&#34;kkk-1:08dbffc5775114b4d4832a173849c143&#34;&gt;kkk&lt;/h2&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

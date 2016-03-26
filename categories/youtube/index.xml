@@ -6,8 +6,35 @@
     <description>Recent content in Youtube on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Mar 2016 01:50:05 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 25 Mar 2016 00:17:44 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/categories/youtube.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>youtube 관련 팁 정리</title>
+      <link>http://taewan.kim/blog/2016/03/25/youtube/</link>
+      <pubDate>Fri, 25 Mar 2016 00:17:44 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/03/25/youtube/</guid>
+      <description>
+
+&lt;h2 id=&#34;youtube-동영상-다운로드:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;Youtube 동영상 다운로드&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Youtube URL에 ss를 추가하면 다운로드 사이트로 이동
+
+&lt;ul&gt;
+&lt;li&gt;이동한 사이트에서 동영상 다운로드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;관련 예
+
+&lt;ul&gt;
+&lt;li&gt;Original URL: &lt;a href=&#34;https://www.youtube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download URL: &lt;a href=&#34;https://ssyoutube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://ssyoutube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;
+&lt;img src=&#34;http://taewan.kim/images/youtube/youtube.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>유튜브 민수 채널</title>
