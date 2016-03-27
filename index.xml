@@ -21,6 +21,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;2016-03-25: 풀이 중&lt;/li&gt;
+&lt;li&gt;2016-03-25: 1/2번 풀이 종료&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;문제:ae225dbb0108137226a4721d51b6129f&#34;&gt;문제&lt;/h2&gt;
@@ -75,38 +76,182 @@ println(result)
     </item>
     
     <item>
-      <title>Problem NintyNine4Scala</title>
+      <title>problem 01</title>
+      <link>http://taewan.kim/documents/prolog99/problem-02.html</link>
+      <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/prolog99/problem-02.html</guid>
+      <description>
+
+&lt;h2 id=&#34;현재-상태:29792a39170f4e52c3470154bba77043&#34;&gt;현재 상태&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2016-03-25: 풀이 중&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;문제:29792a39170f4e52c3470154bba77043&#34;&gt;문제&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;리스트의 마지막 엘리먼트를 구하시오?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; last(List(1, 1, 2, 3, 5, 8))
+res0: Int = 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;풀이:29792a39170f4e52c3470154bba77043&#34;&gt;풀이&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;단순 풀이&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01 {
+  def last[A](list:List[A]):A=list.last
+}
+
+import P01._
+
+var result = last(List(1, 2, 3, 4, 5, 6))
+println(result)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;재귀방식 풀이&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01R{
+  @tailrec
+  def last[A](list:List[A]):A = list match {
+    case h::Nil =&amp;gt; h
+    case _::tail  =&amp;gt; last(tail)
+    case _ =&amp;gt; throw new NoSuchElementException
+  }
+}
+
+import P01R._
+
+var result = last(List(1,2,1,1,2,3,4,5))
+println(result)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem NintyNine for Scala</title>
       <link>http://taewan.kim/documents/Problem-NintyNine4Scala.html</link>
       <pubDate>Fri, 25 Mar 2016 17:57:42 +0900</pubDate>
       
       <guid>http://taewan.kim/documents/Problem-NintyNine4Scala.html</guid>
       <description>
 
-&lt;h2 id=&#34;list:08dbffc5775114b4d4832a173849c143&#34;&gt;List&lt;/h2&gt;
+&lt;p&gt;prolog 학습 자료인 &amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;의 스칼라 버전 입니다.
+&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;는 Prolog의 학습을 지원하기 위한 연습문제 성격입니다.
+Prolog버전의 연습문제를 Scala 버전으로 변경하여 제공하는 내용을 정리하는 페이지 입니다.
+&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;은 홈페이지는 다음과 같습니다.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-01.html&#34;&gt;01&lt;/a&gt; 리스트의 마지막 엘리먼트를 구하시오?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sites.google.com/site/prologsite/prolog-problems&#34;&gt;https://sites.google.com/site/prologsite/prolog-problems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;은 7개 카테고리로 구성되며, 스칼라 버전의 변환은
+aperiodic.net을 참조하여 정리하였습니다.&lt;/p&gt;
+
+&lt;h2 id=&#34;해당-문제의-답안은-문제-번호에-설정된-링크로-확인-할-수-있습니다:08dbffc5775114b4d4832a173849c143&#34;&gt;해당 문제의 답안은 문제 번호에 설정된 링크로 확인 할 수 있습니다.&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;카테고리 구성
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#list&#34;&gt;List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#arithmetic&#34;&gt;Arithmetic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logic&#34;&gt;Logic and Codes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#binarytrees&#34;&gt;Binary Trees&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#multiwaytrees&#34;&gt;Multiway Trees&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graphs&#34;&gt;Graphs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#miscellaneous&#34;&gt;Miscellaneous&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;list&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-list:08dbffc5775114b4d4832a173849c143&#34;&gt;1. List&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-01.html&#34;&gt;S-01&lt;/a&gt;: 리스트의 마지막 엘리먼트를 구하시오?
+
+&lt;ul&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; last(List(1, 1, 2, 3, 5, 8))
 res0: Int = 8
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;kkk:08dbffc5775114b4d4832a173849c143&#34;&gt;kkk&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-02.html&#34;&gt;S-02&lt;/a&gt;: 리스트의 끝에서 두번째 엘리먼트를 구하시오?
 
-&lt;h2 id=&#34;kkk-1:08dbffc5775114b4d4832a173849c143&#34;&gt;kkk&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; penultimate(List(1, 1, 2, 3, 5, 8))
+res0: Int = 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;arithmetic&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-arithmetic:08dbffc5775114b4d4832a173849c143&#34;&gt;2. Arithmetic&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;logic&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-logic:08dbffc5775114b4d4832a173849c143&#34;&gt;3. Logic&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;binarytrees&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;4-binary-trees:08dbffc5775114b4d4832a173849c143&#34;&gt;4. Binary Trees&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;multiwaytrees&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-multiway-trees:08dbffc5775114b4d4832a173849c143&#34;&gt;5. Multiway Trees&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;graphs&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;6-graphs:08dbffc5775114b4d4832a173849c143&#34;&gt;6. Graphs&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;miscellaneous&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-miscellaneous:08dbffc5775114b4d4832a173849c143&#34;&gt;7. Miscellaneous&lt;/h2&gt;
 </description>
     </item>
     
     <item>
-      <title>Documents by Alvin</title>
+      <title>Documents by Taewan</title>
       <link>http://taewan.kim/document.html</link>
       <pubDate>Fri, 25 Mar 2016 17:53:43 +0900</pubDate>
       
       <guid>http://taewan.kim/document.html</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;Problems-99 for Scala&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ss&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
@@ -119,7 +264,26 @@ res0: Int = 8
       <guid>http://taewan.kim/blog/2016/03/25/youtube/</guid>
       <description>
 
-&lt;h2 id=&#34;youtube-동영상-다운로드:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;Youtube 동영상 다운로드&lt;/h2&gt;
+&lt;p&gt;Youtube 관련 몇 가지 팁을 정리합니다. 동영상 다운로드, 반복재생, 특정 위치 URL공유하기 등의 방법을 소개합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;문서 구성
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#download&#34;&gt;Youtube 동영상 다운로드&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#repeat&#34;&gt;동영상 반복 재생&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sharing&#34;&gt;동영상 특정 위치 공유&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bookmark&#34;&gt;나중에 볼 동영상 관리&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;download&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;youtube-동영상-다운로드-a-id-download-a:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;Youtube 동영상 다운로드 &lt;a id=&#34;download&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Youtube URL에 ss를 추가하면 다운로드 사이트로 이동
@@ -137,28 +301,59 @@ res0: Int = 8
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/youtube.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;repeat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;동영상-반복-재생:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 반복 재생&lt;/h2&gt;
 
-&lt;h3 id=&#34;동영상-url에-repeat-추가:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 URL에 repeat 추가&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Original URL 중 youtube뒤에 repeat을 추가
-
-&lt;ul&gt;
-&lt;li&gt;Original URL: &lt;a href=&#34;https://www.youtube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;반복재생 URL: &lt;a href=&#34;https://www.youtuberepeat.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtuberepeat.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/repeat.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;크롬-브라우저에서-무한-반복-설정:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;크롬 브라우저에서 무한 반복 설정&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;youtube 동영상 위에서 context menu를 수행하여 &amp;ldquo;연속재생&amp;rdquo; 선택&lt;/li&gt;
+&lt;li&gt;youtube 동영상 위에서 context menu를 수행하여 &amp;ldquo;연속재생(loop)&amp;rdquo; 선택&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/chrome-repeat.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;sharing&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;동영상-특정-위치-공유:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 특정 위치 공유&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;특정 동영상의 특정 위치를 공유할 수 있음&lt;/li&gt;
+&lt;li&gt;Youtube 동영상이 진행되는 상태에서 마우스를 이용하여 컨텍스트 메뉴에서 &amp;ldquo;현재 시간에 동영상 URL 복사(Get video url at current time)&amp;ldquo;를 선택하면 현재 위치의 동영상 URL이 복사됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/sharing.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;결과 URL: &lt;a href=&#34;https://youtu.be/K2OFxx4n79w?t=170&#34;&gt;https://youtu.be/K2OFxx4n79w?t=170&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;bookmark&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;나중에-볼-동영상-관리:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;나중에 볼 동영상 관리&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Youtube 동영상은 나중에 볼 컨텐츠로 등록 관리.&lt;/li&gt;
+&lt;li&gt;이 기능은 Youtube에 로그인 상태에서 사용 가능.&lt;/li&gt;
+&lt;li&gt;Youtube 동영상을 하단에 &amp;ldquo;+추가&amp;rdquo; 메뉴를 클릭하면 현재 동영상을 자신의 재생 목록에 추가하는 기능을 확인.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;나중에 볼 동영상&amp;rdquo;은 본인만 확인 가능한 private 재생 목록.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;유튜브 좌측 메뉴에서 &amp;ldquo;나중에 볼 동영상&amp;rdquo; 메뉴 확인 가능.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;나중에 볼 동영상 등록 이미지
+&lt;img src=&#34;http://taewan.kim/images/youtube/bookmark.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;나중에 볼 동영상 확인
+&lt;img src=&#34;http://taewan.kim/images/youtube/menu.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;나중에 볼 동영상 등록은 썸네일 추천 동영상에서도 지원.
+&lt;img src=&#34;http://taewan.kim/images/youtube/thumbnail-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://taewan.kim/images/youtube/thumbnail-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -1189,127 +1384,6 @@ push 이벤트 이외의 다른 이벤트를 지정하고자 할 경우에는 &a
 이 기능이 없다면 CI 서버는 주기적으로 Git 레파지토리를 Polling하여 변경이 감지될 경우 빌드 프로세스를 구동하는 방식을 취해야 합니다.
 이는 매우 비효율적인 체계입니다. Webhooks를 사용할 경우 세부적인 이벤트 유형 구분이 가능합니다.
 이러한 방식을 통해 원하는 시점을 세부적으로 정의하여 효과적인 Git 레파지토리와 CI 서버의 연동을 구성할 수 있습니다.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>VirtualBox: 호스트에서 게스트 접근 네트웍 설정</title>
-      <link>http://taewan.kim/blog/2016/01/31/virtualvox_network_config/</link>
-      <pubDate>Sun, 31 Jan 2016 12:42:43 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/01/31/virtualvox_network_config/</guid>
-      <description>
-
-&lt;p&gt;최근에는 VirtualBox 이미지로 테스트 환경을 구성하거나 배포하는 경우가 많아졌습니다.
-특히 오라클에서는 초기 테스트 및 교육 목적으로 다수의 VirtualBox 이미지를 배포하고 있습니다.
-이렇게 만들어진 이미지를 사용할 경우 사용자는 새로운 기술을 접할 때 경험해야 하는 설치 및 구성에 대한 난제를 해결 할 수 있습니다.
-즉 사용자는 새로운 기술의 기능 테스트 및 활용에 집중할 수 있게됩니다.&lt;/p&gt;
-
-&lt;p&gt;오라클이 제공하는 VirtualBox 이미지는 Oracle Big Data Lite입니다.
-Oracle Big Data Lite는 오라클의 빅데이터 소프트웨어 (CHD배포본 + Orale Software)의 최신 구성을 하나의 VirtualBox 이미지에 담아서 제공합니다.
-이 이미지의 최신 버전은 4.3.X (2016.01 기준) 입니다.
-Oracle Big Data Lite는 완전한 설정이 반영된 이미지이기 때문에, 사용자는 설치 및 번거로운 작업을 거치지 않고 바로 기능 테스트를 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/BigDataLite-Initial.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;호스트에서-가상화-이미지에-접근할-수-있다면:e504ff6a47b9ec67ec6136666189d988&#34;&gt;호스트에서 가상화 이미지에 접근할 수 있다면&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;VirtualBox를 통해서 이미지를 실행한 후에는 VirtualBox가 제공하는 윈도우를 통해서 Guest OS에 접근을 할 수 있습니다.
-그러나 Guest OS를 윈도우로 접근하는 방식은 비 효율적입니다.
-Guest OS가 리눅스라면 VirtualBox가 구동하는 호스트에서 터미널로 Guest OS에 접근하여 작업하는 것이 더 효율적 입니다.
-VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS에서 Guest OS에 접근할 수 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;virtualbox의-host-only-adapter-설정:e504ff6a47b9ec67ec6136666189d988&#34;&gt;VirtualBox의 Host Only Adapter 설정&lt;/h2&gt;
-
-&lt;p&gt;Host Only Adapter 설정은 VirtualBox 레벨에서 &amp;ldquo;새 호스트 전용 네트워크&amp;rdquo; 설정 단계와 Guest OS에서 Host Only Adapter 설정 단계로 구분됩니다.&lt;/p&gt;
-
-&lt;h3 id=&#34;새-호스트-전용-네트워크-설정:e504ff6a47b9ec67ec6136666189d988&#34;&gt;새 호스트 전용 네트워크 설정&lt;/h3&gt;
-
-&lt;p&gt;OS X를 기준으로 메뉴:VirtualBox -&amp;gt; 환경설정 -&amp;gt; 네트워크 텝 -&amp;gt; &amp;ldquo;호스트 전용 네트워크&amp;rdquo;에서 오른쪽의 &amp;ldquo;+&amp;ldquo;아이콘을 선택합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hostonlynetwork.png&#34; alt=&#34;Host Only Networks&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;rdquo;+&amp;ldquo;아이콘을 선택하면 &amp;ldquo;vboxnet0&amp;rdquo;가 생성됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vboxnet0.png&#34; alt=&#34;vboxnet0&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;vboxnet0&amp;rdquo;를 더블클릭하여 아래와 같이 DHCP 설정을 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;서버사용: 선택&lt;/li&gt;
-&lt;li&gt;서버주소: 192.168.56.100&lt;/li&gt;
-&lt;li&gt;서버마스크: 255.255.255.0&lt;/li&gt;
-&lt;li&gt;최저주소한계: 192.168.56.101&lt;/li&gt;
-&lt;li&gt;최고주소한계: 192.168.56.154&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/dscp.png&#34; alt=&#34;vboxnet0&#34; /&gt;
-위와 같이 설정을 마치고 &amp;ldquo;저장&amp;rdquo;&amp;rdquo; 및 &amp;ldquo;확인&amp;rdquo;&amp;rdquo; 버튼을 클릭하여 네트워크 등록을 완료합니다.&lt;/p&gt;
-
-&lt;h3 id=&#34;guest-os에-adapter-추가-host-only-adapter:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Guest OS에 Adapter 추가 (Host Only Adapter)&lt;/h3&gt;
-
-&lt;p&gt;Guest OS 선택 후 설정 메뉴 오픈, 네트워크 텝-&amp;gt;어탭터2를 선택하고 다음과 같은 설정을 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;네트워크 어뎁터 사용하기: 선택&lt;/li&gt;
-&lt;li&gt;다음에 연결: Host Only Adapter 선택&lt;/li&gt;
-&lt;li&gt;이름: vboxnet0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adapter2.png&#34; alt=&#34;adapter2&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;새-호스트-전용-네트워크-설정-1:e504ff6a47b9ec67ec6136666189d988&#34;&gt;새 호스트 전용 네트워크 설정&lt;/h3&gt;
-
-&lt;p&gt;Guest OS에 로그인하여 네트웍 정보를 확인 합니다.
-terminal 상에서 ifconfig 명령으로 호스트에서 접근 할 IP를 확인할 수 있습니다.
-(192.168.56.101)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/ipcheck.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;host-os에서-guest-os에-접근:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Host OS에서 Guest OS에 접근&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ssh 접근 결과&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;taewanui-MacBook-Pro:demo taewan$ ssh oracle@192.168.56.101
-oracle@192.168.56.101&#39;s password: 
-Last login: Thu Jan 28 16:00:34 2016 from 192.168.56.1
-[oracle@bigdatalite ~]$
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;hue 접근 결과
-
-&lt;ul&gt;
-&lt;li&gt;Big Data Lite는 8888포트로 Hue를 제공합니다.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hue.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;요약:e504ff6a47b9ec67ec6136666189d988&#34;&gt;요약&lt;/h2&gt;
-
-&lt;p&gt;VirtualBox에 Host Only Network를 추가하고 DHCP를 설정한 후 Guest OS에 Host Only Adapter를 등록하면 Host OS에서 Guest OS에 네트웍 접근이 가능합니다. 설정 절차를 요약하면 다음곽 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;VirtualBox에 Host Only Network 추가
-
-&lt;ul&gt;
-&lt;li&gt;추가된 네트워크에 DHCP 설정&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;접근할 Guest OS에 네트웍 어뎁터 추가
-
-&lt;ul&gt;
-&lt;li&gt;Host Only Adapter&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Guest OS에 로그인하여 접속 IP체크
-
-&lt;ul&gt;
-&lt;li&gt;ifconfig command in terminal&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Host OS에서 Guest OS에 접근&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

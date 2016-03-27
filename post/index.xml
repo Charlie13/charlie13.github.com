@@ -17,7 +17,26 @@
       <guid>http://taewan.kim/blog/2016/03/25/youtube/</guid>
       <description>
 
-&lt;h2 id=&#34;youtube-동영상-다운로드:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;Youtube 동영상 다운로드&lt;/h2&gt;
+&lt;p&gt;Youtube 관련 몇 가지 팁을 정리합니다. 동영상 다운로드, 반복재생, 특정 위치 URL공유하기 등의 방법을 소개합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;문서 구성
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#download&#34;&gt;Youtube 동영상 다운로드&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#repeat&#34;&gt;동영상 반복 재생&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sharing&#34;&gt;동영상 특정 위치 공유&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bookmark&#34;&gt;나중에 볼 동영상 관리&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;download&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;youtube-동영상-다운로드-a-id-download-a:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;Youtube 동영상 다운로드 &lt;a id=&#34;download&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Youtube URL에 ss를 추가하면 다운로드 사이트로 이동
@@ -35,28 +54,59 @@
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/youtube.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;repeat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;동영상-반복-재생:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 반복 재생&lt;/h2&gt;
 
-&lt;h3 id=&#34;동영상-url에-repeat-추가:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 URL에 repeat 추가&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Original URL 중 youtube뒤에 repeat을 추가
-
-&lt;ul&gt;
-&lt;li&gt;Original URL: &lt;a href=&#34;https://www.youtube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;반복재생 URL: &lt;a href=&#34;https://www.youtuberepeat.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtuberepeat.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/repeat.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;크롬-브라우저에서-무한-반복-설정:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;크롬 브라우저에서 무한 반복 설정&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;youtube 동영상 위에서 context menu를 수행하여 &amp;ldquo;연속재생&amp;rdquo; 선택&lt;/li&gt;
+&lt;li&gt;youtube 동영상 위에서 context menu를 수행하여 &amp;ldquo;연속재생(loop)&amp;rdquo; 선택&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/chrome-repeat.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;sharing&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;동영상-특정-위치-공유:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 특정 위치 공유&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;특정 동영상의 특정 위치를 공유할 수 있음&lt;/li&gt;
+&lt;li&gt;Youtube 동영상이 진행되는 상태에서 마우스를 이용하여 컨텍스트 메뉴에서 &amp;ldquo;현재 시간에 동영상 URL 복사(Get video url at current time)&amp;ldquo;를 선택하면 현재 위치의 동영상 URL이 복사됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/sharing.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;결과 URL: &lt;a href=&#34;https://youtu.be/K2OFxx4n79w?t=170&#34;&gt;https://youtu.be/K2OFxx4n79w?t=170&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a id=&#34;bookmark&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;나중에-볼-동영상-관리:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;나중에 볼 동영상 관리&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Youtube 동영상은 나중에 볼 컨텐츠로 등록 관리.&lt;/li&gt;
+&lt;li&gt;이 기능은 Youtube에 로그인 상태에서 사용 가능.&lt;/li&gt;
+&lt;li&gt;Youtube 동영상을 하단에 &amp;ldquo;+추가&amp;rdquo; 메뉴를 클릭하면 현재 동영상을 자신의 재생 목록에 추가하는 기능을 확인.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;나중에 볼 동영상&amp;rdquo;은 본인만 확인 가능한 private 재생 목록.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;유튜브 좌측 메뉴에서 &amp;ldquo;나중에 볼 동영상&amp;rdquo; 메뉴 확인 가능.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;나중에 볼 동영상 등록 이미지
+&lt;img src=&#34;http://taewan.kim/images/youtube/bookmark.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;나중에 볼 동영상 확인
+&lt;img src=&#34;http://taewan.kim/images/youtube/menu.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;나중에 볼 동영상 등록은 썸네일 추천 동영상에서도 지원.
+&lt;img src=&#34;http://taewan.kim/images/youtube/thumbnail-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://taewan.kim/images/youtube/thumbnail-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
