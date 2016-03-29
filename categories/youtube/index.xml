@@ -45,7 +45,7 @@
 &lt;h2 id=&#34;microsoft-virtual-academy:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;Microsoft Virtual Academy&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;[&lt;a href=&#34;https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042][https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042&#34;&gt;https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042][https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042&#34;&gt;https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;마이크로소프트웨어가 제공하는 강좌&lt;/li&gt;
 &lt;li&gt;한글 자막 제공&lt;/li&gt;
 &lt;li&gt;현재 강좌 종류
@@ -56,11 +56,15 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/python/mva.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;백문의-불여일타-code-academy:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;백문의 불여일타: code academy&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;코드를 입력하여 실습하는 강좌&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.codeadademy.com&#34;&gt;https://www.codeadademy.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codeacademy.com&#34;&gt;https://www.codeacademy.com&lt;/a&gt;
+&lt;img src=&#34;http://taewan.kim/images/python/codeacademy1.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://taewan.kim/images/python/codeacademy2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;문제-풀이-사이트-해커랭크:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;문제 풀이 사이트: 해커랭크&lt;/h2&gt;
@@ -73,6 +77,9 @@
 &lt;li&gt;각 단계를 완료해야 다음 단계를 확인 할 수 있음&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/python/hackerrank1.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://taewan.kim/images/python/hackerrank2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
