@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>problem 01 &middot; Taewan Kim</title>
+  <title>problem 02 &middot; Taewan Kim</title>
 
   
   <link rel="stylesheet" href="http://taewan.kim/css/poole.css">
@@ -136,24 +136,28 @@ ul#menu li a:hover {
   </div>
   <br/><br/>
   <div class="post">
-    <h1>problem 01</h1>
+    <h1>problem 02</h1>
     
 
 <h2 id="현재-상태:29792a39170f4e52c3470154bba77043">현재 상태</h2>
 
 <ul>
-<li>2016-03-25: 풀이 중</li>
+<li>2016-03-27: 문서 생성</li>
 </ul>
 
 <h2 id="문제:29792a39170f4e52c3470154bba77043">문제</h2>
 
 <ol>
-<li>리스트의 마지막 엘리먼트를 구하시오?</li>
-</ol>
+<li>리스트의 끝에서 두번째 엘리먼트를 구하시오?
 
-<pre><code class="language-scala">scala&gt; last(List(1, 1, 2, 3, 5, 8))
-res0: Int = 8
-</code></pre>
+<ul>
+<li>예제 코드
+<code>scala
+scala&gt; penultimate(List(1, 1, 2, 3, 5, 8))
+res0: Int = 5
+</code></li>
+</ul></li>
+</ol>
 
 <h2 id="풀이:29792a39170f4e52c3470154bba77043">풀이</h2>
 
@@ -161,14 +165,14 @@ res0: Int = 8
 <li>단순 풀이</li>
 </ul>
 
-<pre><code class="language-scala">object P01 {
-  def last[A](list:List[A]):A=list.last
+<pre><code class="language-scala">object P02{
+  def penultimate[A](list:List[A]):A = {
+    return list(list.length-2)
+  }
 }
 
-import P01._
-
-var result = last(List(1, 2, 3, 4, 5, 6))
-println(result)
+import P02._
+penultimate(List(1, 1, 2, 3, 5, 8))
 </code></pre>
 
 <ul>

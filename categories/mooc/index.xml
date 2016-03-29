@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mooc on taewan&#39;s blog</title>
+    <link>http://taewan.kim/categories/mooc.html</link>
+    <description>Recent content in Mooc on taewan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Mar 2016 10:25:36 +0900</lastBuildDate>
+    <atom:link href="http://taewan.kim/categories/mooc.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>파이썬 입문 온라인 자료 정리</title>
+      <link>http://taewan.kim/blog/2016/03/27/python_resource/</link>
+      <pubDate>Sun, 27 Mar 2016 10:25:36 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/03/27/python_resource/</guid>
+      <description>
+
+&lt;p&gt;파이썬 온라인 강좌들에 대한 요약입니다.&lt;/p&gt;
+
+&lt;h2 id=&#34;youtube의-mit-파이썬-강좌:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;Youtube의 MIT 파이썬 강좌&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PL57FCE46F714A03BC&#34;&gt;MIT Python Course: https://www.youtube.com/playlist?list=PL57FCE46F714A03BC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;전체: 24개 강좌로 구성 (동영상 평균 60분)&lt;/li&gt;
+&lt;li&gt;2016.03.29현재 18편까지 한글 자막 제공&lt;/li&gt;
+&lt;li&gt;컴퓨터 과학이론을 파이썬으로 강의 하는 내용으로 구성&lt;/li&gt;
+&lt;li&gt;2008년 가을 학기 강의 내용&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/k6U-i4gXkLM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;h2 id=&#34;mooc-massive-open-online-course:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;MOOC(Massive Open Online Course)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;edx: &lt;a href=&#34;https://www.edx.org/course?search_query=python&#34;&gt;https://www.edx.org/course?search_query=python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;coursera: &lt;a href=&#34;https://www.coursera.org/courses?query=python&#34;&gt;https://www.coursera.org/courses?query=python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;microsoft-virtual-academy:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;Microsoft Virtual Academy&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#34;https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042][https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042&#34;&gt;https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042][https://mva.microsoft.com/search/SearchResults.aspx#!q=python&amp;amp;lang=1042&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;마이크로소프트웨어가 제공하는 강좌&lt;/li&gt;
+&lt;li&gt;한글 자막 제공&lt;/li&gt;
+&lt;li&gt;현재 강좌 종류
+
+&lt;ul&gt;
+&lt;li&gt;Python을 사용한 프로그래밍 소개&lt;/li&gt;
+&lt;li&gt;Python 및 Django를 사용하여 웹 사이트 개발&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;백문의-불여일타-code-academy:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;백문의 불여일타: code academy&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;코드를 입력하여 실습하는 강좌&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codeadademy.com&#34;&gt;https://www.codeadademy.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;문제-풀이-사이트-해커랭크:00e66bf83c56b8b0fb3d997652e04fec&#34;&gt;문제 풀이 사이트: 해커랭크&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com&#34;&gt;https://www.hackerrank.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;파이썬 문제를 3개의 카테고리로 제공
+
+&lt;ul&gt;
+&lt;li&gt;각 단계를 완료해야 다음 단계를 확인 할 수 있음&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

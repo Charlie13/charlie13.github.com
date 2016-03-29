@@ -76,7 +76,7 @@ println(result)
     </item>
     
     <item>
-      <title>problem 01</title>
+      <title>problem 02</title>
       <link>http://taewan.kim/documents/prolog99/problem-02.html</link>
       <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
       
@@ -86,18 +86,22 @@ println(result)
 &lt;h2 id=&#34;현재-상태:29792a39170f4e52c3470154bba77043&#34;&gt;현재 상태&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;2016-03-25: 풀이 중&lt;/li&gt;
+&lt;li&gt;2016-03-27: 문서 생성&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;문제:29792a39170f4e52c3470154bba77043&#34;&gt;문제&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;리스트의 마지막 엘리먼트를 구하시오?&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;리스트의 끝에서 두번째 엘리먼트를 구하시오?
 
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; last(List(1, 1, 2, 3, 5, 8))
-res0: Int = 8
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;예제 코드
+&lt;code&gt;scala
+scala&amp;gt; penultimate(List(1, 1, 2, 3, 5, 8))
+res0: Int = 5
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h2 id=&#34;풀이:29792a39170f4e52c3470154bba77043&#34;&gt;풀이&lt;/h2&gt;
 
@@ -105,14 +109,14 @@ res0: Int = 8
 &lt;li&gt;단순 풀이&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01 {
-  def last[A](list:List[A]):A=list.last
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P02{
+  def penultimate[A](list:List[A]):A = {
+    return list(list.length-2)
+  }
 }
 
-import P01._
-
-var result = last(List(1, 2, 3, 4, 5, 6))
-println(result)
+import P02._
+penultimate(List(1, 1, 2, 3, 5, 8))
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;

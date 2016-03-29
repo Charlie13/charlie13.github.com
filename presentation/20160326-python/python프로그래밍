@@ -383,7 +383,83 @@ def test11(age, *address, **merong):
 
 test11(24, 111, 222, 333, 444, "taewan", 집="kkk", 나=26)
 ```
+
+### unpacking
+
+```
+>>> list(range(3, 6))
+[3, 4, 5]
+>>> args = [3, 6]
+>>> list(range(*args))
+[3, 4, 5]
+>>> 
+```
+
+- packing, unpacking모두 *를 사용함
+  - packing: 매개변수에 *변수명으로 표시
+    - 여러 인자를 하나의 tuple로 만듬
+  - unpacking
+    - tuple을 여러 변수로 만듦
+    - *리스트형 변수명으로 입력
+
+- packing ==> 함수 선언에 *변수명 으로 설정
+  - 선언시
+- unpacking ==> 함수 사용 부분에 *변수명으로 입력 
+  - 사용시
+
+### 문서화
+'''
+>>> def merong():
+...   """for testing in documentation"""
+...   pass
+... 
+>>> merong.__doc__
+'for testing in documentation'
+'''
+
 ## ch09. 내가 만든 클래스
+### 클래스 이해하기
+- 파이썬에서 클래스는 하나의 객체다
+	- type 클래스인 객체
+	- id가 할당되어 있음
+```
+<class 'str'>
+>>> type(str)
+<class 'type'>
+>>> id(str)
+4297246016
+```
+
+```
+>>> var = "test"
+>>> type(var)
+<class 'str'>
+>>> var.__class__
+<class 'str'>
+>>> var.
+var.__add__(          var.__hash__(         var.__rmod__(         var.find(             var.istitle(          var.rsplit(          
+var.__class__(        var.__init__(         var.__rmul__(         var.format(           var.isupper(          var.rstrip(          
+var.__contains__(     var.__iter__(         var.__setattr__(      var.format_map(       var.join(             var.split(           
+var.__delattr__(      var.__le__(           var.__sizeof__(       var.index(            var.ljust(            var.splitlines(      
+var.__dir__(          var.__len__(          var.__str__(          var.isalnum(          var.lower(            var.startswith(      
+var.__doc__           var.__lt__(           var.__subclasshook__( var.isalpha(          var.lstrip(           var.strip(           
+var.__eq__(           var.__mod__(          var.capitalize(       var.isdecimal(        var.maketrans(        var.swapcase(        
+var.__format__(       var.__mul__(          var.casefold(         var.isdigit(          var.partition(        var.title(           
+var.__ge__(           var.__ne__(           var.center(           var.isidentifier(     var.replace(          var.translate(       
+var.__getattribute__( var.__new__(          var.count(            var.islower(          var.rfind(            var.upper(           
+var.__getitem__(      var.__reduce__(       var.encode(           var.isnumeric(        var.rindex(           var.zfill(           
+var.__getnewargs__(   var.__reduce_ex__(    var.endswith(         var.isprintable(      var.rjust(           
+var.__gt__(           var.__repr__(         var.expandtabs(       var.isspace(          var.rpartition(      
+>>> var.
+
+```
+### 클래스 정의 및 불러오기
+### 클래스 초기화 함수 __init__() 재정의
+### 데이터 은닉과 이름 장식 (name mangling)
+### 객체 지향의 꽃 상속
+### 다형성
+### warp-up
+
 ## ch10. 내가 만든 모듈과 패키지
 ## ch11. 실습 프로젝트 2
 ## ch12. 입/출력 그리고 로깅
