@@ -145,6 +145,28 @@ println(result)
     </item>
     
     <item>
+      <title>문제풀이 준비중 입니다. </title>
+      <link>http://taewan.kim/documents/prolog99/problem-NotYet.html</link>
+      <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/prolog99/problem-NotYet.html</guid>
+      <description>
+
+&lt;h2 id=&#34;현재-상태:57d6af03ea9fe044bddeefd2c80b5ec4&#34;&gt;현재 상태&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2016-03-29: 문서 생성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;문제 풀이 준비 중 입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Problem NintyNine for Scala</title>
       <link>http://taewan.kim/documents/Problem-NintyNine4Scala.html</link>
       <pubDate>Fri, 25 Mar 2016 17:57:42 +0900</pubDate>
@@ -198,6 +220,8 @@ aperiodic.net을 참조하여 정리하였습니다.&lt;/p&gt;
 res0: Int = 8
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;hr /&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-02.html&#34;&gt;S-02&lt;/a&gt;: 리스트의 끝에서 두번째 엘리먼트를 구하시오?
 
@@ -209,6 +233,37 @@ res0: Int = 8
 &lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; penultimate(List(1, 1, 2, 3, 5, 8))
 res0: Int = 5
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-03&lt;/a&gt;: 리스트의 k번째 엘리먼트를 구하시오?
+
+&lt;ul&gt;
+&lt;li&gt;리스트의 첫 번째 엘리먼트는 0.&lt;/li&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; nth(2, List(1, 1, 2, 3, 5, 8))
+res0: Int = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-04&lt;/a&gt;: 리스트의 엔리먼트 사이즈를 구하시오?
+
+&lt;ul&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; length(List(1, 1, 2, 3, 5, 8))
+res0: Int = 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
 
 &lt;hr /&gt;
 

@@ -63,6 +63,8 @@ aperiodic.net을 참조하여 정리하였습니다.&lt;/p&gt;
 res0: Int = 8
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;hr /&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-02.html&#34;&gt;S-02&lt;/a&gt;: 리스트의 끝에서 두번째 엘리먼트를 구하시오?
 
@@ -74,6 +76,37 @@ res0: Int = 8
 &lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; penultimate(List(1, 1, 2, 3, 5, 8))
 res0: Int = 5
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-03&lt;/a&gt;: 리스트의 k번째 엘리먼트를 구하시오?
+
+&lt;ul&gt;
+&lt;li&gt;리스트의 첫 번째 엘리먼트는 0.&lt;/li&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; nth(2, List(1, 1, 2, 3, 5, 8))
+res0: Int = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-04&lt;/a&gt;: 리스트의 엔리먼트 사이즈를 구하시오?
+
+&lt;ul&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; length(List(1, 1, 2, 3, 5, 8))
+res0: Int = 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
 
 &lt;hr /&gt;
 
