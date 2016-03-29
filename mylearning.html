@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>problem 01 &middot; Taewan Kim</title>
+  <title>mylearning &middot; Taewan Kim</title>
 
   
   <link rel="stylesheet" href="http://taewan.kim/css/poole.css">
@@ -137,65 +137,8 @@ ul#menu li a:hover {
   </div>
   <br/><br/>
   <div class="post">
-    <h1>problem 01</h1>
+    <h1>mylearning</h1>
     
-
-<h2 id="현재-상태:ae225dbb0108137226a4721d51b6129f">현재 상태</h2>
-
-<ul>
-<li>2016-03-25: 풀이 중</li>
-<li>2016-03-25: 1/2번 풀이 종료</li>
-</ul>
-
-<h2 id="문제:ae225dbb0108137226a4721d51b6129f">문제</h2>
-
-<ol>
-<li>리스트의 마지막 엘리먼트를 구하시오?</li>
-</ol>
-
-<pre><code class="language-scala">scala&gt; last(List(1, 1, 2, 3, 5, 8))
-res0: Int = 8
-</code></pre>
-
-<h2 id="풀이:ae225dbb0108137226a4721d51b6129f">풀이</h2>
-
-<ul>
-<li>단순 풀이</li>
-</ul>
-
-<pre><code class="language-scala">object P01 {
-  def last[A](list:List[A]):A=list.last
-}
-
-import P01._
-
-var result = last(List(1, 2, 3, 4, 5, 6))
-println(result)
-</code></pre>
-
-<ul>
-<li>재귀방식 풀이</li>
-</ul>
-
-<pre><code class="language-scala">object P01R{
-  @tailrec
-  def last[A](list:List[A]):A = list match {
-    case h::Nil =&gt; h
-    case _::tail  =&gt; last(tail)
-    case _ =&gt; throw new NoSuchElementException
-  }
-}
-
-import P01R._
-
-var result = last(List(1,2,1,1,2,3,4,5))
-println(result)
-</code></pre>
-
-<ul>
-<li><a href="/documents/Problem-NintyNine4Scala.html">&ldquo;Prolog99 for scala&rdquo; 돌아가기</a></li>
-</ul>
-
   </div>
   
   <div>
