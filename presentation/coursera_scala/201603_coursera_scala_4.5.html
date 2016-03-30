@@ -125,6 +125,8 @@ class: center, middle, inverse
   - 기본 트레잇: Expr
   - 2개의 서브 클래스: Number, Sum
 - 표현식을 처리하기 위해서, 표현식의 형태와 컴포넌트를 인지해야 함
+???
+- 클래스의 인스턴스로 부터 트리와 같은 데이터 스트럭처를 만들 수 있음 
 
 ---
 .task[4.5 Decomposition]
@@ -142,6 +144,36 @@ trait Expr{
   def rightOp: Expr         //Accessor
 }
 ```
+
+```scala
+class Number(n:Int) extends Expr{
+  def isNumber: Boolean = true     
+  def isSum: Boolean = false         
+  def numValue: Int = n        
+  def leftOp: Expr  = throw new Error("Number.leftOp")        
+  def rightOp: Expr = throw new Error("Number.rightOp")        
+}
+```
+---
+.task[4.5 Decomposition]
+# Evaluation of Expressions
+----
+.author[Taewan Kim/taewanme@gmail.com]
+.source[Feedback:[http://taewan.kim/presentation.html](/presentation.html)]   
+
+- 평가 함수
+
+```scala
+def eval(e:Expr):Int = {
+  if(e.isNumber) e.numValue
+* else if(e.isSum) eval(e.leftOp)+eval(e.rightOp)
+  else throw new Error("Unknown Expresion"+e)
+}
+```
+
+-Problem: Classification&
+
+- new Sum(e1, e2) = e1 + e2
 ---
 
 ```scala
