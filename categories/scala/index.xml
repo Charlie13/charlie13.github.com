@@ -108,6 +108,18 @@ res0: Int = 6
 
 &lt;hr /&gt;
 
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-05&lt;/a&gt;: 리스트를 리버스로 변환하시오?
+
+&lt;ul&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; reverse(List(1, 1, 2, 3, 5, 8))
+res0: List[Int] = List(8, 5, 3, 2, 1, 1)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;a id=&#34;arithmetic&#34;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -185,6 +197,69 @@ res0: Int = 6
 &lt;h3 id=&#34;1-01:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;1.01&lt;/h3&gt;
 
 &lt;p&gt;1&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[47 Degrees] scala exercises</title>
+      <link>http://taewan.kim/documents/47degrees4scala.html</link>
+      <pubDate>Fri, 20 Mar 2015 11:49:56 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degrees4scala.html</guid>
+      <description>
+
+&lt;p&gt;47 Degrees(47deg.com)에서 운영하는 Scala Exercise(&lt;a href=&#34;http://scala-exercises.47deg.com/)에&#34;&gt;http://scala-exercises.47deg.com/)에&lt;/a&gt; 대한 정리입니다. Scala Exercise는 42개 목록으로 구성되어 있습니다. 각 타이틀에 대한 번역과 코드를 별도 프로젝트로 정리하겠습니다. 각 항목에 대한 정리 내용은 현재 페이지에서 링크로 정리하겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&#34;scala-exercise:9020bfc57ece2aa04d15d84b97c920a4&#34;&gt;Scala Exercise&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assets
+
+&lt;ul&gt;
+&lt;li&gt;번역:&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Val and Var&lt;/li&gt;
+&lt;li&gt;Classes&lt;/li&gt;
+&lt;li&gt;Options&lt;/li&gt;
+&lt;li&gt;Objects&lt;/li&gt;
+&lt;li&gt;Tuples&lt;/li&gt;
+&lt;li&gt;High Order Functions&lt;/li&gt;
+&lt;li&gt;Lists&lt;/li&gt;
+&lt;li&gt;Maps&lt;/li&gt;
+&lt;li&gt;Sets&lt;/li&gt;
+&lt;li&gt;Formatting&lt;/li&gt;
+&lt;li&gt;Pattern Matching&lt;/li&gt;
+&lt;li&gt;Case Classes&lt;/li&gt;
+&lt;li&gt;Range&lt;/li&gt;
+&lt;li&gt;Partially Applied Functions&lt;/li&gt;
+&lt;li&gt;Implicits&lt;/li&gt;
+&lt;li&gt;Traits&lt;/li&gt;
+&lt;li&gt;For Expressions&lt;/li&gt;
+&lt;li&gt;Infix, Prefix and Postfix&lt;/li&gt;
+&lt;li&gt;Operators&lt;/li&gt;
+&lt;li&gt;Infix Types&lt;/li&gt;
+&lt;li&gt;Mutable Maps&lt;/li&gt;
+&lt;li&gt;Mutable Sets&lt;/li&gt;
+&lt;li&gt;Sequences and Arrays&lt;/li&gt;
+&lt;li&gt;Iterables&lt;/li&gt;
+&lt;li&gt;Traversables&lt;/li&gt;
+&lt;li&gt;Named and Default Arguments&lt;/li&gt;
+&lt;li&gt;Mainfests&lt;/li&gt;
+&lt;li&gt;Preconditions&lt;/li&gt;
+&lt;li&gt;Extrators&lt;/li&gt;
+&lt;li&gt;ByName Parameter&lt;/li&gt;
+&lt;li&gt;Repeated Parameters&lt;/li&gt;
+&lt;li&gt;Parent Classes&lt;/li&gt;
+&lt;li&gt;Empty Values&lt;/li&gt;
+&lt;li&gt;Type Signatures&lt;/li&gt;
+&lt;li&gt;Uniform Access Principle&lt;/li&gt;
+&lt;li&gt;Literal Booleans&lt;/li&gt;
+&lt;li&gt;Literal Numbers&lt;/li&gt;
+&lt;li&gt;Literal Strings&lt;/li&gt;
+&lt;li&gt;Type Variance&lt;/li&gt;
+&lt;li&gt;Enumerations&lt;/li&gt;
+&lt;li&gt;Constructions&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     

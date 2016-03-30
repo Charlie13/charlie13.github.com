@@ -108,6 +108,18 @@ res0: Int = 6
 
 &lt;hr /&gt;
 
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-05&lt;/a&gt;: 리스트를 리버스로 변환하시오?
+
+&lt;ul&gt;
+&lt;li&gt;예제 코드&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; reverse(List(1, 1, 2, 3, 5, 8))
+res0: List[Int] = List(8, 5, 3, 2, 1, 1)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;a id=&#34;arithmetic&#34;&gt;&lt;/a&gt;&lt;/p&gt;
