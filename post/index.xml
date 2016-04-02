@@ -6,8 +6,115 @@
     <description>Recent content in Posts on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Mar 2016 17:04:26 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 03 Apr 2016 00:53:14 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/post.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test</title>
+      <link>http://taewan.kim/blog/2016/04/03/test/</link>
+      <pubDate>Sun, 03 Apr 2016 00:53:14 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/04/03/test/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;기계학습은 데이터를 통해서 통찰력을 획득&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;컴퓨터를 사용하여 데이터에 대한 의미를 만들어 내는 것&lt;/p&gt;
+
+&lt;h2 id=&#34;1-1-기계학습이란-무엇인가:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.1 기계학습이란 무엇인가?&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;기계학습은 데이터를 정보로 변환하는 것&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;기계학습은 통계학을 사용함&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;육체 노동자들이 지식 노동자로 전환하면서 생긴일&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;모호한 일들이 일반화 됨&lt;/li&gt;
+&lt;li&gt;이익 최대화&lt;/li&gt;
+&lt;li&gt;손실 최소화&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;최상의 영업 방법 찾기&lt;/p&gt;
+
+&lt;h2 id=&#34;1-2-주요-용어:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.2 주요 용어&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;h2 id=&#34;1-3-기계학습의-주요-기술:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.3 기계학습의 주요 기술&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Supervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;알고리즘이 무엇을 예측할 것인지를 제공&lt;/li&gt;
+&lt;li&gt;유형: Classification, Regerssion&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;NoSupervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;비지도학습&lt;/li&gt;
+&lt;li&gt;분류 항목 표시나 목적 변수가 없음&lt;/li&gt;
+&lt;li&gt;유형&lt;/li&gt;
+&lt;li&gt;clustering: 군집화&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Density Estimation: 밀도 추적&lt;/p&gt;
+
+&lt;h3 id=&#34;알고지즘-정리:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;알고지즘 정리&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Supervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Classification (분류)&lt;/li&gt;
+&lt;li&gt;Regression (회귀)&lt;/li&gt;
+&lt;li&gt;K-nearest Neighbors&lt;/li&gt;
+&lt;li&gt;Linear&lt;/li&gt;
+&lt;li&gt;Naive Bayes&lt;/li&gt;
+&lt;li&gt;Locally Weighted Linear&lt;/li&gt;
+&lt;li&gt;Support Vector Machine&lt;/li&gt;
+&lt;li&gt;Ridge&lt;/li&gt;
+&lt;li&gt;Decision Tree&lt;/li&gt;
+&lt;li&gt;Lasso&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;UnSupervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Clustering&lt;/li&gt;
+&lt;li&gt;Density Estimation&lt;/li&gt;
+&lt;li&gt;K-Mean&lt;/li&gt;
+&lt;li&gt;Expection maximization&lt;/li&gt;
+&lt;li&gt;DBSCAN&lt;/li&gt;
+&lt;li&gt;Parzen Window&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;1-4-올라른-알고리즘-선정-방법:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.4 올라른 알고리즘 선정 방법&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;목적이 무엇인가?
+
+&lt;ul&gt;
+&lt;li&gt;목적 값을 예측하고자 한다면 지도학습 방법을 선택&lt;/li&gt;
+&lt;li&gt;목적 값 예측이 아니라면 비지도학습 선택&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;목적 값의 유형에 따른 선택
+
+&lt;ul&gt;
+&lt;li&gt;목적 값이 특정 추치: regresssion&lt;/li&gt;
+&lt;li&gt;목적 값이 특정 값: Classifcation&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;case class merong(name:String){
+  override toString() = &amp;quot;Merong&amp;quot;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>오라클 Big Data Lite 설치</title>
@@ -1792,71 +1899,6 @@ public static void main(String args[]){
 &lt;p&gt;taewan.kim은 기술과 소소한 일상을 주제로 운영될 블러그입니다. 많은 관심 부탁드립니다.&lt;/p&gt;
 
 &lt;p&gt;감사합니다.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[47 Degrees] scala exercises</title>
-      <link>http://taewan.kim/blog/2015/03/20/scala_exercises/</link>
-      <pubDate>Fri, 20 Mar 2015 11:49:56 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2015/03/20/scala_exercises/</guid>
-      <description>
-
-&lt;p&gt;47 Degrees(47deg.com)에서 운영하는 Scala Exercise에 대한 정리입니다. Scala Exercise는 42개 목록으로 구성되어 있습니다. 각 타이틀에 대한 요약을 remark.js와 worksheet 프로젝트로 정리하겠습니다. 각 항목에 대한 정리 내용은 현재 페이지에서 링크로 정리하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;변경-로그:164bfe7ab04dfe68df0663755834b87d&#34;&gt;변경 로그&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2016.03.20: 정리 시작&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;scala-exercise:164bfe7ab04dfe68df0663755834b87d&#34;&gt;Scala Exercise&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Assets: summary, code&lt;/li&gt;
-&lt;li&gt;Val and Var&lt;/li&gt;
-&lt;li&gt;Classes&lt;/li&gt;
-&lt;li&gt;Options&lt;/li&gt;
-&lt;li&gt;Objects&lt;/li&gt;
-&lt;li&gt;Tuples&lt;/li&gt;
-&lt;li&gt;High Order Functions&lt;/li&gt;
-&lt;li&gt;Lists&lt;/li&gt;
-&lt;li&gt;Maps&lt;/li&gt;
-&lt;li&gt;Sets&lt;/li&gt;
-&lt;li&gt;Formatting&lt;/li&gt;
-&lt;li&gt;Pattern Matching&lt;/li&gt;
-&lt;li&gt;Case Classes&lt;/li&gt;
-&lt;li&gt;Range&lt;/li&gt;
-&lt;li&gt;Partially Applied Functions&lt;/li&gt;
-&lt;li&gt;Implicits&lt;/li&gt;
-&lt;li&gt;Traits&lt;/li&gt;
-&lt;li&gt;For Expressions&lt;/li&gt;
-&lt;li&gt;Infix, Prefix and Postfix&lt;/li&gt;
-&lt;li&gt;Operators&lt;/li&gt;
-&lt;li&gt;Infix Types&lt;/li&gt;
-&lt;li&gt;Mutable Maps&lt;/li&gt;
-&lt;li&gt;Mutable Sets&lt;/li&gt;
-&lt;li&gt;Sequences and Arrays&lt;/li&gt;
-&lt;li&gt;Iterables&lt;/li&gt;
-&lt;li&gt;Traversables&lt;/li&gt;
-&lt;li&gt;Named and Default Arguments&lt;/li&gt;
-&lt;li&gt;Mainfests&lt;/li&gt;
-&lt;li&gt;Preconditions&lt;/li&gt;
-&lt;li&gt;Extrators&lt;/li&gt;
-&lt;li&gt;ByName Parameter&lt;/li&gt;
-&lt;li&gt;Repeated Parameters&lt;/li&gt;
-&lt;li&gt;Parent Classes&lt;/li&gt;
-&lt;li&gt;Empty Values&lt;/li&gt;
-&lt;li&gt;Type Signatures&lt;/li&gt;
-&lt;li&gt;Uniform Access Principle&lt;/li&gt;
-&lt;li&gt;Literal Booleans&lt;/li&gt;
-&lt;li&gt;Literal Numbers&lt;/li&gt;
-&lt;li&gt;Literal Strings&lt;/li&gt;
-&lt;li&gt;Type Variance&lt;/li&gt;
-&lt;li&gt;Enumerations&lt;/li&gt;
-&lt;li&gt;Constructions&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

@@ -6,8 +6,234 @@
     <description>Recent content on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Mar 2016 11:07:44 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 03 Apr 2016 00:53:14 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test</title>
+      <link>http://taewan.kim/blog/2016/04/03/test/</link>
+      <pubDate>Sun, 03 Apr 2016 00:53:14 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/04/03/test/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;기계학습은 데이터를 통해서 통찰력을 획득&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;컴퓨터를 사용하여 데이터에 대한 의미를 만들어 내는 것&lt;/p&gt;
+
+&lt;h2 id=&#34;1-1-기계학습이란-무엇인가:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.1 기계학습이란 무엇인가?&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;기계학습은 데이터를 정보로 변환하는 것&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;기계학습은 통계학을 사용함&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;육체 노동자들이 지식 노동자로 전환하면서 생긴일&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;모호한 일들이 일반화 됨&lt;/li&gt;
+&lt;li&gt;이익 최대화&lt;/li&gt;
+&lt;li&gt;손실 최소화&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;최상의 영업 방법 찾기&lt;/p&gt;
+
+&lt;h2 id=&#34;1-2-주요-용어:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.2 주요 용어&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;h2 id=&#34;1-3-기계학습의-주요-기술:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.3 기계학습의 주요 기술&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Supervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;알고리즘이 무엇을 예측할 것인지를 제공&lt;/li&gt;
+&lt;li&gt;유형: Classification, Regerssion&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;NoSupervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;비지도학습&lt;/li&gt;
+&lt;li&gt;분류 항목 표시나 목적 변수가 없음&lt;/li&gt;
+&lt;li&gt;유형&lt;/li&gt;
+&lt;li&gt;clustering: 군집화&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Density Estimation: 밀도 추적&lt;/p&gt;
+
+&lt;h3 id=&#34;알고지즘-정리:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;알고지즘 정리&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Supervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Classification (분류)&lt;/li&gt;
+&lt;li&gt;Regression (회귀)&lt;/li&gt;
+&lt;li&gt;K-nearest Neighbors&lt;/li&gt;
+&lt;li&gt;Linear&lt;/li&gt;
+&lt;li&gt;Naive Bayes&lt;/li&gt;
+&lt;li&gt;Locally Weighted Linear&lt;/li&gt;
+&lt;li&gt;Support Vector Machine&lt;/li&gt;
+&lt;li&gt;Ridge&lt;/li&gt;
+&lt;li&gt;Decision Tree&lt;/li&gt;
+&lt;li&gt;Lasso&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;UnSupervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Clustering&lt;/li&gt;
+&lt;li&gt;Density Estimation&lt;/li&gt;
+&lt;li&gt;K-Mean&lt;/li&gt;
+&lt;li&gt;Expection maximization&lt;/li&gt;
+&lt;li&gt;DBSCAN&lt;/li&gt;
+&lt;li&gt;Parzen Window&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;1-4-올라른-알고리즘-선정-방법:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.4 올라른 알고리즘 선정 방법&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;목적이 무엇인가?
+
+&lt;ul&gt;
+&lt;li&gt;목적 값을 예측하고자 한다면 지도학습 방법을 선택&lt;/li&gt;
+&lt;li&gt;목적 값 예측이 아니라면 비지도학습 선택&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;목적 값의 유형에 따른 선택
+
+&lt;ul&gt;
+&lt;li&gt;목적 값이 특정 추치: regresssion&lt;/li&gt;
+&lt;li&gt;목적 값이 특정 값: Classifcation&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;case class merong(name:String){
+  override toString() = &amp;quot;Merong&amp;quot;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>10.sets</title>
+      <link>http://taewan.kim/documents/47degree4scala/10.sets.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:25:02 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/10.sets.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>08.lists</title>
+      <link>http://taewan.kim/documents/47degree4scala/08.lists.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:24:45 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/08.lists.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>09.maps</title>
+      <link>http://taewan.kim/documents/47degree4scala/09.maps.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:24:37 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/09.maps.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>07.highorder</title>
+      <link>http://taewan.kim/documents/47degree4scala/07.highorder.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:23:46 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/07.highorder.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>06.tuples</title>
+      <link>http://taewan.kim/documents/47degree4scala/06.tuples.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:23:30 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/06.tuples.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>05.objects</title>
+      <link>http://taewan.kim/documents/47degree4scala/05.objects.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:23:10 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/05.objects.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>04.options</title>
+      <link>http://taewan.kim/documents/47degree4scala/04.options.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:22:51 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/04.options.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>03.classes</title>
+      <link>http://taewan.kim/documents/47degree4scala/03.classes.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:22:41 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/03.classes.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>02.valandvar</title>
+      <link>http://taewan.kim/documents/47degree4scala/02.valandvar.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:22:23 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/02.valandvar.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>01. asserts</title>
+      <link>http://taewan.kim/documents/47degree4scala/01.asserts.html</link>
+      <pubDate>Thu, 31 Mar 2016 01:21:52 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/47degree4scala/01.asserts.html</guid>
+      <description>
+
+&lt;h1 id=&#34;단정-함수:28be12209e2f94f4a685e9d6518a6d60&#34;&gt;단정 함수&lt;/h1&gt;
+
+&lt;p&gt;ScalaTest는 3개의 단정문을 제공하며, 이 단정문은 모든 trait에서 기본적으로 사용 가능하다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;assert: 범용적 단정문&lt;/li&gt;
+&lt;li&gt;assertResult: 실제 값과 예상 값을 식별&lt;/li&gt;
+&lt;li&gt;intercept: 코드가 예고한 예외를 던지는 것을 확인&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;모든 스칼라 프로그램에서 assert 메서드를 호출 할 수 있다. 이 메서드는 Boolean형을 파라미터로 취한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;val left = 2
+val right = 1
+assert(left == right)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;전단한 표현식의 true이면 assert 메서드는 정상적으로 종료되지만, 반대로 false라면 assert 메서드는 AssertionError를 발생시키고 종료될 것이다. 이렇게 동작하는 assert 메서드는 Predef 객체에 정의되어 있다. Predef에 정의된 모든 멤버는 명시적으로 임포트하지 않아서 모든 스칼라 소스 파일이 기본적으로 임포트된다.&lt;/p&gt;
+
+&lt;p&gt;ScalaTest는 DSL(Domain Specific Language)를 제공한다. 이 DSL을 사용하여 &amp;ldquo;should&amp;rdquo; 같은 단어를 사용하여 단정문을 표현 할 수 있다. ScalaTest의 동일성을 체크하는 다섯가지 방법을 제공한다. 이 각각의 방법은 각각 다른 요구사항을 해결하기 위해서 디자인 되었다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;result should equal (3) // Equality를 커스터마이징 할 수 있음
+result should === (3)   // Equality를 커스터마이징 하고 타입 제약을 강제함
+result should be (3)    // Equality를 커스터마이징 할 수 없음. 따라서 컴파일이 가장 빠름
+result shouldEqual 3    // Equality를 커스터마이징 할 수 있음. 괄호가 필요 없음
+result shouldBe 3       // Equality를 커스터마이징 할 수 없음. 따라서 컴파일이 가장 빠름. 괄호 필요 없음
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>My Learning</title>
@@ -535,569 +761,6 @@ println(result)
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>problem 02</title>
-      <link>http://taewan.kim/documents/prolog99/problem-02.html</link>
-      <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
-      
-      <guid>http://taewan.kim/documents/prolog99/problem-02.html</guid>
-      <description>
-
-&lt;h2 id=&#34;현재-상태:29792a39170f4e52c3470154bba77043&#34;&gt;현재 상태&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2016-03-27: 문서 생성&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;문제:29792a39170f4e52c3470154bba77043&#34;&gt;문제&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;리스트의 끝에서 두번째 엘리먼트를 구하시오?
-
-&lt;ul&gt;
-&lt;li&gt;예제 코드
-&lt;code&gt;scala
-scala&amp;gt; penultimate(List(1, 1, 2, 3, 5, 8))
-res0: Int = 5
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;풀이:29792a39170f4e52c3470154bba77043&#34;&gt;풀이&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;단순 풀이&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P02{
-  def penultimate[A](list:List[A]):A = {
-    return list(list.length-2)
-  }
-}
-
-import P02._
-penultimate(List(1, 1, 2, 3, 5, 8))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;재귀방식 풀이&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01R{
-  @tailrec
-  def last[A](list:List[A]):A = list match {
-    case h::Nil =&amp;gt; h
-    case _::tail  =&amp;gt; last(tail)
-    case _ =&amp;gt; throw new NoSuchElementException
-  }
-}
-
-import P01R._
-
-var result = last(List(1,2,1,1,2,3,4,5))
-println(result)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>문제풀이 준비중 입니다. </title>
-      <link>http://taewan.kim/documents/prolog99/problem-NotYet.html</link>
-      <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
-      
-      <guid>http://taewan.kim/documents/prolog99/problem-NotYet.html</guid>
-      <description>
-
-&lt;h2 id=&#34;현재-상태:57d6af03ea9fe044bddeefd2c80b5ec4&#34;&gt;현재 상태&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2016-03-29: 문서 생성&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;문제 풀이 준비 중 입니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem NintyNine for Scala</title>
-      <link>http://taewan.kim/documents/Problem-NintyNine4Scala.html</link>
-      <pubDate>Fri, 25 Mar 2016 17:57:42 +0900</pubDate>
-      
-      <guid>http://taewan.kim/documents/Problem-NintyNine4Scala.html</guid>
-      <description>
-
-&lt;p&gt;prolog 학습 자료인 &amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;의 스칼라 버전 입니다.
-&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;는 Prolog의 학습을 지원하기 위한 연습문제 성격입니다.
-Prolog버전의 연습문제를 Scala 버전으로 변경하여 제공하는 내용을 정리하는 페이지 입니다.
-&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;은 홈페이지는 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sites.google.com/site/prologsite/prolog-problems&#34;&gt;https://sites.google.com/site/prologsite/prolog-problems&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;은 7개 카테고리로 구성되며, 스칼라 버전의 변환은
-aperiodic.net을 참조하여 정리하였습니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;해당-문제의-답안은-문제-번호에-설정된-링크로-확인-할-수-있습니다:08dbffc5775114b4d4832a173849c143&#34;&gt;해당 문제의 답안은 문제 번호에 설정된 링크로 확인 할 수 있습니다.&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;카테고리 구성
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#list&#34;&gt;List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#arithmetic&#34;&gt;Arithmetic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#logic&#34;&gt;Logic and Codes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#binarytrees&#34;&gt;Binary Trees&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#multiwaytrees&#34;&gt;Multiway Trees&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graphs&#34;&gt;Graphs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#miscellaneous&#34;&gt;Miscellaneous&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;list&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;1-list:08dbffc5775114b4d4832a173849c143&#34;&gt;1. List&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-01.html&#34;&gt;S-01&lt;/a&gt;: 리스트의 마지막 엘리먼트를 구하시오?
-
-&lt;ul&gt;
-&lt;li&gt;예제 코드&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; last(List(1, 1, 2, 3, 5, 8))
-res0: Int = 8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-02.html&#34;&gt;S-02&lt;/a&gt;: 리스트의 끝에서 두번째 엘리먼트를 구하시오?
-
-&lt;ul&gt;
-&lt;li&gt;예제 코드&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; penultimate(List(1, 1, 2, 3, 5, 8))
-res0: Int = 5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-03&lt;/a&gt;: 리스트의 k번째 엘리먼트를 구하시오?
-
-&lt;ul&gt;
-&lt;li&gt;리스트의 첫 번째 엘리먼트는 0.&lt;/li&gt;
-&lt;li&gt;예제 코드&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; nth(2, List(1, 1, 2, 3, 5, 8))
-res0: Int = 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-04&lt;/a&gt;: 리스트의 엔리먼트 사이즈를 구하시오?
-
-&lt;ul&gt;
-&lt;li&gt;예제 코드&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; length(List(1, 1, 2, 3, 5, 8))
-res0: Int = 6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/prolog99/problem-NotYet.html&#34;&gt;S-05&lt;/a&gt;: 리스트를 리버스로 변환하시오?
-
-&lt;ul&gt;
-&lt;li&gt;예제 코드&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; reverse(List(1, 1, 2, 3, 5, 8))
-res0: List[Int] = List(8, 5, 3, 2, 1, 1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;arithmetic&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-arithmetic:08dbffc5775114b4d4832a173849c143&#34;&gt;2. Arithmetic&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;logic&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3-logic:08dbffc5775114b4d4832a173849c143&#34;&gt;3. Logic&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;binarytrees&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;4-binary-trees:08dbffc5775114b4d4832a173849c143&#34;&gt;4. Binary Trees&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;multiwaytrees&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;5-multiway-trees:08dbffc5775114b4d4832a173849c143&#34;&gt;5. Multiway Trees&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;graphs&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;6-graphs:08dbffc5775114b4d4832a173849c143&#34;&gt;6. Graphs&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;miscellaneous&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7-miscellaneous:08dbffc5775114b4d4832a173849c143&#34;&gt;7. Miscellaneous&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Documents by Taewan</title>
-      <link>http://taewan.kim/document.html</link>
-      <pubDate>Fri, 25 Mar 2016 17:53:43 +0900</pubDate>
-      
-      <guid>http://taewan.kim/document.html</guid>
-      <description>&lt;p&gt;웹 상의 주요 문서의 번역 및 요약 문서입니다&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;Problems-99 for Scala&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/47degrees4scala.html&#34;&gt;47 Degrees scala&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>youtube 관련 팁 정리</title>
-      <link>http://taewan.kim/blog/2016/03/25/youtube/</link>
-      <pubDate>Fri, 25 Mar 2016 00:17:44 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/03/25/youtube/</guid>
-      <description>
-
-&lt;p&gt;Youtube 관련 몇 가지 팁을 정리합니다. 동영상 다운로드, 반복재생, 특정 위치 URL공유하기 등의 방법을 소개합니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;문서 구성
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#download&#34;&gt;Youtube 동영상 다운로드&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#repeat&#34;&gt;동영상 반복 재생&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sharing&#34;&gt;동영상 특정 위치 공유&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#bookmark&#34;&gt;나중에 볼 동영상 관리&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;download&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;youtube-동영상-다운로드-a-id-download-a:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;Youtube 동영상 다운로드 &lt;a id=&#34;download&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Youtube URL에 ss를 추가하면 다운로드 사이트로 이동
-
-&lt;ul&gt;
-&lt;li&gt;이동한 사이트에서 동영상 다운로드&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;관련 예
-
-&lt;ul&gt;
-&lt;li&gt;Original URL: &lt;a href=&#34;https://www.youtube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://www.youtube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Download URL: &lt;a href=&#34;https://ssyoutube.com/watch?v=kpfRSQv4zm4&#34;&gt;https://ssyoutube.com/watch?v=kpfRSQv4zm4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/youtube.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;repeat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;동영상-반복-재생:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 반복 재생&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;youtube 동영상 위에서 context menu를 수행하여 &amp;ldquo;연속재생(loop)&amp;rdquo; 선택&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/chrome-repeat.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;sharing&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;동영상-특정-위치-공유:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;동영상 특정 위치 공유&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;특정 동영상의 특정 위치를 공유할 수 있음&lt;/li&gt;
-&lt;li&gt;Youtube 동영상이 진행되는 상태에서 마우스를 이용하여 컨텍스트 메뉴에서 &amp;ldquo;현재 시간에 동영상 URL 복사(Get video url at current time)&amp;ldquo;를 선택하면 현재 위치의 동영상 URL이 복사됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/youtube/sharing.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;결과 URL: &lt;a href=&#34;https://youtu.be/K2OFxx4n79w?t=170&#34;&gt;https://youtu.be/K2OFxx4n79w?t=170&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a id=&#34;bookmark&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;나중에-볼-동영상-관리:7e18ea22d19ef41e96a49e8079e84b76&#34;&gt;나중에 볼 동영상 관리&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Youtube 동영상은 나중에 볼 컨텐츠로 등록 관리.&lt;/li&gt;
-&lt;li&gt;이 기능은 Youtube에 로그인 상태에서 사용 가능.&lt;/li&gt;
-&lt;li&gt;Youtube 동영상을 하단에 &amp;ldquo;+추가&amp;rdquo; 메뉴를 클릭하면 현재 동영상을 자신의 재생 목록에 추가하는 기능을 확인.&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;나중에 볼 동영상&amp;rdquo;은 본인만 확인 가능한 private 재생 목록.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;유튜브 좌측 메뉴에서 &amp;ldquo;나중에 볼 동영상&amp;rdquo; 메뉴 확인 가능.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;나중에 볼 동영상 등록 이미지
-&lt;img src=&#34;http://taewan.kim/images/youtube/bookmark.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;나중에 볼 동영상 확인
-&lt;img src=&#34;http://taewan.kim/images/youtube/menu.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;나중에 볼 동영상 등록은 썸네일 추천 동영상에서도 지원.
-&lt;img src=&#34;http://taewan.kim/images/youtube/thumbnail-1.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/youtube/thumbnail-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>세미나 퀴즈: 다음 데이터를 정규화하시요!</title>
-      <link>http://taewan.kim/blog/2016/03/23/question/</link>
-      <pubDate>Wed, 23 Mar 2016 17:31:59 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/03/23/question/</guid>
-      <description>&lt;p&gt;다음 데이터를 이용하여 제 3 정규화가 완료된 ERD를 작성하시오.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/question.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>remark를 이용한 웹 프리젠테이션</title>
-      <link>http://taewan.kim/blog/2016/03/22/remarkjs/</link>
-      <pubDate>Tue, 22 Mar 2016 10:23:15 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/03/22/remarkjs/</guid>
-      <description>&lt;p&gt;PPT를 공유하는 Slideshare 서비스가 있기는 하지만, 웹 상에서 내가 직접 제어와 공유가 가능한 순수 HTML기반의 웹 프리젠테이션에 대한 필요성을 느껴왔씁니다. 오픈소스로 다수의 웹 프리젠테이션 기술 중에서 하나를 선택하라면 remark를 선택하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;remark의 장점은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;순수 HTML 기술이다.&lt;/li&gt;
-&lt;li&gt;슬라이드 데이터는 Markdown 포멧을 사용한다.&lt;/li&gt;
-&lt;li&gt;PPT의 기본 레이아웃 지원에 충실하다.&lt;/li&gt;
-&lt;li&gt;사용법이 간단하다.&lt;/li&gt;
-&lt;li&gt;Syntax Highlight 기능을 잘 지원한다.&lt;/li&gt;
-&lt;li&gt;Latex를 지원한다.&lt;/li&gt;
-&lt;li&gt;Graph를 지원한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;반면 단점을 꼽으라면 Animation 효과가 지원되지 않는다는 것입니다. 개인적으로 Animation 효과보다는 프리젠테이션 구성 지원과 문서 작성 편리성을 중시하는 관계로 제 경우에는 이 단점이 크게 작용하지 않았습니다.&lt;/p&gt;
-
-&lt;p&gt;Remark의 프로젝트 사이트는 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gnab/remark&#34;&gt;Remark 프로젝트 사이트: https://github.com/gnab/remark&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Remark 데모는 다음 URL에서 확인 할 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://remarkjs.com&#34;&gt;Remakr js 데모: http://remarkjs.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Screenshoot
-&lt;img src=&#34;http://taewan.kim/images/remarkjs/slide1.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/remarkjs/presentationmode.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Remark의 사용법은 다음 Web Presentation으로 정리하겠습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/presentation/201603_Remarkjs.html&#34;&gt;Remark 사용법: http://taewan.kim/presentation/201603_Remarkjs.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>presentation</title>
-      <link>http://taewan.kim/presentation.html</link>
-      <pubDate>Sat, 19 Mar 2016 02:13:08 +0900</pubDate>
-      
-      <guid>http://taewan.kim/presentation.html</guid>
-      <description>
-
-&lt;p&gt;스터디 그룹이나 커뮤니티 등에서의 발표 문서의 목록입니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;2016-03-29:82edc323b2fe0e0e86215b27014d533e&#34;&gt;2016.03.29&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/presentation/coursera_scala/201603_coursera_scala_5.1.html&#34;&gt;라스칼라 Coursera Scala 스터디 발표 문서 - Lecture 5.1. More Functions on List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;2016-03-19:82edc323b2fe0e0e86215b27014d533e&#34;&gt;2016.03.19&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/presentation/201603_PIS_Ch06&#34;&gt;라스칼라 PIS 스터디 발표 문서 - 6장 함수형 객체&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Programming In Scala 2nd Edition, 6장 요약&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>현재 작업중 입니다.</title>
-      <link>http://taewan.kim/working.html</link>
-      <pubDate>Sat, 19 Mar 2016 02:12:20 +0900</pubDate>
-      
-      <guid>http://taewan.kim/working.html</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://www.kromogen.com/en/images/underconstruction.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>유튜브 민수 채널</title>
-      <link>http://taewan.kim/minsu.html</link>
-      <pubDate>Sat, 19 Mar 2016 01:50:05 +0900</pubDate>
-      
-      <guid>http://taewan.kim/minsu.html</guid>
-      <description>
-
-&lt;h2 id=&#34;2016-02-23-민수는-못말려:7a570f21acb838ed9cd7d31367455558&#34;&gt;2016.02.23 민수는 못말려&amp;hellip;.&lt;/h2&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/kpfRSQv4zm4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;엄마와-민수-아빠-사랑해:7a570f21acb838ed9cd7d31367455558&#34;&gt;엄마와 민수.. 아빠 사랑해&lt;/h2&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/O1u5T6DmvdM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;2016-02-13-할머니-집에서-아빠-사랑해:7a570f21acb838ed9cd7d31367455558&#34;&gt;2016.02.13 할머니 집에서 아빠 사랑해&lt;/h2&gt;
-
-&lt;p&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/s_KZ5Fy8s1k&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;레이서-민수:7a570f21acb838ed9cd7d31367455558&#34;&gt;레이서 민수&lt;/h2&gt;
-
-&lt;p&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/8BuqnJxi8CI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;2015-10-03-물이-맛있어:7a570f21acb838ed9cd7d31367455558&#34;&gt;2015.10.03 물이 맛있어&amp;hellip;.&lt;/h2&gt;
-
-&lt;p&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/2RF35ibeJt0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;2015-10-03-모래가-무서워:7a570f21acb838ed9cd7d31367455558&#34;&gt;2015.10.03 모래가 무서워&lt;/h2&gt;
-
-&lt;p&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/kzd1aOwxqqU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-&lt;/p&gt;
-
-&lt;hr /&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Scala Exercises - Series (1)</title>
-      <link>http://taewan.kim/blog/2016/03/18/prog-problems-01/</link>
-      <pubDate>Fri, 18 Mar 2016 01:18:18 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/03/18/prog-problems-01/</guid>
-      <description>
-
-&lt;h2 id=&#34;문서상태:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;문서상태&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;현재 작업중&amp;hellip;..&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;시작하며:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;시작하며&lt;/h2&gt;
-
-&lt;p&gt;스위스의 Bern University에서는 Prolog의 교육을 목적으로 99개의 문제와 각 문제에 대한 풀이법을 제공합니다. (&lt;a href=&#34;https://sites.google.com/site/prologsite/&#34;&gt;https://sites.google.com/site/prologsite/&lt;/a&gt;) 이 사이트에서 제공하는 99개의 문제를 풀어가는 과정은 Prolog에대한 이해를 높이고 친숙해지는 가장 효율적인 방법이라고 생각됩니다. 최근에 Scala를 처음 접하는 과정에서 스칼라를 언어적으로 연습하고 연마할 적절한  대상이 부족하다는 아쉬움이 많았습니다. 최근에 Prolog 99을 스칼라 버전으로 변환한 &lt;a href=&#34;http://aperiodic.net을&#34;&gt;http://aperiodic.net을&lt;/a&gt; 발견하였습니다. 이 사이트에서는 Prolog 99을 스칼라 버전으로 변환한 문제와 풀이를 제공합니다. 이 사이트에서 제공하는 스칼라 버전의 Prolog 99은 스칼라 학습 및 연습에 유용하게 사용될 수 있있습니다. 이 문제 풀이는 스칼라에 대한 이해를 높일 수 있는 효과적인 컨텐츠 입니다.&lt;/p&gt;
-
-&lt;h3 id=&#34;prolog-problems의-구성:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;Prolog Problems의 구성&lt;/h3&gt;
-
-&lt;p&gt;&amp;ldquo;P-99: Ninety-Nine Prolog Problems&amp;rdquo;는 7개의 카테고리 99개 문제로 구성되어 있습니다. 7개의 카테고리는 다음과 같습니다&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Prolog Lists (28개)&lt;/li&gt;
-&lt;li&gt;Arithmetic (11개)&lt;/li&gt;
-&lt;li&gt;Logic and codes (5개)&lt;/li&gt;
-&lt;li&gt;Binary Trees (18개)&lt;/li&gt;
-&lt;li&gt;Multiway Trees (6개)&lt;/li&gt;
-&lt;li&gt;Graphs (11개)&lt;/li&gt;
-&lt;li&gt;Miscellaneous (9개)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;prolog-lists:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;Prolog Lists&lt;/h2&gt;
-
-&lt;h3 id=&#34;1-01:da945fcb0d0477d4f89828ad0783ee93&#34;&gt;1.01&lt;/h3&gt;
-
-&lt;p&gt;1&lt;/p&gt;
 </description>
     </item>
     

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Documents &middot; Taewan Kim</title>
+  <title>01. asserts &middot; Taewan Kim</title>
 
   
   <link rel="stylesheet" href="http://taewan.kim/css/poole.css">
@@ -54,10 +54,10 @@ ul#menu li a:hover {
   
   
   
-  <link href="http://taewan.kim/documents.xml" rel="alternate" type="application/rss+xml" title="taewan&#39;s blog &middot; Taewan Kim" />
+  
 
   <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="scala,asserts,47degrees">
   
 </head>
 <body class="theme-base-08 layout-reverse">
@@ -121,6 +121,7 @@ ul#menu li a:hover {
 
 
 
+
 <div class="content container">
   <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -134,117 +135,50 @@ ul#menu li a:hover {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
   </div>
+  <br/><br/>
+  <div class="post">
+    <h1>01. asserts</h1>
+    
 
-  <ul class="posts">
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/10.sets.html">10.sets</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/08.lists.html">08.lists</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/09.maps.html">09.maps</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/07.highorder.html">07.highorder</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/06.tuples.html">06.tuples</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/05.objects.html">05.objects</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/04.options.html">04.options</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/03.classes.html">03.classes</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/02.valandvar.html">02.valandvar</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degree4scala/01.asserts.html">01. asserts</a>
-    
-    &middot;
-    <a class="label" href="http://taewan.kim/categories/scala.html">scala</a><a class="label" href="http://taewan.kim/categories/asserts.html">asserts</a><a class="label" href="http://taewan.kim/categories/47degrees.html">47degrees</a>
-    </span>
-    &middot; <time>Mar 31, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/prolog99/problem-01.html">problem 01</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 25, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/prolog99/problem-02.html">problem 02</a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 25, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/prolog99/problem-NotYet.html">문제풀이 준비중 입니다. </a>
-    
-    &middot;
-    
-    </span>
-    &middot; <time>Mar 25, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/Problem-NintyNine4Scala.html">Problem NintyNine for Scala</a>
-    
-    &middot;
-    <a class="label" href="http://taewan.kim/categories/scala.html">Scala</a><a class="label" href="http://taewan.kim/categories/prolog.html">Prolog</a>
-    </span>
-    &middot; <time>Mar 25, 2016</time></li>
-  
-    <li><a href="http://taewan.kim/documents/47degrees4scala.html">[47 Degrees] scala exercises</a>
-    
-    &middot;
-    <a class="label" href="http://taewan.kim/categories/scala.html">scala</a>
-    </span>
-    &middot; <time>Mar 20, 2015</time></li>
-  
-  </ul>
+<h1 id="단정-함수:28be12209e2f94f4a685e9d6518a6d60">단정 함수</h1>
 
+<p>ScalaTest는 3개의 단정문을 제공하며, 이 단정문은 모든 trait에서 기본적으로 사용 가능하다.</p>
+
+<ul>
+<li>assert: 범용적 단정문</li>
+<li>assertResult: 실제 값과 예상 값을 식별</li>
+<li>intercept: 코드가 예고한 예외를 던지는 것을 확인</li>
+</ul>
+
+<p>모든 스칼라 프로그램에서 assert 메서드를 호출 할 수 있다. 이 메서드는 Boolean형을 파라미터로 취한다.</p>
+
+<pre><code class="language-scala">val left = 2
+val right = 1
+assert(left == right)
+</code></pre>
+
+<p>전단한 표현식의 true이면 assert 메서드는 정상적으로 종료되지만, 반대로 false라면 assert 메서드는 AssertionError를 발생시키고 종료될 것이다. 이렇게 동작하는 assert 메서드는 Predef 객체에 정의되어 있다. Predef에 정의된 모든 멤버는 명시적으로 임포트하지 않아서 모든 스칼라 소스 파일이 기본적으로 임포트된다.</p>
+
+<p>ScalaTest는 DSL(Domain Specific Language)를 제공한다. 이 DSL을 사용하여 &ldquo;should&rdquo; 같은 단어를 사용하여 단정문을 표현 할 수 있다. ScalaTest의 동일성을 체크하는 다섯가지 방법을 제공한다. 이 각각의 방법은 각각 다른 요구사항을 해결하기 위해서 디자인 되었다.</p>
+
+<pre><code class="language-scala">result should equal (3) // Equality를 커스터마이징 할 수 있음
+result should === (3)   // Equality를 커스터마이징 하고 타입 제약을 강제함
+result should be (3)    // Equality를 커스터마이징 할 수 없음. 따라서 컴파일이 가장 빠름
+result shouldEqual 3    // Equality를 커스터마이징 할 수 있음. 괄호가 필요 없음
+result shouldBe 3       // Equality를 커스터마이징 할 수 없음. 따라서 컴파일이 가장 빠름. 괄호 필요 없음
+</code></pre>
+
+  </div>
+  
   <div>
+    <hr/>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="/images/creative.png" /></a><a href='https://www.facebook.com/alvinkim082' target='_blank'>taewanme</a>의 저작물인 이 저작물은(는) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+    <hr/>
+  </div>
+  <div id="disqus_thread"></div>
+
+  <br/><br/>
+    <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <ins class="adsbygoogle"
@@ -256,8 +190,19 @@ ul#menu li a:hover {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
   </div>
-
 </div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = "taewankim";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 
@@ -274,4 +219,3 @@ ul#menu li a:hover {
 
 </body>
 </html>
-
