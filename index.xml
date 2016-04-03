@@ -6,115 +6,8 @@
     <description>Recent content on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Apr 2016 00:53:14 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 31 Mar 2016 01:25:02 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>test</title>
-      <link>http://taewan.kim/blog/2016/04/03/test/</link>
-      <pubDate>Sun, 03 Apr 2016 00:53:14 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/04/03/test/</guid>
-      <description>
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;기계학습은 데이터를 통해서 통찰력을 획득&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;컴퓨터를 사용하여 데이터에 대한 의미를 만들어 내는 것&lt;/p&gt;
-
-&lt;h2 id=&#34;1-1-기계학습이란-무엇인가:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.1 기계학습이란 무엇인가?&lt;/h2&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;기계학습은 데이터를 정보로 변환하는 것&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;기계학습은 통계학을 사용함&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;육체 노동자들이 지식 노동자로 전환하면서 생긴일&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;모호한 일들이 일반화 됨&lt;/li&gt;
-&lt;li&gt;이익 최대화&lt;/li&gt;
-&lt;li&gt;손실 최소화&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;최상의 영업 방법 찾기&lt;/p&gt;
-
-&lt;h2 id=&#34;1-2-주요-용어:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.2 주요 용어&lt;/h2&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;h2 id=&#34;1-3-기계학습의-주요-기술:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.3 기계학습의 주요 기술&lt;/h2&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Supervised Learning&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;알고리즘이 무엇을 예측할 것인지를 제공&lt;/li&gt;
-&lt;li&gt;유형: Classification, Regerssion&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;NoSupervised Learning&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;비지도학습&lt;/li&gt;
-&lt;li&gt;분류 항목 표시나 목적 변수가 없음&lt;/li&gt;
-&lt;li&gt;유형&lt;/li&gt;
-&lt;li&gt;clustering: 군집화&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Density Estimation: 밀도 추적&lt;/p&gt;
-
-&lt;h3 id=&#34;알고지즘-정리:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;알고지즘 정리&lt;/h3&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Supervised Learning&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Classification (분류)&lt;/li&gt;
-&lt;li&gt;Regression (회귀)&lt;/li&gt;
-&lt;li&gt;K-nearest Neighbors&lt;/li&gt;
-&lt;li&gt;Linear&lt;/li&gt;
-&lt;li&gt;Naive Bayes&lt;/li&gt;
-&lt;li&gt;Locally Weighted Linear&lt;/li&gt;
-&lt;li&gt;Support Vector Machine&lt;/li&gt;
-&lt;li&gt;Ridge&lt;/li&gt;
-&lt;li&gt;Decision Tree&lt;/li&gt;
-&lt;li&gt;Lasso&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;UnSupervised Learning&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Clustering&lt;/li&gt;
-&lt;li&gt;Density Estimation&lt;/li&gt;
-&lt;li&gt;K-Mean&lt;/li&gt;
-&lt;li&gt;Expection maximization&lt;/li&gt;
-&lt;li&gt;DBSCAN&lt;/li&gt;
-&lt;li&gt;Parzen Window&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;1-4-올라른-알고리즘-선정-방법:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;1.4 올라른 알고리즘 선정 방법&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;목적이 무엇인가?
-
-&lt;ul&gt;
-&lt;li&gt;목적 값을 예측하고자 한다면 지도학습 방법을 선택&lt;/li&gt;
-&lt;li&gt;목적 값 예측이 아니라면 비지도학습 선택&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;목적 값의 유형에 따른 선택
-
-&lt;ul&gt;
-&lt;li&gt;목적 값이 특정 추치: regresssion&lt;/li&gt;
-&lt;li&gt;목적 값이 특정 값: Classifcation&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;case class merong(name:String){
-  override toString() = &amp;quot;Merong&amp;quot;
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
     
     <item>
       <title>10.sets</title>
@@ -737,6 +630,75 @@ import P01._
 
 var result = last(List(1, 2, 3, 4, 5, 6))
 println(result)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;재귀방식 풀이&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01R{
+  @tailrec
+  def last[A](list:List[A]):A = list match {
+    case h::Nil =&amp;gt; h
+    case _::tail  =&amp;gt; last(tail)
+    case _ =&amp;gt; throw new NoSuchElementException
+  }
+}
+
+import P01R._
+
+var result = last(List(1,2,1,1,2,3,4,5))
+println(result)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>problem 02</title>
+      <link>http://taewan.kim/documents/prolog99/problem-02.html</link>
+      <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
+      
+      <guid>http://taewan.kim/documents/prolog99/problem-02.html</guid>
+      <description>
+
+&lt;h2 id=&#34;현재-상태:29792a39170f4e52c3470154bba77043&#34;&gt;현재 상태&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2016-03-27: 문서 생성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;문제:29792a39170f4e52c3470154bba77043&#34;&gt;문제&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;리스트의 끝에서 두번째 엘리먼트를 구하시오?
+
+&lt;ul&gt;
+&lt;li&gt;예제 코드
+&lt;code&gt;scala
+scala&amp;gt; penultimate(List(1, 1, 2, 3, 5, 8))
+res0: Int = 5
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;풀이:29792a39170f4e52c3470154bba77043&#34;&gt;풀이&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;단순 풀이&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P02{
+  def penultimate[A](list:List[A]):A = {
+    return list(list.length-2)
+  }
+}
+
+import P02._
+penultimate(List(1, 1, 2, 3, 5, 8))
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
