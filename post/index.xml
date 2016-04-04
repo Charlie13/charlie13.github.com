@@ -6,8 +6,632 @@
     <description>Recent content in Posts on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Mar 2016 17:04:26 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 Apr 2016 13:47:07 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/post.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>마크다운 사용법 정리</title>
+      <link>http://taewan.kim/blog/2016/04/04/markdown/</link>
+      <pubDate>Mon, 04 Apr 2016 13:47:07 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/04/04/markdown/</guid>
+      <description>
+
+&lt;p&gt;taewan.kim은 대부분의 내용을 markdown으로 관리하고 있습니다. 문서 관리로는 markdown이 상당히 효율적인 방법인것 같습니다. markdown은 직관적이고 간단한 문법으로 컨텐츠 관리에 매우 효과적입니다. markdown에서 주로 이용되는 테그는 15개정도 입니다. 혼동되는 주요 테그를 정리하겠습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;목차 &lt;a id=&#34;top&#34;&gt;&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#header&#34;&gt;헤더&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hr&#34;&gt;수평선&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#text&#34;&gt;텍스트 출력&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#em&#34;&gt;텍스트 강조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#quotation&#34;&gt;인용&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#list&#34;&gt;목록&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code&#34;&gt;코드&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#table&#34;&gt;테이블&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link&#34;&gt;링크&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#image&#34;&gt;이미지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#comment&#34;&gt;주석&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#footnote&#34;&gt;각주&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;헤더-a-id-header-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;헤더 &lt;a id=&#34;header&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;H1 ~ H6까지 테그를 #으로 표현&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# 헤더 스타일 (h1)
+## 헤더 스타일 (h2)
+### 헤더 스타일 (h3)
+#### 헤더 스타일 (h4)
+##### 헤더 스타일 (h5)
+###### 헤더 스타일 (h6)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;헤더-스타일-h1:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;헤더 스타일 (h1)&lt;/h1&gt;
+
+&lt;h2 id=&#34;헤더-스타일-h2:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;헤더 스타일 (h2)&lt;/h2&gt;
+
+&lt;h3 id=&#34;헤더-스타일-h3:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;헤더 스타일 (h3)&lt;/h3&gt;
+
+&lt;h4 id=&#34;헤더-스타일-h4:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;헤더 스타일 (h4)&lt;/h4&gt;
+
+&lt;h5 id=&#34;헤더-스타일-h5:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;헤더 스타일 (h5)&lt;/h5&gt;
+
+&lt;h6 id=&#34;헤더-스타일-h6:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;헤더 스타일 (h6)&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;효과: 다음과 같은 코드와 동일한 결과가 됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;헤더 스타일 (h1)&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;헤더 스타일 (h2)&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;헤더 스타일 (h3)&amp;lt;/h3&amp;gt;
+&amp;lt;h4&amp;gt;헤더 스타일 (h4)&amp;lt;/h4&amp;gt;
+&amp;lt;h5&amp;gt;헤더 스타일 (h5)&amp;lt;/h5&amp;gt;
+&amp;lt;h6&amp;gt;헤더 스타일 (h6)&amp;lt;/h6&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;수평선-a-id-hr-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;수평선 &lt;a id=&#34;hr&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;hr /&amp;gt;와 동일한 결과를 출력&lt;/li&gt;
+&lt;li&gt;&amp;rsquo;-&amp;lsquo;, &amp;lsquo;*&amp;lsquo;, &amp;lsquo;_&amp;lsquo;을 세개 이상 나열하면 수평선을 만듦&lt;/li&gt;
+&lt;li&gt;단락 나누기 용도로 많이 사용.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;***
+___
+___
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;텍스트-출력-a-id-text-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;텍스트 출력 &lt;a id=&#34;text&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;별도의 테그 없이 입력된 내용은 &amp;lt;p&amp;gt; ~ &amp;lt;\p&amp;gt; 처리가 됨&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;markdown은 직관적이고 간단한 문법으로 컨텐츠 관리에 매우 효과적입니다.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;효과: 다음과 같은 코드와 동일한 결과가 됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;markdown은 직관적이고 간단한 문법으로 컨텐츠 관리에 매우 효과적입니다.&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;텍스트-강조-a-id-em-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;텍스트 강조 &lt;a id=&#34;em&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;*single asterisks* - 기울임체
+_single underscores_ - 기울임체
+**double asterisks** - 굵은글씨체 
+__double underscores__ - 기울임체/굵은글씨체
+***triple underscores*** - 기울임체/굵은글씨체
+~~cancelline~~ - 취소줄 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;결과 출력&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt; - 기울임체&lt;br/&gt;
+&lt;em&gt;single underscores&lt;/em&gt; - 기울임체&lt;br/&gt;
+&lt;strong&gt;double asterisks&lt;/strong&gt; - 굵은글씨체 &lt;br/&gt;
+&lt;strong&gt;double underscores&lt;/strong&gt; - 기울임체/굵은글씨체&lt;br/&gt;
+&lt;strong&gt;&lt;em&gt;triple underscores&lt;/em&gt;&lt;/strong&gt; - 기울임체/굵은글씨체 &lt;br/&gt;
+&lt;del&gt;cancelline&lt;/del&gt; - 취소줄&lt;br/&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;인용-a-id-quotation-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;인용 &lt;a id=&#34;quotation&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;분문 중 인용된 글을 표시할 때 사용하며, &amp;ldquo;&amp;gt;&amp;rdquo; 기호를 모든 줄 앞에 붙임.&lt;/li&gt;
+&lt;li&gt;&amp;rdquo;&amp;gt;&amp;rdquo; 기호의 개수에 따라 들여쓰기 레벨 조정 가능&lt;/li&gt;
+&lt;li&gt;인용 블록 안에서 다른 마크다운 테그를 포함할 수 있음&lt;/li&gt;
+&lt;li&gt;인용 블록 안에서 중첩 인용 표기 가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;인용-예제-1-기본-스타일:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;인용 예제 1: 기본 스타일&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;&amp;gt; 인용되는 글입니다. 
+&amp;gt; 인용되는 글의 두 번째 줄. 
+&amp;gt; 인용되는 글의 세 번째 줄. 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;인용되는 글입니다. &lt;br/&gt;
+인용되는 글의 두 번째 줄.&lt;br/&gt;
+인용되는 글의 세 번째 줄. &lt;br/&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;인용문의 레벨을 설정 할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;인용-예제-2-중첩-인용-및-스타일-적용:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;인용 예제 2: 중첩 인용 및 스타일 적용&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; 인용되는 첫 번째 줄입니다.
+&amp;gt;&amp;gt; 인용되는 내용 안에서 다시 인용되는 부분입니다. 
+&amp;gt; (인용 수준을 변경할 때 이렇게 빈 줄 하나 넣어주세요) 
+&amp;gt; 꺽쇠 한 번만 쓰면 다시 상위 수준으로 표시됩니다. 
+&amp;gt; ###### 인용문 내부 헤더
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;인용되는 첫 번째 줄입니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;인용되는 내용 안에서 다시 인용되는 부분입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(인용 수준을 변경할 때 이렇게 빈 줄 하나 넣어주세요)&lt;/p&gt;
+
+&lt;p&gt;꺽쇠 한 번만 쓰면 다시 상위 수준으로 표시됩니다.&lt;/p&gt;
+
+&lt;h6 id=&#34;인용문-내부-헤더:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;인용문 내부 헤더&lt;/h6&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;인용-예제-2-tab-을-적용한-인용:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;인용 예제 2: tab 을 적용한 인용&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;인용 기호 앞에 tab을 입력하면 인용문의 들여 쓰기를 작성 가능.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;	&amp;gt; 인용되는 글입니다. 
+	&amp;gt; 인용되는 글의 두 번째 줄. 
+	&amp;gt; 인용되는 글의 세 번째 줄. 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;출력 결과&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;인용되는 글입니다. &lt;br/&gt;
+인용되는 글의 두 번째 줄.&lt;br/&gt;
+인용되는 글의 세 번째 줄. &lt;br/&gt;
+인용문의 레벨을 설정 할 수 있음&lt;br/&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;목록-a-id-list-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;목록 &lt;a id=&#34;list&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MarkDown으로 숫자 리스트, 블릿 리스트를 표현할 수 있음.&lt;/li&gt;
+&lt;li&gt;순차가 없는 리스트를 표현할 때는 &amp;lsquo;*&amp;lsquo;, &amp;lsquo;+&amp;rsquo;, &amp;lsquo;-&amp;rdquo; 기호 사용 가능.&lt;/li&gt;
+&lt;li&gt;순차가 있는 리스트를 표현할 때 &amp;lsquo;숫자&amp;rsquo; 사용용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;* 리스트1
++ 리스트2
+    * 서브 리스트1
+    * 서브리스트 2
+- 리스트3
+    1. 순차 리스트1
+    2. 순차 리스트2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;출력 결과&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;리스트1&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;리스트2&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;서브 리스트1&lt;/li&gt;
+&lt;li&gt;서브리스트 2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;리스트3&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;순차 리스트1&lt;/li&gt;
+&lt;li&gt;순차 리스트2&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;코드-a-id-code-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;코드 &lt;a id=&#34;code&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;코드-유형-1-공백:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;코드 유형 1: 공백&lt;/h3&gt;
+
+&lt;p&gt;4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속됨.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;공백 없이 바로 시작...
+
+    스페이스 4개로 시작
+    스페이스 4개로 시작
+
+공백 없이 바로 시작...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;공백 없이 바로 시작&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;스페이스 4개로 시작
+스페이스 4개로 시작
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;공백 없이 바로 시작&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;코드-유형-2-코드-블록:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;코드 유형 2: 코드 블록&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;코드 첫라인 앞과 마지막 라인 다음에 &amp;ldquo;```&amp;rdquo; (fense) 설치&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;코드-유형-3-인라인-코드:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;코드 유형 3: 인라인 코드&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;스칼라에서는 `val a:Int = 3`과 같은 형식으로 변수를 선언합니다.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;스칼라에서는 &lt;code&gt;val a:Int = 3&lt;/code&gt;과 같은 형식으로 변수를 선언합니다.&lt;/p&gt;
+
+&lt;h2 id=&#34;테이블-a-id-table-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;테이블 &lt;a id=&#34;table&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;| 이름   | 설명  | 나이 |
+| ----- | ---- | --- | 
+| 김태완  | 아빠  | 40 |
+| 임선영  | 엄마  | 30 |
+| 김민수  | 아들  | 2  |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;이름&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;나이&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;김태완&lt;/td&gt;
+&lt;td&gt;아빠&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;임선영&lt;/td&gt;
+&lt;td&gt;엄마&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;김민수&lt;/td&gt;
+&lt;td&gt;아들&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;테이블-정렬:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;테이블 정렬&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;테이블 정렬: 헤더와 row 구분 자에 적용
+
+&lt;ul&gt;
+&lt;li&gt;오른쪽 정렬: &amp;ndash;:&lt;/li&gt;
+&lt;li&gt;왼쪽 정렬: :&amp;ndash;&lt;/li&gt;
+&lt;li&gt;가운데 정렬: :&amp;ndash;:&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;| 이름   | 설명  | 나이 |
+| :----- | ----: | :---: | 
+| 김태완  | 아빠  | 40 |
+| 임선영  | 엄마  | 30 |
+| 김민수  | 아들  | 2  |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;이름&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;설명&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;나이&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;김태완&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;아빠&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;임선영&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;엄마&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;김민수&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;아들&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;링크-a-id-link-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;링크 &lt;a id=&#34;link&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;기본-링크:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;기본 링크&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;기본 문법: [링크걸 문구](http://주소)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[taewan.kim](http://taewan.kim)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML 변환 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;http://taewan.kim&amp;quot;&amp;gt;taewan.kim&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://taewan.kim&#34;&gt;taewan.kim&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;타이틀을-포함하는-링크:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;타이틀을 포함하는 링크&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;기본 문법: [링크걸 문구](http://주소 &amp;ldquo;타이틀 문구&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;타이틀 문구&amp;rdquo;는 툴팁으로 표현 됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[taewan.kim](http://taewan.kim &amp;quot;김태완 블러그&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML 변환 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://taewan.kim&amp;quot; title=&amp;quot;김태완 블러그&amp;quot;&amp;gt;taewan.kim&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://taewan.kim&#34; title=&#34;김태완 블러그&#34;&gt;taewan.kim&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;참조-링크:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;참조 링크&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;주소를 id로 참조&lt;/li&gt;
+&lt;li&gt;[id] 형식으로 지정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    [구글][1]
+    [1]: http://www.google.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.google.com&#34;&gt;구글&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;주소만으로-링크:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;주소만으로 링크&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;주소를 &amp;ldquo;&amp;lt;&amp;ldquo;와 &amp;ldquo;&amp;gt;&amp;ldquo;기호로 감싸서 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;http://taewan.kim&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML 변환 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://taewan.kim&amp;quot;&amp;gt;http://taewan.kim&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://taewan.kim&#34;&gt;http://taewan.kim&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;네임드-앵커:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;네임드 앵커&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;네임드 앵커는 특정 앵커로 점프하는 용도로 적합.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;
+### 테이블 구성
+  * [1장](#chapter-1)
+  * [2장](#chapter-2)
+  * [3장](#chapter-3)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;###### 1장 &amp;lt;a id=&amp;quot;chapter-1&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+1장의 내용은.....
+
+###### 2장 &amp;lt;a id=&amp;quot;chapter-2&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+2장의 내용은.....
+
+###### 3장 &amp;lt;a id=&amp;quot;chapter-3&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+3장의 내용은.....
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;테이블-구성:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;테이블 구성&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#chapter-1&#34;&gt;1장&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chapter-2&#34;&gt;2장&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chapter-3&#34;&gt;3장&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&#34;1장-a-id-chapter-1-a:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;1장 &lt;a id=&#34;chapter-1&#34;&gt;&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;1장의 내용은&amp;hellip;..&lt;/p&gt;
+
+&lt;h6 id=&#34;2장-a-id-chapter-2-a:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;2장 &lt;a id=&#34;chapter-2&#34;&gt;&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;2장의 내용은&amp;hellip;..&lt;/p&gt;
+
+&lt;h6 id=&#34;3장-a-id-chapter-3-a:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;3장 &lt;a id=&#34;chapter-3&#34;&gt;&lt;/a&gt;&lt;/h6&gt;
+
+&lt;p&gt;3장의 내용은&amp;hellip;..&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;이미지-a-id-image-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;이미지 &lt;a id=&#34;image&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;기본-이미지:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;기본 이미지&lt;/h3&gt;
+
+&lt;p&gt;문법: &lt;code&gt;![사진이름](사진경로)&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;![Minion](http://octodex.github.com/images/minion.png)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML 변환 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;http://octodex.github.com/images/minion.png&amp;quot; alt=&amp;quot;Minion&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://octodex.github.com/images/minion.png&#34; alt=&#34;Minion&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;타이클을-포함하는-이미지:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;타이클을 포함하는 이미지&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;툴팁으로 타이틀이 출력 됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;![Alt text](http://octodex.github.com/images/stormtroopocat.jpg &amp;quot;The Stormtroopocat&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML 변환 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;http://octodex.github.com/images/stormtroopocat.jpg&amp;quot; alt=&amp;quot;Alt text&amp;quot; title=&amp;quot;The Stormtroopocat&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://octodex.github.com/images/stormtroopocat.jpg&#34; alt=&#34;Alt text&#34; title=&#34;The Stormtroopocat&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;주소-참조-이미지:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;주소 참조 이미지&lt;/h3&gt;
+
+&lt;p&gt;링크와 같이 참조 주소를 갖는 이미지&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ![Alt text][10]
+    [10]: http://octodex.github.com/images/dojocat.jpg  &amp;quot;The Dojocat&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://octodex.github.com/images/dojocat.jpg&#34; alt=&#34;Alt text&#34; title=&#34;The Dojocat&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;주석-a-id-comment-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;주석 &lt;a id=&#34;comment&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!--
+마크다운으로 주석 처리 가능
+--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;출력결과 (출력 결과가 노출되지 않습니다.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTML 변환 결과&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!--
+마크다운으로 주석 처리 가능
+--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;각주-a-id-footnote-a-top-top:d59f7b4dfecd890f0583fb0bac5a436e&#34;&gt;각주 &lt;a id=&#34;footnote&#34;&gt;&lt;/a&gt; &lt;a href=&#34;#top&#34;&gt;top&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;본문의 어떤 부분을 설명하거나 보충하기 위해 본문 아래쪽에 별도로 작성하는 간단한 설명문으로서 주로 내용의 출처를 밝힐 때 사용됩니다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;최근 스칼라는 매우 인기가 높은 언어이다.[^scala]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;출력 결과
+최근 스칼라는 매우 인기가 높은 언어이다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:d59f7b4dfecd890f0583fb0bac5a436e:scala&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:d59f7b4dfecd890f0583fb0bac5a436e:scala&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:d59f7b4dfecd890f0583fb0bac5a436e:scala&#34;&gt;스칼라는 마틴 오더시크가 개발한 함수형 언어이다.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:d59f7b4dfecd890f0583fb0bac5a436e:scala&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>오라클 Big Data Lite 설치</title>
@@ -1792,71 +2416,6 @@ public static void main(String args[]){
 &lt;p&gt;taewan.kim은 기술과 소소한 일상을 주제로 운영될 블러그입니다. 많은 관심 부탁드립니다.&lt;/p&gt;
 
 &lt;p&gt;감사합니다.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[47 Degrees] scala exercises</title>
-      <link>http://taewan.kim/blog/2015/03/20/scala_exercises/</link>
-      <pubDate>Fri, 20 Mar 2015 11:49:56 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2015/03/20/scala_exercises/</guid>
-      <description>
-
-&lt;p&gt;47 Degrees(47deg.com)에서 운영하는 Scala Exercise에 대한 정리입니다. Scala Exercise는 42개 목록으로 구성되어 있습니다. 각 타이틀에 대한 요약을 remark.js와 worksheet 프로젝트로 정리하겠습니다. 각 항목에 대한 정리 내용은 현재 페이지에서 링크로 정리하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;변경-로그:164bfe7ab04dfe68df0663755834b87d&#34;&gt;변경 로그&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2016.03.20: 정리 시작&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;scala-exercise:164bfe7ab04dfe68df0663755834b87d&#34;&gt;Scala Exercise&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Assets: summary, code&lt;/li&gt;
-&lt;li&gt;Val and Var&lt;/li&gt;
-&lt;li&gt;Classes&lt;/li&gt;
-&lt;li&gt;Options&lt;/li&gt;
-&lt;li&gt;Objects&lt;/li&gt;
-&lt;li&gt;Tuples&lt;/li&gt;
-&lt;li&gt;High Order Functions&lt;/li&gt;
-&lt;li&gt;Lists&lt;/li&gt;
-&lt;li&gt;Maps&lt;/li&gt;
-&lt;li&gt;Sets&lt;/li&gt;
-&lt;li&gt;Formatting&lt;/li&gt;
-&lt;li&gt;Pattern Matching&lt;/li&gt;
-&lt;li&gt;Case Classes&lt;/li&gt;
-&lt;li&gt;Range&lt;/li&gt;
-&lt;li&gt;Partially Applied Functions&lt;/li&gt;
-&lt;li&gt;Implicits&lt;/li&gt;
-&lt;li&gt;Traits&lt;/li&gt;
-&lt;li&gt;For Expressions&lt;/li&gt;
-&lt;li&gt;Infix, Prefix and Postfix&lt;/li&gt;
-&lt;li&gt;Operators&lt;/li&gt;
-&lt;li&gt;Infix Types&lt;/li&gt;
-&lt;li&gt;Mutable Maps&lt;/li&gt;
-&lt;li&gt;Mutable Sets&lt;/li&gt;
-&lt;li&gt;Sequences and Arrays&lt;/li&gt;
-&lt;li&gt;Iterables&lt;/li&gt;
-&lt;li&gt;Traversables&lt;/li&gt;
-&lt;li&gt;Named and Default Arguments&lt;/li&gt;
-&lt;li&gt;Mainfests&lt;/li&gt;
-&lt;li&gt;Preconditions&lt;/li&gt;
-&lt;li&gt;Extrators&lt;/li&gt;
-&lt;li&gt;ByName Parameter&lt;/li&gt;
-&lt;li&gt;Repeated Parameters&lt;/li&gt;
-&lt;li&gt;Parent Classes&lt;/li&gt;
-&lt;li&gt;Empty Values&lt;/li&gt;
-&lt;li&gt;Type Signatures&lt;/li&gt;
-&lt;li&gt;Uniform Access Principle&lt;/li&gt;
-&lt;li&gt;Literal Booleans&lt;/li&gt;
-&lt;li&gt;Literal Numbers&lt;/li&gt;
-&lt;li&gt;Literal Strings&lt;/li&gt;
-&lt;li&gt;Type Variance&lt;/li&gt;
-&lt;li&gt;Enumerations&lt;/li&gt;
-&lt;li&gt;Constructions&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     
