@@ -6,8 +6,28 @@
     <description>Recent content on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Apr 2016 13:47:07 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Apr 2016 10:07:25 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>extjs 2.2 다운로드 URL</title>
+      <link>http://taewan.kim/blog/2016/04/06/extjs_2.2_download/</link>
+      <pubDate>Wed, 06 Apr 2016 10:07:25 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/04/06/extjs_2.2_download/</guid>
+      <description>&lt;p&gt;하둡 에코에서 Batch Job 및 워크플로우를 담당하는 Apache Oozie는 Web Console기능을 제공합니다. Oozie Web Console은 ExtJS 2.2버전으로 개발되어 있습니다. 그러나 라이센스 문제로 Oozie 배포 패키지에는 ExtJS 2.2 버전이 포함되어 있지 않습니다.&lt;/p&gt;
+
+&lt;p&gt;ExtJS 2.2 파일(zip파일)을 다운로드 받아 Oozie Server가 동작하는 &amp;ldquo;/var/lib/oozie&amp;rdquo;에 저장하고 oozie-site.xml에 &amp;ldquo;Enable Oozie Server Web Console&amp;rdquo;을 &amp;ldquo;true&amp;rdquo;로 설정하고 Oozie 서버를 재시작하면 Oozie Web Console이 구동됩니다.&lt;/p&gt;
+
+&lt;p&gt;ExtJS 2.2는 sencha.com에서 관리하지 않는 버전의 라이브러리로 현재 sencha.com에서는 제공하지 않습니다. typo3.org는 오픈소스 CMS(Contents Management System)입니다. ExtJS 2.2의 오픈소스 버전은 다음 typo3.org에서 다운로드 받을 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ExtJS 2.2 다운로드 URL: &lt;a href=&#34;https://typo3.org/extensions/repository/view/extjs&#34;&gt;https://typo3.org/extensions/repository/view/extjs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cdn.infoq.com/statics_s2_20160405-0343u1/resource/articles/introductionOozie/en/resources/Figure2%20small.jpg&#34; alt=&#34;&#34; title=&#34;Ooozie Web Console&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>마크다운 사용법 정리</title>
@@ -1216,72 +1236,6 @@ Linux bigdatalite.localdomain 2.6.39-400.264.5.el6uek.x86_64 #1 SMP Tue Nov 3 18
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/python/hackerrank1.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;img src=&#34;http://taewan.kim/images/python/hackerrank2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>problem 01</title>
-      <link>http://taewan.kim/documents/prolog99/problem-01.html</link>
-      <pubDate>Fri, 25 Mar 2016 18:00:54 +0900</pubDate>
-      
-      <guid>http://taewan.kim/documents/prolog99/problem-01.html</guid>
-      <description>
-
-&lt;h2 id=&#34;현재-상태:ae225dbb0108137226a4721d51b6129f&#34;&gt;현재 상태&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2016-03-25: 풀이 중&lt;/li&gt;
-&lt;li&gt;2016-03-25: 1/2번 풀이 종료&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;문제:ae225dbb0108137226a4721d51b6129f&#34;&gt;문제&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;리스트의 마지막 엘리먼트를 구하시오?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;scala&amp;gt; last(List(1, 1, 2, 3, 5, 8))
-res0: Int = 8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;풀이:ae225dbb0108137226a4721d51b6129f&#34;&gt;풀이&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;단순 풀이&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01 {
-  def last[A](list:List[A]):A=list.last
-}
-
-import P01._
-
-var result = last(List(1, 2, 3, 4, 5, 6))
-println(result)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;재귀방식 풀이&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-scala&#34;&gt;object P01R{
-  @tailrec
-  def last[A](list:List[A]):A = list match {
-    case h::Nil =&amp;gt; h
-    case _::tail  =&amp;gt; last(tail)
-    case _ =&amp;gt; throw new NoSuchElementException
-  }
-}
-
-import P01R._
-
-var result = last(List(1,2,1,1,2,3,4,5))
-println(result)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://taewan.kim/documents/Problem-NintyNine4Scala.html&#34;&gt;&amp;ldquo;Prolog99 for scala&amp;rdquo; 돌아가기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

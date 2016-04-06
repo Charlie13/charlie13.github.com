@@ -6,8 +6,28 @@
     <description>Recent content in Posts on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Apr 2016 13:47:07 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Apr 2016 10:07:25 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/post.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>extjs 2.2 다운로드 URL</title>
+      <link>http://taewan.kim/blog/2016/04/06/extjs_2.2_download/</link>
+      <pubDate>Wed, 06 Apr 2016 10:07:25 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/04/06/extjs_2.2_download/</guid>
+      <description>&lt;p&gt;하둡 에코에서 Batch Job 및 워크플로우를 담당하는 Apache Oozie는 Web Console기능을 제공합니다. Oozie Web Console은 ExtJS 2.2버전으로 개발되어 있습니다. 그러나 라이센스 문제로 Oozie 배포 패키지에는 ExtJS 2.2 버전이 포함되어 있지 않습니다.&lt;/p&gt;
+
+&lt;p&gt;ExtJS 2.2 파일(zip파일)을 다운로드 받아 Oozie Server가 동작하는 &amp;ldquo;/var/lib/oozie&amp;rdquo;에 저장하고 oozie-site.xml에 &amp;ldquo;Enable Oozie Server Web Console&amp;rdquo;을 &amp;ldquo;true&amp;rdquo;로 설정하고 Oozie 서버를 재시작하면 Oozie Web Console이 구동됩니다.&lt;/p&gt;
+
+&lt;p&gt;ExtJS 2.2는 sencha.com에서 관리하지 않는 버전의 라이브러리로 현재 sencha.com에서는 제공하지 않습니다. typo3.org는 오픈소스 CMS(Contents Management System)입니다. ExtJS 2.2의 오픈소스 버전은 다음 typo3.org에서 다운로드 받을 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ExtJS 2.2 다운로드 URL: &lt;a href=&#34;https://typo3.org/extensions/repository/view/extjs&#34;&gt;https://typo3.org/extensions/repository/view/extjs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cdn.infoq.com/statics_s2_20160405-0343u1/resource/articles/introductionOozie/en/resources/Figure2%20small.jpg&#34; alt=&#34;&#34; title=&#34;Ooozie Web Console&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>마크다운 사용법 정리</title>
@@ -2379,47 +2399,6 @@ public static void main(String args[]){
 &lt;li&gt;테마가 클라이언트 모드를 지원할 경우, highlisht 스타일은 static/css/highlight에서 확인 가능하다.&lt;/li&gt;
 &lt;li&gt;테마가 서버사이드 모드를 지원할 경우, hugo 빌드를 수행하는 곳에는 pygments가 설치되어 있어야 한다.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>taewan.kim을 오픈합니다.</title>
-      <link>http://taewan.kim/blog/2016/01/25/first/</link>
-      <pubDate>Mon, 25 Jan 2016 13:09:53 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/01/25/first/</guid>
-      <description>&lt;p&gt;안녕하세요 김태완입니다.&lt;/p&gt;
-
-&lt;p&gt;여러 블러그를 떠돌다 이번에 Hugo로 만든 정적 블러그에 정착하기로 했습니다.
-이젠 힘들어서 이 녀석에 최대한 의지할 예정입니다.&lt;/p&gt;
-
-&lt;p&gt;taewan.kim의 구성은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hugo
-
-&lt;ul&gt;
-&lt;li&gt;theme: Hyde-X&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Host: github.io&lt;/li&gt;
-&lt;li&gt;version control
-
-&lt;ul&gt;
-&lt;li&gt;github.com&lt;/li&gt;
-&lt;li&gt;bitbucket.org&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Publishing: Jenkins at AWS&lt;/li&gt;
-&lt;li&gt;Others
-
-&lt;ul&gt;
-&lt;li&gt;Google Analytics&lt;/li&gt;
-&lt;li&gt;Disqus&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;taewan.kim은 기술과 소소한 일상을 주제로 운영될 블러그입니다. 많은 관심 부탁드립니다.&lt;/p&gt;
-
-&lt;p&gt;감사합니다.&lt;/p&gt;
 </description>
     </item>
     
