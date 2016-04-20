@@ -759,7 +759,7 @@ VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS�
 &lt;li&gt;서버주소: 192.168.56.100&lt;/li&gt;
 &lt;li&gt;서버마스크: 255.255.255.0&lt;/li&gt;
 &lt;li&gt;최저주소한계: 192.168.56.101&lt;/li&gt;
-&lt;li&gt;최고주소한계: 192.168.56.154&lt;/li&gt;
+&lt;li&gt;최고주소한계: 192.168.56.254&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/dscp.png&#34; alt=&#34;vboxnet0&#34; /&gt;
