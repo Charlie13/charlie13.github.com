@@ -6,8 +6,24 @@
     <description>Recent content in Posts on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Oct 2016 14:26:30 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 07 Oct 2016 17:41:46 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/post.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>네크워크 클래스 별 Private IP의 대역입니다.</title>
+      <link>http://taewan.kim/blog/2016/10/07/private_ip/</link>
+      <pubDate>Fri, 07 Oct 2016 17:41:46 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/10/07/private_ip/</guid>
+      <description>&lt;p&gt;암기용 요약입니다. 네트워크 클래스별 Private IP의 대역입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A 클래스 : 10.0.0.0 ~ 10.255.255.255&lt;/li&gt;
+&lt;li&gt;B 클래스 : 172.16.0.0 ~ 172.31.255.255&lt;/li&gt;
+&lt;li&gt;C 클래스 : 192.168.0.0 ~ 192.168.255.255&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>오라클 클라우드 계정 생성하기</title>
@@ -2375,135 +2391,6 @@ Port = 4567
 &lt;li&gt;낮은 값을 설정할 경우 불필요한 커넥션 연결 오픈을 방지할 수 있음&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>JBoss Seam 로고의 의미</title>
-      <link>http://taewan.kim/blog/2016/01/27/seam_log/</link>
-      <pubDate>Wed, 27 Jan 2016 10:50:36 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/01/27/seam_log/</guid>
-      <description>
-
-&lt;p&gt;2008~2009년도에는 JBoss Seam에 몰입했던 기시였습니다. 그 당시에 작성했던 글입니다. 오픈소스를 이해할 때 오픈소스의 이름과 로고가 담고 있는 의미를 이해하는 성움이 됩니다. 오픈소스 이름과 로고를 이렇게 해석했구나 라는 사례로 봐 주시면 좋을 것 같습니다. 그럼 2009년으로 들어가 보겠습니다.&lt;/p&gt;
-
-&lt;h1 id=&#34;seam-framework-로고는-어떤-의미일까요:f19f716c8aeb01c785b0b485dd6debca&#34;&gt;Seam Framework 로고는 어떤 의미일까요?&lt;/h1&gt;
-
-&lt;p&gt;Seam Framework은 기존과 차별되는 독특한 컴포넌트 관리 모델을 제안하고 있습니다. 기존에 Java EE 애플리케이션은 Web 티어와 EJB 티어로 구분되어 있기 때문어 상호간에 참조하기가 어려웠습니다. 웹 에서 EJB 컴포넌트를 참조하기 위해서는 JNDI Lookup과 Casting 작업이 선행되어야 했습니다.&lt;/p&gt;
-
-&lt;p&gt;이렇다 보니 Java EE의 핵심 컴포넌트인 JSF 컴포넌트와 EJB 컴포넌트는 Java EE의 핵심 컴포넌트이기는 하지만 상호간을 참조하는 것은 여간 번거로운 작업이 아닐수 없었습니다.&lt;/p&gt;
-
-&lt;p&gt;왜 이런일이 발생할까? 라는 고민에서 Seam Framework이 시작되었다고 보셔도 좋을것 같습니다.&lt;/p&gt;
-
-&lt;p&gt;처음 Seam을 접할때 Seam이란 의미는 Seamless의 약자가 아닐까? 라는 생각을 했습니다. Seam의 컴포넌트 모델을 보다 보면 다음과 같은 이미지를 연상하게 됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/seamlogo.png&#34; alt=&#34;Seam Logo&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;seam-framework-logo는-이런-의미를-담고-있지-않을까요:f19f716c8aeb01c785b0b485dd6debca&#34;&gt;Seam Framework Logo는 이런 의미를 담고 있지 않을까요?&lt;/h2&gt;
-
-&lt;p&gt;개인적인 추측에 불과하지만 Seam Framework의 빗살 무늬 로고는 이런 의미를 담고 있는 것이 아닌가라는 생각을 해 보았습니다.&lt;/p&gt;
-
-&lt;p&gt;동일한 JVM에서 구동하는 WAS의 컴포넌트를 통합하여 사용할 수 있도록 지원하는 것이 Seam 프레임웍의 시작점 입니다. 이렇게 Java EE 컴포넌트를 통합하는 모델위에 컴포넌트가 서로를 상호 참조하는 의존성 주입 모델이 결합되면 이것이 최종 Seam 컴포넌트 관리 모델이 됩니다.&lt;/p&gt;
-
-&lt;p&gt;Seam 컴포넌트 모델은 지난 번에 말씀 드렸던 것 처럼 JSR - 299 스펙 CDI (Context and Dependency Injection)의 토대가 되고 있고, 현재 Seam의 모습으로 JSR - 299가 정의 되고 있습니다.&lt;/p&gt;
-
-&lt;p&gt;웹컴포넌트와 EJB 컴포넌트가 통합되어 관리 된다는 것은 어떤 의미일까요?&lt;/p&gt;
-
-&lt;p&gt;이것은 다음과 같은 코드를 보시면 좋을 것 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;JSP 코드 예제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt; &amp;lt;h:form&amp;gt;
-    &amp;lt;h:inputText value=&amp;quot;#{person.name}&amp;quot; /&amp;gt;&amp;lt;br/&amp;gt;
-    &amp;lt;h:commandButton type=&amp;quot;submit&amp;quot;  value=&amp;quot;submit&amp;quot; 
-        action=&amp;quot;#{manager.sayHello}&amp;quot; /&amp;gt;
-&amp;lt;/h:form&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;위와 같은 JSP 코드가 존재한다고 생각해 보시기바랍니다.
-이코드를 보면 다음과 같은 것을 추측할 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;폼에 하나의 입력 텍스트와 하나의 버튼으로 구성&lt;/li&gt;
-&lt;li&gt;입력 텍스트에 입력된 값은 person 객체의 name 필드에 저장됨&lt;/li&gt;
-&lt;li&gt;버튼을 클릭하면 manager 객체의 sayHello 메서드가 실행됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;person과 manager 객체의 실체는 무엇일까요? person 객체는 다음과 같을 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Person 객체&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Entity
-@Name(&amp;quot;person&amp;quot;)
-public class Person implements Serializable{
-  private long id;
-  private String name;
-  //이하 코드 생략
-  //getter-setter
-  //Annotation
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;person 객체의 실체는 위와 같을 수 있습니다. 실제 Person 객체는 Seam Person 컴포넌트라고 하는 것이 정확한 표현입니다. Person 객체를 person 이라는 이름으로 참조 할 수 있는 것은  바로 Seam이 제공하는 컴포넌트 관리 모델때문입니다.&lt;/p&gt;
-
-&lt;p&gt;그런데 Person 객체는 실제로 Entity Bean입니다. JPA에서 ORM으로 사용하는 POJO 객체입니다. JPA는 Java SE에서도 구동되는 기술임을 감안하면 아직까지는 크게 이상할 것은 없는 코드 입니다.&lt;/p&gt;
-
-&lt;p&gt;그렇다면 manager 객체, 더 정확히 말해서 manager 컴포넌트의 실체는 무엇일까요?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;manager 컴포넌트&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Stateless
-@Name(&amp;quot;manager&amp;quot;)
-public class ManagerAction implements Manager{
-    @In @Out Person person;
-    @Out List&amp;lt;Person&amp;gt; personList;
-    @PersistenceContext EntityManager em;
-
-    public String sayHello(){
-      em.persist(person);
-      person = null;
-      return null;
-    }
-   //이하 코드 생략
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;여러가지 manager 컴포넌트 스타일을 생각해 볼 수 있지만 위와 같은 코드가 일반적입니다. 놀라운 것은 manager 컴포넌트는 실제 무상태 세션 빈이라는 것입니다. JSP 페이지의 테그라이브러리의 Expression Language 형태로 설정한 형태는 실제 세션빈의 메서드를 호출하는 것이었습니다.&lt;/p&gt;
-
-&lt;p&gt;JSP를 통하여 별다른 작업 없이 ejb를 직접 호출하는 형태 입니다. JSF에 익숙하신 분들에게는 이렇게 표현하실 수 있습니다. (위 JSP는 실제 JSF 페이지 코드의 일부 입니다. )&lt;/p&gt;
-
-&lt;h2 id=&#34;seam은-세션빈을-액션-리스너로-직접-사용할-수-있다:f19f716c8aeb01c785b0b485dd6debca&#34;&gt;Seam은 세션빈을 액션 리스너로 직접 사용할 수 있다.&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;JSF로 이런한 기능을 구현하기 위해서는 다음과 같은 작업을 거치게 됩니다&lt;/li&gt;
-&lt;li&gt;JSF페이지에서 managed bean으로 등록된 컴포넌트의 메소드를 호출 그 메서드가 JDNI 룩업을 하고 전처리를 수행&lt;/li&gt;
-&lt;li&gt;ejb를 호출&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Seam은 이런 절차를 모두 생략하고 직접 세션빈을 액션 리스너로 사용할 수 있는 방법을 제공합니다.&lt;/p&gt;
-
-&lt;p&gt;이것이 Seam에서 이야기하는 컴포넌트 통합 모델의 근간 입니다.&lt;/p&gt;
-
-&lt;p&gt;Seam은 기존에 경험하지 못했던 새로운 개념의 통합 컴포넌트 모델 관리 개념을 제공합니다. 컴포넌트를 직접 참조하는 것이 아니라 컴포넌트 이름으로 참조하고 이것을 관리하는 것은 Seam 프레임웍이 전담하는 형태입니다.&lt;/p&gt;
-
-&lt;p&gt;사실 EJB 컴포넌트와 Web 컴포넌트를 통합하는 것은 Seam의 핵심 기능이기는 하지만 가장 밑바탕이 되는 기능중의 일부 입니다. Seam은 기존의 Dependency Injection을 확장하여 Bijection이라는 개념과 Context 개념을 강화하여 진보된 컴포넌트 관리 모델을 제공합니다.&lt;/p&gt;
-
-&lt;p&gt;이런 의미에서 앞에서 살펴 보았던 Seam Logo 이미지를 다시 한번 살펴 보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/seamlogo.png&#34; alt=&#34;Seam Logo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Seam 프레임웍 로고로 사용하는 빗살 무늬 로고는 아마도 두 개의 Tier로 나누어져 있는 컴포넌트를 서로 연결하는 상호작용 할 수 있도록 지원한다는 의미라고 저는 생각하고 있습니다.&lt;/p&gt;
-
-&lt;p&gt;여러분들은 어떻게 보이시나요?&lt;/p&gt;
-
-&lt;p&gt;간혹 이런 의미를 생각해 보는 것도 재미있는 것 같습니다.^^&lt;/p&gt;
 </description>
     </item>
     

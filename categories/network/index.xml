@@ -6,8 +6,24 @@
     <description>Recent content in Network on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Jan 2016 12:42:43 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 07 Oct 2016 17:41:46 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/categories/network.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>네크워크 클래스 별 Private IP의 대역입니다.</title>
+      <link>http://taewan.kim/blog/2016/10/07/private_ip/</link>
+      <pubDate>Fri, 07 Oct 2016 17:41:46 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/10/07/private_ip/</guid>
+      <description>&lt;p&gt;암기용 요약입니다. 네트워크 클래스별 Private IP의 대역입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A 클래스 : 10.0.0.0 ~ 10.255.255.255&lt;/li&gt;
+&lt;li&gt;B 클래스 : 172.16.0.0 ~ 172.31.255.255&lt;/li&gt;
+&lt;li&gt;C 클래스 : 192.168.0.0 ~ 192.168.255.255&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>VirtualBox: 호스트에서 게스트 접근 네트웍 설정</title>
