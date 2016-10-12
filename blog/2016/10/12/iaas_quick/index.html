@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>오라클 IaaS를 이용한 VM 인스턴스 생성 &middot; Taewan Kim</title>
+
+  
+  <link rel="stylesheet" href="http://taewan.kim/css/poole.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/hyde.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/hyde-x.css">
+  <link rel="stylesheet" href="http://taewan.kim/css/highlight/github2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://taewan.kim/touch-icon-144-precomposed.png">
+  <link href="http://taewan.kim/favicon.png" rel="icon">
+
+<style>
+ul#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul#menu li {
+    float: left;
+}
+
+ul#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul#menu li a:hover {
+    background-color: #111;
+}
+</style>
+
+
+  
+  
+  
+  
+
+  <meta name="description" content="오라클 클라우드의 IaaS(Oracle Compute Cloud Service)를 이용하여 인스턴스를 생성하는 방법을 살펴보겠습니다. Step-By-Step 스타일로 VM 인스턴스 절차를 정리합니다. ">
+  <meta name="keywords" content="Oracle,Cloud,Oracle Cloud,IaaS,VM,Step by Step">
+  
+</head>
+<body class="theme-base-08 layout-reverse">
+
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/e0994f88e71e61c3dede3a00e0e3dc00?s=200"
+             alt="gravatar" title="Taewan Kim">
+      
+      <h1>Taewan Kim</h1>
+      <p class="lead">민수아빠..</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/post.html">all</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/bigdata.html">BigData</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/linux.html">Linux</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/cloud.html">cloud</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://taewan.kim/categories/hugo.html">hugo</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/taewanme"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      <a href="http://www.facebook.com/alvinkim082"><i class="fa fa-facebook-square fa-3x"></i></a>
+      <a href="https://twitter.com/taewamme"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://taewan.kim/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://taewan.kim/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a></p>
+  </div>
+</div>
+
+<ul id="menu">
+  <li><a href="/">Home</a></li>
+  <li><a href="/working.html">About Me</a></li>
+  <li><a href="/presentation.html">Presentation</a></li>
+  <li><a href="/document.html">Document</a></li>
+  <li><a href="/mylearning.html">My Learning</a></li>
+  <li><a href="/minsu.html">My Son - Minsu</a></li>
+</ul> 
+
+
+
+<div class="content container">
+    <div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8469722754608892"
+     data-ad-slot="5594090168"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+
+  <div class="post">
+    <h1>오라클 IaaS를 이용한 VM 인스턴스 생성</h1>
+    <span class="post-date">Oct 12, 2016 &middot; 1 minute read &middot; <a href="http://taewan.kim/blog/2016/10/12/iaas_quick/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://taewan.kim/categories/oracle.html">Oracle</a><a class="label" href="http://taewan.kim/categories/cloud.html">Cloud</a><a class="label" href="http://taewan.kim/categories/oracle-cloud.html">Oracle Cloud</a><a class="label" href="http://taewan.kim/categories/iaas.html">IaaS</a><a class="label" href="http://taewan.kim/categories/virtualization.html">Virtualization</a><a class="label" href="http://taewan.kim/categories/tutorial.html">Tutorial</a>
+    </span>
+    
+
+<p>오라클 클라우드의 IaaS 서비스에 Ubuntu 14.04를 가상 인스턴스로 만드는 절차를 정라힙니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 &ldquo;오라클 IaaS를 이용한 VM 인스턴스 생성&rdquo; (<a href="http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/">http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/</a> ) 를 참조하시기 바랍니다.</p>
+
+<h2 id="oracle-cloud-vm-생성-실습:7a6448865fd6548e9403a0ce293d8c64">Oracle Cloud VM 생성 실습</h2>
+
+<p>실습에 사용된 클라이언트 OS는 Mac입니다. 이 문서에서 실행한 절차를 윈도우에서 실습하실 경우에는 PUTTY와 같은 Terminal을 사용한다는 것과 SSH-KEYGEN을 사용하는 절차가 달라질 것입니다. 이 부분에 대해서는 별도의 문서로 정리하겠습니다.</p>
+
+<p>오라클 클라우드 VM 생성 실습은 약 10정도 소요됩니다.</p>
+
+<h3 id="실습-절차:7a6448865fd6548e9403a0ce293d8c64">실습 절차</h3>
+
+<p>오라클 클라우드에 VM을 생성하는 실습은 다음과 같은 절차로 진행됩니다. 각 절차는 &ldquo;Step by Step&rdquo;으로 설명하겠습니다.</p>
+
+<ol>
+<li>로컬 컴퓨터 ssh key 생성</li>
+<li>Oracle Cloud 로그인</li>
+<li>Compute Service UI 접근</li>
+<li>Network 설정
+
+<ul>
+<li>Public IP 생성</li>
+<li>Public Key 등록</li>
+</ul></li>
+<li>VM Instance 생성</li>
+<li>VM 로그인 및 nginx 설치</li>
+<li>Security 등록 및 브라우저 접근</li>
+<li>VM 인스턴스 정지</li>
+</ol>
+
+<h2 id="oracle-cloud-vm-생성:7a6448865fd6548e9403a0ce293d8c64">Oracle Cloud VM 생성</h2>
+
+<h3 id="step01-로컬-컴퓨터-ssh-key-생성:7a6448865fd6548e9403a0ce293d8c64">Step01: 로컬 컴퓨터 ssh key 생성</h3>
+
+<p>Oracle Public Cloud(이하 OPC)에 가상 머신을 생성하면 ssh를 터미널로 VM 인스턴스(이하 인스턴스)에 접근하게 됩니다.
+OPC에 VM을 생성하는 과정에서 접속할 컴퓨터에서 생성된 public key를 등록하는 절차가 포함됩니다.</p>
+
+<p><img src="/images/oracloud/iaas_quick/step010.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step020.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step030.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step040.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step050.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step060.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step070.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step080.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step090.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step100.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step110.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step120.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step130.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step140.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step150.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step160.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step170.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step180.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step190.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step200.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step210.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step220.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step240.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step250.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step260.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step280.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step290.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step300.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step310.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step320.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step330.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step340.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step350.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step360.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step370.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step380.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step390.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step400.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step440.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step450.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step460.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step470.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step480.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step490.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step500.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step510.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step520.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step530.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step540.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step550.jpg" alt="" />
+<img src="/images/oracloud/iaas_quick/step560.jpg" alt="" /></p>
+
+  </div>
+  <div>
+    <hr/>
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="/images/creative.png" /></a><a href='https://www.facebook.com/alvinkim082' target='_blank'>taewanme</a>의 저작물인 이 저작물은(는) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+    <hr/>
+  </div>
+  <div id="disqus_thread"></div>
+
+    <div>
+    <br/><br/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8469722754608892"
+     data-ad-slot="5594090168"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+
+</div>
+
+
+<script type="text/javascript">
+    var disqus_shortname = "taewankim";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+<script src="http://taewan.kim/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-73312251-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+</body>
+</html>
+
