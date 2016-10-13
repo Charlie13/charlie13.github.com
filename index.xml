@@ -30,22 +30,23 @@
       <guid>http://taewan.kim/blog/2016/10/12/iaas_quick/</guid>
       <description>
 
-&lt;p&gt;오라클 클라우드의 IaaS 서비스에 Ubuntu 14.04를 가상 인스턴스로 만드는 절차를 정라힙니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 &lt;a href=&#34;http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/&#34;&gt;&amp;ldquo;오라클 클라우드 계정 생성하기&amp;rdquo;&lt;/a&gt; 를 참조하시기 바랍니다.&lt;/p&gt;
+&lt;p&gt;오라클 클라우드의 IaaS 서비스에 Ubuntu 14.04를 가상 인스턴스로 만드는 절차를 정라합니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 &lt;a href=&#34;http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/&#34;&gt;&amp;ldquo;오라클 클라우드 계정 생성하기&amp;rdquo;&lt;/a&gt; 를 참조하시기 바랍니다.&lt;/p&gt;
 
 &lt;h2 id=&#34;oracle-cloud-vm-인스턴스-생성-실습:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Oracle Cloud VM 인스턴스 생성 실습&lt;/h2&gt;
 
-&lt;p&gt;본 문서는 OS X(Mac) 환경에서 만들었습니다. 이 문서에서 실행한 절차를 윈도우에서 실습하실 경우에는 PUTTY와 같은 Terminal을 사용한다는 것과 SSH-KEYGEN을 사용하는 절차가 달라질 것입니다. 이 부분에 대해서는 별도 문서로 정리하겠습니다.&lt;/p&gt;
+&lt;p&gt;본 문서는 OS X(Mac) 환경에서 만들었습니다. 이 문서를 윈도우에서 실습하실 경우에는 PUTTY와 같은 Terminal을 사용한다는 것 과 SSH-KEYGEN을 사용하는 절차가 달라질 것입니다. 이 부분에 대해서는 별도 문서로 정리하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;오라클 클라우드 VM 생성 실습은 약 10~15분 정도 소요됩니다.&lt;/p&gt;
 
 &lt;h3 id=&#34;실습-절차:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;실습 절차&lt;/h3&gt;
 
-&lt;p&gt;오라클 클라우드에 VM을 생성하는 실습은 다음과 같은 절차되며, 각 절차는 &amp;ldquo;Step by Step&amp;rdquo;으로 설명하겠습니다.&lt;/p&gt;
+&lt;p&gt;오라클 클라우드에 VM을 생성하는 실습은 다음과 같은 순서로 진행되며,
+각 단계를 &amp;ldquo;Step by Step&amp;rdquo; 형태로 설명하겠습니다.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;로컬 컴퓨터 ssh key 생성&lt;/li&gt;
 &lt;li&gt;Oracle Cloud 로그인&lt;/li&gt;
-&lt;li&gt;Compute Cloud Service Console 이동&lt;/li&gt;
+&lt;li&gt;Compute Cloud Service Console&lt;/li&gt;
 &lt;li&gt;Network 설정
 
 &lt;ul&gt;
@@ -64,9 +65,10 @@
 &lt;h3 id=&#34;step01-로컬-컴퓨터-ssh-key-생성:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step01: 로컬 컴퓨터 ssh key 생성&lt;/h3&gt;
 
 &lt;p&gt;Oracle Public Cloud(이하 OPC)에 가상 머신을 생성하면, 터미널에서 ssh로 VM 인스턴스(이하 인스턴스)에 접근하게 됩니다.
-OPC에 VM을 생성하는 과정은 접속할 컴퓨터를 인증하는 용도로 사용될 public key를 등록하는 것을 포함합니다.&lt;/p&gt;
+OPC에 VM을 생성하는 과정은 SSH 공개키를 등록하는 단계가 포함되어 있습니다.
+이 ssh 공개키는 접속할 컴퓨터를 인증하는 용도로 사용됩니다.&lt;/p&gt;
 
-&lt;p&gt;리눅스와 OS X에서는 ssh 명령에서 사용할 암호화 키를 다음과 같은 명령으로 생성합니다.&lt;/p&gt;
+&lt;p&gt;리눅스와 OS X의 ssh 명령에서 사용하는 암호화 키는 다음과 같은 명령으로 생성됩니다.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -t rsa
 &lt;/code&gt;&lt;/pre&gt;
