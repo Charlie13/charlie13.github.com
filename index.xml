@@ -6,8 +6,21 @@
     <description>Recent content on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Oct 2016 10:27:49 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Oct 2016 17:18:09 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Oracle Public Cloud 모음</title>
+      <link>http://taewan.kim/opc.html</link>
+      <pubDate>Wed, 12 Oct 2016 17:18:09 +0900</pubDate>
+      
+      <guid>http://taewan.kim/opc.html</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/&#34;&gt;오라클 클라우드 계정 생성하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://taewan.kim/blog/2016/10/12/iaas_quick/&#34;&gt;오라클 IaaS를 이용한 VM 인스턴스 생성&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>오라클 IaaS를 이용한 VM 인스턴스 생성</title>
@@ -17,29 +30,30 @@
       <guid>http://taewan.kim/blog/2016/10/12/iaas_quick/</guid>
       <description>
 
-&lt;p&gt;오라클 클라우드의 IaaS 서비스에 Ubuntu 14.04를 가상 인스턴스로 만드는 절차를 정라힙니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 &amp;ldquo;오라클 IaaS를 이용한 VM 인스턴스 생성&amp;rdquo; (&lt;a href=&#34;http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/&#34;&gt;http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/&lt;/a&gt; ) 를 참조하시기 바랍니다.&lt;/p&gt;
+&lt;p&gt;오라클 클라우드의 IaaS 서비스에 Ubuntu 14.04를 가상 인스턴스로 만드는 절차를 정라힙니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 &lt;a href=&#34;http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/&#34;&gt;&amp;ldquo;오라클 클라우드 계정 생성하기&amp;rdquo;&lt;/a&gt; 를 참조하시기 바랍니다.&lt;/p&gt;
 
-&lt;h2 id=&#34;oracle-cloud-vm-생성-실습:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Oracle Cloud VM 생성 실습&lt;/h2&gt;
+&lt;h2 id=&#34;oracle-cloud-vm-인스턴스-생성-실습:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Oracle Cloud VM 인스턴스 생성 실습&lt;/h2&gt;
 
-&lt;p&gt;실습에 사용된 클라이언트 OS는 Mac입니다. 이 문서에서 실행한 절차를 윈도우에서 실습하실 경우에는 PUTTY와 같은 Terminal을 사용한다는 것과 SSH-KEYGEN을 사용하는 절차가 달라질 것입니다. 이 부분에 대해서는 별도의 문서로 정리하겠습니다.&lt;/p&gt;
+&lt;p&gt;본 문서는 OS X(Mac) 환경에서 만들었습니다. 이 문서에서 실행한 절차를 윈도우에서 실습하실 경우에는 PUTTY와 같은 Terminal을 사용한다는 것과 SSH-KEYGEN을 사용하는 절차가 달라질 것입니다. 이 부분에 대해서는 별도 문서로 정리하겠습니다.&lt;/p&gt;
 
-&lt;p&gt;오라클 클라우드 VM 생성 실습은 약 10정도 소요됩니다.&lt;/p&gt;
+&lt;p&gt;오라클 클라우드 VM 생성 실습은 약 10~15분 정도 소요됩니다.&lt;/p&gt;
 
 &lt;h3 id=&#34;실습-절차:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;실습 절차&lt;/h3&gt;
 
-&lt;p&gt;오라클 클라우드에 VM을 생성하는 실습은 다음과 같은 절차로 진행됩니다. 각 절차는 &amp;ldquo;Step by Step&amp;rdquo;으로 설명하겠습니다.&lt;/p&gt;
+&lt;p&gt;오라클 클라우드에 VM을 생성하는 실습은 다음과 같은 절차되며, 각 절차는 &amp;ldquo;Step by Step&amp;rdquo;으로 설명하겠습니다.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;로컬 컴퓨터 ssh key 생성&lt;/li&gt;
 &lt;li&gt;Oracle Cloud 로그인&lt;/li&gt;
-&lt;li&gt;Compute Service UI 접근&lt;/li&gt;
+&lt;li&gt;Compute Cloud Service Console 이동&lt;/li&gt;
 &lt;li&gt;Network 설정
 
 &lt;ul&gt;
-&lt;li&gt;Public IP 생성&lt;/li&gt;
 &lt;li&gt;Public Key 등록&lt;/li&gt;
+&lt;li&gt;Public IP 생성&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;VM Instance 생성&lt;/li&gt;
+&lt;li&gt;Security Rule 등록 (for SSH)&lt;/li&gt;
 &lt;li&gt;VM 로그인 및 nginx 설치&lt;/li&gt;
 &lt;li&gt;Security 등록 및 브라우저 접근&lt;/li&gt;
 &lt;li&gt;VM 인스턴스 정지&lt;/li&gt;
@@ -49,60 +63,409 @@
 
 &lt;h3 id=&#34;step01-로컬-컴퓨터-ssh-key-생성:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step01: 로컬 컴퓨터 ssh key 생성&lt;/h3&gt;
 
-&lt;p&gt;Oracle Public Cloud(이하 OPC)에 가상 머신을 생성하면 ssh를 터미널로 VM 인스턴스(이하 인스턴스)에 접근하게 됩니다.
-OPC에 VM을 생성하는 과정에서 접속할 컴퓨터에서 생성된 public key를 등록하는 절차가 포함됩니다.&lt;/p&gt;
+&lt;p&gt;Oracle Public Cloud(이하 OPC)에 가상 머신을 생성하면, 터미널에서 ssh로 VM 인스턴스(이하 인스턴스)에 접근하게 됩니다.
+OPC에 VM을 생성하는 과정은 접속할 컴퓨터를 인증하는 용도로 사용될 public key를 등록하는 것을 포함합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step010.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step020.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step030.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step040.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step050.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step060.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step070.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step080.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step090.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step100.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step110.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step120.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step130.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step140.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step150.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step160.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step170.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step180.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step190.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step200.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step210.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step220.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step240.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step250.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step260.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step280.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step290.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step300.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step310.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step320.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step330.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step340.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step350.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step360.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step370.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step380.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step390.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step400.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step440.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step450.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step460.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step470.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step480.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step490.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step500.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step510.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step520.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step530.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step540.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step550.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step560.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;리눅스와 OS X에서는 ssh 명령에서 사용할 암호화 키를 다음과 같은 명령으로 생성합니다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen -t rsa
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[그림 1]은 ssh-keygen 명령으로 암호화 키를 생성하는 스크린 샷입니다.
+ssh-keygen 명령으로 암호화 키를 생성할때 기본 파일 생성 디렉터리와 파일명은 다음과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;기본 디렉터리: &lt;USER_HOME&gt;/.ssh/&lt;/li&gt;
+&lt;li&gt;기본 파일명: id_rsa / id_rsa.pub&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;taewan@.ssh $pwd
+/Users/taewan/.ssh
+taewan@.ssh $ls -al
+drwx------   24 taewan  staff   816 10 11 15:15 .
+drwxr-xr-x+ 147 taewan  staff  4998 10 11 15:15 ..
+-rw-------    1 taewan  staff  1675 10 11 13:58 id_rsa
+-rw-------    1 taewan  staff   415 10 11 13:58 id_rsa.pub
+taewan@.ssh $
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 1. ssh-keygen 명령을 이용한 암호화키 생성
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step010.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ssh-keygen 명령으로 생성된 파일 중 확장자가 pub인 파일이 공개키 입니다.
+[그림 1]에서 생성한 id_rsa.pub에 포함된 내용은 OPC에 등록되며, 이 정보는 향후 해당 인스턴스의 운영체제 접속시점에 사용 됩니다.
+id_ras.pub에 저장되어 있는 내용은 [그림 2]와 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 2. ssh-keygen으로 생성한 공개키
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step020.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step02-oracle-cloud-로그인:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step02: Oracle Cloud 로그인&lt;/h3&gt;
+
+&lt;p&gt;OPC에 인스턴스를 생성하기 위해서 &lt;a href=&#34;http://cloud.oracle.com&#34;&gt;http://cloud.oracle.com&lt;/a&gt; 에 로그인 합니다.
+[그림 3]에서 &amp;ldquo;sign in&amp;rdquo;을 클릭하면 리전을 선택하는 페이지로 이동합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 3. &lt;a href=&#34;http://cloud.oracle.com&#34;&gt;http://cloud.oracle.com&lt;/a&gt; 메인 페이지
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step030.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;로그인에 앞서 인스턴스를 생성할 region을 선택합니다.
+&lt;strong&gt;Free trial&lt;/strong&gt; 계정의 경우 [그림 4]와 같이 &lt;strong&gt;Public Cloud Services - US&lt;/strong&gt; 를 선택해야 합니다.
+리전을 선택하고 &lt;strong&gt;My Services&lt;/strong&gt; 버튼을 클릭하면, 로그인 페이지로 이동하게 됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 4. &lt;a href=&#34;http://cloud.oracle.com&#34;&gt;http://cloud.oracle.com&lt;/a&gt; 메인 페이지
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step040.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;OPC 로그인을 위해서 [그림 5]와 [그림 6]과 같이 도메인 ID, 계정 ID, 패스워드를 입력합니다.
+[그림 5]에서 도메인 ID를 입력하고 &lt;strong&gt;실행&lt;/strong&gt; 버튼을 클릭하면 계정 ID/패스워드 입력 페이지로 이동합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 5. 도메인 ID 입력
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step050.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 6]과 같이 계정 ID/패스워드을 입력하고 &lt;strong&gt;사인인&lt;/strong&gt; 버튼을 클릭하면 로그인이 수행됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 6. 로그인 정보 입력
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step060.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;로그인이 정상적으로 수행되면 [그림 7]과 같은 &lt;strong&gt;Oracle Cloud My Services Dashboard&lt;/strong&gt; 가 출력됩니다.&lt;/p&gt;
+
+&lt;h3 id=&#34;step03-compute-cloud-service-console-이동:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step03: compute Cloud Service Console 이동&lt;/h3&gt;
+
+&lt;p&gt;Dashboard 페이지에서는 [그림 7]과 같이 각 클라우드 서비스으로 이동 가능한 블럭이 출력됩니다.
+VM 인스턴스를 생성하는 &lt;strong&gt;Compute Cloud Service Console(이하 compute console)&lt;/strong&gt; 로 이동하기 위해서 Dashboard의 왼쪽 상단의 메뉴 아이콘을 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 7. Dashboard 페이지의 메뉴 아이콘 선택
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step070.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 7]에서 메뉴 아이콘을 클릭하면 왼측에서 [그림 8]과 같이 각 서비스 콘솔과 모니터링 콘솔 페이지로의 이동을 지원하는 메뉴가 출력됩니다.
+출력된 메뉴 중에서 &lt;strong&gt;compute&lt;/strong&gt; 를 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 8. Compute 서비스 선택
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step080.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step04-네트워크-설정:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step04: 네트워크 설정&lt;/h3&gt;
+
+&lt;p&gt;Comput Console에서 네트워크 텝을 선택하여 [그림 9]와 같이 네트워크 설정 페이지로 이동합니다.
+네트워크 설정 페이지 에서는 Security Rule, Security List, Security Application, Security IP List, IP Reservation, SSH Public Key를 설정할 수 있습니다.
+다음은 설정 메뉴에 대한 요약입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Security List: 보안 대상 서버 그룹 설정, 일종의 방화벽 구성&lt;/li&gt;
+&lt;li&gt;Security Rule: 보안 대상 서버 그룹에 설정할 보안 룰 정의&lt;/li&gt;
+&lt;li&gt;Security Application: Security Rule에서 사용할 포트 정보 등록 및 관리&lt;/li&gt;
+&lt;li&gt;Security IP List: 현재 계정이 관리히지 않는 외부 시스템의 IP 목록 관리&lt;/li&gt;
+&lt;li&gt;IP Reservation: Public IP 생성 및 관리&lt;/li&gt;
+&lt;li&gt;SSH Public Key: SSH Public Key 등록&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;네트워크 설정 관련해서는 별도의 문서로 정리하겠습니다. 본 문서에서는 이 중에서 IP Reservation과 SSH Public Key만을 사용할 것입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 9. Compute Cloud Service Console
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step090.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;ssh-public-key-등록:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;SSH Public Key 등록&lt;/h4&gt;
+
+&lt;p&gt;앞에서 생성한 SSH 공개키(그림 2 참조)의 내용을 등록해야 합니다. 여기에서 등록한 public키는 VM 생성시 인스턴스에 할당되고,
+향후에 터미널을 통해서 ssh를 이용하여 시스템에 접근할 때 사용됩니다.&lt;/p&gt;
+
+&lt;p&gt;네트워크 페이지에서 SSH 공개키[그림 10]와 같이 &lt;strong&gt;SSH Public Keys&lt;/strong&gt; 를 선택하여 SSH Public Key 등록 페이지로 이동합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 10. SSH Public Keys 페이지 이동
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step100.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 11]과 같이 &lt;code&gt;Add SSH Public Key&lt;/code&gt;을 클릭하면 [그림 12]와 같이 SSH Public Key 등록 폼이 출력됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 11. SSH Public Keys 추가 버튼 클릭
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step110.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 2]에서 생성한 공개키 파일의 내용을 복사하여 [그림 12]의 등록 폼에 입력하고,
+공개키 이름을 입력한 후 &amp;ldquo;Add&amp;rdquo; 버튼을 클릭하면 공개키 등록 절차는 완료 됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 12. SSH Public 등록 폼
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step120.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;공개키 등록이 완료되면 [그림 13]과 같이 공개키가 등록된 결과를 확인 할 수 있습니다. 이제 &lt;code&gt;IP Reservation&lt;/code&gt; 메뉴를 클릭하여
+IP Reserverion 페이지로 이동합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 13. 공개 키 등록 확인 및 IP Reservation 페이지로 이동
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step130.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;public-ip-생성:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Public IP 생성&lt;/h4&gt;
+
+&lt;p&gt;VM을 관리함에 있어서 Public IP를 예약하고 재사용하는 것이 편리합니다.
+Public IP를 예약하지 않을 경우 VM을 재시작 할 때 마다 새로운 Public IP가 설정됩니다.
+VM 인스턴스를 효과적으로 관리하기 위해서는 Public IP를 사전에 생성하고, 인스턴스에 할당해야 합니다.&lt;/p&gt;
+
+&lt;p&gt;[그림 14]와 같이 &lt;code&gt;Create IP Reservation&lt;/code&gt; 버튼을 클릭하면 공개 IP 설정 폼이 출력 됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 14. Public IP를 생성하기 위한 &lt;code&gt;Create IP Reservation&lt;/code&gt; 클릭
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step140.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;생성할 공개 IP에 할당 될 IP 명을 입력하고 &lt;code&gt;Create&lt;/code&gt; 버튼을 클릭하면 IP 생성은 완료됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 15. IP 명 설정 및 생성
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step150.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;공개 IP 생성이 완료되면, [그림 16]과 같이 생성된 공개 IP를 목록에서 확인할 수 있습니다.
+이제 VM Instance를 생성하기 위해서 상단의 &lt;strong&gt;Instances&lt;/strong&gt; 텝을 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 16. 공개 IP 목록
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step160.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step04-vm-인스턴스-생성:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step04: VM 인스턴스 생성&lt;/h3&gt;
+
+&lt;p&gt;&amp;ldquo;Create Instance&amp;rdquo; 버튼을 클릭하여 인스턴스 생성 페이지로 이동합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 17. &amp;ldquo;Create Instance&amp;rdquo; 버튼 클릭
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step170.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Boot Images 선택 페이지로 이동합니다. OPC는 3가지의 유형의 Images를 제공합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Oracle Images: 오라클 공식 VM 이미지 (Oracle Enterprise Linux)&lt;/li&gt;
+&lt;li&gt;Private Images: 사용자 등록 이미지&lt;/li&gt;
+&lt;li&gt;Marketplaces: 마켓 등록 이미지&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ubuntu Boot Image를 선택하기 위해서 왼쪽 메뉴에서 &amp;ldquo;Marketplaces&amp;rdquo;를 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 18. Marketplaces 이동 메뉴
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step180.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Marketplaces에는 2016/10/13 현재 335개의 boot 이미지가 등록되어 있습니다.
+필요한 이미지는 [그림 19]와 같이 검색이 가능합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 19. Marketplaces의 검색 기능
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step190.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 20]과 같이 검색어로 &amp;ldquo;ubuntu&amp;rdquo;를 입력하면 ubuntu로 tagging된 모든 이미지가 조회 됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 20. Marketplaces의 검색 &amp;ldquo;Ubuntu&amp;rdquo;
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step200.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;검색된 Ubuntu 이미지 중에 &amp;ldquo;Ubuntu Server 14.04 LTS amd64&amp;rdquo;를 선택하고 [그림 21]과 같이 오른쪽 상단의 &amp;ldquo;&amp;gt;&amp;rdquo; 버튼을 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 21. 설치 Boot 이미지 선택
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step210.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Marketplaces에서 이미지를 선택하면 현재 계정의 Compute Cloud에 다운로드 됩니다. 이와 관련된 알림과 승인 창이 출력됩니다.
+[그림 22]와 같이 승인 체크 박스에 체크하고 &amp;ldquo;Install&amp;rdquo;을 선택합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 22. 대상 이미지 다운로드 및 승인 확인 알림
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step220.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;다음으로는 인스턴스의 Shape을 선택하는 페이지로 이동합니다. [그림 23]과 같이 현재 3개의 Shape을 제공합니다.
+현재는 &amp;ldquo;General Purpose&amp;rdquo;를 선택하고 오른쪽 상단의 &amp;ldquo;&amp;gt;&amp;rdquo; 버튼을 클릭합니다.
+&amp;ldquo;General Purpose&amp;rdquo;는 1 ocpu / memory 7.5GB입니다. 1 OCPU는 아마존 2 vCPU와 동일한 용량을 제공합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 23. 설치할 Compute의 Shape 선택
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step240.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 24]와 같은 기본 폼이 출력됩니다.
+VM Instance를 생성하기 위해서는 Name / DNS Hostname Profix / Public IP Address / SSH Key 같은 항목을 입력해야 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 24. VM Instance 생성 폼
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step250.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 25]와 같이 인스턴스 명, host 명을 입력합니다. 추가로 Public IP Address에 &lt;strong&gt;Persistant Public IP Reservation&lt;/strong&gt; 을 선택하면
+앞에서 생성한 Public IP를 선택하는 입력 폼이 추가됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 25. &amp;ldquo;ㅜname&amp;rdquo; 지정 및 DNS Hostname Prefix 지정
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step260.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 26]과 같이 Public IP Address에는 [그림 16]에서 생성한 Public IP를 선택합니다. Security List 항목에는 기본적으로 생성된 default를 선택합니다.
+그리고 SSH Key에는 [그림 13]에서 등록한 SSH 공개키를 선택합니다. 이상으로 입력이 완료되면 오른쪽 상단의 &amp;ldquo;&amp;gt;&amp;rdquo; 버튼을 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 26. Public IP, Security List, SSH Key 입력
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step280.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 27]은 스토리지 설정 페이징 입니다.
+스토리지 관련해서는 별도의 문서로 다룰 것입니다. 지금은 기본적으로 만들어진 &amp;ldquo;demo_ubuntu_vm_storage&amp;rdquo;를 그대로 사용할 것입니다.
+이제 모든 설정은 완료되었습니다. 오른쪽 상단의 &amp;ldquo;&amp;gt;&amp;rdquo; 버튼을 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 27. Storage 설정 페이지
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step290.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 28]은 지금까지 진행한 설정에 대한 요약을 출력합니다. 모든 정보가 맞다면 &amp;ldquo;create&amp;rdquo; 버튼을 클릭하여 인스턴스를 생성합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 28. Instance 요약
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step300.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 28]에서 &amp;ldquo;create&amp;rdquo; 버튼을 클릭하면 Instances 페이지로 이동합니다.
+Instances에는 현재 인스턴스가 추가되지 않은 상태입니다.
+현재 생성중인 인스턴스 상태는 Orchestrations 텝에서  확인 할 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 29. Orchestrations 텝 이동
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step310.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 30]과 같이 Orchestrations에는 3개의 orchestation이 등록되어 있고 2개가 동작중인 것을 확인할 수 있습니다.
+각각은 master, storage, instance 용 orchestration입니다.
+master는 storage와 instance orchestration을 실행하는 역할을 담당하며 storage와 instance는 차례로
+스토리지를 생성하고 인스턴스를 생성하는 일련의 작업을 수행합니다.
+현재 생성하는 인스턴스의 경우 전체적인 생성시간은 3~5분정도 소요됩니다&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 30. Orchestrations 목록과 상태
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step320.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;인스턴스 생성이 완료되면 [그림 31]과 같이 Orchestrations 목록이 모두 Ready 상태로 변경된 것을 확인 할 수 있습니다.
+Orchestration이 완료되었다면 Instances 텝으로 이동합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 31. 인스턴스 생성이 완료된 Orchestrations 목록과 상태
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step330.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Instances 텝에서 새로 등록된 인스턴스를 확인할 수 있습니다.
+또한 인스턴스에 사전에 등록한 Public IP가 설정되어 있는 것을 확인할 수 있습니다.
+현재 인스턴스에는 외부에서 접근 불가능한 상태 입니다.
+외부에서 접근을 하기 위해서는 Network 텝으로 이동하여 Security Rule을 등록해야 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 32. 인스턴스 등록 확인
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step340.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step04-security-rule-등록-for-ssh:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step04: Security Rule 등록 (for SSH)&lt;/h3&gt;
+
+&lt;p&gt;터미널에서 ssh로 앞에서 생성한 인스턴스에 접근하기 위해서는 ssh가 사용하는 22번 포트에 대한 보안 설정을 추가해야 합니다.
+이러한 보안 설정은 Security Rule에서 설정할 수 있습니다. Network 텝의 왼쪽 메뉴에서 &amp;ldquo;Security Rule&amp;rdquo;로 이동합니다.
+&amp;ldquo;Security Rule&amp;rdquo; 페이지에서 [그림 33]과 같이 &amp;ldquo;Create Security Rule&amp;rdquo; 버튼을 클릭하여 Security Rule을 추가할 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 33. Security Rule 등록
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step350.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 34]는 Security Rule 등록 폼입니다. Security Rule을 등록하기 위해서는 다음과 같은 정보를 입력해야 합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Security rule 명&lt;/li&gt;
+&lt;li&gt;Security Application: 포트&lt;/li&gt;
+&lt;li&gt;Souece&lt;/li&gt;
+&lt;li&gt;Destination&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;기본적으로 위 4가지 정보를 등록해야 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 34. Security Rule 등록 폼
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step360.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ssh을 위한 Security Rule은 [그림 35]와 같이 입력합니다.
+source의 public-internet은 모든 IP를 의미(0.0.0.0)합니다.
+Destination에 설정한 default는  VM&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;그림 35. ssh 서비스 오픈을 위한 설정
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step370.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 36.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step380.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 37.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step390.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 38.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step400.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 39.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step440.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 40.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step450.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 41.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step460.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 42.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step470.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 43. 80 포트 오픈을 위한 Security Rule 생성 요청
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step480.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 44.
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step490.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 45. &amp;lsquo;Create Security Rule&amp;rsquo; 생성을 위한 정보 입력
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step500.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 46. http_rule 등록 결과
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step510.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 47. 인스턴스 구동시 Orchestration 상태 조회
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step520.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 48. 인스턴스 셧다운을 위한 Master 종료 명령
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step530.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 49. 인스턴스 종료 시 데이터 유실 경고 메세지
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step540.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 50. 인스턴스 종료하는 Orchestration 프로세스 종료
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step550.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 51. Instance 텝에서 VM 종료 상태 확인
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step560.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -289,7 +652,7 @@ Trial Account는 현재 US서버로 고정되어 있습니다.
 
 &lt;ul&gt;
 &lt;li&gt;Oracle Database Cloud Service(이하 CS)&lt;/li&gt;
-&lt;li&gt;Java CS&lt;/li&gt;
+&lt;li&gt;Java CS&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Compute CS&lt;/li&gt;
 &lt;li&gt;Developer CS&lt;/li&gt;
 &lt;li&gt;Database Backup CS&lt;/li&gt;
@@ -3902,15 +4265,6 @@ __double underscores__ - 기울임체/굵은글씨체
       <pubDate>Thu, 31 Mar 2016 01:23:46 +0900</pubDate>
       
       <guid>http://taewan.kim/documents/47degree4scala/07.highorder.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>06.tuples</title>
-      <link>http://taewan.kim/documents/47degree4scala/06.tuples.html</link>
-      <pubDate>Thu, 31 Mar 2016 01:23:30 +0900</pubDate>
-      
-      <guid>http://taewan.kim/documents/47degree4scala/06.tuples.html</guid>
       <description></description>
     </item>
     
