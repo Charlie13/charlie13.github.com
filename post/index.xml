@@ -399,60 +399,134 @@ Orchestration이 완료되었다면 Instances 텝으로 이동합니다.&lt;/p&g
 
 &lt;p&gt;ssh을 위한 Security Rule은 [그림 35]와 같이 입력합니다.
 source의 public-internet은 모든 IP를 의미(0.0.0.0)합니다.
-Destination에 설정한 default는  VM&lt;/p&gt;
+Destination에 설정한 default는 VM 인스턴스 생성시 할당한 값입니다.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;그림 35. ssh 서비스 오픈을 위한 설정
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step370.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;그림 35. ssh 서비스 오픈을 위한 설정
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step370.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;그림 36.
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step380.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;[그림 35]에서 &amp;ldquo;Create&amp;rdquo; 버튼을 클릭하면, [그림 36]에서 Security Rule이 생성된 것을 확인 할 수 있습니다.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;그림 37.
+&lt;ul&gt;
+&lt;li&gt;그림 36. Security Rule 생성
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step380.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step05-vm-로그인-및-nginx-설치:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step05: VM 로그인 및 nginx 설치&lt;/h3&gt;
+
+&lt;p&gt;사용자 컴퓨터에서 [그림 37]과 [그림 38] 같이 다음 명령으로 앞에서 생성한 VM 인스턴스에 로그인 할 수 있습니다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh ubuntu@129.144.152.137
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;그림 37. Ubuntu 로그인
 &lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step390.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;그림 38.
+&lt;li&gt;&lt;p&gt;그림 38. Ubuntu 로그인 결과
 &lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step400.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;li&gt;&lt;p&gt;그림 39.
+&lt;p&gt;ubuntu에 nginx를 설치하기 위해서는 [그림 37]과 [그림 38]과 같은 명령을 입력해야 합니다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get updates
+sudo apt-get install -y nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;그림 39. apt 레파지토리 업데이트
 &lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step440.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;그림 40.
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step450.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 41.
+&lt;li&gt;&lt;p&gt;그림 40. nginx 설치
 &lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step460.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 42.
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step470.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 43. 80 포트 오픈을 위한 Security Rule 생성 요청
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step480.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 44.
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step490.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 45. &amp;lsquo;Create Security Rule&amp;rsquo; 생성을 위한 정보 입력
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step500.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 46. http_rule 등록 결과
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step510.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 47. 인스턴스 구동시 Orchestration 상태 조회
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step520.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 48. 인스턴스 셧다운을 위한 Master 종료 명령
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step530.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 49. 인스턴스 종료 시 데이터 유실 경고 메세지
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step540.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 50. 인스턴스 종료하는 Orchestration 프로세스 종료
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step550.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 51. Instance 텝에서 VM 종료 상태 확인
-&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step560.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;nginx가 설치가 완료되면, [그림 41]과 같은 명령으로 nginx 서비스 구동 상태를 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 41. nginx 서비스 구동 상태 확인
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step470.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step06-security-등록-및-브라우저:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step06: Security 등록 및 브라우저&lt;/h3&gt;
+
+&lt;p&gt;nginx의 서비스를 브라우저로 접근하기 위해서는 80포트에 대한 보안 설정이 필요합니다.
+80 포트에 유입되는 모든 요청을 처리하기 위해서는 새로운 Security Rule을 [그림 42]와
+[그림 43]과 같이 생성해야 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 42. 80 포트 오픈을 위한 Security Rule 생성 요청
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step480.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;TCP/80 포트의 경우 Security Application에 사전에 만들어져 있습니다.
+따라서 [그림 43]과 같이 Security Application에 http를 선택합니다.
+또한 internet으로 부터 들어오는 모든 요청을 받아들이기 위해서는 source에
+public-internet을 선택하고 &amp;ldquo;Create&amp;rdquo; 버튼을 클릭합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 43. 80 포트 오픈을 위한 Security Rule 생성
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step490.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Security Rule이 정상적으로 생성될 경우 [그림 44]와 같이 Security Rules 목록을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 44. Security Rules 목록을 확인
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step500.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Security Rules가 등록되면 바로 [그림 45]와 같이 브라우저 접근이 가능합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 45. 브라우저 접근
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step510.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step07-vm-인스턴스-정지:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;Step07: VM 인스턴스 정지&lt;/h3&gt;
+
+&lt;p&gt;OPC에 생성된 VM 인스턴스는 Orchestrations 텝에서 시작과 종료를 할 수 있습니다.
+현재 인스턴스가 동작하는 상태는 [그림 46]과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 46. 인스턴스 구동시 Orchestration 상태 조회
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step520.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;인스턴스를 종료하기 위해서는 [그림 48]과 같이 master orchestration의 메뉴 아이콘을 클릭하고 stop을 클릭하면 됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 48. 인스턴스 셧다운을 위한 Master 종료 명령
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step530.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;현재 인스턴스는 디폴트 스토리지를 사용하기 때문에 인스턴스 종료시 데이터가 유실될 수 있습니다.
+인스턴스 종료시 데이터 유실을 방지하기 위해서는 별도의 스토리지를 생성하고 설정해야 합니다.
+이 부분은 별도의 문서로 다루겠습니다.&lt;/p&gt;
+
+&lt;p&gt;현재 인스턴스를 종료하면 [그림 49]와 같이 데이터 유실에 관한 에러 메세지가 출력됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 49. 인스턴스 종료 시 데이터 유실 경고 메세지
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step540.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[그림 49]에서 &amp;ldquo;YES&amp;rdquo;를 클릭하면 Master Orchestration이 시작하며 [그림 50] 과 같이 종료된 것을 확인할 수있습니다.
+- 그림 50. 인스턴스 종료하는 Orchestration 프로세스 종료
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step550.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Orchestration이 종료디면 Instances탭의 인스턴스 정보에서 public ip가 사라진 것을 확인할 수 있습니다.
+- 그림 51. Instance 텝에서 VM 종료 상태 확인
+&lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step560.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;종료된 인스턴스를 다시 시작하기 위해서는  Orchestrations 텝에서 master orchestration의 메뉴 아이콘을 클릭하고 start를 클릭하면 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&#34;마치며:7a6448865fd6548e9403a0ce293d8c64&#34;&gt;마치며&lt;/h2&gt;
+
+&lt;p&gt;지금까지 OPC에서 Ubuntu이미지를 이용하여 VM 인스턴스를 생성하고, ssh 보안설정, 소프트웨어 설치, 80포트 보안 설정, 인스턴스 종료와 시작에 대해서 알아 보았습니다.&lt;/p&gt;
+
+&lt;p&gt;다음 문서에서는 스토리지 및 보안 관련된 사항을 다루도록 하겠습니다.&lt;/p&gt;
 </description>
     </item>
     
