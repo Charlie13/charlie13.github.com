@@ -525,7 +525,7 @@ public-internet을 선택하고 &lt;code&gt;Create&lt;/code&gt; 버튼을 클릭
 &lt;img src=&#34;http://taewan.kim/images/oracloud/iaas_quick/step550.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Orchestration이 종료디면 Instances탭의 인스턴스 정보에서 public ip가 사라진 것을 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;Orchestration이 종료디면 Instances탭의 인스턴스 정보에서 Public IP가 사라진 것을 확인할 수 있습니다.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;그림 51. Instance 텝에서 VM 종료 상태 확인
