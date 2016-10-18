@@ -25,9 +25,10 @@
 함수형 코드를 모방한 함수를 사용하기는 했지만 지역변수가 존재하고 제어문이 그래도 노출되는 문제를 안고 있습니다.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;그림 1. 첫번째 구현체
-!()[&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;그림 1. 첫번째 구현체&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;이 부분을 다시 구현해 보았습니다. 주안점을 둔 부분은 다음과 같습니다.&lt;/p&gt;
 
@@ -38,9 +39,10 @@
 
 &lt;li&gt;&lt;p&gt;ES6 기반 코드&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;그림 2. 두번째 구현체
-!()[&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&lt;/a&gt;]&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;그림 2. 두번째 구현체&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;함수형 코드를 사용함에 있어서 장점은..&lt;/p&gt;
 
