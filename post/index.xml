@@ -26,7 +26,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;그림 1. 첫번째 구현체
-[](&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&lt;/a&gt;)&lt;/li&gt;
+!()[&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;이 부분을 다시 구현해 보았습니다. 주안점을 둔 부분은 다음과 같습니다.&lt;/p&gt;
@@ -39,7 +39,7 @@
 &lt;li&gt;&lt;p&gt;ES6 기반 코드&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;그림 2. 두번째 구현체
-[](&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+!()[&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&lt;/a&gt;]&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;함수형 코드를 사용함에 있어서 장점은..&lt;/p&gt;
