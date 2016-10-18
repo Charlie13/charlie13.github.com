@@ -141,17 +141,17 @@ ul#menu li a:hover {
     <br/>
     <a class="label" href="http://taewan.kim/categories/functioal-programming.html">Functioal Programming</a><a class="label" href="http://taewan.kim/categories/javascript.html">JavaScript</a>
     </span>
-    <p>최근에 함수형 언어을 다른 시각에서 접근한다는 취지로 &ldquo;<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B9124201558">함수형 자바스크립트 : 새롭고 올바른 자바스크립트 프로그래밍 기법</a>&ldquo;을 보고 있습니다. (기존에는 Scala를 중심으로 함수형을 접근했스빈다. ) 이 책의 4장까지의 내용을 기초로 테이블 테그 래퍼를 작성해 보았습니다.</p>
+    <p>최근에 함수형 언어을 다른 시각에서 접근한다는 취지로 &ldquo;<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B9124201558">함수형 자바스크립트 : 새롭고 올바른 자바스크립트 프로그래밍 기법</a>&ldquo;을 보고 있습니다. (기존에는 Scala를 중심으로 함수형을 접근했습니다.) 이 책의 4장까지의 내용을 기초로 테이블 테그 래퍼를 작성해 보았습니다.</p>
 
 <p>이 책에서는 함수형을 지원하기 위해서 underscore.js를 사용하고 있지만, ES6는 함수형의 핵심 함수들을 대부분 포함하고 있습니다.</p>
 
 <p>첫번째 구현체를 ES6 코드로 작성해 보았습니다.</p>
 
 <p>코드를 리뷰해 주신 분의 의견은 &ldquo;함수형을 빙지한 순차적 프로그래밍이다&rdquo;라는 리뷰를 받았습니다.
-함수형 코드를 모방한 함수를 사용하기는 했지만 지역변수가 존재하고 제어문이 그래도 노출되는 문제를 안고 있습니다.</p>
+함수형 코드를 모방한 함수를 사용하기는 했지만 지역변수가 존재하고 제어문이 그대로 노출되는 문제를 안고 있습니다.</p>
 
 <ul>
-<li>그림 1. 첫번째 구현체</li>
+<li>그림 1. 첫번째 구현체 (초기 버전)</li>
 </ul>
 
 <p><img src="https://minsupapa.github.io/javascript/functional_practice/fig01.jpg" alt="" /></p>
@@ -165,7 +165,7 @@ ul#menu li a:hover {
 
 <li><p>ES6 기반 코드</p></li>
 
-<li><p>그림 2. 두번째 구현체</p></li>
+<li><p>그림 2. 두번째 구현체 수정 코드</p></li>
 </ol>
 
 <p><img src="https://minsupapa.github.io/javascript/functional_practice/fig02.jpg" alt="" /></p>
@@ -187,7 +187,7 @@ ul#menu li a:hover {
 <p>다양한 리뷰 부탁드립니다.
 스칼라를 주로 사용하다가 자바스크립트로 함수형 프로그래밍을 해보니 역시 힘드네요.</p>
 
-<pre><code>wrapper = function(tag){
+<pre><code class="language-javascript">wrapper = function(tag){
     return function(v){return '&lt;' + tag + '&gt;' + v + '&lt;/' + tag + '&gt;';};
 }
 
