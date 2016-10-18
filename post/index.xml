@@ -6,8 +6,91 @@
     <description>Recent content in Posts on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Oct 2016 10:27:49 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 18 Oct 2016 21:28:14 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/post.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>자바스크립트 함수형 프로그래밍 연습 - Table 테그 레퍼</title>
+      <link>http://taewan.kim/blog/2016/10/18/functional_javascript/</link>
+      <pubDate>Tue, 18 Oct 2016 21:28:14 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/10/18/functional_javascript/</guid>
+      <description>&lt;p&gt;최근에 (함수형 자바스크립트 : 새롭고 올바른 자바스크립트 프로그래밍 기법)[&lt;a href=&#34;http://www.hanbit.co.kr/store/books/look.php?p_code=B9124201558]을&#34;&gt;http://www.hanbit.co.kr/store/books/look.php?p_code=B9124201558]을&lt;/a&gt; 보고 있습니다.
+4장의 내용을 기초로 테이블 테그 래퍼를 작성해 보았습니다.&lt;/p&gt;
+
+&lt;p&gt;스칼라를 주로 사용하다가 자바스크립트로 함수형 프로그래밍을 해보니 역시 힘드네요.
+첫번째 구현체를 ES6 코드로 작성해 보았습니다.&lt;/p&gt;
+
+&lt;p&gt;코드를 리뷰해 주신 분들의 의견은 &amp;ldquo;함수형을 빙지한 순차적 프로그래밍이다&amp;rdquo;라는 리뷰를 받았습니다.
+함수형 코드를 모방한 함수를 사용하기는 했지만 지역변수가 존재하고 제어문이 그래도 노출되는 문제를 안고 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 1. 첫번째 구현체
+[](&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig01.jpg&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 부분을 다시 구현해 보았습니다. 주안점을 둔 부분은 다음과 같습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;제어문을 제거&lt;/li&gt;
+&lt;li&gt;지역 변수를 사용 금지&lt;/li&gt;
+&lt;li&gt;배열 검증&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ES6 기반 코드&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;그림 2. 두번째 구현체
+[](&lt;a href=&#34;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&#34;&gt;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;함수형 코드를 사용함에 있어서 장점은..&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;코드의 재사용성이 높아짐&lt;/li&gt;
+&lt;li&gt;재사용성을 높이는 Generic 함수 드지안이 가능&lt;/li&gt;
+&lt;li&gt;코드이 가독성이 높아짐&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이러한 특징을 볼 수 있는것 같습니다.
+그러나 너무 어렵네요&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;다음은 두 번째 코드입니다.
+아직은 연습하는 입장에서 문제가 많은니다.&lt;/p&gt;
+
+&lt;p&gt;다양한 리뷰 부탁드립니다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wrapper = function(tag){
+    return function(v){return &#39;&amp;lt;&#39; + tag + &#39;&amp;gt;&#39; + v + &#39;&amp;lt;/&#39; + tag + &#39;&amp;gt;&#39;;};
+}
+
+initArr = function(arr){
+    return Array.isArray(arr) ? arr : []
+}
+
+
+var people = [
+  [&#39;김민수&#39;,&#39;3&#39;,&#39;아들&#39;],
+  [&#39;임선영&#39;,&#39;39&#39;,&#39;엄마&#39;],
+  [&#39;김태완&#39;,&#39;43&#39;,&#39;아빠&#39;]
+];
+var labels = [&#39;이름&#39;,&#39;나이&#39;,&#39;비고&#39;];
+
+
+tableGen = function(matrix, head, wrapfun){
+    const tr = wrapfun(&#39;tr&#39;);
+    const td = wrapfun(&#39;td&#39;);
+
+    return wrapfun(&#39;table&#39;)(
+        wrapfun(&#39;thead&#39;)(initArr(head).reduce( (p,c)=&amp;gt;p+td(c),&#39;&#39;)) +
+        wrapper(&#39;tbody&#39;)(initArr(matrix).reduce( (p,c)=&amp;gt;p+tr(c.reduce((sp,sc)=&amp;gt;sp+td(sc),&#39;&#39;)),&#39;&#39;))
+    );
+}
+
+var tbltag = tableGen(people, labels, wrapper)
+
+$$html$$ = tbltag
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>오라클 IaaS를 이용한 VM 인스턴스 생성</title>
@@ -2512,127 +2595,6 @@ push 이벤트 이외의 다른 이벤트를 지정하고자 할 경우에는 &a
 이 기능이 없다면 CI 서버는 주기적으로 Git 레파지토리를 Polling하여 변경이 감지될 경우 빌드 프로세스를 구동하는 방식을 취해야 합니다.
 이는 매우 비효율적인 체계입니다. Webhooks를 사용할 경우 세부적인 이벤트 유형 구분이 가능합니다.
 이러한 방식을 통해 원하는 시점을 세부적으로 정의하여 효과적인 Git 레파지토리와 CI 서버의 연동을 구성할 수 있습니다.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>VirtualBox: 호스트에서 게스트 접근 네트웍 설정</title>
-      <link>http://taewan.kim/blog/2016/01/31/virtualvox_network_config/</link>
-      <pubDate>Sun, 31 Jan 2016 12:42:43 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/01/31/virtualvox_network_config/</guid>
-      <description>
-
-&lt;p&gt;최근에는 VirtualBox 이미지로 테스트 환경을 구성하거나 배포하는 경우가 많아졌습니다.
-특히 오라클에서는 초기 테스트 및 교육 목적으로 다수의 VirtualBox 이미지를 배포하고 있습니다.
-이렇게 만들어진 이미지를 사용할 경우 사용자는 새로운 기술을 접할 때 경험해야 하는 설치 및 구성에 대한 난제를 해결 할 수 있습니다.
-즉 사용자는 새로운 기술의 기능 테스트 및 활용에 집중할 수 있게됩니다.&lt;/p&gt;
-
-&lt;p&gt;오라클이 제공하는 VirtualBox 이미지는 Oracle Big Data Lite입니다.
-Oracle Big Data Lite는 오라클의 빅데이터 소프트웨어 (CHD배포본 + Orale Software)의 최신 구성을 하나의 VirtualBox 이미지에 담아서 제공합니다.
-이 이미지의 최신 버전은 4.3.X (2016.01 기준) 입니다.
-Oracle Big Data Lite는 완전한 설정이 반영된 이미지이기 때문에, 사용자는 설치 및 번거로운 작업을 거치지 않고 바로 기능 테스트를 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/BigDataLite-Initial.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;호스트에서-가상화-이미지에-접근할-수-있다면:e504ff6a47b9ec67ec6136666189d988&#34;&gt;호스트에서 가상화 이미지에 접근할 수 있다면&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;VirtualBox를 통해서 이미지를 실행한 후에는 VirtualBox가 제공하는 윈도우를 통해서 Guest OS에 접근을 할 수 있습니다.
-그러나 Guest OS를 윈도우로 접근하는 방식은 비 효율적입니다.
-Guest OS가 리눅스라면 VirtualBox가 구동하는 호스트에서 터미널로 Guest OS에 접근하여 작업하는 것이 더 효율적 입니다.
-VirtualBox에 &amp;ldquo;Host Only Adapter&amp;rdquo;를 설정하면, Host OS에서 Guest OS에 접근할 수 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;virtualbox의-host-only-adapter-설정:e504ff6a47b9ec67ec6136666189d988&#34;&gt;VirtualBox의 Host Only Adapter 설정&lt;/h2&gt;
-
-&lt;p&gt;Host Only Adapter 설정은 VirtualBox 레벨에서 &amp;ldquo;새 호스트 전용 네트워크&amp;rdquo; 설정 단계와 Guest OS에서 Host Only Adapter 설정 단계로 구분됩니다.&lt;/p&gt;
-
-&lt;h3 id=&#34;새-호스트-전용-네트워크-설정:e504ff6a47b9ec67ec6136666189d988&#34;&gt;새 호스트 전용 네트워크 설정&lt;/h3&gt;
-
-&lt;p&gt;OS X를 기준으로 메뉴:VirtualBox -&amp;gt; 환경설정 -&amp;gt; 네트워크 텝 -&amp;gt; &amp;ldquo;호스트 전용 네트워크&amp;rdquo;에서 오른쪽의 &amp;ldquo;+&amp;ldquo;아이콘을 선택합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hostonlynetwork.png&#34; alt=&#34;Host Only Networks&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;rdquo;+&amp;ldquo;아이콘을 선택하면 &amp;ldquo;vboxnet0&amp;rdquo;가 생성됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/vboxnet0.png&#34; alt=&#34;vboxnet0&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;vboxnet0&amp;rdquo;를 더블클릭하여 아래와 같이 DHCP 설정을 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;서버사용: 선택&lt;/li&gt;
-&lt;li&gt;서버주소: 192.168.56.100&lt;/li&gt;
-&lt;li&gt;서버마스크: 255.255.255.0&lt;/li&gt;
-&lt;li&gt;최저주소한계: 192.168.56.101&lt;/li&gt;
-&lt;li&gt;최고주소한계: 192.168.56.254&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/dscp.png&#34; alt=&#34;vboxnet0&#34; /&gt;
-위와 같이 설정을 마치고 &amp;ldquo;저장&amp;rdquo;&amp;rdquo; 및 &amp;ldquo;확인&amp;rdquo;&amp;rdquo; 버튼을 클릭하여 네트워크 등록을 완료합니다.&lt;/p&gt;
-
-&lt;h3 id=&#34;guest-os에-adapter-추가-host-only-adapter:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Guest OS에 Adapter 추가 (Host Only Adapter)&lt;/h3&gt;
-
-&lt;p&gt;Guest OS 선택 후 설정 메뉴 오픈, 네트워크 텝-&amp;gt;어탭터2를 선택하고 다음과 같은 설정을 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;네트워크 어뎁터 사용하기: 선택&lt;/li&gt;
-&lt;li&gt;다음에 연결: Host Only Adapter 선택&lt;/li&gt;
-&lt;li&gt;이름: vboxnet0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/adapter2.png&#34; alt=&#34;adapter2&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;새-호스트-전용-네트워크-설정-1:e504ff6a47b9ec67ec6136666189d988&#34;&gt;새 호스트 전용 네트워크 설정&lt;/h3&gt;
-
-&lt;p&gt;Guest OS에 로그인하여 네트웍 정보를 확인 합니다.
-terminal 상에서 ifconfig 명령으로 호스트에서 접근 할 IP를 확인할 수 있습니다.
-(192.168.56.101)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/ipcheck.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;host-os에서-guest-os에-접근:e504ff6a47b9ec67ec6136666189d988&#34;&gt;Host OS에서 Guest OS에 접근&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ssh 접근 결과&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;taewanui-MacBook-Pro:demo taewan$ ssh oracle@192.168.56.101
-oracle@192.168.56.101&#39;s password: 
-Last login: Thu Jan 28 16:00:34 2016 from 192.168.56.1
-[oracle@bigdatalite ~]$
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;hue 접근 결과
-
-&lt;ul&gt;
-&lt;li&gt;Big Data Lite는 8888포트로 Hue를 제공합니다.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/hue.png&#34; alt=&#34;ipcheck&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;요약:e504ff6a47b9ec67ec6136666189d988&#34;&gt;요약&lt;/h2&gt;
-
-&lt;p&gt;VirtualBox에 Host Only Network를 추가하고 DHCP를 설정한 후 Guest OS에 Host Only Adapter를 등록하면 Host OS에서 Guest OS에 네트웍 접근이 가능합니다. 설정 절차를 요약하면 다음곽 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;VirtualBox에 Host Only Network 추가
-
-&lt;ul&gt;
-&lt;li&gt;추가된 네트워크에 DHCP 설정&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;접근할 Guest OS에 네트웍 어뎁터 추가
-
-&lt;ul&gt;
-&lt;li&gt;Host Only Adapter&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Guest OS에 로그인하여 접속 IP체크
-
-&lt;ul&gt;
-&lt;li&gt;ifconfig command in terminal&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Host OS에서 Guest OS에 접근&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
