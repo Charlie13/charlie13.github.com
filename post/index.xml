@@ -6,8 +6,61 @@
     <description>Recent content in Posts on taewan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Oct 2016 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 19 Oct 2016 23:04:19 +0900</lastBuildDate>
     <atom:link href="http://taewan.kim/post.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Vagrant으로 구성하는 파이썬 데이터 분석 환경</title>
+      <link>http://taewan.kim/blog/2016/10/19/env_datascience_vagrant/</link>
+      <pubDate>Wed, 19 Oct 2016 23:04:19 +0900</pubDate>
+      
+      <guid>http://taewan.kim/blog/2016/10/19/env_datascience_vagrant/</guid>
+      <description>&lt;p&gt;이 문서는 Vagrant가 설치되어 있다는 것을 가정합니다. 설치가 필요하시다면 &amp;ldquo;(내 친구 Vagrant를 소개합니다.)[&lt;a href=&#34;http://taewan.kim/blog/2016/02/06/vagrant_intro/]&amp;quot;를&#34;&gt;http://taewan.kim/blog/2016/02/06/vagrant_intro/]&amp;quot;를&lt;/a&gt; 참고하시기 바랍니다.&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/taewanme/5aec347b6fbfdc96495d3cc522b906cd.js&#34;&gt;&lt;/script&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:taewanme/vagrant4DS.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;`&lt;code&gt;vagrant up&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;taewan@vagrant4DS $vagrant up
+Bringing machine &#39;default&#39; up with &#39;virtualbox&#39; provider...
+==&amp;gt; default: Checking if box &#39;ubuntu/xenial64&#39; is up to date...
+==&amp;gt; default: There was a problem while downloading the metadata for your box
+==&amp;gt; default: to check for updates. This is not an error, since it is usually due
+==&amp;gt; default: to temporary network problems. This is just a warning. The problem
+## 로그 생략
+==&amp;gt; default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==&amp;gt; default: flag to force provisioning. Provisioners marked to run always will still run.
+taewan@vagrant4DS $vagrant
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;taewan@vagrant4DS $vagrant ssh
+Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+6 packages can be updated.
+0 updates are security updates.
+
+
+ubuntu@ubuntu-xenial:~$ ./jupyter.sh 
+ubuntu@ubuntu-xenial:~$ nohup: redirecting stderr to stdout
+
+ubuntu@ubuntu-xenial:~$ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://minsupapa.github.io/vm/vagrant/forDataScience/step01.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://minsupapa.github.io/vm/vagrant/forDataScience/step02.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://minsupapa.github.io/vm/vagrant/forDataScience/step03.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>자바스크립트 함수형 프로그래밍 연습 - Table 테그 레퍼</title>
@@ -36,11 +89,14 @@
 &lt;li&gt;제어문을 제거&lt;/li&gt;
 &lt;li&gt;지역 변수를 사용 금지&lt;/li&gt;
 &lt;li&gt;배열 검증&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;ES6 기반 코드&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;그림 2. 두번째 구현체 수정 코드&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;ES6 기반 코드&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;그림 2. 두번째 구현체 수정 코드&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://minsupapa.github.io/javascript/functional_practice/fig02.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -48,7 +104,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;코드의 재사용성이 높아짐&lt;/li&gt;
-&lt;li&gt;재사용성을 높이는 Generic 함수 드지안이 가능&lt;/li&gt;
+&lt;li&gt;재사용성을 높이는 Generic 함수 디자인 가능&lt;/li&gt;
 &lt;li&gt;코드이 가독성이 높아짐&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -56,10 +112,11 @@
 그러나 너무 어렵네요&amp;hellip;.&lt;/p&gt;
 
 &lt;p&gt;다음은 두 번째 코드입니다.
-아직은 연습하는 입장에서 문제가 많은니다.&lt;/p&gt;
+아직은 연습하는 입장에서 문제가 많습니다.&lt;/p&gt;
 
 &lt;p&gt;다양한 리뷰 부탁드립니다.
-스칼라를 주로 사용하다가 자바스크립트로 함수형 프로그래밍을 해보니 역시 힘드네요.&lt;/p&gt;
+스칼라를 주로 사용하다가 자바스크립트로 함수형 프로그래밍을 해보니 역시 힘드네요.
+(아직 함수형 개념이 부족한듯 합니다)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;wrapper = function(tag){
     return function(v){return &#39;&amp;lt;&#39; + tag + &#39;&amp;gt;&#39; + v + &#39;&amp;lt;/&#39; + tag + &#39;&amp;gt;&#39;;};
@@ -2501,103 +2558,6 @@ taewanui-MacBook-Pro:workspace taewan$
 &lt;li&gt;&lt;a href=&#34;https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4&#34;&gt;https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.vagrantup.com/docs/&#34;&gt;https://www.vagrantup.com/docs/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Webhook 연동: git 서비스 &#43; jenkins</title>
-      <link>http://taewan.kim/blog/2016/02/03/bitbucket_jenkins_webhook/</link>
-      <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
-      
-      <guid>http://taewan.kim/blog/2016/02/03/bitbucket_jenkins_webhook/</guid>
-      <description>
-
-&lt;p&gt;최근에 git 기반의 서비스들(github, bitbucket, gitlab)은 Webhooks 기능을 기본적으로 제공합니다.
-Webhooks는 해당 git repository에 push, commtit, tag와 같은 이벤트가 발생하면 Jenkins와 같은 CI 서버에 이벤트를 전달하는 기능입니다.
-Webhooks 이벤트를 전달받은 CI서버는 해당 프로젝트의 빌드 프로세스를 시작하는 방식으로 Git 레파지토리와 CI 서버를 연동하는 방법입니다.
-Git 레파지토리가 호출하는 Webhooks는 HTTP URL(Restful 서비스)입니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;jenkins의-빌드-트리거:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;Jenkins의 빌드 트리거&lt;/h2&gt;
-
-&lt;p&gt;Webhooks 기능을 활성화 시키기 위해서 git 서비스에 Jenkins가 제공하는 URL을 등록해야 합니다.
-Jenkins는 Job의 설정화면의 &amp;ldquo;빌드 트리거&amp;rdquo;에서 git서비스에 등록할 URL을 만들수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;Jenkins에 로그인하여 대상 Job을 선택한 후 아래 그림과 같이 configuration 메뉴를 클릭합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_1.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Configuration 화면에서 아래 그림과 같이 상단 메뉴의 &amp;ldquo;Build Triggers&amp;rdquo;를 선택하여 &amp;ldquo;Build Triggers&amp;rdquo; 설정 부분으로 이동합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_2.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Build Triggers&amp;rdquo;영역에서는 지정한 프로젝트의 url을 확인하고 인증토큰을 설정하는 것을 제공합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://taewan.kim/images/bitbucket/jenkins_config_3.png&#34; alt=&#34;BigDataLite&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위 예제를 통해서 인증토큰 값과 그 아래의 안내 URL을 조합하면 다음과 같은 URL을 만들 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;TOKEN_NAME: iloveminsu&lt;/li&gt;
-&lt;li&gt;URL: JENKINS_URL/job/build%20for%20taewan.kim%20blog/build?token=TOKEN_NAME&lt;/li&gt;
-&lt;li&gt;JENKINS_URL: &lt;a href=&#34;http://ci.taewan.kim&#34;&gt;http://ci.taewan.kim&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;최종 URL은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ci.taewan.kim/job/build%20for%20taewan.kim%20blog/build?token=iloveminsu&#34;&gt;http://ci.taewan.kim/job/build%20for%20taewan.kim%20blog/build?token=iloveminsu&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이 값을 git 서비스의 Webhooks에 등록해야 합니다.&lt;/p&gt;
-
-&lt;h2 id=&#34;git-서비스에-webhook-등록:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;git 서비스에 Webhook 등록&lt;/h2&gt;
-
-&lt;p&gt;github, gitlab 그리고 Bitbucket은 유사한 형태의 Webhook 등록을 지원합니다.&lt;/p&gt;
-
-&lt;h3 id=&#34;github의-webhooks-등록:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;github의 webhooks 등록&lt;/h3&gt;
-
-&lt;p&gt;github에서 webhooks를 설정하기 위해서는 github 레파지토리의 settings 텝을 클릭하여 설정 페이지로 이동해야 합니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;settings 페이지에서 &amp;ldquo;Webhooks &amp;amp; Services&amp;rdquo;로 부터 webhooks으로 이동가능합니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;다음과 같이 &amp;ldquo;Add webhook&amp;rdquo; 버튼을 클릭하여 최종 Webhook 등록 폼으로 이동합니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;등록 폼에서 앞에서 알아낸 최종 URL은 등록하고 이벤트 유형을 선택한 후 저장하면 등록이 완료됩니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/webhook-github-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위 예제는 push 이벤트가 발생할 때에만 앞에서 지정한 URL을 호출하는 설정입니다.
-push 이벤트 이외의 다른 이벤트를 지정하고자 할 경우에는 &amp;ldquo;Let me select individual events&amp;rdquo;를 선택하여 복수개의 다른 이벤트를 선택할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&#34;gitlab의-webhooks-등록:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;gitlab의 webhooks 등록&lt;/h3&gt;
-
-&lt;p&gt;gitlab에서는 프로젝트 settings에서 다음과 같이 설정을 수행합니다.
-프로젝트 메뉴에서 settings를 클릭하면 다음과 같은 설정 페이지로 이동합니다.
-설정 페이지에서 &amp;ldquo;web hooks&amp;rdquo;를 선택하고 앞에서 정리한 URL과 이벤트를 선택하고 &amp;ldquo;Add Web Hook&amp;rdquo;을 클릭하여 등록합니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/gitlab-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;bitbucket의-webhooks-등록:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;bitbucket의 webhooks 등록&lt;/h3&gt;
-
-&lt;p&gt;bitbucket에서는 다음과 같이 프로젝트 페이지에서 settings 메뉴를 클릭하여 프로젝트 설정 페이지로 이동합니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/bitbucket-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;프로젝트 설정 페이지에서 webhooks메뉴와 &amp;ldquo;add webhook&amp;rdquo; 버튼을 클릭하여 webhook 등록 페이지로 이동합니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/bitbucket-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;webhook 등록페이지에서는 제목, URL, 트리거 유형을 선택한 후 &amp;ldquo;Save&amp;rdquo;버튼을 클릭하여 등록을 완료합니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/bitbucket-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;등록이 정상적으로 완료되었다면 다음과 같이 등록된 webhook을 확인 할 수 있습니다.
-&lt;img src=&#34;http://taewan.kim/images/bitbucket/bitbucket-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;summary:922394644e1f3ee8cce21149fbcc0a54&#34;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;이렇게 git 서비스가 제공하는 Webhooks 기능을 사용하여 CI 서버와 Git레파지토리를 효과적으로 연동할 수 있습니다.
-이 기능이 없다면 CI 서버는 주기적으로 Git 레파지토리를 Polling하여 변경이 감지될 경우 빌드 프로세스를 구동하는 방식을 취해야 합니다.
-이는 매우 비효율적인 체계입니다. Webhooks를 사용할 경우 세부적인 이벤트 유형 구분이 가능합니다.
-이러한 방식을 통해 원하는 시점을 세부적으로 정의하여 효과적인 Git 레파지토리와 CI 서버의 연동을 구성할 수 있습니다.&lt;/p&gt;
 </description>
     </item>
     
