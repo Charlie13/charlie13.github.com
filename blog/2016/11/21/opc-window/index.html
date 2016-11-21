@@ -143,18 +143,18 @@ ul#menu li a:hover {
     </span>
     
 
-<p>오라클 클라우드(Oracle Public Cloud, OPC)의 IaaS 서비스에서 Window VM 인스턴스로 만드는 절차를 정리합니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 <a href="http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/">&ldquo;오라클 클라우드 계정 생성하기&rdquo;</a> 를 참조하시기 바랍니다.</p>
+<p>오라클 클라우드(Oracle Public Cloud, OPC)의 Compute 서비스에서 Window VM 인스턴스를 생성하는 절차를 정리합니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud 계정이 필요합니다. 현재 OPC 계정이 없다면 <a href="http://taewan.kim/blog/2016/10/06/account_reg_of_oracloud/">&ldquo;오라클 클라우드 계정 생성하기&rdquo;</a> 를 먼저 확인하시기 바랍니다.</p>
 
 <h2 id="oracle-cloud-vm-인스턴스-생성-실습:94992633c6f2d4e4cf6bd081f840f7fe">Oracle Cloud VM 인스턴스 생성 실습</h2>
 
-<p>본 문서는 OS X(Mac) 환경에서 작성되었습니다. 이 문서를 실습함에 있어서 윈도우와 &ldquo;OS X&rdquo;의 차이는 거의 없습니다. Window VM을 생성한 이후에 RDP로 Window VM에 접속한는 부분에서만 차이가 있습니다. 이 부분은 Window와 &ldquo;OS X&rdquo;를 구분하여 문서를 작성했습니다. 본 문서는 2016년 11월 19일을 기준으로 작성되었습니다.</p>
+<p>본 문서는 OS X(Mac) 환경에서 작성되었습니다. 이 문서를 실습함에 있어서 윈도우와 &ldquo;OS X&rdquo;의 차이는 거의 없습니다. Window VM을 생성한 후, RDP로 Window VM에 접속한는 부분에서만 차이가 있습니다. 이 부분은 Window와 &ldquo;OS X&rdquo;를 구분하여 작성했습니다. 본 문서는 2016년 11월 19일을 기준으로 작성되었습니다.</p>
 
 <p>오라클 클라우드 VM 생성 실습은 약 10~15분 정도 소요됩니다.</p>
 
 <h3 id="실습-절차:94992633c6f2d4e4cf6bd081f840f7fe">실습 절차</h3>
 
-<p>오라클 클라우드에 Window VM을 생성하는 실습은 다음과 같은 순서로 진행되며,
-각 단계를 &ldquo;Step by Step&rdquo; 형태로 설명하겠습니다.</p>
+<p>오라클 클라우드에 Window VM을 생성하는 실습은 다음과 같은 순서로 진행됩니다.
+각 단계는 &ldquo;Step by Step&rdquo; 형태로 설명하겠습니다.</p>
 
 <ol>
 <li>Oracle Cloud 로그인</li>
@@ -165,6 +165,8 @@ ul#menu li a:hover {
 <li>Window VM 인스턴스 재시작</li>
 <li>Window VM 인스턴스 정지 및 제거</li>
 </ol>
+
+<hr />
 
 <h2 id="oracle-cloud에서-window-vm-생성:94992633c6f2d4e4cf6bd081f840f7fe">Oracle Cloud에서 Window VM 생성</h2>
 
