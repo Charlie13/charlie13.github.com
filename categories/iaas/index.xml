@@ -121,7 +121,7 @@ VM 인스턴스를 생성하는 Compute Cloud Service Console(이하 compute con
 &lt;img src=&#34;https://minsupapa.github.io/oracle/opc/win-vm/0080.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Marketplaces에서 설치할 이미지를 설치하면 라이센스 관련 동의 팝업 페이지가 출력됩니다. [그림 9]와 같이 두 개 항목을 체크하고 &lt;code&gt;install&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
+&lt;p&gt;Marketplaces에서 설치할 이미지를 선택하면 라이센스 관련 동의 팝업 페이지가 출력됩니다. [그림 9]와 같이 두 개 항목을 체크하고 &lt;code&gt;install&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;그림 9. Marketplaces 이미지 설치를 위한 라이센스 동의
@@ -147,7 +147,7 @@ VM 인스턴스를 생성하는 Compute Cloud Service Console(이하 compute con
 Public IP Address의 경우 이번에는 자동 생성을 사용할 것 입니다. 사전에 고정된 Public IP Address를 사용해야 한다면
 사전에 생성된 Public IP Address를 선택할 수 있습니다.
 리눅스 VM과 달리 Window VM은 SSH를 사용하지 않습니다. 따라서 &lt;code&gt;SSH keys&lt;/code&gt;를 설정할 필요가 없습니다.
-윈도우 접속을 위해서 &lt;code&gt;RDP&lt;/code&gt;를 Enabled로 선택하고 Administorator 패스워드를 설정해야 합니다.
+윈도우 접속을 위해서 &lt;code&gt;RDP&lt;/code&gt;를 Enabled로 선택한 후 Administorator 패스워드를 설정해야 합니다.
 설정이 완료되었으면, 다음 단계로 넘어가기 위해서 &lt;code&gt;&amp;gt;&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -179,7 +179,9 @@ Public IP Address의 경우 이번에는 자동 생성을 사용할 것 입니�
 &lt;img src=&#34;https://minsupapa.github.io/oracle/opc/win-vm/0150.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Window VM이 생성되는 시점에서는 [그림 16]과 같이 3개의 Orchestration이 starting으로 출력됩니다.&lt;/p&gt;
+&lt;p&gt;Window VM이 생성되는 시점에서는 [그림 16]과 같이 3개의 Orchestration이 starting으로 출력됩니다.
+VM이 생성되는 시점에서 각 Orchestration의 상태는 &lt;strong&gt;stopped&lt;/strong&gt;이거나 &lt;strong&gt;starting&lt;/strong&gt;입니다.
+Orchestration의 상태는 &lt;code&gt;update Orchestration&lt;/code&gt; 버튼을 클릭하여 업데이트 할 수 있습니다.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;그림 16. Window VM 생성 중 Orchestration 상태
@@ -195,9 +197,9 @@ Public IP Address의 경우 이번에는 자동 생성을 사용할 것 입니�
 
 &lt;h3 id=&#34;step04-security-rule-등록-for-rdp:94992633c6f2d4e4cf6bd081f840f7fe&#34;&gt;Step04. Security Rule 등록 (for RDP)&lt;/h3&gt;
 
-&lt;p&gt;Window VM 생성이 완료되면, Oracle Cloud에 생성된 Window에 접근하기 위해서는  RDP(Remote Desktop Protocol)을 사용해야 합니다.
-외부에서 Window VM에 접근하기 위해서 RDP 포트를 외부에 오픈하는 설정을 추가해야 합니다. 현재 실습에 사용하는 컴퓨터에서 고정 IP가 아닌 유동 IP라면
-사용중이라면 &amp;ldquo;Public Internet&amp;rdquo;에 RDP 포트를 오픈해야 합니다.&lt;/p&gt;
+&lt;p&gt;Oracle Cloud에 생성된 Window에 접근하기 위해서는 RDP(Remote Desktop Protocol)을 사용해야 합니다.
+외부에서 Window VM에 접근하기 위해서 RDP 포트를 외부에 오픈하는 설정을 추가해야 합니다. 현재 실습에 사용하는 컴퓨터가 유동 IP를 사용한다면
+&amp;ldquo;Public Internet&amp;rdquo;에 RDP 포트를 오픈해야 합니다.&lt;/p&gt;
 
 &lt;p&gt;이러한 설정을 하기 위해서는 &amp;ldquo;Compute Service Console&amp;rdquo;에서 [그림 18]과 같이 Network 텝으로 이동합니다.&lt;/p&gt;
 
@@ -206,8 +208,9 @@ Public IP Address의 경우 이번에는 자동 생성을 사용할 것 입니�
 &lt;img src=&#34;https://minsupapa.github.io/oracle/opc/win-vm/0180.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;RDP 포트에 대한 정의는 &amp;ldquo;Security Application&amp;rdquo;에 RDP라는 이름으로 사전에 만들어져 있습니다.
-또한 &amp;ldquo;Pulbic Internet&amp;rdquo;은  Secirytp IP List에 빌트인으로 사전에 만들어져 있습니다. 따라서 [그림 19]와 같이 &lt;code&gt;create Security Rule&lt;/code&gt;버튼을 클릭하여 &amp;ldquo;Security Rules&amp;rdquo;을 만들수 있습니다.&lt;/p&gt;
+&lt;p&gt;RDP 포트에 대한 정의는 &amp;ldquo;Security Application&amp;rdquo;에 RDP라는 이름으로 빌트인으로 만들어져 있습니다.
+또한 &amp;ldquo;Pulbic Internet&amp;rdquo; 역시  Secirytp IP List에 빌트인으로 만들어져 있습니다.
+[그림 19]와 같이 &lt;code&gt;create Security Rule&lt;/code&gt;버튼을 클릭하여 &amp;ldquo;Security Rules&amp;rdquo;을 만들수 있습니다.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;그림 19. Security Rule 생성
@@ -229,7 +232,7 @@ Public IP Address의 경우 이번에는 자동 생성을 사용할 것 입니�
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;설정이 완료되면 &lt;code&gt;create&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
+&lt;p&gt;설정이 완료되면 [그림 20]과 같이 &lt;code&gt;create&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;그림 20. RDP Security Rule 설정
@@ -239,7 +242,7 @@ Public IP Address의 경우 이번에는 자동 생성을 사용할 것 입니�
 &lt;p&gt;Security Rule이 정상적으로 생성되면, [그림 21]과 같이 Security Rules 목록이 출력됩니다.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;그림 21. RDP Security Rule 생설 결과
+&lt;li&gt;그림 21. RDP Security Rule 생성 결과
 &lt;img src=&#34;https://minsupapa.github.io/oracle/opc/win-vm/0210.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -275,7 +278,7 @@ Public IP Address의 경우 이번에는 자동 생성을 사용할 것 입니�
 &lt;img src=&#34;https://minsupapa.github.io/oracle/opc/win-vm/0250.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;접속 정보는 [그림 26]과 같이 설정됩니다. 특히 PC name에서 접속할 Window의 Public IP를 입력합니다.
+&lt;p&gt;접속 정보는 [그림 26]과 같이 설정됩니다. PC name에서는 접속할 Window의 Public IP를 입력합니다.
 Password 항목에는 [그림 12]에서 설정한 패스워드를 사용합니다. 설정이 완료되면 상단의 닫기 아이콘(red)을 클릭합니다.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -362,7 +365,7 @@ Password 항목에는 [그림 12]에서 설정한 패스워드를 사용합니�
 
 &lt;h3 id=&#34;step08-vm-인스턴스-정지-및-제거:94992633c6f2d4e4cf6bd081f840f7fe&#34;&gt;Step08: VM 인스턴스 정지 및 제거&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;Compute Service Console&lt;/code&gt;의 Orchestration 텝에서 생성한 VM을 정지 및 제거할 수 있습니다.
+&lt;p&gt;&lt;code&gt;Compute Service Console&lt;/code&gt;의 Orchestration 텝에서 생성한 VM을 정지 및 제거 할 수 있습니다.
 Orchestration을 통해서 VM을 제거할 때 약 5분 정도 소요됩니다.&lt;/p&gt;
 
 &lt;p&gt;각 VM은 3개의 Orchestration으로 관리 됩니다. 3개 중에서 master가 대표 Orchestration입니다.
