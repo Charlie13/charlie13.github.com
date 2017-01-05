@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>remark를 이용한 웹 프리젠테이션 &middot; Taewan Kim</title>
+  <title>OPC Sales Workshop &middot; Taewan Kim</title>
 
   
   <link rel="stylesheet" href="http://taewan.kim/css/poole.css">
@@ -56,8 +56,8 @@ ul#menu li a:hover {
   
   
 
-  <meta name="description" content="remark는 웹 프리젠테이션 기술로 markdown 형식의 데이터를 웹에서 PPT 형식으로 제공하는 오픈소스입니다. 기술 적용이 간단하고 프리젠테이션의 기본 구성이 지원됩니다. 최종 결과물은 Pure HTML입니다. Remark JS의 사용법을 정리해 보겠습니다.">
-  <meta name="keywords" content="remark,markdown,Web Presentation">
+  <meta name="description" content="Oracle Public Cloud의 IaaS Workshop 데모 동영상 입니다.">
+  <meta name="keywords" content="Oracle,OPC,demo">
   
 </head>
 <body class="theme-base-08 layout-reverse">
@@ -120,8 +120,9 @@ ul#menu li a:hover {
   <li><a href="/minsu.html">My Son - Minsu</a></li>
 </ul>
 
+
 <div class="content container">
-    <div>
+  <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <ins class="adsbygoogle"
@@ -133,61 +134,89 @@ ul#menu li a:hover {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
   </div>
-
+  <br/><br/>
   <div class="post">
-    <h1>remark를 이용한 웹 프리젠테이션</h1>
-    <span class="post-date">Mar 22, 2016 &middot; 1 minute read &middot; <a href="http://taewan.kim/blog/2016/03/22/remarkjs/#disqus_thread">Comments</a>
+    <h1>OPC Sales Workshop</h1>
     
-    <br/>
-    <a class="label" href="http://taewan.kim/categories/remark.html">remark</a><a class="label" href="http://taewan.kim/categories/markdown.html">markdown</a><a class="label" href="http://taewan.kim/categories/web-presentation.html">Web Presentation</a>
-    </span>
-    <p>PPT를 공유하는 Slideshare 서비스가 있기는 하지만, 웹 상에서 내가 직접 제어와 공유가 가능한 순수 HTML기반의 웹 프리젠테이션에 대한 필요성을 느껴왔씁니다. 오픈소스로 다수의 웹 프리젠테이션 기술 중에서 하나를 선택하라면 remark를 선택하겠습니다.</p>
 
-<p>remark의 장점은 다음과 같습니다.</p>
+<p>Oracle Public Cloud의 IaaS Workshop 데모의 동영상버전입니다.
+Oracle Public Cloud(OPC)에서 1개의 NGINX, 2개의 Tomcat, 1개의 Oracle Database CS 인스턴스로 구성된 시스템를 구성하는 데모입니다.
+동영상을 Youtube에 올라가 있으며 주소는 다음과 같습니다.</p>
 
 <ul>
-<li>순수 HTML 기술이다.</li>
-<li>슬라이드 데이터는 Markdown 포멧을 사용한다.</li>
-<li>PPT의 기본 레이아웃 지원에 충실하다.</li>
-<li>사용법이 간단하다.</li>
-<li>Syntax Highlight 기능을 잘 지원한다.</li>
-<li>Latex를 지원한다.</li>
-<li>Graph를 지원한다.</li>
-</ul>
+<li><p>youtube playlist: <a href="https://www.youtube.com/playlist?list=PLIJx4l2jox4_Q4ns5Lz-88uCx6NyGXLQW">youtube link</a></p></li>
 
-<p>반면 단점을 꼽으라면 Animation 효과가 지원되지 않는다는 것입니다. 개인적으로 Animation 효과보다는 프리젠테이션 구성 지원과 문서 작성 편리성을 중시하는 관계로 제 경우에는 이 단점이 크게 작용하지 않았습니다.</p>
-
-<p>Remark의 프로젝트 사이트는 다음과 같습니다.</p>
+<li><p>카테고리 구성</p>
 
 <ul>
-<li><a href="https://github.com/gnab/remark">Remark 프로젝트 사이트: https://github.com/gnab/remark</a></li>
+<li><a href="#ssh">OPC Compute Server에 IP와 SSH Public Key 등록</a></li>
+<li><a href="#dbcs">OPC DBCS 인스턴스 생성 및 접속</a></li>
+<li><a href="#security">OPC Security 설정</a></li>
+<li><a href="#iaas">OPC Compute CS 인스턴스 생성</a></li>
+</ul></li>
 </ul>
 
-<p>Remark 데모는 다음 URL에서 확인 할 수 있습니다.</p>
+<hr />
 
-<ul>
-<li><a href="http://remarkjs.com">Remakr js 데모: http://remarkjs.com</a></li>
-<li>Screenshoot
-<img src="/images/remarkjs/slide1.png" alt="" />
-<img src="/images/remarkjs/presentationmode.png" alt="" /></li>
-</ul>
+<p><a id="ssh"></a></p>
 
-<p>Remark의 사용법은 다음 Web Presentation으로 정리하겠습니다.</p>
+<h2 id="opc-compute-server에-ip와-ssh-public-key-등록:331cd164ff239e7e25949c2b74c2846d">OPC Compute Server에 IP와 SSH Public Key 등록</h2>
 
-<ul>
-<li><a href="/presentation/201603_Remarkjs.html">Remark 사용법: http://taewan.kim/presentation/201603_Remarkjs.html</a></li>
-</ul>
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/DwHlDfNhRIA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+<hr />
+
+<p><a id="dbcs"></a></p>
+
+<h2 id="opc-dbcs-인스턴스-생성-및-접속:331cd164ff239e7e25949c2b74c2846d">OPC DBCS 인스턴스 생성 및 접속</h2>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/mMLMtBiZ4-Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+<hr />
+
+<p><a id="security"></a></p>
+
+<h2 id="opc-security-설정:331cd164ff239e7e25949c2b74c2846d">OPC Security 설정</h2>
+
+<p>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/uA4qU_Jzkv8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+</p>
+
+<hr />
+
+<p><a id="iaas"></a></p>
+
+<h2 id="opc-compute-cs-인스턴스-생성:331cd164ff239e7e25949c2b74c2846d">OPC Compute CS 인스턴스 생성</h2>
+
+<p>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/2SLNvr9m9iU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+</p>
+
+<hr />
 
   </div>
+  
   <div>
     <hr/>
-	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="/images/creative.png" /></a><a href='https://www.facebook.com/alvinkim082' target='_blank'>taewanme</a>의 저작물인 이 저작물은(는) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="/images/creative.png" /></a><a href='https://www.facebook.com/alvinkim082' target='_blank'>taewanme</a>의 저작물인 이 저작물은(는) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
     <hr/>
   </div>
   <div id="disqus_thread"></div>
 
+  <br/><br/>
     <div>
-    <br/><br/>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <ins class="adsbygoogle"
@@ -199,7 +228,6 @@ ul#menu li a:hover {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
   </div>
-
 </div>
 
 
@@ -229,4 +257,3 @@ ul#menu li a:hover {
 
 </body>
 </html>
-
