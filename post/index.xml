@@ -15,7 +15,7 @@
       <pubDate>Wed, 08 Feb 2017 16:52:34 +0900</pubDate>
       
       <guid>http://taewan.kim/blog/2017/02/08/occs/</guid>
-      <description>&lt;p&gt;오라클은 2015년에 Stack Engine이라는 Docker 전문 업체를 인수하였고, 이 업체의 솔수션은 클라우드 서비스 형태로 제공하고 있습니다. 오라클 도커 커테이너 서비스는 Oracle Container Cloud Service라고 합니다.&lt;/p&gt;
+      <description>&lt;p&gt;오라클은 2015년에 Stack Engine이라는 Docker 전문 업체를 인수하였고, 이 업체의 솔루션을 클라우드 서비스 형태로 제공하고 있습니다. 이 서비스가 &lt;strong&gt;Oracle Container Cloud Service&lt;/strong&gt; 입니다.&lt;/p&gt;
 
 &lt;p&gt;OCCS(Oracle Container Cloud Service)에 대한 개요와 Docker의 개념을 소개하는 슬라이드를 공유합니다.&lt;/p&gt;
 
