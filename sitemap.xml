@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/post/oracloud_patch/</loc>
+    <lastmod>2017-08-20T23:20:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/installing_pms/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/changing_trial_account/</loc>
+    <lastmod>2017-08-01T04:20:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/container_infographics/</loc>
+    <lastmod>2017-08-01T01:20:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/stpe_by_step_new_cluster_bdcsce/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/bdcsce01/</loc>
+    <lastmod>2017-07-27T11:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/mysql_cs/</loc>
+    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/compute_security/</loc>
+    <lastmod>2017-05-04T13:23:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/compute_instance/</loc>
+    <lastmod>2017-05-02T11:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/storage_cs/</loc>
+    <lastmod>2017-04-28T23:02:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/occs_new_docker_container/</loc>
+    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/occs-new-inst/</loc>
+    <lastmod>2017-04-20T19:36:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/docker_in_oc/</loc>
+    <lastmod>2017-04-19T19:01:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/occs/</loc>
+    <lastmod>2017-04-05T11:23:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/win-vm/</loc>
+    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/dbcs_demo/</loc>
+    <lastmod>2017-03-12T13:20:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/objest-storage-replication/</loc>
+    <lastmod>2017-03-06T08:54:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/iaas_vm/</loc>
+    <lastmod>2017-03-05T22:20:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/ssh_config/</loc>
+    <lastmod>2017-03-05T12:07:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/ssh_key/</loc>
+    <lastmod>2017-03-04T12:07:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/accont/</loc>
+    <lastmod>2017-03-02T21:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/functional_javascript/</loc>
+    <lastmod>2016-10-18T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/markdown/</loc>
+    <lastmod>2016-04-04T13:47:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/installing_bigdatalite/</loc>
+    <lastmod>2016-03-28T17:04:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/youtube/</loc>
+    <lastmod>2016-03-25T00:17:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/question/</loc>
+    <lastmod>2016-03-23T14:01:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/remarkjs/</loc>
+    <lastmod>2016-03-22T10:23:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/minsu/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/vagrant_intro/</loc>
+    <lastmod>2016-02-06T20:47:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/bitbucket_jenkins_webhook/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/virtualbox_network_config/</loc>
+    <lastmod>2016-01-31T12:42:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/seam_log/</loc>
+    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/os_bit/</loc>
+    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/log4j_perf/</loc>
+    <lastmod>2016-01-03T00:17:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/tomcat_encoding/</loc>
+    <lastmod>2011-08-01T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/worker_in_masscom/</loc>
+    <lastmod>2011-04-17T00:17:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/glassfish_encoding/</loc>
+    <lastmod>2011-04-05T21:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/seam_ip_address/</loc>
+    <lastmod>2011-03-30T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/sudo_in_centos/</loc>
+    <lastmod>2011-03-16T14:01:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/junit4_annotation/</loc>
+    <lastmod>2010-11-09T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/jersey_license_gpl2_cddl1.1/</loc>
+    <lastmod>2010-10-21T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2006_javaone/</loc>
+    <lastmod>2006-08-01T21:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/i_like_new_techs/</loc>
+    <lastmod>2005-07-25T00:17:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/jsf/</loc>
+    <lastmod>2004-12-01T21:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/acc/</loc>
+    <lastmod>2017-04-19T19:01:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/account/</loc>
+    <lastmod>2017-08-01T04:20:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bdcsce/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/bdcsce/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/big-data/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/big-data/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/big-data-lite/</loc>
+    <lastmod>2016-03-28T17:04:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bigdata/</loc>
+    <lastmod>2016-03-28T17:04:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bitbucket/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2017-08-01T04:20:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ci/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/ci/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cloud/</loc>
+    <lastmod>2017-05-02T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/cloud/</loc>
+    <lastmod>2017-05-02T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cloudera/</loc>
+    <lastmod>2016-03-28T17:04:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/compute/</loc>
+    <lastmod>2017-05-04T13:23:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/compute/</loc>
+    <lastmod>2017-05-04T13:23:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/compute-cs/</loc>
+    <lastmod>2017-05-02T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/container/</loc>
+    <lastmod>2017-08-01T01:20:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/container/</loc>
+    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/database/</loc>
+    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dbcs/</loc>
+    <lastmod>2017-03-12T13:20:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/docker/</loc>
+    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/docker/</loc>
+    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/encoding/</loc>
+    <lastmod>2011-08-01T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/essay/</loc>
+    <lastmod>2005-07-25T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/functioal-programming/</loc>
+    <lastmod>2016-10-18T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/git/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/github/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gitlab/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/glassfish/</loc>
+    <lastmod>2011-04-05T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hadoop/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/humor/</loc>
+    <lastmod>2011-04-17T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/iaas/</loc>
+    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/iaas/</loc>
+    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/java/</loc>
+    <lastmod>2016-01-03T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/java/</loc>
+    <lastmod>2011-04-05T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/javaone/</loc>
+    <lastmod>2006-08-01T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/javascript/</loc>
+    <lastmod>2016-10-18T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/javascript/</loc>
+    <lastmod>2016-10-18T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/jboss/</loc>
+    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/jenkins/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/jersey/</loc>
+    <lastmod>2010-10-21T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/jsf/</loc>
+    <lastmod>2004-12-01T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/license/</loc>
+    <lastmod>2010-10-21T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2011-03-16T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/log4j/</loc>
+    <lastmod>2016-01-03T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/markdown/</loc>
+    <lastmod>2016-04-04T13:47:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/minsu/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mysql/</loc>
+    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/mysql/</loc>
+    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/network/</loc>
+    <lastmod>2016-01-31T12:42:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/news/</loc>
+    <lastmod>2011-04-17T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/nomalization/</loc>
+    <lastmod>2016-03-23T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/object-storage/</loc>
+    <lastmod>2017-03-06T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/occs/</loc>
+    <lastmod>2017-04-19T19:01:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/opensource/</loc>
+    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/opensource/</loc>
+    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/oracle/</loc>
+    <lastmod>2017-04-20T19:36:38+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/oracle/</loc>
+    <lastmod>2017-04-05T11:23:40+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/oracle-bdcsce/</loc>
+    <lastmod>2017-08-20T23:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/oracle-cloud/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/oracle-cloud/</loc>
+    <lastmod>2017-08-20T23:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paas/</loc>
+    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/paas/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/patch/</loc>
+    <lastmod>2017-08-20T23:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2017-08-20T23:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/psm/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rdbms/</loc>
+    <lastmod>2016-03-23T14:01:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/remark/</loc>
+    <lastmod>2016-03-22T10:23:15+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/seam/</loc>
+    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/security/</loc>
+    <lastmod>2017-05-04T13:23:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/spark/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ssh/</loc>
+    <lastmod>2017-03-05T12:07:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/storage/</loc>
+    <lastmod>2017-04-28T23:02:33+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/storage/</loc>
+    <lastmod>2017-04-28T23:02:33+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2017-04-19T19:01:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tip/</loc>
+    <lastmod>2016-04-04T13:47:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/tip/</loc>
+    <lastmod>2016-04-04T13:47:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tomcat/</loc>
+    <lastmod>2011-08-01T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/trial-account/</loc>
+    <lastmod>2017-08-01T04:20:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/vagrant/</loc>
+    <lastmod>2016-02-06T20:47:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/virtualbox/</loc>
+    <lastmod>2016-03-28T17:04:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/virtualization/</loc>
+    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/virtualization/</loc>
+    <lastmod>2016-02-06T20:47:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/vm/</loc>
+    <lastmod>2017-03-05T22:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/web-presentation/</loc>
+    <lastmod>2016-03-22T10:23:15+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/window/</loc>
+    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/youtube/</loc>
+    <lastmod>2016-03-25T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/youtube/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-08-20T23:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

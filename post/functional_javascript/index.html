@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<META http-equiv="Expires" content="-1">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="No-Cache">
+
+<title>자바스크립트 함수형 프로그래밍 연습 - Table 테그 레퍼</title>
+<meta name="description" content="오라클 클라우드 기술 블로그">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="자바스크립트 함수형 프로그래밍 연습 - Table 테그 레퍼" />
+<meta property="og:description" content="자바스크립트로 함수형 프로그램밍을 연습하고 있습니다. 가장 기초적인  table 테그 레퍼를 만들어 봤습니다. 고차함수를 사용하여 코드의 재사용성을 높이고 제어문과 지역 변수 제거에 초점을 맞췄습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/functional_javascript/" />
+
+
+
+<meta property="article:published_time" content="2016-10-18T21:28:14&#43;09:00"/>
+<meta property="article:modified_time" content="2016-10-18T21:28:14&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/minsu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/hybrid.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
+
+
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="taewan.kim" rel="home">
+						<h1 class="logo__title">taewan.kim</h1>
+						<h2 class="logo__tagline">Oracle Cloud 블로그</h2>
+					</a>
+				</div>
+			</div>
+			<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
+		<li class="menu__item "><a class="menu__link" href="/profile/" title="taewan.kim을 소개합니다. " >PROFILE</a></li>
+		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >MY SON - MINSU</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		
+		<div>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+	<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-8469722754608892"
+			 data-ad-slot="5594090168"
+			 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+		  <hr/>
+		</div>
+		
+		<header class="post__header clearfix">
+			<h1 class="post__title">자바스크립트 함수형 프로그래밍 연습 - Table 테그 레퍼</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2016-10-18 21:28:14 &#43;0900 KST">October 18, 2016</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/javascript" rel="category">JavaScript</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			<p>최근에 함수형 언어을 다른 시각에서 접근한다는 취지로 &ldquo;<a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B9124201558">함수형 자바스크립트 : 새롭고 올바른 자바스크립트 프로그래밍 기법</a>&ldquo;을 보고 있습니다. (기존에는 Scala를 중심으로 함수형을 접근했습니다.) 이 책의 4장까지의 내용을 기초로 테이블 테그 래퍼를 작성해 보았습니다.</p>
+
+<p>이 책에서는 함수형을 지원하기 위해서 underscore.js를 사용하고 있지만, ES6는 함수형의 핵심 함수들을 대부분 포함하고 있습니다.</p>
+
+<p>첫번째 구현체를 ES6 코드로 작성해 보았습니다.</p>
+
+<p>코드를 리뷰해 주신 분의 의견은 &ldquo;함수형을 빙지한 순차적 프로그래밍이다&rdquo;라는 리뷰를 받았습니다.
+함수형 코드를 모방한 함수를 사용하기는 했지만 지역변수가 존재하고 제어문이 그대로 노출되는 문제를 안고 있습니다.</p>
+
+<ul>
+<li>그림 1. 첫번째 구현체 (초기 버전)</li>
+</ul>
+
+<p><img src="https://minsupapa.github.io/javascript/functional_practice/fig01.jpg" alt="" /></p>
+
+<p>이 부분을 다시 구현해 보았습니다. 주안점을 둔 부분은 다음과 같습니다.</p>
+
+<ol>
+<li>제어문을 제거</li>
+<li>지역 변수를 사용 금지</li>
+<li>배열 검증</li>
+<li>ES6 기반 코드</li>
+</ol>
+
+<hr />
+
+<ul>
+<li>그림 2. 두번째 구현체 수정 코드</li>
+</ul>
+
+<p><img src="https://minsupapa.github.io/javascript/functional_practice/fig02.jpg" alt="" /></p>
+
+<p>함수형 코드를 사용함에 있어서 장점은..</p>
+
+<ul>
+<li>코드의 재사용성이 높아짐</li>
+<li>재사용성을 높이는 Generic 함수 디자인 가능</li>
+<li>코드이 가독성이 높아짐</li>
+</ul>
+
+<p>이러한 특징을 볼 수 있는것 같습니다.
+그러나 너무 어렵네요&hellip;.</p>
+
+<p>다음은 두 번째 코드입니다.
+아직은 연습하는 입장에서 문제가 많습니다.</p>
+
+<p>다양한 리뷰 부탁드립니다.
+스칼라를 주로 사용하다가 자바스크립트로 함수형 프로그래밍을 해보니 역시 힘드네요.
+(아직 함수형 개념이 부족한듯 합니다)</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #a6e22e">wrapper</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">tag</span><span style="color: #f8f8f2">){</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">v</span><span style="color: #f8f8f2">){</span><span style="color: #66d9ef">return</span> <span style="color: #e6db74">&#39;&lt;&#39;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">tag</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39;&gt;&#39;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">v</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39;&lt;/&#39;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">tag</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39;&gt;&#39;</span><span style="color: #f8f8f2">;};</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #a6e22e">initArr</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">arr</span><span style="color: #f8f8f2">){</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">Array.</span><span style="color: #a6e22e">isArray</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">arr</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">?</span> <span style="color: #a6e22e">arr</span> <span style="color: #f92672">:</span> <span style="color: #f8f8f2">[]</span>
+<span style="color: #f8f8f2">}</span>
+
+
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">people</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+  <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&#39;김민수&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;3&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;아들&#39;</span><span style="color: #f8f8f2">],</span>
+  <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&#39;임선영&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;39&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;엄마&#39;</span><span style="color: #f8f8f2">],</span>
+  <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&#39;김태완&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;43&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;아빠&#39;</span><span style="color: #f8f8f2">]</span>
+<span style="color: #f8f8f2">];</span>
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">labels</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&#39;이름&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;나이&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;비고&#39;</span><span style="color: #f8f8f2">];</span>
+
+
+<span style="color: #a6e22e">tableGen</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">matrix</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">head</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">wrapfun</span><span style="color: #f8f8f2">){</span>
+    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">tr</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">wrapfun</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;tr&#39;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">td</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">wrapfun</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;td&#39;</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">wrapfun</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;table&#39;</span><span style="color: #f8f8f2">)(</span>
+        <span style="color: #a6e22e">wrapfun</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;thead&#39;</span><span style="color: #f8f8f2">)(</span><span style="color: #a6e22e">initArr</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">head</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">reduce</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">p</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">c</span><span style="color: #f8f8f2">)=&gt;</span><span style="color: #a6e22e">p</span><span style="color: #f92672">+</span><span style="color: #a6e22e">td</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">c</span><span style="color: #f8f8f2">),</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">))</span> <span style="color: #f92672">+</span>
+        <span style="color: #a6e22e">wrapper</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;tbody&#39;</span><span style="color: #f8f8f2">)(</span><span style="color: #a6e22e">initArr</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">matrix</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">reduce</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">p</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">c</span><span style="color: #f8f8f2">)=&gt;</span><span style="color: #a6e22e">p</span><span style="color: #f92672">+</span><span style="color: #a6e22e">tr</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">c</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">reduce</span><span style="color: #f8f8f2">((</span><span style="color: #a6e22e">sp</span><span style="color: #f8f8f2">,</span><span style="color: #a6e22e">sc</span><span style="color: #f8f8f2">)=&gt;</span><span style="color: #a6e22e">sp</span><span style="color: #f92672">+</span><span style="color: #a6e22e">td</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">sc</span><span style="color: #f8f8f2">),</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">)),</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">))</span>
+    <span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">tbltag</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">tableGen</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">people</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">labels</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">wrapper</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #a6e22e">$$html$$</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">tbltag</span>
+</pre></div>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/functioal-programming/" rel="tag">Functioal Programming</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/javascript/" rel="tag">JavaScript</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="김태완 avatar" src="/img/author/taewan.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<div class="authorbox__description">
+		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다.
+	</div>
+	<div class="authorbox__description">
+		E-mail: taewanme@gmail.com
+	</div>
+</div>
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/markdown/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">마크다운 사용법 - Quick Start</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/accont/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">오라클 클라우드 계정</p></a>
+	</div>
+</nav>
+
+	
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://taewankim.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+	<div>
+		<hr />
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-8469722754608892"
+				 data-ad-slot="5594090168"
+				 data-ad-format="auto"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="/" />
+	</form>
+</div>
+	
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">최신글</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracloud_patch/" title="Oracle Cloud의 PaaS 서비스 패치: Orace BDCSCE">
+							Oracle Cloud의 PaaS 서비스 패치: Orace BDCSCE</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/installing_pms/" title="Oracle PaaS Service Manager 소개 및 설치">
+							Oracle PaaS Service Manager 소개 및 설치</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/changing_trial_account/" title="Oracle Cloud 트라이얼 계정 지원 방식 변경">
+							Oracle Cloud 트라이얼 계정 지원 방식 변경</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/container_infographics/" title="Oracle Container Cloud Service의 Infographics입니다.">
+							Oracle Container Cloud Service의 Inf ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/stpe_by_step_new_cluster_bdcsce/" title="Oracle BDCSCE: 클러스터 생성 ">
+							Oracle BDCSCE: 클러스터 생성 </a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/bdcsce01/" title="Oracle Big Data Cloud Service Compute-Edition">
+							Oracle Big Data Cloud Service Compu ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/mysql_cs/" title="Oracle MySQL Cloud Service">
+							Oracle MySQL Cloud Service</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/compute_security/" title="오라클 클라우드 Compute CS 보안 적용">
+							오라클 클라우드 Compute CS 보안 적용</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/compute_instance/" title="우분투 17.04 가상머신 만들기">
+							우분투 17.04 가상머신 만들기</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/storage_cs/" title="Oracle Storage Cloud Service">
+							Oracle Storage Cloud Service</a>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">카테고리</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/account">Account</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/bdcsce">Bdcsce</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/big-data">Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/ci">Ci</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/cloud">Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/compute">Compute</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/container">Container</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/humor">Humor</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/iaas">Iaas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/java">Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/minsu">Minsu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/opensource">Opensource</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle">Oracle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud">Oracle-Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/paas">Paas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/storage">Storage</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tip">Tip</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/virtualization">Virtualization</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/youtube">Youtube</a></li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+	<h4 class="widget__title">SNS(Social Network Service)</h4>
+	<div class="widget__content">
+		<a href="https://github.com/oracloud-kr-team" target="_blank" title="github"><img src="/img/icon/github.png" width="50px" height="50px"/></a>
+		<a href="https://www.slideshare.net/ssusercda07e" target="_blank" title="slideshare"><img src="/img/icon/slideshare.png" width="50px" height="50px"/></a>
+		<a href="https://www.youtube.com/channel/UCboJr3TLlqeDqpBURRdb_lg" target="_blank" title="youtube"><img src="/img/icon/youtube.png" width="50px" height="50px"/></a>
+		<a href="mailto:oracloud.kr@gmail.com" title="email"><img src="/img/icon/email.png" width="50px" height="50px"/></a>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">관심 사이트</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="http://www.oracloud.kr/">
+				Oracle Cloud 기술 블로그</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73312251-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+

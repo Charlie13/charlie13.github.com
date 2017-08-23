@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<META http-equiv="Expires" content="-1">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="No-Cache">
+
+<title>VirtualBox: 호스트에서 게스트 접근 네트웍 설정</title>
+<meta name="description" content="오라클 클라우드 기술 블로그">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="VirtualBox: 호스트에서 게스트 접근 네트웍 설정" />
+<meta property="og:description" content="VirtualBox는 테스트 환경 구성에 사용되는 가상화 기술입니다. 오라클의 경우 자사의 빅데이터 솔루션(CDH&#43;오라클솔루션)을 하나의 VirtualBox 이미지를 만들어 Oracle Big Data Lite라는 이름으로  배포합니다. 사용자는 Oracle Big Data Lite를 사용하여 빅데이터 기능을 바로 사용해 보고 점검 할 수 있있습니다. VirtualBox 사용 할 경우에 Host OS에서 VirtualBox의 Guest OS에 직접 접근하는 설정을 사용하면 매우 유용합니다. 이와 관련한 네트웍 설정 방법을 정리합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/virtualbox_network_config/" />
+
+
+
+<meta property="article:published_time" content="2016-01-31T12:42:43&#43;09:00"/>
+<meta property="article:modified_time" content="2016-01-31T12:42:43&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/minsu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/hybrid.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
+
+
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="taewan.kim" rel="home">
+						<h1 class="logo__title">taewan.kim</h1>
+						<h2 class="logo__tagline">Oracle Cloud 블로그</h2>
+					</a>
+				</div>
+			</div>
+			<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
+		<li class="menu__item "><a class="menu__link" href="/profile/" title="taewan.kim을 소개합니다. " >PROFILE</a></li>
+		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >MY SON - MINSU</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		
+		<div>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+	<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-8469722754608892"
+			 data-ad-slot="5594090168"
+			 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+		  <hr/>
+		</div>
+		
+		<header class="post__header clearfix">
+			<h1 class="post__title">VirtualBox: 호스트에서 게스트 접근 네트웍 설정</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2016-01-31 12:42:43 &#43;0900 KST">January 31, 2016</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/virtualization" rel="category">virtualization</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			
+
+<p>최근에는 VirtualBox 이미지로 테스트 환경을 구성하거나 배포하는 경우가 많아졌습니다.
+특히 오라클에서는 초기 테스트 및 교육 목적으로 다수의 VirtualBox 이미지를 배포하고 있습니다.
+이렇게 만들어진 이미지를 사용할 경우 사용자는 새로운 기술을 접할 때 경험해야 하는 설치 및 구성에 대한 난제를 해결 할 수 있습니다.
+즉 사용자는 새로운 기술의 기능 테스트 및 활용에 집중할 수 있게됩니다.</p>
+
+<p>오라클이 제공하는 VirtualBox 이미지는 Oracle Big Data Lite입니다.
+Oracle Big Data Lite는 오라클의 빅데이터 소프트웨어 (CHD배포본 + Orale Software)의 최신 구성을 하나의 VirtualBox 이미지에 담아서 제공합니다.
+이 이미지의 최신 버전은 4.3.X (2016.01 기준) 입니다.
+Oracle Big Data Lite는 완전한 설정이 반영된 이미지이기 때문에, 사용자는 설치 및 번거로운 작업을 거치지 않고 바로 기능 테스트를 할 수 있습니다.</p>
+
+<p><img src="https://taewanmerepo.github.io/repo1/virtualbox/BigDataLite-Initial.png" alt="BigDataLite" /></p>
+
+<h2 id="호스트에서-가상화-이미지에-접근할-수-있다면">호스트에서 가상화 이미지에 접근할 수 있다면&hellip;</h2>
+
+<p>VirtualBox를 통해서 이미지를 실행한 후에는 VirtualBox가 제공하는 윈도우를 통해서 Guest OS에 접근을 할 수 있습니다.
+그러나 Guest OS를 윈도우로 접근하는 방식은 비 효율적입니다.
+Guest OS가 리눅스라면 VirtualBox가 구동하는 호스트에서 터미널로 Guest OS에 접근하여 작업하는 것이 더 효율적 입니다.
+VirtualBox에 &ldquo;Host Only Adapter&rdquo;를 설정하면, Host OS에서 Guest OS에 접근할 수 있습니다.</p>
+
+<h2 id="virtualbox의-host-only-adapter-설정">VirtualBox의 Host Only Adapter 설정</h2>
+
+<p>Host Only Adapter 설정은 VirtualBox 레벨에서 &ldquo;새 호스트 전용 네트워크&rdquo; 설정 단계와 Guest OS에서 Host Only Adapter 설정 단계로 구분됩니다.</p>
+
+<h3 id="새-호스트-전용-네트워크-설정">새 호스트 전용 네트워크 설정</h3>
+
+<p>OS X를 기준으로 메뉴:VirtualBox -&gt; 환경설정 -&gt; 네트워크 텝 -&gt; &ldquo;호스트 전용 네트워크&rdquo;에서 오른쪽의 &ldquo;+&ldquo;아이콘을 선택합니다.</p>
+
+<p><img src="https://taewanmerepo.github.io/repo1/virtualbox/hostonlynetwork.png" alt="Host Only Networks" /></p>
+
+<p>&rdquo;+&ldquo;아이콘을 선택하면 &ldquo;vboxnet0&rdquo;가 생성됩니다.</p>
+
+<p><img src="https://taewanmerepo.github.io/repo1/virtualbox/vboxnet0.png" alt="vboxnet0" /></p>
+
+<p>&ldquo;vboxnet0&rdquo;를 더블클릭하여 아래와 같이 DHCP 설정을 합니다.</p>
+
+<ul>
+<li>서버사용: 선택</li>
+<li>서버주소: 192.168.56.100</li>
+<li>서버마스크: 255.255.255.0</li>
+<li>최저주소한계: 192.168.56.101</li>
+<li>최고주소한계: 192.168.56.254</li>
+</ul>
+
+<p><img src="https://taewanmerepo.github.io/repo1/virtualbox/dscp.png" alt="vboxnet0" />
+위와 같이 설정을 마치고 &ldquo;저장&rdquo;&rdquo; 및 &ldquo;확인&rdquo;&rdquo; 버튼을 클릭하여 네트워크 등록을 완료합니다.</p>
+
+<h3 id="guest-os에-adapter-추가-host-only-adapter">Guest OS에 Adapter 추가 (Host Only Adapter)</h3>
+
+<p>Guest OS 선택 후 설정 메뉴 오픈, 네트워크 텝-&gt;어탭터2를 선택하고 다음과 같은 설정을 합니다.</p>
+
+<ul>
+<li>네트워크 어뎁터 사용하기: 선택</li>
+<li>다음에 연결: Host Only Adapter 선택</li>
+<li>이름: vboxnet0</li>
+</ul>
+
+<p><img src="https://taewanmerepo.github.io/repo1/virtualbox/adapter2.png" alt="adapter2" /></p>
+
+<h3 id="새-호스트-전용-네트워크-설정-1">새 호스트 전용 네트워크 설정</h3>
+
+<p>Guest OS에 로그인하여 네트웍 정보를 확인 합니다.
+terminal 상에서 ifconfig 명령으로 호스트에서 접근 할 IP를 확인할 수 있습니다.
+(192.168.56.101)</p>
+
+<p><img src="https://taewanmerepo.github.io/repo1/virtualbox/ipcheck.png" alt="ipcheck" /></p>
+
+<h3 id="host-os에서-guest-os에-접근">Host OS에서 Guest OS에 접근</h3>
+
+<ul>
+<li>ssh 접근 결과</li>
+</ul>
+
+<pre><code>taewanui-MacBook-Pro:demo taewan$ ssh oracle@192.168.56.101
+oracle@192.168.56.101's password:
+Last login: Thu Jan 28 16:00:34 2016 from 192.168.56.1
+[oracle@bigdatalite ~]$
+</code></pre>
+
+<ul>
+<li>hue 접근 결과
+
+<ul>
+<li>Big Data Lite는 8888포트로 Hue를 제공합니다.</li>
+</ul></li>
+</ul>
+
+<p><img src="https://taewanmerepo.github.io/repo1/virtualbox/hue.png" alt="ipcheck" /></p>
+
+<h2 id="요약">요약</h2>
+
+<p>VirtualBox에 Host Only Network를 추가하고 DHCP를 설정한 후 Guest OS에 Host Only Adapter를 등록하면 Host OS에서 Guest OS에 네트웍 접근이 가능합니다. 설정 절차를 요약하면 다음곽 같습니다.</p>
+
+<ul>
+<li>VirtualBox에 Host Only Network 추가
+
+<ul>
+<li>추가된 네트워크에 DHCP 설정</li>
+</ul></li>
+<li>접근할 Guest OS에 네트웍 어뎁터 추가
+
+<ul>
+<li>Host Only Adapter</li>
+</ul></li>
+<li>Guest OS에 로그인하여 접속 IP체크
+
+<ul>
+<li>ifconfig command in terminal</li>
+</ul></li>
+<li>Host OS에서 Guest OS에 접근</li>
+</ul>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/virtualbox/" rel="tag">VirtualBox</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/virtualization/" rel="tag">virtualization</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/network/" rel="tag">network</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="김태완 avatar" src="/img/author/taewan.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<div class="authorbox__description">
+		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다.
+	</div>
+	<div class="authorbox__description">
+		E-mail: taewanme@gmail.com
+	</div>
+</div>
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/seam_log/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">JBoss Seam 로고의 의미</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/bitbucket_jenkins_webhook/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Webhook 연동: git 서비스 &#43; jenkins</p></a>
+	</div>
+</nav>
+
+	
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://taewankim.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+	<div>
+		<hr />
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-8469722754608892"
+				 data-ad-slot="5594090168"
+				 data-ad-format="auto"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="/" />
+	</form>
+</div>
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">ToC (목차)</h4>
+	<div class="widget__content">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#호스트에서-가상화-이미지에-접근할-수-있다면">호스트에서 가상화 이미지에 접근할 수 있다면&hellip;</a></li>
+<li><a href="#virtualbox의-host-only-adapter-설정">VirtualBox의 Host Only Adapter 설정</a>
+<ul>
+<li><a href="#새-호스트-전용-네트워크-설정">새 호스트 전용 네트워크 설정</a></li>
+<li><a href="#guest-os에-adapter-추가-host-only-adapter">Guest OS에 Adapter 추가 (Host Only Adapter)</a></li>
+<li><a href="#새-호스트-전용-네트워크-설정-1">새 호스트 전용 네트워크 설정</a></li>
+<li><a href="#host-os에서-guest-os에-접근">Host OS에서 Guest OS에 접근</a></li>
+</ul></li>
+<li><a href="#요약">요약</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">최신글</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracloud_patch/" title="Oracle Cloud의 PaaS 서비스 패치: Orace BDCSCE">
+							Oracle Cloud의 PaaS 서비스 패치: Orace BDCSCE</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/installing_pms/" title="Oracle PaaS Service Manager 소개 및 설치">
+							Oracle PaaS Service Manager 소개 및 설치</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/changing_trial_account/" title="Oracle Cloud 트라이얼 계정 지원 방식 변경">
+							Oracle Cloud 트라이얼 계정 지원 방식 변경</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/container_infographics/" title="Oracle Container Cloud Service의 Infographics입니다.">
+							Oracle Container Cloud Service의 Inf ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/stpe_by_step_new_cluster_bdcsce/" title="Oracle BDCSCE: 클러스터 생성 ">
+							Oracle BDCSCE: 클러스터 생성 </a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/bdcsce01/" title="Oracle Big Data Cloud Service Compute-Edition">
+							Oracle Big Data Cloud Service Compu ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/mysql_cs/" title="Oracle MySQL Cloud Service">
+							Oracle MySQL Cloud Service</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/compute_security/" title="오라클 클라우드 Compute CS 보안 적용">
+							오라클 클라우드 Compute CS 보안 적용</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/compute_instance/" title="우분투 17.04 가상머신 만들기">
+							우분투 17.04 가상머신 만들기</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/storage_cs/" title="Oracle Storage Cloud Service">
+							Oracle Storage Cloud Service</a>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">카테고리</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/account">Account</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/bdcsce">Bdcsce</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/big-data">Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/ci">Ci</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/cloud">Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/compute">Compute</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/container">Container</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/humor">Humor</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/iaas">Iaas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/java">Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/minsu">Minsu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/opensource">Opensource</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle">Oracle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud">Oracle-Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/paas">Paas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/storage">Storage</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tip">Tip</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/virtualization">Virtualization</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/youtube">Youtube</a></li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+	<h4 class="widget__title">SNS(Social Network Service)</h4>
+	<div class="widget__content">
+		<a href="https://github.com/oracloud-kr-team" target="_blank" title="github"><img src="/img/icon/github.png" width="50px" height="50px"/></a>
+		<a href="https://www.slideshare.net/ssusercda07e" target="_blank" title="slideshare"><img src="/img/icon/slideshare.png" width="50px" height="50px"/></a>
+		<a href="https://www.youtube.com/channel/UCboJr3TLlqeDqpBURRdb_lg" target="_blank" title="youtube"><img src="/img/icon/youtube.png" width="50px" height="50px"/></a>
+		<a href="mailto:oracloud.kr@gmail.com" title="email"><img src="/img/icon/email.png" width="50px" height="50px"/></a>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">관심 사이트</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="http://www.oracloud.kr/">
+				Oracle Cloud 기술 블로그</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73312251-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+
