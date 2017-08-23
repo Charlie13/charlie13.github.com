@@ -2,606 +2,606 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on taewan.kim</title>
-    <link>http://taewan.kim/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Apr 2017 19:01:16 +0900</lastBuildDate>
     
-	<atom:link href="http://taewan.kim/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Acc</title>
-      <link>http://taewan.kim/tags/acc/</link>
+      <link>/tags/acc/</link>
       <pubDate>Wed, 19 Apr 2017 19:01:16 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/acc/</guid>
+      <guid>/tags/acc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bdcsce</title>
-      <link>http://taewan.kim/tags/bdcsce/</link>
+      <link>/tags/bdcsce/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/bdcsce/</guid>
+      <guid>/tags/bdcsce/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Big Data</title>
-      <link>http://taewan.kim/tags/big-data/</link>
+      <link>/tags/big-data/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/big-data/</guid>
+      <guid>/tags/big-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Big Data Lite</title>
-      <link>http://taewan.kim/tags/big-data-lite/</link>
+      <link>/tags/big-data-lite/</link>
       <pubDate>Mon, 28 Mar 2016 17:04:26 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/big-data-lite/</guid>
+      <guid>/tags/big-data-lite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bigdata</title>
-      <link>http://taewan.kim/tags/bigdata/</link>
+      <link>/tags/bigdata/</link>
       <pubDate>Mon, 28 Mar 2016 17:04:26 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/bigdata/</guid>
+      <guid>/tags/bigdata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bitbucket</title>
-      <link>http://taewan.kim/tags/bitbucket/</link>
+      <link>/tags/bitbucket/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/bitbucket/</guid>
+      <guid>/tags/bitbucket/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ci</title>
-      <link>http://taewan.kim/tags/ci/</link>
+      <link>/tags/ci/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/ci/</guid>
+      <guid>/tags/ci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>http://taewan.kim/tags/cloud/</link>
+      <link>/tags/cloud/</link>
       <pubDate>Tue, 02 May 2017 11:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/cloud/</guid>
+      <guid>/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloudera</title>
-      <link>http://taewan.kim/tags/cloudera/</link>
+      <link>/tags/cloudera/</link>
       <pubDate>Mon, 28 Mar 2016 17:04:26 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/cloudera/</guid>
+      <guid>/tags/cloudera/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compute</title>
-      <link>http://taewan.kim/tags/compute/</link>
+      <link>/tags/compute/</link>
       <pubDate>Thu, 04 May 2017 13:23:35 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/compute/</guid>
+      <guid>/tags/compute/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compute Cs</title>
-      <link>http://taewan.kim/tags/compute-cs/</link>
+      <link>/tags/compute-cs/</link>
       <pubDate>Tue, 02 May 2017 11:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/compute-cs/</guid>
+      <guid>/tags/compute-cs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>http://taewan.kim/tags/container/</link>
+      <link>/tags/container/</link>
       <pubDate>Tue, 01 Aug 2017 01:20:12 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/container/</guid>
+      <guid>/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Database</title>
-      <link>http://taewan.kim/tags/database/</link>
+      <link>/tags/database/</link>
       <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/database/</guid>
+      <guid>/tags/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dbcs</title>
-      <link>http://taewan.kim/tags/dbcs/</link>
+      <link>/tags/dbcs/</link>
       <pubDate>Sun, 12 Mar 2017 13:20:12 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/dbcs/</guid>
+      <guid>/tags/dbcs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>http://taewan.kim/tags/docker/</link>
+      <link>/tags/docker/</link>
       <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/docker/</guid>
+      <guid>/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Encoding</title>
-      <link>http://taewan.kim/tags/encoding/</link>
+      <link>/tags/encoding/</link>
       <pubDate>Mon, 01 Aug 2011 10:50:36 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/encoding/</guid>
+      <guid>/tags/encoding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Essay</title>
-      <link>http://taewan.kim/tags/essay/</link>
+      <link>/tags/essay/</link>
       <pubDate>Mon, 25 Jul 2005 00:17:44 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/essay/</guid>
+      <guid>/tags/essay/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Functioal Programming</title>
-      <link>http://taewan.kim/tags/functioal-programming/</link>
+      <link>/tags/functioal-programming/</link>
       <pubDate>Tue, 18 Oct 2016 21:28:14 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/functioal-programming/</guid>
+      <guid>/tags/functioal-programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>http://taewan.kim/tags/git/</link>
+      <link>/tags/git/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/git/</guid>
+      <guid>/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>http://taewan.kim/tags/github/</link>
+      <link>/tags/github/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/github/</guid>
+      <guid>/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gitlab</title>
-      <link>http://taewan.kim/tags/gitlab/</link>
+      <link>/tags/gitlab/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/gitlab/</guid>
+      <guid>/tags/gitlab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Glassfish</title>
-      <link>http://taewan.kim/tags/glassfish/</link>
+      <link>/tags/glassfish/</link>
       <pubDate>Tue, 05 Apr 2011 21:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/glassfish/</guid>
+      <guid>/tags/glassfish/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hadoop</title>
-      <link>http://taewan.kim/tags/hadoop/</link>
+      <link>/tags/hadoop/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/hadoop/</guid>
+      <guid>/tags/hadoop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Iaas</title>
-      <link>http://taewan.kim/tags/iaas/</link>
+      <link>/tags/iaas/</link>
       <pubDate>Fri, 31 Mar 2017 22:42:46 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/iaas/</guid>
+      <guid>/tags/iaas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>http://taewan.kim/tags/java/</link>
+      <link>/tags/java/</link>
       <pubDate>Sun, 03 Jan 2016 00:17:44 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/java/</guid>
+      <guid>/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javaone</title>
-      <link>http://taewan.kim/tags/javaone/</link>
+      <link>/tags/javaone/</link>
       <pubDate>Tue, 01 Aug 2006 21:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/javaone/</guid>
+      <guid>/tags/javaone/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>http://taewan.kim/tags/javascript/</link>
+      <link>/tags/javascript/</link>
       <pubDate>Tue, 18 Oct 2016 21:28:14 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/javascript/</guid>
+      <guid>/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jboss</title>
-      <link>http://taewan.kim/tags/jboss/</link>
+      <link>/tags/jboss/</link>
       <pubDate>Wed, 27 Jan 2016 10:50:36 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/jboss/</guid>
+      <guid>/tags/jboss/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jenkins</title>
-      <link>http://taewan.kim/tags/jenkins/</link>
+      <link>/tags/jenkins/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/jenkins/</guid>
+      <guid>/tags/jenkins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jersey</title>
-      <link>http://taewan.kim/tags/jersey/</link>
+      <link>/tags/jersey/</link>
       <pubDate>Thu, 21 Oct 2010 10:50:36 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/jersey/</guid>
+      <guid>/tags/jersey/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jsf</title>
-      <link>http://taewan.kim/tags/jsf/</link>
+      <link>/tags/jsf/</link>
       <pubDate>Wed, 01 Dec 2004 21:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/jsf/</guid>
+      <guid>/tags/jsf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>License</title>
-      <link>http://taewan.kim/tags/license/</link>
+      <link>/tags/license/</link>
       <pubDate>Thu, 21 Oct 2010 10:50:36 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/license/</guid>
+      <guid>/tags/license/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://taewan.kim/tags/linux/</link>
+      <link>/tags/linux/</link>
       <pubDate>Wed, 16 Mar 2011 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/linux/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Log4j</title>
-      <link>http://taewan.kim/tags/log4j/</link>
+      <link>/tags/log4j/</link>
       <pubDate>Sun, 03 Jan 2016 00:17:44 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/log4j/</guid>
+      <guid>/tags/log4j/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown</title>
-      <link>http://taewan.kim/tags/markdown/</link>
+      <link>/tags/markdown/</link>
       <pubDate>Mon, 04 Apr 2016 13:47:07 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/markdown/</guid>
+      <guid>/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>http://taewan.kim/tags/mysql/</link>
+      <link>/tags/mysql/</link>
       <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/mysql/</guid>
+      <guid>/tags/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network</title>
-      <link>http://taewan.kim/tags/network/</link>
+      <link>/tags/network/</link>
       <pubDate>Sun, 31 Jan 2016 12:42:43 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/network/</guid>
+      <guid>/tags/network/</guid>
       <description></description>
     </item>
     
     <item>
       <title>News</title>
-      <link>http://taewan.kim/tags/news/</link>
+      <link>/tags/news/</link>
       <pubDate>Sun, 17 Apr 2011 00:17:44 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/news/</guid>
+      <guid>/tags/news/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nomalization</title>
-      <link>http://taewan.kim/tags/nomalization/</link>
+      <link>/tags/nomalization/</link>
       <pubDate>Wed, 23 Mar 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/nomalization/</guid>
+      <guid>/tags/nomalization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Object Storage</title>
-      <link>http://taewan.kim/tags/object-storage/</link>
+      <link>/tags/object-storage/</link>
       <pubDate>Mon, 06 Mar 2017 08:54:32 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/object-storage/</guid>
+      <guid>/tags/object-storage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Occs</title>
-      <link>http://taewan.kim/tags/occs/</link>
+      <link>/tags/occs/</link>
       <pubDate>Wed, 19 Apr 2017 19:01:16 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/occs/</guid>
+      <guid>/tags/occs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Opensource</title>
-      <link>http://taewan.kim/tags/opensource/</link>
+      <link>/tags/opensource/</link>
       <pubDate>Wed, 27 Jan 2016 10:50:36 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/opensource/</guid>
+      <guid>/tags/opensource/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oracle</title>
-      <link>http://taewan.kim/tags/oracle/</link>
+      <link>/tags/oracle/</link>
       <pubDate>Thu, 20 Apr 2017 19:36:38 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/oracle/</guid>
+      <guid>/tags/oracle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oracle Bdcsce</title>
-      <link>http://taewan.kim/tags/oracle-bdcsce/</link>
+      <link>/tags/oracle-bdcsce/</link>
       <pubDate>Sun, 20 Aug 2017 23:20:25 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/oracle-bdcsce/</guid>
+      <guid>/tags/oracle-bdcsce/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oracle Cloud</title>
-      <link>http://taewan.kim/tags/oracle-cloud/</link>
+      <link>/tags/oracle-cloud/</link>
       <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/oracle-cloud/</guid>
+      <guid>/tags/oracle-cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paas</title>
-      <link>http://taewan.kim/tags/paas/</link>
+      <link>/tags/paas/</link>
       <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/paas/</guid>
+      <guid>/tags/paas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Patch</title>
-      <link>http://taewan.kim/tags/patch/</link>
+      <link>/tags/patch/</link>
       <pubDate>Sun, 20 Aug 2017 23:20:25 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/patch/</guid>
+      <guid>/tags/patch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Psm</title>
-      <link>http://taewan.kim/tags/psm/</link>
+      <link>/tags/psm/</link>
       <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/psm/</guid>
+      <guid>/tags/psm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rdbms</title>
-      <link>http://taewan.kim/tags/rdbms/</link>
+      <link>/tags/rdbms/</link>
       <pubDate>Wed, 23 Mar 2016 14:01:55 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/rdbms/</guid>
+      <guid>/tags/rdbms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Remark</title>
-      <link>http://taewan.kim/tags/remark/</link>
+      <link>/tags/remark/</link>
       <pubDate>Tue, 22 Mar 2016 10:23:15 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/remark/</guid>
+      <guid>/tags/remark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Seam</title>
-      <link>http://taewan.kim/tags/seam/</link>
+      <link>/tags/seam/</link>
       <pubDate>Wed, 27 Jan 2016 10:50:36 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/seam/</guid>
+      <guid>/tags/seam/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>http://taewan.kim/tags/security/</link>
+      <link>/tags/security/</link>
       <pubDate>Thu, 04 May 2017 13:23:35 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/security/</guid>
+      <guid>/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spark</title>
-      <link>http://taewan.kim/tags/spark/</link>
+      <link>/tags/spark/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/spark/</guid>
+      <guid>/tags/spark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ssh</title>
-      <link>http://taewan.kim/tags/ssh/</link>
+      <link>/tags/ssh/</link>
       <pubDate>Sun, 05 Mar 2017 12:07:16 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/ssh/</guid>
+      <guid>/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Storage</title>
-      <link>http://taewan.kim/tags/storage/</link>
+      <link>/tags/storage/</link>
       <pubDate>Fri, 28 Apr 2017 23:02:33 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/storage/</guid>
+      <guid>/tags/storage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tip</title>
-      <link>http://taewan.kim/tags/tip/</link>
+      <link>/tags/tip/</link>
       <pubDate>Mon, 04 Apr 2016 13:47:07 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/tip/</guid>
+      <guid>/tags/tip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tomcat</title>
-      <link>http://taewan.kim/tags/tomcat/</link>
+      <link>/tags/tomcat/</link>
       <pubDate>Mon, 01 Aug 2011 10:50:36 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/tomcat/</guid>
+      <guid>/tags/tomcat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Trial Account</title>
-      <link>http://taewan.kim/tags/trial-account/</link>
+      <link>/tags/trial-account/</link>
       <pubDate>Tue, 01 Aug 2017 04:20:12 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/trial-account/</guid>
+      <guid>/tags/trial-account/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
-      <link>http://taewan.kim/tags/tutorial/</link>
+      <link>/tags/tutorial/</link>
       <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/tutorial/</guid>
+      <guid>/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vagrant</title>
-      <link>http://taewan.kim/tags/vagrant/</link>
+      <link>/tags/vagrant/</link>
       <pubDate>Sat, 06 Feb 2016 20:47:54 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/vagrant/</guid>
+      <guid>/tags/vagrant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virtualbox</title>
-      <link>http://taewan.kim/tags/virtualbox/</link>
+      <link>/tags/virtualbox/</link>
       <pubDate>Mon, 28 Mar 2016 17:04:26 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/virtualbox/</guid>
+      <guid>/tags/virtualbox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virtualization</title>
-      <link>http://taewan.kim/tags/virtualization/</link>
+      <link>/tags/virtualization/</link>
       <pubDate>Fri, 31 Mar 2017 22:42:46 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/virtualization/</guid>
+      <guid>/tags/virtualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vm</title>
-      <link>http://taewan.kim/tags/vm/</link>
+      <link>/tags/vm/</link>
       <pubDate>Sun, 05 Mar 2017 22:20:25 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/vm/</guid>
+      <guid>/tags/vm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web Presentation</title>
-      <link>http://taewan.kim/tags/web-presentation/</link>
+      <link>/tags/web-presentation/</link>
       <pubDate>Tue, 22 Mar 2016 10:23:15 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/web-presentation/</guid>
+      <guid>/tags/web-presentation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Window</title>
-      <link>http://taewan.kim/tags/window/</link>
+      <link>/tags/window/</link>
       <pubDate>Fri, 31 Mar 2017 22:42:46 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/window/</guid>
+      <guid>/tags/window/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Youtube</title>
-      <link>http://taewan.kim/tags/youtube/</link>
+      <link>/tags/youtube/</link>
       <pubDate>Fri, 25 Mar 2016 00:17:44 +0900</pubDate>
       
-      <guid>http://taewan.kim/tags/youtube/</guid>
+      <guid>/tags/youtube/</guid>
       <description></description>
     </item>
     

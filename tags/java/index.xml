@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on taewan.kim</title>
-    <link>http://taewan.kim/tags/java/</link>
+    <link>/tags/java/</link>
     <description>Recent content in Java on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2016 00:17:44 +0900</lastBuildDate>
     
-	<atom:link href="http://taewan.kim/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Log4J 로깅 비용 계산</title>
-      <link>http://taewan.kim/post/log4j_perf/</link>
+      <link>/post/log4j_perf/</link>
       <pubDate>Sun, 03 Jan 2016 00:17:44 +0900</pubDate>
       
-      <guid>http://taewan.kim/post/log4j_perf/</guid>
+      <guid>/post/log4j_perf/</guid>
       <description>2006년 4월 30일에 이글루스 블로그에서 섰던 글입니다. 추억 팔이로 옮겨 놓습니다. 2006년 추억 속으로&amp;hellip;. - 원문: http://okcode.egloos.com/1892085
 기존의 System.out.println()으로 로그를 남길 때 발생하는 문제의 대안으로 Log4J를 요즘 많이 사용한다.
 Log4J를 사용하면 OutputStream에서 발생하는 자원독점 문제 해결, logging 레벨 설정을 코드와 분리, 로그 출력 방식 설정 변경 등 다양한 이점을 얻을 수 있다.
@@ -25,10 +25,10 @@ Log4J를 사용하면 OutputStream에서 발생하는 자원독점 문제 해결
     
     <item>
       <title>The Power Of The Java:2006 자바원 컨퍼런스 후기</title>
-      <link>http://taewan.kim/post/2006_javaone/</link>
+      <link>/post/2006_javaone/</link>
       <pubDate>Tue, 01 Aug 2006 21:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/post/2006_javaone/</guid>
+      <guid>/post/2006_javaone/</guid>
       <description>10년전 Javaone 컨퍼런스 후기 형식으로 2006년 7월에 월간 마이크로 소프트웨어에 기고했던 기사입니다.
  기사명: 자바개발자 페스티벌 - The Power Of The Java: 2006 자바원 컨퍼런스 작성자: 김태완(프로자바 운영자) 소속: 대우정보시스템 원본: http://www.zdnet.co.kr/news/news_view.asp?artice_id=00000039153641   2006 자바원 컨퍼런스가 5월 16일부터 19일까지 나흘 동안 샌프란시스코 모스코니 센터에세 개최되었다. 2006 자바원 컨퍼런스의 슬로건은‘The Power Of JAVA’와‘for Everything that Matters’이다.
  작년까지의 자바원이 강력한 플랫폼으로서의 자바를 강조했다면, 2006 자바원은 11살이 된 듀크(자바의 마스코트)가 또 다른 변화를 준비하고 있음을 강조했다.</description>
@@ -36,10 +36,10 @@ Log4J를 사용하면 OutputStream에서 발생하는 자원독점 문제 해결
     
     <item>
       <title>자바 웹 개발의 페이스오프: JavaServer Faces</title>
-      <link>http://taewan.kim/post/jsf/</link>
+      <link>/post/jsf/</link>
       <pubDate>Wed, 01 Dec 2004 21:59:47 +0900</pubDate>
       
-      <guid>http://taewan.kim/post/jsf/</guid>
+      <guid>/post/jsf/</guid>
       <description>월간 마이크로 소프트웨어 2004년 12월호 &amp;ldquo;2005년을 달굴 프레임워크 열전!&amp;rdquo; 특집호에 기고했던 JSF 기사입니다.
  원본  dbguide.net-기사링크 구글 캐쉬    JSF의 최종 릴리즈가 지난 2월 발표되었고, 2004년 자바원 컨퍼런스의 주요 기술로 소개되었다. JSF는 자바 기반 웹 애플리케이션을 위한 서버사이드 사용자 인터페이스 컴포넌트 프레임워크이다. 요즘 들어 많은 프레임워크가 발표되고 있고, 스트럿츠가 사실상 웹 개발의 표준으로 자리 잡고 있는 상황에서 또 하나의 프레임워크가 발표되었다고 간과하기에는 J2EE 진영 대형 벤더들이 제시하는 JSF 지원책이나 오픈소스의 움직임이 너무나 활발하다.</description>
     </item>
