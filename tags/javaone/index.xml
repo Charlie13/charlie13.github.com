@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javaone on taewan.kim</title>
-    <link>taewan.kim/tags/javaone/</link>
+    <link>http://taewan.kim/tags/javaone/</link>
     <description>Recent content in Javaone on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Aug 2006 21:59:47 +0900</lastBuildDate>
     
-	<atom:link href="taewan.kim/tags/javaone/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://taewan.kim/tags/javaone/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Power Of The Java:2006 자바원 컨퍼런스 후기</title>
-      <link>taewan.kim/post/2006_javaone/</link>
+      <link>http://taewan.kim/post/2006_javaone/</link>
       <pubDate>Tue, 01 Aug 2006 21:59:47 +0900</pubDate>
       
-      <guid>taewan.kim/post/2006_javaone/</guid>
+      <guid>http://taewan.kim/post/2006_javaone/</guid>
       <description>10년전 Javaone 컨퍼런스 후기 형식으로 2006년 7월에 월간 마이크로 소프트웨어에 기고했던 기사입니다.
  기사명: 자바개발자 페스티벌 - The Power Of The Java: 2006 자바원 컨퍼런스 작성자: 김태완(프로자바 운영자) 소속: 대우정보시스템 원본: http://www.zdnet.co.kr/news/news_view.asp?artice_id=00000039153641   2006 자바원 컨퍼런스가 5월 16일부터 19일까지 나흘 동안 샌프란시스코 모스코니 센터에세 개최되었다. 2006 자바원 컨퍼런스의 슬로건은‘The Power Of JAVA’와‘for Everything that Matters’이다.
  작년까지의 자바원이 강력한 플랫폼으로서의 자바를 강조했다면, 2006 자바원은 11살이 된 듀크(자바의 마스코트)가 또 다른 변화를 준비하고 있음을 강조했다.</description>

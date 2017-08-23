@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Humor on taewan.kim</title>
-    <link>taewan.kim/categories/humor/</link>
+    <link>http://taewan.kim/categories/humor/</link>
     <description>Recent content in Humor on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Apr 2011 00:17:44 +0900</lastBuildDate>
     
-	<atom:link href="taewan.kim/categories/humor/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://taewan.kim/categories/humor/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>텔레비전에 내가 나왔으면~~</title>
-      <link>taewan.kim/post/worker_in_masscom/</link>
+      <link>http://taewan.kim/post/worker_in_masscom/</link>
       <pubDate>Sun, 17 Apr 2011 00:17:44 +0900</pubDate>
       
-      <guid>taewan.kim/post/worker_in_masscom/</guid>
+      <guid>http://taewan.kim/post/worker_in_masscom/</guid>
       <description>예전 devtainer.blogspot.kr 블로그의 글을 퍼왔습니다.1
 어찌어찌 하다 보니 흘러가는 뉴스 영상에 제가 나오게 되었습니다.
 특별한 내용은 아니지만 첫번째 경험이다 보니 기념으로 남겨 볼랍니다. ㅋㅋㅋ 지대로 나온 사진은 전무합니다. 옆모습, 손가락, 매력적인 뒷태, 고개돌린 모습 등 행인 1, 2, 3, 4 포스 입니다.
@@ -25,10 +25,10 @@
     
     <item>
       <title>나는 새로운 기술을 좋아한다. </title>
-      <link>taewan.kim/post/i_like_new_techs/</link>
+      <link>http://taewan.kim/post/i_like_new_techs/</link>
       <pubDate>Mon, 25 Jul 2005 00:17:44 +0900</pubDate>
       
-      <guid>taewan.kim/post/i_like_new_techs/</guid>
+      <guid>http://taewan.kim/post/i_like_new_techs/</guid>
       <description>예전 2005년에 okcode 블로그에서 섰던 넉두리 입니다. 지금 보니 너무 재미있네요. 추억으로 보관합니다. 32살의 저는 이런 고민을 했었네요&amp;hellip;.
 원문: http://okcode.egloos.com/388443
 간혹 새로운 기술을 너무 밝힌다는 핀잔을 듣는다. &amp;ldquo;새로운 기술을 너무 좋아해서 코드가 너무 어렵다.&amp;rdquo; 라는 말을 들으면 또다른 벽을 느끼게 된다. 다시 한번 내가 새로운 기술을을 보편화된 기술에 녹여내지 못하는 수준이라는 안타까운 사실을 발견하게 된다. 내 자신이 새로운 기술을 선호하는 이유는 대략 5가지 인것 같다. 아마도 더 있겠지만 지금 생각나는 변명거리(?</description>
