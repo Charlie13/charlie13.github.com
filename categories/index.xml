@@ -2,210 +2,210 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on taewan.kim</title>
-    <link>/categories/</link>
+    <link>taewan.kim/categories/</link>
     <description>Recent content in Categories on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Aug 2017 04:20:12 +0900</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="taewan.kim/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Account</title>
-      <link>/categories/account/</link>
+      <link>taewan.kim/categories/account/</link>
       <pubDate>Tue, 01 Aug 2017 04:20:12 +0900</pubDate>
       
-      <guid>/categories/account/</guid>
+      <guid>taewan.kim/categories/account/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bdcsce</title>
-      <link>/categories/bdcsce/</link>
+      <link>taewan.kim/categories/bdcsce/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
-      <guid>/categories/bdcsce/</guid>
+      <guid>taewan.kim/categories/bdcsce/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Big Data</title>
-      <link>/categories/big-data/</link>
+      <link>taewan.kim/categories/big-data/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
-      <guid>/categories/big-data/</guid>
+      <guid>taewan.kim/categories/big-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ci</title>
-      <link>/categories/ci/</link>
+      <link>taewan.kim/categories/ci/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>/categories/ci/</guid>
+      <guid>taewan.kim/categories/ci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>/categories/cloud/</link>
+      <link>taewan.kim/categories/cloud/</link>
       <pubDate>Tue, 02 May 2017 11:59:47 +0900</pubDate>
       
-      <guid>/categories/cloud/</guid>
+      <guid>taewan.kim/categories/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compute</title>
-      <link>/categories/compute/</link>
+      <link>taewan.kim/categories/compute/</link>
       <pubDate>Thu, 04 May 2017 13:23:35 +0900</pubDate>
       
-      <guid>/categories/compute/</guid>
+      <guid>taewan.kim/categories/compute/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>/categories/container/</link>
+      <link>taewan.kim/categories/container/</link>
       <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
       
-      <guid>/categories/container/</guid>
+      <guid>taewan.kim/categories/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>/categories/docker/</link>
+      <link>taewan.kim/categories/docker/</link>
       <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
       
-      <guid>/categories/docker/</guid>
+      <guid>taewan.kim/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Humor</title>
-      <link>/categories/humor/</link>
+      <link>taewan.kim/categories/humor/</link>
       <pubDate>Sun, 17 Apr 2011 00:17:44 +0900</pubDate>
       
-      <guid>/categories/humor/</guid>
+      <guid>taewan.kim/categories/humor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Iaas</title>
-      <link>/categories/iaas/</link>
+      <link>taewan.kim/categories/iaas/</link>
       <pubDate>Fri, 31 Mar 2017 22:42:46 +0900</pubDate>
       
-      <guid>/categories/iaas/</guid>
+      <guid>taewan.kim/categories/iaas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>/categories/java/</link>
+      <link>taewan.kim/categories/java/</link>
       <pubDate>Tue, 05 Apr 2011 21:59:47 +0900</pubDate>
       
-      <guid>/categories/java/</guid>
+      <guid>taewan.kim/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>/categories/javascript/</link>
+      <link>taewan.kim/categories/javascript/</link>
       <pubDate>Tue, 18 Oct 2016 21:28:14 +0900</pubDate>
       
-      <guid>/categories/javascript/</guid>
+      <guid>taewan.kim/categories/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Minsu</title>
-      <link>/categories/minsu/</link>
+      <link>taewan.kim/categories/minsu/</link>
       <pubDate>Sat, 19 Mar 2016 01:50:05 +0900</pubDate>
       
-      <guid>/categories/minsu/</guid>
+      <guid>taewan.kim/categories/minsu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>/categories/mysql/</link>
+      <link>taewan.kim/categories/mysql/</link>
       <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
       
-      <guid>/categories/mysql/</guid>
+      <guid>taewan.kim/categories/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Opensource</title>
-      <link>/categories/opensource/</link>
+      <link>taewan.kim/categories/opensource/</link>
       <pubDate>Wed, 27 Jan 2016 10:50:36 +0900</pubDate>
       
-      <guid>/categories/opensource/</guid>
+      <guid>taewan.kim/categories/opensource/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oracle</title>
-      <link>/categories/oracle/</link>
+      <link>taewan.kim/categories/oracle/</link>
       <pubDate>Wed, 05 Apr 2017 11:23:40 +0900</pubDate>
       
-      <guid>/categories/oracle/</guid>
+      <guid>taewan.kim/categories/oracle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oracle Cloud</title>
-      <link>/categories/oracle-cloud/</link>
+      <link>taewan.kim/categories/oracle-cloud/</link>
       <pubDate>Sun, 20 Aug 2017 23:20:25 +0900</pubDate>
       
-      <guid>/categories/oracle-cloud/</guid>
+      <guid>taewan.kim/categories/oracle-cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paas</title>
-      <link>/categories/paas/</link>
+      <link>taewan.kim/categories/paas/</link>
       <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
       
-      <guid>/categories/paas/</guid>
+      <guid>taewan.kim/categories/paas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Storage</title>
-      <link>/categories/storage/</link>
+      <link>taewan.kim/categories/storage/</link>
       <pubDate>Fri, 28 Apr 2017 23:02:33 +0900</pubDate>
       
-      <guid>/categories/storage/</guid>
+      <guid>taewan.kim/categories/storage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tip</title>
-      <link>/categories/tip/</link>
+      <link>taewan.kim/categories/tip/</link>
       <pubDate>Mon, 04 Apr 2016 13:47:07 +0900</pubDate>
       
-      <guid>/categories/tip/</guid>
+      <guid>taewan.kim/categories/tip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virtualization</title>
-      <link>/categories/virtualization/</link>
+      <link>taewan.kim/categories/virtualization/</link>
       <pubDate>Sat, 06 Feb 2016 20:47:54 +0900</pubDate>
       
-      <guid>/categories/virtualization/</guid>
+      <guid>taewan.kim/categories/virtualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Youtube</title>
-      <link>/categories/youtube/</link>
+      <link>taewan.kim/categories/youtube/</link>
       <pubDate>Sat, 19 Mar 2016 01:50:05 +0900</pubDate>
       
-      <guid>/categories/youtube/</guid>
+      <guid>taewan.kim/categories/youtube/</guid>
       <description></description>
     </item>
     

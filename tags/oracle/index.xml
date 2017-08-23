@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oracle on taewan.kim</title>
-    <link>/tags/oracle/</link>
+    <link>taewan.kim/tags/oracle/</link>
     <description>Recent content in Oracle on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Apr 2017 19:36:38 +0900</lastBuildDate>
     
-	<atom:link href="/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="taewan.kim/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Oracle Container CS 인스턴스 생성</title>
-      <link>/post/occs-new-inst/</link>
+      <link>taewan.kim/post/occs-new-inst/</link>
       <pubDate>Thu, 20 Apr 2017 19:36:38 +0900</pubDate>
       
-      <guid>/post/occs-new-inst/</guid>
+      <guid>taewan.kim/post/occs-new-inst/</guid>
       <description>Oracle Cloud는 Docker 기반의 컨테이너 서비스를 2016년 11월에 출시하였습니다. 오라클은 2015년 11월에 StackEngine을 인수하였습니다. (관련 공지). StackEngine사는 2014년 텍사스 오스틴 주에서 설립된 업체로, 엔터프라이즈급 컨테이너 관리 및 자동화 솔루션 개발 업체입니다. StackEngine은 kubernetes(k8s), docker-swarm 그리고 marathon과 같은 container orchestration 도구입니다.
 오라클은 2015년 11월에 StackEngine을 인수한 후, 1년 동안 Oracle Public Cloud에 StackEngine을 통합하였습니다. 이 결과물이 Oracle Container Cloud Service 입니다.
 Oracle Container Clod Service를 통해서 Docker 컨테이너의 클러스터 구성, 인스턴스 배포 및 운영, 모니터링을 효과적으로 할 수 있습니다.</description>
@@ -24,10 +24,10 @@ Oracle Container Clod Service를 통해서 Docker 컨테이너의 클러스터 �
     
     <item>
       <title>Oracle Container Cloud Service 소개와 Docker 개요</title>
-      <link>/post/occs/</link>
+      <link>taewan.kim/post/occs/</link>
       <pubDate>Wed, 05 Apr 2017 11:23:40 +0900</pubDate>
       
-      <guid>/post/occs/</guid>
+      <guid>taewan.kim/post/occs/</guid>
       <description>오라클은 2015년에 Stack Engine이라는 Docker 전문 업체를 인수하였고, 이 업체의 솔루션을 클라우드 서비스 형태로 제공하고 있습니다. 이 서비스가 Oracle Container Cloud Service입니다.
 OCCS(Oracle Container Cloud Service)에 대한 개요와 Docker의 개념을 소개하는 슬라이드를 공유합니다.
  작성일: 2017-02-07   </description>
@@ -35,10 +35,10 @@ OCCS(Oracle Container Cloud Service)에 대한 개요와 Docker의 개념을 소
     
     <item>
       <title>Oracle Database CS: 인스턴스 생성 및 접속 Demo</title>
-      <link>/post/dbcs_demo/</link>
+      <link>taewan.kim/post/dbcs_demo/</link>
       <pubDate>Sun, 12 Mar 2017 13:20:12 +0900</pubDate>
       
-      <guid>/post/dbcs_demo/</guid>
+      <guid>taewan.kim/post/dbcs_demo/</guid>
       <description>Oracle DBMS 소개 Oracle Database Cloud Service(이하 Oracle DBCS)는 오라클 클라우드에서 PaaS 형태로 제공하는 오라클 데이터베이스 서비스입니다.
 Oracle Database Cloud Service에는 다음과 같이 4 가지 유형의 패키지로 라이센스가 구분됩니다.
  Standard Edition Enterprise Edition  TDE (transparent Data Encryption) Data Guard  Enterprise Edition High Performance  Multitenant Partitioning Advanced Compression Advanced Security Database Vault  Enterprise Edition Extreme Performance  Oracle RAC 지원 In-memory Active Data Guard   2017년 04월 현재 Oracle Database CS의 지원 버전은 다음과 같습니다.</description>
@@ -46,10 +46,10 @@ Oracle Database Cloud Service에는 다음과 같이 4 가지 유형의 패키�
     
     <item>
       <title>오라클 클라우드 계정</title>
-      <link>/post/accont/</link>
+      <link>taewan.kim/post/accont/</link>
       <pubDate>Thu, 02 Mar 2017 21:59:47 +0900</pubDate>
       
-      <guid>/post/accont/</guid>
+      <guid>taewan.kim/post/accont/</guid>
       <description>Oracle Cloud의 트라이얼 계정을 이용하여 무료로 오라클 클라우드를 경험할 수 있습니다. 무료 트라이얼 계정에는 Oracle Database Cloud Service(이하 Cloud Service는 CS로 표기), Java CS, Compute CS, Developer CS, Database Backup CS, Storage CS, Application Container CS, SOA CS 등 11개 서비스와 6개 OCPU와 500GB 스토리지 자원에 대한 사용 권한이 포함됩니다. 트라이얼 계정의 유효 기간은 계정 생성일로부터 30일입니다.
 본 문에서는 Oracle Cloud 계정을 생성하는 방법에 대하여 설명하겠습니다.
 Oracle Cloud 계정 등록 절차 오라클 클라우드의 계정 등록 절차는 다음과 같습니다.</description>
@@ -57,10 +57,10 @@ Oracle Cloud 계정 등록 절차 오라클 클라우드의 계정 등록 절차
     
     <item>
       <title>오라클 Big Data Lite 설치</title>
-      <link>/post/installing_bigdatalite/</link>
+      <link>taewan.kim/post/installing_bigdatalite/</link>
       <pubDate>Mon, 28 Mar 2016 17:04:26 +0900</pubDate>
       
-      <guid>/post/installing_bigdatalite/</guid>
+      <guid>taewan.kim/post/installing_bigdatalite/</guid>
       <description>오라클에서는 빅데이터 플랫폼의 테스트와 학습을 효과적으로 지원하는 것을 목표로 Oracle Big Data Lite를 제공합니다. Oracle Big Data Lite는 Cloudera의 최신 CDH와 오라클 연계 솔루션을 하나의 VitrualBox 이미지에 담고 있습니다. 오라클 Big Data Lite는 빅데이터 소프트웨어에 대한 모든 설치와 구성이 완성된 상태로 배포되기 때문에, 하둡이 익숙하지 않은 엔지니어가 Hadoop Eco를 학습하기에 가장 이상적인 시작점입니다.
 오라클 Big Data Lite의 메인 페이지의 URL은 다음과 같습니다.
  http://www.oracle.com/technetwork/database/bigdata-appliance/oracle-bigdatalite-2104726.html  오라클 Big Data Lite 버전과 구성 컴포넌트 2016년 2월 현재 오라클 Big Data Lite의 최신 버전은 4.</description>
