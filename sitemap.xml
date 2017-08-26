@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/oracle_cloud_reg/</loc>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/jsf/</loc>
     <lastmod>2017-08-23T21:59:47+09:00</lastmod>
   </url>
@@ -234,8 +239,8 @@
   </url>
   
   <url>
-    <loc>/categories/account/</loc>
-    <lastmod>2017-08-01T04:20:12+09:00</lastmod>
+    <loc>/categories/agile/</loc>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -283,7 +288,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2017-08-01T04:20:12+09:00</lastmod>
+    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -294,38 +299,20 @@
   </url>
   
   <url>
-    <loc>/categories/ci/</loc>
-    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/cloud/</loc>
-    <lastmod>2017-05-02T11:59:47+09:00</lastmod>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/cloud/</loc>
-    <lastmod>2017-05-02T11:59:47+09:00</lastmod>
+    <lastmod>2017-04-05T11:23:40+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/cloudera/</loc>
     <lastmod>2016-03-28T17:04:26+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/compute/</loc>
-    <lastmod>2017-05-04T13:23:35+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/compute/</loc>
-    <lastmod>2017-05-04T13:23:35+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -462,12 +449,6 @@
   </url>
   
   <url>
-    <loc>/categories/javascript/</loc>
-    <lastmod>2016-10-18T21:28:14+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/jboss/</loc>
     <lastmod>2016-01-27T10:50:36+09:00</lastmod>
     <priority>0</priority>
@@ -494,6 +475,12 @@
   <url>
     <loc>/tags/junit/</loc>
     <lastmod>2006-03-01T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/language/</loc>
+    <lastmod>2017-08-22T21:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -583,7 +570,7 @@
   
   <url>
     <loc>/tags/oracle/</loc>
-    <lastmod>2017-04-20T19:36:38+09:00</lastmod>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -601,13 +588,19 @@
   
   <url>
     <loc>/tags/oracle-cloud/</loc>
-    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/oracle-cloud/</loc>
-    <lastmod>2017-08-20T23:20:25+09:00</lastmod>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/oracle-compute-cs/</loc>
+    <lastmod>2017-05-04T13:23:35+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -631,7 +624,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-08-23T21:59:47+09:00</lastmod>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -787,7 +780,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-08-23T21:59:47+09:00</lastmod>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   

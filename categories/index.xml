@@ -6,17 +6,17 @@
     <description>Recent content in Categories on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2017 04:20:12 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 03 Feb 2016 14:01:55 +0900</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Account</title>
-      <link>/categories/account/</link>
-      <pubDate>Tue, 01 Aug 2017 04:20:12 +0900</pubDate>
+      <title>Agile</title>
+      <link>/categories/agile/</link>
+      <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
       
-      <guid>/categories/account/</guid>
+      <guid>/categories/agile/</guid>
       <description></description>
     </item>
     
@@ -39,29 +39,11 @@
     </item>
     
     <item>
-      <title>Ci</title>
-      <link>/categories/ci/</link>
-      <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
-      
-      <guid>/categories/ci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Cloud</title>
       <link>/categories/cloud/</link>
-      <pubDate>Tue, 02 May 2017 11:59:47 +0900</pubDate>
+      <pubDate>Wed, 05 Apr 2017 11:23:40 +0900</pubDate>
       
       <guid>/categories/cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Compute</title>
-      <link>/categories/compute/</link>
-      <pubDate>Thu, 04 May 2017 13:23:35 +0900</pubDate>
-      
-      <guid>/categories/compute/</guid>
       <description></description>
     </item>
     
@@ -111,11 +93,11 @@
     </item>
     
     <item>
-      <title>Javascript</title>
-      <link>/categories/javascript/</link>
-      <pubDate>Tue, 18 Oct 2016 21:28:14 +0900</pubDate>
+      <title>Language</title>
+      <link>/categories/language/</link>
+      <pubDate>Tue, 22 Aug 2017 21:59:47 +0900</pubDate>
       
-      <guid>/categories/javascript/</guid>
+      <guid>/categories/language/</guid>
       <description></description>
     </item>
     
@@ -158,7 +140,7 @@
     <item>
       <title>Oracle Cloud</title>
       <link>/categories/oracle-cloud/</link>
-      <pubDate>Sun, 20 Aug 2017 23:20:25 +0900</pubDate>
+      <pubDate>Sat, 26 Aug 2017 08:54:32 +0900</pubDate>
       
       <guid>/categories/oracle-cloud/</guid>
       <description></description>
