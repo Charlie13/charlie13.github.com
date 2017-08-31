@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Ansible</title>
+      <link>/tags/ansible/</link>
+      <pubDate>Thu, 31 Aug 2017 08:54:32 +0900</pubDate>
+      
+      <guid>/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bdcsce</title>
       <link>/tags/bdcsce/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
@@ -516,6 +525,15 @@
     </item>
     
     <item>
+      <title>Terraform</title>
+      <link>/tags/terraform/</link>
+      <pubDate>Thu, 31 Aug 2017 08:54:32 +0900</pubDate>
+      
+      <guid>/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Testng</title>
       <link>/tags/testng/</link>
       <pubDate>Wed, 01 Mar 2006 21:59:47 +0900</pubDate>
@@ -563,7 +581,7 @@
     <item>
       <title>Vagrant</title>
       <link>/tags/vagrant/</link>
-      <pubDate>Sat, 06 Feb 2016 20:47:54 +0900</pubDate>
+      <pubDate>Thu, 31 Aug 2017 08:54:32 +0900</pubDate>
       
       <guid>/tags/vagrant/</guid>
       <description></description>

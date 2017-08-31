@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/oracle_code_provisioning0/</loc>
+    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/oracle_code_provisioning/</loc>
+    <lastmod>2017-08-29T08:54:32+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/oracle_cloud_reg/</loc>
     <lastmod>2017-08-26T08:54:32+09:00</lastmod>
   </url>
@@ -245,6 +255,12 @@
   </url>
   
   <url>
+    <loc>/tags/ansible/</loc>
+    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/bdcsce/</loc>
     <lastmod>2017-07-31T11:59:47+09:00</lastmod>
     <priority>0</priority>
@@ -367,6 +383,12 @@
   <url>
     <loc>/tags/essay/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/event/</loc>
+    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -624,7 +646,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
+    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -689,6 +711,12 @@
   </url>
   
   <url>
+    <loc>/tags/terraform/</loc>
+    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/testng/</loc>
     <lastmod>2006-03-01T21:59:47+09:00</lastmod>
     <priority>0</priority>
@@ -726,7 +754,7 @@
   
   <url>
     <loc>/tags/vagrant/</loc>
-    <lastmod>2016-02-06T20:47:54+09:00</lastmod>
+    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -780,7 +808,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
+    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
