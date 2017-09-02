@@ -175,23 +175,22 @@ Oracle Big Data Lite는 Cloudera의 최신 CDH와 오라클 연계 솔루션을 
 
 <p>Big Data Lite 가상 인스턴스를 운영 할 호스트 머신에는 디스크, 메모리, CPU에 대하여 다음과 같은 조건을 충족해야 합니다.</p>
 
-<h4 id="디스크">디스크</h4>
-
 <ul>
-<li>최소 50 GB, 최대 80GB
+<li><p>디스크</p></li>
+
+<li><p>최소 50 GB, 최대 80GB</p>
 
 <ul>
 <li>7zip 분할 파일: 13개, 26Gb - OVA 생성 후 삭제 가능</li>
 <li>OVA 파일 - 7zip 분할 파일로 부터 생성된 파일, 30GB (VirtalBox 임포트 후 삭제 가능)</li>
 <li>VirtualBox 인스턴스 파일 - OVA를 임포트한 결과, 30GB</li>
 </ul></li>
-</ul>
 
-<h4 id="cpu">CPU</h4>
+<li><p>CPU</p></li>
 
-<ul>
-<li>4 core 이상</li>
-<li>2 core를 VirtualBox 인스턴스에 할당</li>
+<li><p>4 core 이상</p></li>
+
+<li><p>2 core를 VirtualBox 인스턴스에 할당</p></li>
 </ul>
 
 <p>VirtualBox는 CPU의 하드웨어 가상화 기술을 사용합니다. 따라서 CPU 별로 다음과 같은 항목이 BIOS에서 활성화 되어 있어야 합니다.</p>
@@ -208,19 +207,18 @@ Oracle Big Data Lite는 Cloudera의 최신 CDH와 오라클 연계 솔루션을 
 <p><img src="/images/BigDataLite/03.VTD.png" alt="" /></p>
 
 <ul>
-<li>AMD CPU의 활성화 항목
+<li><p>AMD CPU의 활성화 항목</p>
 
 <ul>
 <li>Secure Virtual Machine
 <img src="/images/BigDataLite/04.amd_svm.jpg" alt="" /></li>
 </ul></li>
-</ul>
 
-<h4 id="memory">Memory</h4>
+<li><p>Memory</p></li>
 
-<ul>
-<li>Host의 Memory: 최소 8GB 이상</li>
-<li>인스턴스 할당 최소 메모리 사이즈: 5GB</li>
+<li><p>Host의 Memory: 최소 8GB 이상</p></li>
+
+<li><p>인스턴스 할당 최소 메모리 사이즈: 5GB</p></li>
 </ul>
 
 <p>가상 인스턴스에 할당하는 메모리의 경우 메모리 할당 사이즈에 따라서 다음과 같은 컴포넌트를 추가로 사용할 수 있습니다.</p>
@@ -538,12 +536,7 @@ s.setAttribute('data-timestamp', +new Date());
 <li><a href="#big-data-lite를-위한-사전-준비사항">Big Data Lite를 위한 사전 준비사항</a>
 <ul>
 <li><a href="#소프트웨어">소프트웨어</a></li>
-<li><a href="#하드웨어">하드웨어</a>
-<ul>
-<li><a href="#디스크">디스크</a></li>
-<li><a href="#cpu">CPU</a></li>
-<li><a href="#memory">Memory</a></li>
-</ul></li>
+<li><a href="#하드웨어">하드웨어</a></li>
 </ul></li>
 <li><a href="#big-data-lite-다운로드">Big Data Lite 다운로드</a></li>
 <li><a href="#가상-이미지-설치">가상 이미지 설치</a></li>
@@ -573,6 +566,14 @@ s.setAttribute('data-timestamp', +new Date());
 	<h4 class="widget__title">최신글</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/review_oracle_code/" title="2017 Oracle Code in Seoul을 마치며">
+							2017 Oracle Code in Seoul을 마치며</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_java/" title="&#39;J오라클, 더 이상 자바 EE를 이끌 생각 없다&#39;는 억울함이 있습니다.">
+							&#39;J오라클, 더 이상 자바 EE를 이끌 생각 없다&#39;는 억울함이 있습니다.</a>
+		  </li>
 			<li class="widget__item">
 				<a class="widget__link" href="/post/oracle_code_provisioning0/" title="2017 Oracle Code In Seoul: How to control cloud resources 데모">
 							2017 Oracle Code In Seoul: How to c ......</a>
@@ -605,14 +606,6 @@ s.setAttribute('data-timestamp', +new Date());
 				<a class="widget__link" href="/post/container_infographics/" title="Oracle Container Cloud Service의 Infographics입니다.">
 							Oracle Container Cloud Service의 Inf ......</a>
 		  </li>
-			<li class="widget__item">
-				<a class="widget__link" href="/post/stpe_by_step_new_cluster_bdcsce/" title="Oracle BDCSCE: 클러스터 생성 ">
-							Oracle BDCSCE: 클러스터 생성 </a>
-		  </li>
-			<li class="widget__item">
-				<a class="widget__link" href="/post/bdcsce01/" title="Oracle Big Data Cloud Service Compute-Edition">
-							Oracle Big Data Cloud Service Compu ......</a>
-		  </li>
 		</ul>
 	</div>
 </div>
@@ -625,6 +618,7 @@ s.setAttribute('data-timestamp', +new Date());
 			<li class="widget__item"><a class="widget__link" href="/categories/agile">Agile</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/bdcsce">Bdcsce</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/big-data">Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/career">Career</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/cloud">Cloud</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/container">Container</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>

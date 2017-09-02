@@ -32,7 +32,7 @@
     <item>
       <title>Bdcsce</title>
       <link>/tags/bdcsce/</link>
-      <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
+      <pubDate>Fri, 01 Sep 2017 01:59:47 +0900</pubDate>
       
       <guid>/tags/bdcsce/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>Big Data</title>
       <link>/tags/big-data/</link>
-      <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
+      <pubDate>Fri, 01 Sep 2017 01:59:47 +0900</pubDate>
       
       <guid>/tags/big-data/</guid>
       <description></description>
@@ -212,7 +212,7 @@
     <item>
       <title>Hadoop</title>
       <link>/tags/hadoop/</link>
-      <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
+      <pubDate>Fri, 01 Sep 2017 01:59:47 +0900</pubDate>
       
       <guid>/tags/hadoop/</guid>
       <description></description>
@@ -426,6 +426,15 @@
     </item>
     
     <item>
+      <title>Oracle Code</title>
+      <link>/tags/oracle-code/</link>
+      <pubDate>Sat, 02 Sep 2017 10:50:36 +0900</pubDate>
+      
+      <guid>/tags/oracle-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Oracle Compute Cs</title>
       <link>/tags/oracle-compute-cs/</link>
       <pubDate>Thu, 04 May 2017 13:23:35 +0900</pubDate>
@@ -500,7 +509,7 @@
     <item>
       <title>Spark</title>
       <link>/tags/spark/</link>
-      <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
+      <pubDate>Fri, 01 Sep 2017 01:59:47 +0900</pubDate>
       
       <guid>/tags/spark/</guid>
       <description></description>

@@ -65,3 +65,21 @@ strong {
 #TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li  {
     display: none;
 }
+
+
+#img {
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  /*Borders - (Optional)*/
+  border-left: 15px solid #EEEEEE;
+  border-right: 2px solid #EEEEEE;
+
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+}
