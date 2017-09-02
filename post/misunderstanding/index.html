@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<META http-equiv="Expires" content="-1">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="No-Cache">
+
+<title>&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다.</title>
+<meta name="description" content="오라클 클라우드 기술 블로그">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다." />
+<meta property="og:description" content="오라클 클라우드에는 무료로 오라클 클라우드를 경험할 수 할 수 있는 Free Trial Account를 제공하고 있습니다. 이 계정을 이용하여 Oracle Database Cloud Service(이하 CS), Java CS, Compute CS, Developer CS, Database Backup CS, Storage CS, Application Container CS, SOA CS를 사용할 수 있습니다. 본 문에서는 Oracle Cloud의 Cloud의 계정을 생성하는 방법에 대하여 살펴보겠습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/misunderstanding/" />
+
+
+
+<meta property="article:published_time" content="2017-09-03T08:54:32&#43;09:00"/>
+<meta property="article:modified_time" content="2017-09-03T08:54:32&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/minsu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/hybrid.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
+
+
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="taewan.kim" rel="home">
+						<h1 class="logo__title">taewan.kim</h1>
+						<h2 class="logo__tagline">Oracle Cloud 블로그</h2>
+					</a>
+				</div>
+			</div>
+			<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
+		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >MY SON - MINSU</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		
+		<div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-8469722754608892"
+					 data-ad-slot="5594090168"
+					 data-ad-format="auto"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		  <hr/>
+		</div>
+		
+		<header class="post__header clearfix">
+			<h1 class="post__title">&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다.</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2017-09-03 08:54:32 &#43;0900 KST">September 03, 2017</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/oracle" rel="category">oracle</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+
+			<figure class="post__thumbnail">
+				<img src="https://taewanmerepo.github.io/2017/09/misunderstanding/head.jpg" alt="&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다.">
+			</figure>
+			
+
+<p>2017년 08월 18일에 &ldquo;<strong>itworld</strong>&ldquo;에서 <a href="http://www.itworld.co.kr/news/106037">&ldquo;오라클, 더 이상 자바 EE를 이끌 생각 없다&rdquo;</a><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>라는 기사가 공개되었습니다. 기사의 내용을 요약하면 다음과 같습니다.</p>
+
+<ul>
+<li>오라클은 엔터프라이즈 자바 개발에서 리더십을 내려놓기를 원하며 이를 맡아줄 오픈소스 재단을 찾고 있다.</li>
+<li>아파치(Apache)와 이클립스(Eclipse)가 자바 EE를 인수할 가능성이 높다.</li>
+<li>오라클은 오픈소스 커뮤니티, 라이선스 사용자, 후보 재단들에게 <strong>자바 EE를 떠넘기려는 계획이다.</strong></li>
+<li>마이크로프로파일(MicroProfile)이라 부르는 오라클의 새로운 계획에 대해 오픈소스 그룹 가운데 가장 선두에 자리한 레드햇(Red Hat)은 갈채를 보냈다</li>
+<li>자바 EE에서 오라클의 목표는 리더십을 <strong>떠넘기려는 것일뿐</strong> 프로젝트에는 지속적으로 참여할 것이다.</li>
+</ul>
+
+<p>이 기사가 오픈된 후 SNS을 중심으로 개발자들에게 큰 화재가 되었습니다.
+개발자들의 반응은 물론 오라클에 불쾌한 감정을 표현하는 것이 대부분이었습니다.
+&lt;그림 1&gt;은 2018년 8월 18일의 페이스북의 개발자 반응입니다. 2018년 8년 18일 SNS에서 개발자 사이에 이 기사는 큰 화재를 모았습니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/misunderstanding/img010.jpg" alt="해당 기사에 대한 개발자 반응(SNS: 페이스북)" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 1</strong>:
+        
+        해당 기사에 대한 개발자 반응(SNS: 페이스북)
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<h2 id="이-기사의-이상한-점">이 기사의 이상한 점</h2>
+
+<p>상당히 자극적인 단어(&rdquo;<strong>&ldquo;떠넘기려는</strong>&rdquo;)와 Java를 걷어내는 포크레인 이미지를 담은 이 기사의 내용은 상당히 이상했습니다.
+오라클이 Java EE 버리거나 팔아버리는 것과 같은 뉘앙스를 풍기지만 부분적으로 Oracle을 지지하는 Red Hat의 내용도 있고,
+부정적인 단어를 포함하지만 전체 문장은 긍정적인 내용으로 마무리되는 좀 이상한 문장이 많았습니다. 또 오라클이 Java EE를 버릴 계획이라는 명확한 문구는 없었습니다. 그래서 이 가사에 대한 근거를 찾아 보았습니다.</p>
+
+<h2 id="본론에-들어가기에-앞서">본론에 들어가기에 앞서</h2>
+
+<p>본인은 2017년 09월 현재 저는 한국 오라클 소속의 엔지니어 입니다. 이 글은 오라클의 공식적인 입장이 아니며 개인적인 관점으로 작성된 글입니다. 본문은 전적으로 저 개인의 생각임을 밝힙니다. 사실 저는 오라클을 대변하는 위치에 있지 않습니다. 잘못된 정보 전달로 제가 몸담고 있는 회사가 비난받고 오해를 받는 부분을 조금이나마 정정한다는 취지로 이 글을 작성하였습니다. 이 글은 온라인 상에 오픈된 정보를 기준으로 사실만을 정리하겠습니다.</p>
+
+<h2 id="오라클-더-이상-자바-ee를-이끌-생각-없다-의-원문-대조">&ldquo;오라클, 더 이상 자바 EE를 이끌 생각 없다&rdquo;의 원문 대조</h2>
+
+<p>itworld의 &ldquo;<strong>오라클, 더 이상 자바 EE를 이끌 생각 없다</strong>&ldquo;는 &ldquo;<strong>Paul Krill</strong>&ldquo;이 InfoWorld에 쓴 기사를 번역한 기사입니다.
+itworld와 infoworld는 모두 idgenterprise의 자회사 성격의 미디어 입니다. 이 기사는 itworld의 미국 본사의 기사를 번역한 번역 기사입니다. Paul Krill은 infoworld의 it 전문 기자입니다.</p>
+
+<p>Paul Krill은 &ldquo;<a href="https://www.infoworld.com/article/3217347/java/oracle-doesnt-want-java-ee-any-more.html">Oracle doesn&rsquo;t want Java EE any more</a>&ldquo;라는 기사를 썼습니다.</p>
+
+<p>&lt;그림 2&gt;를 보면 Paul Krill의 기사 제목은 &ldquo;Oracle doesn&rsquo;t want Java EE any more&rdquo;이며 매우 자극적이지만, 헤드 내용은 그렇게 자극적이지 않습니다. 오라클은 Java EE를 이끌어줄 누군가를 찾고 있다. 대상은 아마도 아파치 재단이나 이클립스가 될 것 같다는 내용입니다.</p>
+
+<blockquote>
+<p>원문: Oracle wants someone else to lead enterprise Java, though it says it will stay involved. Apache and Eclipse are likely candidates to take over Java EE</p>
+</blockquote>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/misunderstanding/img020.jpg" alt="Paul Krill의 기사 헤더" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 2</strong>:
+        
+        Paul Krill의 기사 헤더
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<table>
+<thead>
+<tr>
+<th>번역</th>
+<th>원본</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Oracle plans to explore its desire to <font color="red">offload</font> Java EE with the open source community, licensees, and candidate foundations.</td>
+<td>오라클은 오픈소스 커뮤니티, 라이선스 사용자, 후보 재단들에게 자바 EE를 <font color="red">떠넘기려는</font> 계획이다.</td>
+</tr>
+
+<tr>
+<td>Oracle’s goals for <font color="red">offloading</font> Java EE would have Oracle not lead the project as it still effectively does with Java SE.</td>
+<td>자바 EE에서 오라클의 목표는 리더십을 <font color="red">떠넘기려는</font> 것일뿐 프로젝트에는 지속적으로 참여할 것이다.</td>
+</tr>
+</tbody>
+</table>
+
+<p>offload를 &ldquo;떠넘기려한다&rdquo;라고 번역한 것 같습니다. offload라는 단어가 &ldquo;<strong>(짐, 부담)을 덜다</strong>&ldquo;라는 의미와 &ldquo;<strong>(주식)을 매각하다</strong>&ldquo;라는 의미가 있기에 오역이라고 볼 수는 없습니다. 그러나 부정적인 느낌이 강한 &ldquo;<strong><font color="red">떠넘기려하다</font></strong>&ldquo;라는 단어를 사용한 것은 아쉬움이 남습니다.</p>
+
+<h2 id="oracle-doesn-t-want-java-ee-any-more-의-근거">&ldquo;Oracle doesn&rsquo;t want Java EE any more&rdquo;의 근거</h2>
+
+<p>아쉽운 부분은 있으나 &ldquo;떠넘기려한다&rdquo;는 오역은 아닌것 같습니다. 문장을 번역할 때 긍정적인 느낌과 부정적인 어감을 선택할 수 있고, 이 중에서 부정적인 어감을 사용한 것이 아쉽기는 하지만 이 기사가 오역은 아닌 것 같습니다. 그래서 Paul Krill이 기사를 쓴 근거를 찾아 보았습니다.</p>
+
+<p>Paul Krill이 기사 작성에 참고한 근거는 오라클 공식 블로그(<a href="https://blogs.oracle.com/theaquarium/">https://blogs.oracle.com/theaquarium/</a> )의 <a href="https://blogs.oracle.com/theaquarium/opening-up-java-ee">Opening Up Java EE</a>를 근거로 작성된 기사로 예상됩니다. 이 포스트는 2017년 8월 17일, Paul Krill가 기사를 쓴 같은 날에 공개된 포스트입니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/misunderstanding/img030.jpg" alt="오라클 블로그 포스트: Opening Up Java EE" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 3</strong>:
+        
+        오라클 블로그 포스트: Opening Up Java EE
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>오라클 이 블로그의 내용을 요약하면 다음과 같습니다.</p>
+
+<ul>
+<li>현재 Java EE 8 막바지 작업중이며 JavaOne 2017 conference에서 공개를 목표로 하고 있다</li>
+<li>오라클은 변화하는 산업 및 기술 요구에 민첩하고 신속하게 대응하기 위해 Java EE의 개발 방식을 개선해야 할 시점이라고 생각한다.</li>
+<li>Java EE는 Java EE 커뮤니티의 참여로 오픈 소스 형태로 개발되고 있지만 다른 진영과 비교해 볼때 프로세스가 기민성, 유연성 또는 개방성이 떨어진다.</li>
+<li>Java EE 8을 공개한 후에 Java EE 개발 프로세스 개선을 논ㄴ의할 것이다.</li>
+<li>Java EE 참조구현체 개발 및 호환성 테스트는 오픈소스 재단으로 이전하는것이 더 효율적이라고 판단하고 있다.</li>
+<li>오라클은 개발자, 최종 사용자, 고객, 기술 소비자, 기술 공헌자, 파트너 및 라이센스 사용자에 대한 지속적인 약속을 준수할 것이다.</li>
+<li>또한 기존 Java EE 구현 및 향후 Java EE 8 구현을 지원할 예정이다.</li>
+<li>Java EE 기술의 향후 발전에 계속 참여할 것이다.</li>
+<li>개방 된 프로세스가 더 큰 참여와 혁신을 장려 할 것이며 커뮤니티의 이익을 최대화 할 것이라고 믿는다.</li>
+<li>Glassfihs 참조 구현체는 계속 개발할 것이며, 앞으로 계속 Weblogic을 지원할 것이다.</li>
+</ul>
+
+<p>이 포스트에서 오라클은 Java EE에서 오라클의 주도권을 내려 놓고 기존에 효율성이 떨어지는 JCP(java community process)<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>를 개선하려 한다는 내용입니다. Java EE 개발의 효율성과 민첩성을 높이려는 의도입니다. 오픈소스 진영 혹은 다른 플랫폼에 비교하여 산업계의 변화에 민첩하게 대응하기 위한 목적입니다.</p>
+
+<h2 id="배경-설명">배경 설명</h2>
+
+<p>자바는 산업계에서 만들어진 언어입니다. 자바는 개발 초기부터 엔터프라이즈의 요구 사항을 적극 반영한 언어입니다. 따라서 표준화에 대한 강력한 지원을 포함합니다. 1990년대 후반부터 2010까지는 Standardization(표준화)가 중요한 시대였습니다. 어떤 기술을 볼 때, 해당 기술이 어떤 표준을 따르는지 중요하게 여겼습니다. 표준을 준수하는 솔루션을 사용하면 동일한 표준을 지원하는 다른 솔루션으로 이전 가능하다는 상호운영성과 호환성에 대한 강한 필요성과 믿음이 있던 시기였습니다. 자바는 이런 시대에 발전한 언어입니다. 그렇다 보니 Java 혹은 Java EE의 이해당사자(JCP 멤버)들의 동의를 거쳐 스펙이 정의되고, 그 스펙으로 참조구현체(tomcat, glassfish)를 만들어 검증하고, 각 Java 벤더는 각자의 WAS(Web Application Server)를 개발하는 프로세스로 Java EE를 개발하고 운영하여 왔습니다.</p>
+
+<p>문제는 Java EE에 참여하는 기업이나 오픈소스 커뮤니티의 이해관계가 달라서 스펙 정의 단계가 너무 오래 걸린다는 것입니다. 또한 2000년대 중후반까지는 벤더(Oracle, Sun, IBM, BEA, HP)가 기술을 주도하는 시기였습니다. Java EE와 같은 스펙이 정의되면, 정의에 따라서 기업 및 오픈소스가 움지이는 형태였습니다. 이것이 Java EE 5부터 역전됩니다. 오픈소스에서 검증된 기술이 Java EE 스펙에 들어오는 형태가 됩니다. 그리고 Java EE 스펙이 정해지면 이 스펙이 오픈소스에 다시 적용되는 긍정적인 선순환 관계가 적용됩니다. 대표적인 사례가 SpringFrameowork과 Hibernate입니다.</p>
+
+<p>JCP의 스펙 제정 단계는 여러 이해당사자의 합의과정이 오래 걸리는 관계로 오픈소스의 발전 속도를 따라가지 못하는 형국이 되었습니다. 또한 Java가 20살이 넘어가면서<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup> 최근에 태어난 Modern Language의 개념과 발전 속도를 못 따라가고 있습니다.</p>
+
+<p>결국 Java는 Modern Language의 특징을 반영하지 못하고, 비 효율적인 JCP 프로세스 그리고 Sun의 오라클 합병으로 인한 불안감 등으로 Java 위기설이 상당히 부각된 상태였습니다.</p>
+
+<h2 id="다시-오라클-블로그-포스트-opening-up-java-ee">다시 오라클 블로그 포스트: Opening Up Java EE</h2>
+
+<p>오라클은 현재 산업계의 변화 속도와 다른 플랫폼 및 오픈소스의 변화 속도를 따라잡지 못하고 있는  Java EE의 프로세스를 개선할 계획이며,
+프로세스의 개선을 위해서 오라클리 갖고 있는 Ownership(소유권)과 주도권을 오픈소스 진영에 이양할 준비를 하고 있다는 내용을 담고 있습니다.
+오라클은 주도권을 이양할 뿐, 지속적인 Java EE 개발 참여와 지원을 계속 할 것을 언급하고 있습니다.</p>
+
+<p>Infoworld의 Paul Krill는 이유는 알 수 없지만 이 내용을 인용하여 &ldquo;Oracle doesn&rsquo;t want Java EE any more&rdquo;라는 기사를 썻습니다. 그리고 이 기사는 &ldquo;오라클, 더 이상 자바 EE를 이끌 생각 없다&rdquo;라는 기사 제목으로 번역되고, offload는 &ldquo;떠넘기려한다&rdquo;로 변역되었습니다.</p>
+
+<h2 id="이-글을-마치며">이 글을 마치며</h2>
+
+<p>내용을 요약하면 오라클 블로그의 포스트의 내용을 보면</p>
+
+<ul>
+<li>오라클은 Java EE의 개발 효율을 높이기 위해서 Java EE 개발 프로세스를 개선하려 한다.</li>
+<li>오라클 주도에서 오픈소스 재단 주도로 진행되는 것이 효율적이라고 판단된다.</li>
+<li>Java EE 참조 구현체(Glassfish) 개발과 WebLogic에 대한 지원을 계속할 것이다.</li>
+<li>오라클은 향후 Java EE 계발 프로세스에 적극적으로 참여할 것이다.</li>
+</ul>
+
+<p>라는 각오을 담고 있습니다.</p>
+
+<p>오라클이 Java EE를 버리지 않을 것이고, Java EE의 개발 효율성을 위해서 주도권을 내려 놓겠다고 말하고 있습니다.</p>
+
+<p>오라클이 Java EE를 버리거나 떠넘기려 한다는 근거는 현재 없습니다.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">기사 원문 URL: <a href="http://www.itworld.co.kr/news/106037">http://www.itworld.co.kr/news/106037</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">JCP는 자바 표준 스펙 정의 기관 및 프로세스입니다. 주요 자바 벤더(Oracle, IMB, HP, Red Hat), 오픈소스 재단(Apache, JBoss), WAS 개발 업체, 개인 개발자로 구성됩니다.
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3">Java는 1995년 5월에 태어났습니다.
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/oracle/" rel="tag">oracle</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/java-ee/" rel="tag">Java EE</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="김태완 avatar" src="/img/author/taewan.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<div class="authorbox__description">
+		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다.
+	</div>
+	<div class="authorbox__description">
+		E-mail: taewanme@gmail.com
+	</div>
+</div>
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/review_oracle_code/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">2017 Oracle Code in Seoul을 마치며</p></a>
+	</div>
+</nav>
+
+	
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://taewankim.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+	<div>
+		<hr />
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-8469722754608892"
+				 data-ad-slot="5594090168"
+				 data-ad-format="auto"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="taewan.kim" />
+	</form>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">ToC (목차)</h4>
+	<div class="widget__content">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#이-기사의-이상한-점">이 기사의 이상한 점</a></li>
+<li><a href="#본론에-들어가기에-앞서">본론에 들어가기에 앞서</a></li>
+<li><a href="#오라클-더-이상-자바-ee를-이끌-생각-없다-의-원문-대조">&ldquo;오라클, 더 이상 자바 EE를 이끌 생각 없다&rdquo;의 원문 대조</a></li>
+<li><a href="#oracle-doesn-t-want-java-ee-any-more-의-근거">&ldquo;Oracle doesn&rsquo;t want Java EE any more&rdquo;의 근거</a></li>
+<li><a href="#배경-설명">배경 설명</a></li>
+<li><a href="#다시-오라클-블로그-포스트-opening-up-java-ee">다시 오라클 블로그 포스트: Opening Up Java EE</a></li>
+<li><a href="#이-글을-마치며">이 글을 마치며</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">최신글</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/misunderstanding/" title="&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다.">
+							&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다.</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/review_oracle_code/" title="2017 Oracle Code in Seoul을 마치며">
+							2017 Oracle Code in Seoul을 마치며</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_code_provisioning0/" title="2017 Oracle Code In Seoul: How to control cloud resources 데모">
+							2017 Oracle Code In Seoul: How to c ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_cloud_reg/" title="오라클 클라우드 트라이얼 신청: $300 Credit">
+							오라클 클라우드 트라이얼 신청: $300 Credit</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/jsf/" title="자바 웹 개발의 페이스오프: JavaServer Faces">
+							자바 웹 개발의 페이스오프: JavaServer Faces</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/2006_javaone/" title="The Power Of The Java:2006 자바원 컨퍼런스 후기">
+							The Power Of The Java:2006 자바원 컨퍼런스 후기</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracloud_patch/" title="Oracle Cloud의 PaaS 서비스 패치: Orace BDCSCE">
+							Oracle Cloud의 PaaS 서비스 패치: Orace BDCSCE</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/installing_pms/" title="Oracle PaaS Service Manager 소개 및 설치">
+							Oracle PaaS Service Manager 소개 및 설치</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/changing_trial_account/" title="Oracle Cloud 트라이얼 계정 지원 방식 변경">
+							Oracle Cloud 트라이얼 계정 지원 방식 변경</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/container_infographics/" title="Oracle Container Cloud Service의 Infographics입니다.">
+							Oracle Container Cloud Service의 Inf ......</a>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">카테고리</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/agile">Agile</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/bdcsce">Bdcsce</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/big-data">Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/career">Career</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/cloud">Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/container">Container</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/event">Event</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/humor">Humor</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/iaas">Iaas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/java">Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/language">Language</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/minsu">Minsu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/opensource">Opensource</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle">Oracle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud">Oracle-Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/paas">Paas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/storage">Storage</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tip">Tip</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/virtualization">Virtualization</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/youtube">Youtube</a></li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+	<h4 class="widget__title">SNS(Social Network Service)</h4>
+	<div class="widget__content">
+		<a href="https://github.com/oracloud-kr-team" target="_blank" title="github"><img src="/img/icon/github.png" width="50px" height="50px"/></a>
+		<a href="https://www.slideshare.net/ssusercda07e" target="_blank" title="slideshare"><img src="/img/icon/slideshare.png" width="50px" height="50px"/></a>
+		<a href="https://www.youtube.com/channel/UCboJr3TLlqeDqpBURRdb_lg" target="_blank" title="youtube"><img src="/img/icon/youtube.png" width="50px" height="50px"/></a>
+		<a href="mailto:oracloud.kr@gmail.com" title="email"><img src="/img/icon/email.png" width="50px" height="50px"/></a>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">관심 사이트</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="http://www.oracloud.kr/">
+				Oracle Cloud 기술 블로그</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72835175-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+
