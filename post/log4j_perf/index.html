@@ -168,7 +168,9 @@ Session 정보를 추출하기 위하여 다음과 같은 코드가 공통 코�
 
 <h3 id="2-log4j-운영-모드에-따른-비용-계산">2. Log4j 운영 모드에 따른 비용 계산</h3>
 
-<h4 id="debug-모드일-때">Debug 모드일 때</h4>
+<ul>
+<li>Debug 모드일 때</li>
+</ul>
 
 <ol>
 <li>로깅 문자열 생성 = 6개의 스트링 객체 생성, 1개만 사용, 5개의 스트링 객체는 GC 대상</li>
@@ -176,7 +178,9 @@ Session 정보를 추출하기 위하여 다음과 같은 코드가 공통 코�
 <li>로깅 실행 - layout 적용 후 output에 로깅 적용<br /></li>
 </ol>
 
-<h4 id="non-debug-모드일-때">non-Debug 모드일 때</h4>
+<ul>
+<li>non-Debug 모드일 때</li>
+</ul>
 
 <ol>
 <li>로깅 문자열 생성 = 6개의 스트링 객체 생성, 1개만 사용, 5개의 스트링 객체는 GC 대상</li>
@@ -369,11 +373,7 @@ s.setAttribute('data-timestamp', +new Date());
 <li><a href="#문제-코드-분석">문제 코드 분석</a>
 <ul>
 <li><a href="#1-log4j-로깅-메소드-비용-계산">1. Log4J 로깅 메소드 비용 계산</a></li>
-<li><a href="#2-log4j-운영-모드에-따른-비용-계산">2. Log4j 운영 모드에 따른 비용 계산</a>
-<ul>
-<li><a href="#debug-모드일-때">Debug 모드일 때</a></li>
-<li><a href="#non-debug-모드일-때">non-Debug 모드일 때</a></li>
-</ul></li>
+<li><a href="#2-log4j-운영-모드에-따른-비용-계산">2. Log4j 운영 모드에 따른 비용 계산</a></li>
 <li><a href="#3-문제-해결-코드">3. 문제 해결 코드</a></li>
 <li><a href="#4-문제-해결-코드의-side-effect">4. 문제 해결 코드의 side-effect</a></li>
 </ul></li>
@@ -391,12 +391,12 @@ s.setAttribute('data-timestamp', +new Date());
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/post/review_oracle_code/" title="2017 Oracle Code in Seoul을 마치며">
-							2017 Oracle Code in Seoul을 마치며</a>
+				<a class="widget__link" href="/post/misunderstanding_on_oracle/" title="&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다.">
+							&#39;오라클은 Java EE를 떠넘기려한다&#39;는 사실과 다릅니다.</a>
 		  </li>
 			<li class="widget__item">
-				<a class="widget__link" href="/post/oracle_java/" title="&#39;J오라클, 더 이상 자바 EE를 이끌 생각 없다&#39;는 억울함이 있습니다.">
-							&#39;J오라클, 더 이상 자바 EE를 이끌 생각 없다&#39;는 억울함이 있습니다.</a>
+				<a class="widget__link" href="/post/review_oracle_code/" title="2017 Oracle Code in Seoul을 마치며">
+							2017 Oracle Code in Seoul을 마치며</a>
 		  </li>
 			<li class="widget__item">
 				<a class="widget__link" href="/post/oracle_code_provisioning0/" title="2017 Oracle Code In Seoul: How to control cloud resources 데모">

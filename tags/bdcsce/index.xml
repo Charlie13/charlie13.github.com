@@ -6,19 +6,10 @@
     <description>Recent content in Bdcsce on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Sep 2017 01:59:47 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 31 Jul 2017 11:59:47 +0900</lastBuildDate>
     
 	<atom:link href="/tags/bdcsce/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>&#39;J오라클, 더 이상 자바 EE를 이끌 생각 없다&#39;는 억울함이 있습니다.</title>
-      <link>/post/oracle_java/</link>
-      <pubDate>Fri, 01 Sep 2017 01:59:47 +0900</pubDate>
-      
-      <guid>/post/oracle_java/</guid>
-      <description>빅데이터 기술을 사용하면서 가장 어려운 부분은 오픈소스로 구성된 빅데이터 에코 기술을 설치하고 관리하는 부분입니다. 빅데이터 에코 기술들은 여러 오픈소스 프로젝트로 구성되어 있고, 각 오픈소스 프로젝트는 특정 오픈소스 프로젝트의 버전에 의존성을 갖고 있습니다. 또한, 각 오픈소스는 개별적인 업그레이드 주기를 갖습니다. 여러 오픈소스 프로젝트가 상호 버전 의존성을 갖고 있고, 개별적인 업그레이드 주기를 갖는 기술들로 빅데이터 환경을 구성하고 관리하기 위해서는 많은 노력이 필요합니다. 이 문제를 해결하기 위해서 Cloudera와 Hotonworks는 빅데이터 오픈소스 프로젝트들의 검증된 버전을 모아 패키지로 관리합니다.</description>
-    </item>
     
     <item>
       <title>Oracle BDCSCE: 클러스터 생성 </title>
