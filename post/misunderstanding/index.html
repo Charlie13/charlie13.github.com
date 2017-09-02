@@ -248,15 +248,13 @@ itworld와 infoworld는 모두 idgenterprise의 자회사 성격의 미디어입
 
 <p>이 포스트에서 오라클은 Java EE에서 오라클의 주도권을 내려놓고 기존에 효율성이 떨어지는 JCP(java community process)<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>를 개선하려 한다는 내용입니다. Java EE 개발의 효율성과 민첩성을 높이려는 의도입니다. 오픈소스 진영 혹은 다른 플랫폼에 비교하여 산업계의 변화에 민첩하게 대응하기 위한 목적입니다.</p>
 
-<h2 id="배경-설명">배경 설명</h2>
+<h2 id="배경-설명-java-ee">배경 설명: Java EE</h2>
 
 <p>자바는 산업계에서 만들어진 언어입니다. 자바는 개발 초기부터 엔터프라이즈의 요구 사항을 적극적으로 반영한 언어입니다. 따라서 표준화에 대한 강력한 지원을 포함합니다. 1990년대 후반부터 2010까지는 Standardization(표준화) 가 중요한 시대였습니다. 어떤 기술을 볼 때, 해당 기술이 어떤 표준을 따르는지 중요하게 여겼습니다. 표준을 준수하는 솔루션을 사용하면 같은 표준을 지원하는 다른 솔루션으로 이전 가능하다는 상호운용성과 호환성에 대한 강한 필요성과 믿음이 있던 시기였습니다. 자바는 이런 시대에 발전한 언어입니다. 그렇다 보니 Java 혹은 Java EE의 이해당사자(JCP 멤버)들의 동의를 거쳐 스펙이 정의되고, 그 스펙으로 참조구현체(tomcat, glassfish)를 만들어 검증하고, 각 Java 벤더는 각자의 WAS(Web Application Server)를 개발하는 프로세스로 Java EE를 개발하고 운영했습니다.</p>
 
 <p>문제는 Java EE에 참여하는 기업이나 오픈소스 커뮤니티의 이해관계가 달라서 스펙 정의 단계가 너무 오래 걸린다는 것입니다. 또한, 2000년대 중후반까지는 벤더(Oracle, Sun, IBM, BEA, HP)가 기술을 주도하는 시기였습니다. Java EE와 같은 스펙이 정의되면, 정의에 따라서 기업 및 오픈소스가 움직이는 형태였습니다. 이것이 Java EE 5부터 역전됩니다. 오픈소스에서 검증된 기술이 Java EE 스펙에 들어오는 형태가 됩니다. 그리고 Java EE 스펙이 정해지면 이 스펙이 오픈소스에 다시 적용되는 선순환 관계가 형성됩니다. 대표적인 사례가 SpringFramework과 Hibernate입니다.</p>
 
-<p>JCP의 스펙 제정 단계는 여러 이해당사자의 합의 과정이 오래 걸리는 관계로 오픈소스의 발전 속도를 따라가지 못하는 형국이 되었습니다. 또한 Java가 20살이 넘어가면서<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup> 최근에 태어난 Modern Language의 개념과 발전 속도를 못 따라가고 있습니다.</p>
-
-<p>결국 Java는 Modern Language의 특징을 반영하지 못하고, 비효율적인 JCP 프로세스 그리고 Sun의 오라클 합병으로 인한 불안감 등으로 Java 위기설이 상당히 주목받은 상태였습니다.</p>
+<p>JCP의 스펙 제정 단계는 여러 이해당사자의 합의 도출 과정이 오래 결리는 문제점을 안고 있습니다. 결과적으로 Java EE가 오픈소스의 발전 속도를 따라가지 못하는 원인이 되었습니다. Standardization(표준화)의 가치가 중요한 시대에는 이 이슈는 업계에서 받아들일 수 밖에 없는 문제였습니다. Standardization(표준화)의 시대가 저물고 Optimization(최적화)가 중요한 가치로 부각된 시대에는 JCP의 비효율설은 치명적인 단점입니다. 또한 Java가 20살이 넘어가면서<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup> 최근에 태어난 Modern Language의 개념과 발전 속도를 못 따라가고 있습니다.</p>
 
 <h2 id="다시-오라클-블로그-포스트-opening-up-java-ee">다시 오라클 블로그 포스트: Opening Up Java EE</h2>
 
@@ -391,7 +389,7 @@ s.setAttribute('data-timestamp', +new Date());
 <li><a href="#본론에-들어가기에-앞서">본론에 들어가기에 앞서</a></li>
 <li><a href="#오라클-더-이상-자바-ee를-이끌-생각-없다-의-원문-대조">&ldquo;오라클, 더 이상 자바 EE를 이끌 생각 없다&rdquo;의 원문 대조</a></li>
 <li><a href="#oracle-doesn-t-want-java-ee-any-more-의-근거">&ldquo;Oracle doesn&rsquo;t want Java EE any more&rdquo;의 근거</a></li>
-<li><a href="#배경-설명">배경 설명</a></li>
+<li><a href="#배경-설명-java-ee">배경 설명: Java EE</a></li>
 <li><a href="#다시-오라클-블로그-포스트-opening-up-java-ee">다시 오라클 블로그 포스트: Opening Up Java EE</a></li>
 <li><a href="#이-글을-마치며">이 글을 마치며</a></li>
 </ul></li>
