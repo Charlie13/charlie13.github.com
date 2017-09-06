@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/updating_fork/</loc>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/article/misunderstanding_on_oracle/</loc>
     <lastmod>2017-09-03T08:54:32+09:00</lastmod>
   </url>
@@ -415,6 +420,12 @@
   </url>
   
   <url>
+    <loc>/tags/fork/</loc>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/functioal-programming/</loc>
     <lastmod>2016-10-18T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -422,13 +433,13 @@
   
   <url>
     <loc>/tags/git/</loc>
-    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/github/</loc>
-    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -680,7 +691,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -764,7 +775,7 @@
   
   <url>
     <loc>/categories/tip/</loc>
-    <lastmod>2016-04-04T13:47:07+09:00</lastmod>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -842,7 +853,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
