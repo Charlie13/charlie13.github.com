@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Autoenv</title>
+      <link>/tags/autoenv/</link>
+      <pubDate>Sun, 06 Sep 2015 10:50:36 +0900</pubDate>
+      
+      <guid>/tags/autoenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bdcsce</title>
       <link>/tags/bdcsce/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
@@ -480,11 +489,29 @@
     </item>
     
     <item>
+      <title>Pip</title>
+      <link>/tags/pip/</link>
+      <pubDate>Sun, 06 Sep 2015 10:50:36 +0900</pubDate>
+      
+      <guid>/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Psm</title>
       <link>/tags/psm/</link>
       <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
       
       <guid>/tags/psm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pyenv</title>
+      <link>/tags/pyenv/</link>
+      <pubDate>Sun, 06 Sep 2015 10:50:36 +0900</pubDate>
+      
+      <guid>/tags/pyenv/</guid>
       <description></description>
     </item>
     
@@ -629,6 +656,15 @@
       <pubDate>Fri, 31 Mar 2017 22:42:46 +0900</pubDate>
       
       <guid>/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virualenv</title>
+      <link>/tags/virualenv/</link>
+      <pubDate>Sun, 06 Sep 2015 10:50:36 +0900</pubDate>
+      
+      <guid>/tags/virualenv/</guid>
       <description></description>
     </item>
     

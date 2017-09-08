@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/extra/install_python/</loc>
+    <lastmod>2017-09-06T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/updating_fork/</loc>
     <lastmod>2017-09-05T16:50:36+09:00</lastmod>
   </url>
@@ -213,6 +218,11 @@
   </url>
   
   <url>
+    <loc>/post/python_virtual_env/</loc>
+    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/tomcat_encoding/</loc>
     <lastmod>2011-08-01T10:50:36+09:00</lastmod>
   </url>
@@ -278,6 +288,12 @@
   <url>
     <loc>/article/</loc>
     <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/autoenv/</loc>
+    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -416,6 +432,12 @@
   <url>
     <loc>/categories/event/</loc>
     <lastmod>2017-09-02T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/extra/</loc>
+    <lastmod>2017-09-06T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -690,6 +712,12 @@
   </url>
   
   <url>
+    <loc>/tags/pip/</loc>
+    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
@@ -698,6 +726,18 @@
   <url>
     <loc>/tags/psm/</loc>
     <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/pyenv/</loc>
+    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/python/</loc>
+    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -822,6 +862,12 @@
   </url>
   
   <url>
+    <loc>/tags/virualenv/</loc>
+    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/vm/</loc>
     <lastmod>2017-03-05T22:20:25+09:00</lastmod>
     <priority>0</priority>
@@ -853,7 +899,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
+    <lastmod>2017-09-06T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
