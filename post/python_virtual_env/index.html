@@ -165,18 +165,20 @@ $ brew install homebrew/dupes/zlib
 
 <h4 id="centos-oracle-linux-rhel-사전-준비사항">CentOS, Oracle Linux, RHEL 사전 준비사항</h4>
 
-<p>yum으로 다음과 같은 패키지를 설치합니다.</p>
+<p>yum으로 다음과 같은 패키지를 설치합니다. 다음 예시에서 역슬래쉬(&rsquo;\&lsquo;)는 다음 라인과 연결을 의미합니다..</p>
 
-<pre><code>sudo yum install -y zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel curl git
+<pre><code>sudo yum install -y zlib-devel bzip2 bzip2-devel \
+  readline-devel sqlite sqlite-devel openssl-devel xz xz-devel curl git
 </code></pre>
 
 <h4 id="ubuntu-사전-준비사항">Ubuntu 사전 준비사항</h4>
 
 <p>우분투 환경에서는 다음과 같은 패키지를 설치합니다.</p>
 
-<pre><code>sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev git python-pip
+<pre><code>sudo apt-get install -y make build-essential \
+ libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
+ wget curl llvm libncurses5-dev libncursesw5-dev \
+ xz-utils tk-dev git python-pip
 </code></pre>
 
 <h3 id="pyenv-설치">pyenv 설치</h3>
