@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/python_virtual_env/</loc>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/oracle_code_iac_youtube/</loc>
     <lastmod>2017-09-09T08:54:32+09:00</lastmod>
   </url>
@@ -223,11 +228,6 @@
   </url>
   
   <url>
-    <loc>/post/python_virtual_env/</loc>
-    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/tomcat_encoding/</loc>
     <lastmod>2011-08-01T10:50:36+09:00</lastmod>
   </url>
@@ -298,13 +298,7 @@
   
   <url>
     <loc>/tags/autoenv/</loc>
-    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/bdcsce/</loc>
-    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -315,13 +309,19 @@
   </url>
   
   <url>
-    <loc>/categories/big-data/</loc>
+    <loc>/categories/bdcsce/</loc>
     <lastmod>2017-07-31T11:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/big-data/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/big-data/</loc>
     <lastmod>2017-07-31T11:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -363,14 +363,14 @@
   </url>
   
   <url>
-    <loc>/categories/cloud/</loc>
-    <lastmod>2017-04-05T11:23:40+09:00</lastmod>
+    <loc>/tags/cloud/</loc>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/cloud/</loc>
-    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
+    <loc>/categories/cloud/</loc>
+    <lastmod>2017-04-05T11:23:40+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -387,14 +387,14 @@
   </url>
   
   <url>
-    <loc>/categories/container/</loc>
-    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
+    <loc>/tags/container/</loc>
+    <lastmod>2017-08-01T01:20:12+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/container/</loc>
-    <lastmod>2017-08-01T01:20:12+09:00</lastmod>
+    <loc>/categories/container/</loc>
+    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -411,13 +411,13 @@
   </url>
   
   <url>
-    <loc>/categories/docker/</loc>
+    <loc>/tags/docker/</loc>
     <lastmod>2017-04-24T19:34:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/docker/</loc>
+    <loc>/categories/docker/</loc>
     <lastmod>2017-04-24T19:34:26+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -495,25 +495,25 @@
   </url>
   
   <url>
-    <loc>/categories/iaas/</loc>
-    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/iaas/</loc>
     <lastmod>2017-03-31T22:42:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/java/</loc>
-    <lastmod>2017-08-23T21:59:47+09:00</lastmod>
+    <loc>/categories/iaas/</loc>
+    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/java/</loc>
+    <lastmod>2017-08-23T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/java/</loc>
     <lastmod>2017-08-23T21:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -603,13 +603,13 @@
   </url>
   
   <url>
-    <loc>/categories/mysql/</loc>
+    <loc>/tags/mysql/</loc>
     <lastmod>2017-05-10T15:48:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/mysql/</loc>
+    <loc>/categories/mysql/</loc>
     <lastmod>2017-05-10T15:48:24+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -645,25 +645,25 @@
   </url>
   
   <url>
-    <loc>/categories/opensource/</loc>
-    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/opensource/</loc>
     <lastmod>2016-01-27T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/oracle/</loc>
-    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <loc>/categories/opensource/</loc>
+    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/oracle/</loc>
+    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/oracle/</loc>
     <lastmod>2017-09-03T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -675,13 +675,13 @@
   </url>
   
   <url>
-    <loc>/categories/oracle-cloud/</loc>
+    <loc>/tags/oracle-cloud/</loc>
     <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/oracle-cloud/</loc>
+    <loc>/categories/oracle-cloud/</loc>
     <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -699,14 +699,14 @@
   </url>
   
   <url>
-    <loc>/categories/paas/</loc>
-    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <loc>/tags/paas/</loc>
+    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/paas/</loc>
-    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
+    <loc>/categories/paas/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -718,13 +718,13 @@
   
   <url>
     <loc>/tags/pip/</loc>
-    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -736,13 +736,13 @@
   
   <url>
     <loc>/tags/pyenv/</loc>
-    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/python/</loc>
-    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -783,13 +783,13 @@
   </url>
   
   <url>
-    <loc>/categories/storage/</loc>
+    <loc>/tags/storage/</loc>
     <lastmod>2017-04-28T23:02:33+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/storage/</loc>
+    <loc>/categories/storage/</loc>
     <lastmod>2017-04-28T23:02:33+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -813,14 +813,14 @@
   </url>
   
   <url>
-    <loc>/categories/tip/</loc>
-    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
+    <loc>/tags/tip/</loc>
+    <lastmod>2016-04-04T13:47:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/tip/</loc>
-    <lastmod>2016-04-04T13:47:07+09:00</lastmod>
+    <loc>/categories/tip/</loc>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -855,20 +855,20 @@
   </url>
   
   <url>
-    <loc>/categories/virtualization/</loc>
-    <lastmod>2016-02-06T20:47:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/virtualization/</loc>
     <lastmod>2017-03-31T22:42:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/categories/virtualization/</loc>
+    <lastmod>2016-02-06T20:47:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/virualenv/</loc>
-    <lastmod>2015-09-06T10:50:36+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -891,20 +891,20 @@
   </url>
   
   <url>
-    <loc>/categories/youtube/</loc>
-    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/youtube/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/categories/youtube/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
