@@ -33,7 +33,7 @@ ubuntu@e7d50d:~$ sudo apt-get install python Reading package lists... Done Build
     </item>
     
     <item>
-      <title>원본 Git 레파지토리 변경 사항 Fork된 Git 레파지토리에 반영</title>
+      <title>Fork된 Git 레파지토리에 원본 레파지토리 업데이트</title>
       <link>/post/updating_fork/</link>
       <pubDate>Tue, 05 Sep 2017 16:50:36 +0900</pubDate>
       
