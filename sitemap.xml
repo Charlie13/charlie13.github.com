@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/oracle_code_iac_youtube/</loc>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/extra/install_python/</loc>
     <lastmod>2017-09-06T10:50:36+09:00</lastmod>
   </url>
@@ -28,7 +33,7 @@
   </url>
   
   <url>
-    <loc>/post/oracle_code_provisioning0/</loc>
+    <loc>/post/oracle_code_provisioning/</loc>
     <lastmod>2017-08-31T08:54:32+09:00</lastmod>
   </url>
   
@@ -281,7 +286,7 @@
   
   <url>
     <loc>/tags/ansible/</loc>
-    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -431,7 +436,7 @@
   
   <url>
     <loc>/categories/event/</loc>
-    <lastmod>2017-09-02T10:50:36+09:00</lastmod>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -719,7 +724,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -797,7 +802,7 @@
   
   <url>
     <loc>/tags/terraform/</loc>
-    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -839,7 +844,7 @@
   
   <url>
     <loc>/tags/vagrant/</loc>
-    <lastmod>2017-08-31T08:54:32+09:00</lastmod>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -899,7 +904,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-09-06T10:50:36+09:00</lastmod>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   

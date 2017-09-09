@@ -126,6 +126,7 @@
 <ul>
 <li><a href="https://github.com/kennethreitz/autoenv">autoenv</a>는 디렉토리 이동시 실행되는 스크립트입니다.</li>
 <li>pyenv-virtualenv 사용시 불편한 수작업을 자동화 합니다.</li>
+<li>특정 프로젝트 폴더로 들어가면 .env파일을 찾아서 자동으로 개발 환경을 로딩합니다.</li>
 </ul></li>
 <li>pip
 
@@ -134,7 +135,7 @@
 </ul></li>
 </ol>
 
-<p>본 문서는 python2가 상태임을 가정합니다.</p>
+<p>본 문서는 python2가 상태임을 가정합니다. 파이썬을 설치해야 한다면 다음 문서를 참조하시기 바랍니다.</p>
 
 <h2 id="파이썬-버전-관리-pyenv">파이썬 버전 관리: pyenv</h2>
 
@@ -226,7 +227,7 @@ eval &quot;$(pyenv virtualenv-init -)&quot;
 
 <h3 id="환경변수-적용-및-업데이트">환경변수 적용 및 업데이트</h3>
 
-<p>다음 명령 쉘에서 수행하여 환경변수를 등록합니다. 다음 코드는 bash를 사용하는 상화을 가정합니다. zsh를 사용하실 경우에는 &ldquo;<strong>~/.bash_profile</strong>&ldquo;을  &ldquo;<strong>~/.zshrc</strong>&ldquo;로 변경하여 실행해야 합니다.</p>
+<p>다음 명령 쉘에서 수행하여 환경변수를 등록합니다. 다음 코드는 bash를 사용하는 상황을 가정합니다. zsh를 사용하실 경우에는 &ldquo;<strong>~/.bash_profile</strong>&ldquo;을  &ldquo;<strong>~/.zshrc</strong>&ldquo;로 변경하여 실행해야 합니다.</p>
 
 <pre><code>$ echo 'export PYENV_ROOT=&quot;$HOME/.pyenv&quot;' &gt;&gt; ~/.bash_profile
 $ echo 'export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;' &gt;&gt; ~/.bash_profile
@@ -435,14 +436,147 @@ pyenv가 설치되어 있다면 별도의 조치가 필요 없습니다.</p>
 
 <p>다음과 같은 명령으로 파이썬 환경을 구성합니다.</p>
 
-<pre><code>$ pyenv virtualenv &lt;version&gt; &lt;vertualenv-name&gt;
+<pre><code>$ pyenv virtualenv &lt;vertualenv-name&gt;
 </code></pre>
 
-<p><version>은 생략가능합니다. 버젼을 생략할 경우 현재 시스템의 버젼으로 가상환경이 설정됩니다.</p>
+<p><version>은 생략가능합니다. 버젼을 생략할 경우 현재 시스템의 버젼으로 가상환경이 설정됩니다. virtualenv 플러그인으로 만든 가상환경인 경우 activate, deactivate로 활성화 비활성화 할 수 있다. 가상환경을 활성화/비활성화를 위해서는 다음 명령을 사용합니다.</p>
 
-<h3 id="case01">case01:</h3>
+<pre><code>$ pyenv activate &lt;vertualenv-name&gt;
+</code></pre>
+
+<p>가상환경 종료는 다음 명령을 사용합니다.</p>
+
+<pre><code>$ pyenv deactivate
+</code></pre>
+
+<p>가상환경을 삭제할 경우 다음과 같은 명령을 사용합니다.</p>
+
+<pre><code>$ pyenv uninstall &lt;version&gt;/&lt;vertualenv-name&gt;
+</code></pre>
+
+<h3 id="case01-py27-가상환경-생성">case01: py27 가상환경 생성</h3>
+
+<p>다음음 파이썬 2.7.13 버전으로 py27 가상환경을 만드는 데모입니다.</p>
+
+<pre><code>[opc@b4b8b6 ~]$ pyenv version            ## 현재 버전 확인
+3.5.3 (set by /home/opc/.pyenv/version)  
+[opc@b4b8b6 ~]$ pyenv versions           ## 설치 버전 확인
+  system
+  2.7.13
+* 3.5.3 (set by /home/opc/.pyenv/version)
+  3.6.2
+[opc@b4b8b6 ~]$ pyenv virtualenv 2.7.13 py27  ## py27 가상환경 생성
+Collecting virtualenv
+  Downloading virtualenv-15.1.0-py2.py3-none-any.whl (1.8MB)
+    100% |████████████████████████████████| 1.8MB 501kB/s
+Installing collected packages: virtualenv
+Successfully installed virtualenv-15.1.0
+New python executable in /home/opc/.pyenv/versions/2.7.13/envs/py27/bin/python2.7
+Also creating executable in /home/opc/.pyenv/versions/2.7.13/envs/py27/bin/python
+Installing setuptools, pip, wheel...done.
+Requirement already satisfied: setuptools in /home/opc/.pyenv/versions/2.7.13/envs/py27/lib/python2.7/site-packages
+Requirement already satisfied: pip in /home/opc/.pyenv/versions/2.7.13/envs/py27/lib/python2.7/site-packages
+[opc@b4b8b6 ~]$ pyenv activate py27     ## py27 가상환경 활성화
+pyenv-virtualenv: prompt changing will be removed from future release. configure &quot;export PYENV_VIRTUALENV_DISABLE_PROMPT=1&quot; to simulate the behavior.
+(py27) [opc@b4b8b6 ~]$ python -V        ## py27 버전 확인
+Python 2.7.13
+(py27) [opc@b4b8b6 ~]$ pyenv deactivate ## py27 가상환경 종료
+[opc@b4b8b6 ~]$ python -V               ## py27 가상환경 종료 후 버전 확인
+Python 3.5.3
+[opc@b4b8b6 ~]$
+</code></pre>
+
+<h3 id="case02-py36-가상환경-생성">case02: py36 가상환경 생성</h3>
+
+<p>다음음 파이썬 3.6.2 버전으로 py36 가상환경을 만드는 데모입니다.</p>
+
+<pre><code>[opc@b4b8b6 ~]$ pyenv version            ## 현재 버전 확인
+3.5.3 (set by /home/opc/.pyenv/version)  
+[opc@b4b8b6 ~]$ pyenv versions           ## 설치 버전 확인
+  system
+  2.7.13
+  2.7.13/envs/py27
+* 3.5.3 (set by /home/opc/.pyenv/version)
+  3.6.2
+  py27
+[opc@b4b8b6 ~]$ pyenv virtualenv 3.6.2 py36  ## py36 가상환경 생성
+Requirement already satisfied: setuptools in /home/opc/.pyenv/versions/3.6.2/envs/py36/lib/python3.6/site-packages
+Requirement already satisfied: pip in /home/opc/.pyenv/versions/3.6.2/envs/py36/lib/python3.6/site-packages
+[opc@b4b8b6 ~]$ python -V               ## 현재 버전 확인
+Python 3.5.3
+[opc@b4b8b6 ~]$ pyenv activate py36     ## py36 가상환경 활성화
+pyenv-virtualenv: prompt changing will be removed from future release. configure `export PYENV_VIRTUALENV_DISABLE_PROMPT=1' to simulate the behavior.
+(py36) [opc@b4b8b6 ~]$ python -V        ## py36 가상환경의 파이썬 버전
+Python 3.6.2
+(py36) [opc@b4b8b6 ~]$ pyenv deactivate ## py36 가상환경 비활성화
+[opc@b4b8b6 ~]$ python -V               ## 현재 버전 확인
+Python 3.5.3
+[opc@b4b8b6 ~]$ pyenv versions          ## 현재 설치 버전 확인
+  system
+  2.7.13
+  2.7.13/envs/py27
+* 3.5.3 (set by /home/opc/.pyenv/version)
+  3.6.2
+  3.6.2/envs/py36
+  py27
+  py36
+[opc@b4b8b6 ~]$
+</code></pre>
+
+<h3 id="case03-py36-가상환경-제거">case03: py36 가상환경 제거</h3>
+
+<p>다음은 py36 가상환경을 제거하는 데모입니다.</p>
+
+<pre><code>[opc@b4b8b6 ~]$ pyenv versions                       ## 설치 버전 확인
+  system
+  2.7.13
+  2.7.13/envs/py27
+* 3.5.3 (set by /home/opc/.pyenv/version)
+  3.6.2
+  3.6.2/envs/py36
+  py27
+  py36
+[opc@b4b8b6 ~]$ pyenv uninstall  3.6.2/envs/py36    ## 파이썬 버전 삭제
+pyenv-virtualenv: remove /home/opc/.pyenv/versions/3.6.2/envs/py36? y
+[opc@b4b8b6 ~]$ pyenv versions                      ## 설치 버전 확인
+  system
+  2.7.13
+  2.7.13/envs/py27
+* 3.5.3 (set by /home/opc/.pyenv/version)
+  3.6.2
+  py27
+[opc@b4b8b6 ~]$
+</code></pre>
 
 <h2 id="귀차니즘-autoenv">귀차니즘: autoenv</h2>
+
+<p>pyenv-virtualenv의 단점은 가상환경을 활성화 시키기 위해서 pyenv activate를 실행해야 한다는 것입니다.</p>
+
+<p><a href="https://github.com/kennethreitz/autoenv">https://github.com/kennethreitz/autoenv</a></p>
+
+<h3 id="설치">설치</h3>
+
+<h4 id="os-x에서-autoenv-설치">OS X에서 autoenv 설치</h4>
+
+<p>다음 코드는 bash를 사용하는 상황을 가정합니다. zsh를 사용하실 경우에는 &ldquo;<strong>~/.bash_profile</strong>&ldquo;을  &ldquo;<strong>~/.zshrc</strong>&ldquo;로 변경하여 실행해야 합니다.</p>
+
+<pre><code>$ brew install autoenv
+$ echo &quot;source $(brew --prefix autoenv)/activate.sh&quot; &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<h4 id="리눅스에서-autoenv-설치-pip">리눅스에서 autoenv 설치: pip</h4>
+
+<p>다음 코드는 bash를 사용하는 상황을 가정합니다. zsh를 사용하실 경우에는 &ldquo;<strong>~/.bash_profile</strong>&ldquo;을  &ldquo;<strong>~/.zshrc</strong>&ldquo;로 변경하여 실행해야 합니다.</p>
+
+<pre><code>$ pip install autoenv
+$ echo &quot;source `which activate.sh`&quot; &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<h4 id="리눅스에서-autoenv-설치-소스-설치">리눅스에서 autoenv 설치: 소스 설치</h4>
+
+<pre><code>$ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+$ echo 'source ~/.autoenv/activate.sh' &gt;&gt; ~/.bash_profile
+</code></pre>
 
 <h2 id="파이썬-라이브러리-관리-pip">파이썬 라이브러리 관리: pip</h2>
 
@@ -577,9 +711,19 @@ s.setAttribute('data-timestamp', +new Date());
 </ul></li>
 <li><a href="#pyenv-virtualenv-사용하기">pyenv-virtualenv 사용하기</a>
 <ul>
-<li><a href="#case01">case01:</a></li>
+<li><a href="#case01-py27-가상환경-생성">case01: py27 가상환경 생성</a></li>
+<li><a href="#case02-py36-가상환경-생성">case02: py36 가상환경 생성</a></li>
+<li><a href="#case03-py36-가상환경-제거">case03: py36 가상환경 제거</a></li>
 </ul></li>
-<li><a href="#귀차니즘-autoenv">귀차니즘: autoenv</a></li>
+<li><a href="#귀차니즘-autoenv">귀차니즘: autoenv</a>
+<ul>
+<li><a href="#설치">설치</a>
+<ul>
+<li><a href="#os-x에서-autoenv-설치">OS X에서 autoenv 설치</a></li>
+<li><a href="#리눅스에서-autoenv-설치-pip">리눅스에서 autoenv 설치: pip</a></li>
+<li><a href="#리눅스에서-autoenv-설치-소스-설치">리눅스에서 autoenv 설치: 소스 설치</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#파이썬-라이브러리-관리-pip">파이썬 라이브러리 관리: pip</a></li>
 <li><a href="#요약">요약</a></li>
 <li><a href="#참고자료">참고자료</a></li>
@@ -595,6 +739,10 @@ s.setAttribute('data-timestamp', +new Date());
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_code_iac_youtube/" title="2017 Oracle Code in Seoul: IaC 발표 동영상">
+							2017 Oracle Code in Seoul: IaC 발표 동영상</a>
+		  </li>
+			<li class="widget__item">
 				<a class="widget__link" href="/post/updating_fork/" title="원본 Git 레파지토리 변경 사항 Fork된 Git 레파지토리에 반영">
 							원본 Git 레파지토리 변경 사항 Fork된 Git 레파지토리에 반영</a>
 		  </li>
@@ -607,7 +755,7 @@ s.setAttribute('data-timestamp', +new Date());
 							2017 Oracle Code in Seoul을 마치며</a>
 		  </li>
 			<li class="widget__item">
-				<a class="widget__link" href="/post/oracle_code_provisioning0/" title="2017 Oracle Code In Seoul: How to control cloud resources 데모">
+				<a class="widget__link" href="/post/oracle_code_provisioning/" title="2017 Oracle Code In Seoul: How to control cloud resources 데모">
 							2017 Oracle Code In Seoul: How to c ......</a>
 		  </li>
 			<li class="widget__item">
@@ -629,10 +777,6 @@ s.setAttribute('data-timestamp', +new Date());
 			<li class="widget__item">
 				<a class="widget__link" href="/post/installing_pms/" title="Oracle PaaS Service Manager 소개 및 설치">
 							Oracle PaaS Service Manager 소개 및 설치</a>
-		  </li>
-			<li class="widget__item">
-				<a class="widget__link" href="/post/changing_trial_account/" title="Oracle Cloud 트라이얼 계정 지원 방식 변경">
-							Oracle Cloud 트라이얼 계정 지원 방식 변경</a>
 		  </li>
 		</ul>
 	</div>
