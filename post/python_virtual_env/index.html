@@ -12,7 +12,7 @@
 <meta name="description" content="오라클 클라우드 기술 블로그">
 <meta name="generator" content="Hugo 0.25.1" />
 <meta property="og:title" content="파이썬 가상 개발 환경 구성: pyenv, virtualenv, autoenv, pip" />
-<meta property="og:description" content="파이썬 가상 개발 환경을 소개합낟. pyenv, virtualenv, autoenv, pip 사용법을 소개합니다. " />
+<meta property="og:description" content="파이썬 가상 개발 환경을 정리합니다. pyenv, virtualenv, autoenv, pip 사용법을 소개합니다. " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/python_virtual_env/" />
 
@@ -98,13 +98,13 @@
 			</figure>
 			
 
-<p>파이썬에는 Python2와 Python3가 공존하고 각 파이썬에는 다수의 서브 버전이 존재합니다. 또한, 파이썬 커뮤니티는 엄청난 패키지를 만들고 공유하고 있습니다. 이러한 패키지들은 개별적으로 여러 버전을 갖고 있다. 컴퓨터 한 대에 여러 파이썬 프로그램을 돌릴 경우, 파이썬 애플리케이션의 파이썬 런타임 버전과 파이썬 라이브러리 충돌 문제가 발생할 수 있습니다. 이러한 문제는 개발 언어와 런타임 및 라이브러리가 전역적으로 설치되고 관리될 때, 발생하는 전형적인 문제입니다.</p>
+<p>파이썬에는 Python2와 Python3가 공존하고 각 파이썬에는 다수의 서브 버전이 존재합니다. 또한, 파이썬 커뮤니티는 엄청난 패키지를 만들고 공유하고 있습니다. 이러한 패키지들은 개별적으로 여러 버전을 갖고 있습니다. 컴퓨터 한 대에 여러 파이썬 프로그램을 돌릴 경우, 파이썬 애플리케이션의 파이썬 런타임 버전과 파이썬 라이브러리 충돌 문제가 빈번하게 발생합니다. 이러한 문제는 개발 언어와 런타임 및 라이브러리가 전역적으로 설치되고 관리하기 때문에 발생하는 전형적인 문제입니다.</p>
 
-<p>이러한 문제를 해결하기 위해서는 파이썬 구동 환경의 독립성을 확보할 수 있어야합니다. 각 파이썬 애플리케이션 별로 독립적인 파이썬 환경을 사용할 수 있도록 파이썬 구동 환경을 가상화해야 합니다</p>
+<p>이 문제를 해결하기 위해서는 파이썬 구동 환경이 독립성을 확보도록 구성되어야 합니다. 파이썬 애플리케이션 별로 독립적인 파이썬 환경을 사용할 수 있도록 파이썬 환경을 가상화해야 합니다</p>
 
-<p>이러한 파이썬 가상화 환경을 구성하기 위해서는 pyenv, pyenv-virtualenv, autoenv, pip와 같은 툴이 필요합니다. 본 문서에서는 OS X와 리눅스 환경에서 앞에서 언급한 툴로 파이썬 가상화 환경을 구성하는 방법을 정리하겠습습니다.</p>
+<p>파이썬 가상화 환경을 구성하기 위해서 pyenv, pyenv-virtualenv, autoenv, pip와 같은 툴이 필요합니다. 본 문서에서는 앞에서 언급한 툴로 파이썬 가상화 환경을 구성하는 방법을 정리합니다. 데모 환경은 OS X와 리눅스로 한정합니다.</p>
 
-<p>앞으로 살펴볼 파이썬 툴은 다음과 같이 요약할 수 있습니다.</p>
+<p>이 문서에서 다룰 파이썬 툴은 다음과 같이 요약할 수 있습니다.</p>
 
 <ol>
 <li>pyenv
@@ -124,18 +124,22 @@
 <li>autoenv
 
 <ul>
-<li><a href="https://github.com/kennethreitz/autoenv">autoenv</a>는 디렉토리 이동시 실행되는 스크립트입니다.</li>
-<li>pyenv-virtualenv 사용시 불편한 수작업을 자동화 합니다.</li>
-<li>특정 프로젝트 폴더로 들어가면 .env파일을 찾아서 자동으로 개발 환경을 로딩합니다.</li>
+<li><a href="https://github.com/kennethreitz/autoenv">autoenv</a>는 디렉토리 이동시 실행되는 스크립트</li>
+<li>pyenv-virtualenv 사용시 불편한 수작업을 자동화.</li>
+<li>특정 프로젝트 폴더로 들어가면 .env파일 실행하여 가상환경 활성화.</li>
 </ul></li>
 <li>pip
 
 <ul>
-<li>파이썬 라이브러리를 관리합니다.</li>
+<li>파이썬 라이브러리를 관리.</li>
 </ul></li>
 </ol>
 
-<p>본 문서는 python2가 상태임을 가정합니다. 파이썬을 설치해야 한다면 다음 문서를 참조하시기 바랍니다.</p>
+<p>본 문서는 python2가 이미 설치되어 있음을 가정합니다. 파이썬을 설치해야 한다면 다음 문서를 참조하시기 바랍니다.</p>
+
+<ul>
+<li><a href="../extra/install_python/">파이썬 설치</a></li>
+</ul>
 
 <h2 id="파이썬-버전-관리-pyenv">파이썬 버전 관리: pyenv</h2>
 
