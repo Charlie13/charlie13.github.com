@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle Cloud Iaas on taewan.kim</title>
+    <link>/categories/oracle-cloud-iaas/</link>
+    <description>Recent content in Oracle Cloud Iaas on taewan.kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Apr 2017 23:02:33 +0900</lastBuildDate>
+    
+	<atom:link href="/categories/oracle-cloud-iaas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Oracle Storage Cloud Service</title>
+      <link>/post/storage_cs/</link>
+      <pubDate>Fri, 28 Apr 2017 23:02:33 +0900</pubDate>
+      
+      <guid>/post/storage_cs/</guid>
+      <description>클라우드 서비스에서 기본은 Compute 서비스와 오브젝트 스토리지 서비스입니다. 그만큼 스토리지 서비스는 가장 많이 사용하고 중요한 서비스입니다. 아마존의 S3에 해당하는 오라클 클라우드의 오브젝트 스토리지 서비스는 Oracle Storage Cloud Service입니다.
+Oracle Storage Cloud Service는 인터넷 접근이 가능한 어디서나 데이터를 저장하고 사용할 수 있는 신뢰성과 안전성을 겸비한 스토리지 서비스입니다. 높은 수준의 가용성을 제공하기 위해서 모든 데이터는 데이터 센터 내에서 복수의 복사본(Replica)으로 관리됩니다. 99.9%의 가용성과 Eleven-Nine의 Durability1를 SLA로 보장합니다. 더 높은 고가용성을 제공하기 위해서 데이터 센터간 복제 설정을 추가할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>OCCS에 Docker 이미지 배포</title>
+      <link>/post/occs_new_docker_container/</link>
+      <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
+      
+      <guid>/post/occs_new_docker_container/</guid>
+      <description>Oracle Container Cloud Service(이하 OCCS)는 오라클 클라우드가 제공하는 Docker 서비스입니다. OCCS에는 Kubernetes(k8s), docker-swarm 그리고 marathon 과 유사한 container orchestration 도구가 포함되어 있습니다. Docker를 운영환경에 적용하기 위해서는 Container orchestration 도구를 반드시 사용해야 합니다. Kubernetes나 docker-swarm 등을 직접 설치하고 운영할 경우에 관리 부담이 증가하고, Container orchestration을 운영하기 위한 노하우와 연구가 필요합니다. OCCS를 통해서 이러한 Container orchestration의 어려움을 해결할 수 있습니다. 또한 Docker 인프라 운영의 기술적 &amp;amp; 관리적 문제를 상당 부분 해결할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Oracle Container CS 인스턴스 생성</title>
+      <link>/post/occs-new-inst/</link>
+      <pubDate>Thu, 20 Apr 2017 19:36:38 +0900</pubDate>
+      
+      <guid>/post/occs-new-inst/</guid>
+      <description>Oracle Cloud는 Docker 기반의 컨테이너 서비스를 2016년 11월에 출시하였습니다. 오라클은 2015년 11월에 StackEngine을 인수하였습니다. (관련 공지). StackEngine사는 2014년 텍사스 오스틴 주에서 설립된 업체로, 엔터프라이즈급 컨테이너 관리 및 자동화 솔루션 개발 업체입니다. StackEngine은 kubernetes(k8s), docker-swarm 그리고 marathon과 같은 container orchestration 도구입니다.
+오라클은 2015년 11월에 StackEngine을 인수한 후, 1년 동안 Oracle Public Cloud에 StackEngine을 통합하였습니다. 이 결과물이 Oracle Container Cloud Service 입니다.
+Oracle Container Clod Service를 통해서 Docker 컨테이너의 클러스터 구성, 인스턴스 배포 및 운영, 모니터링을 효과적으로 할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>오라클 클라우드의 Docker 컨테이너 지원 유형</title>
+      <link>/post/docker_in_oc/</link>
+      <pubDate>Wed, 19 Apr 2017 19:01:16 +0900</pubDate>
+      
+      <guid>/post/docker_in_oc/</guid>
+      <description>오라클 클라우드에서 docker를 운영하는 방식은 3가지 입니다. 첫 번째는 Oracle cloud의 가상머신에 Docker와 Orchestration tool(Kubernetes, docker-swarm, marathon)을 직접 설치하고 사용하는 것입니다. 두 번째는 Oracle Cloud가 IaaS 형태로 제공하는 Oracle Container Cloud Service (이하 OCCS)를 사용하는 것입니다. 세 번째는 Oracle Cloud가 PaaS 형태로 제공하는 Oracle Application Container Cloud(이하 Oracle ACC)를 사용하는 것입니다.
+Oracle Cloud에서 Docker를 사용하는 방식을 요약하면 다음과 같습니다.
+ DIY 타입: Oracle Compute CS에 직접 설치 IAAS 타입: Oracle Container Cloud Service (OCCS) PAAS 타입: Oracle Application Container Service (Oracle ACC)  Type 1.</description>
+    </item>
+    
+    <item>
+      <title>Oracle Container Cloud Service 소개와 Docker 개요</title>
+      <link>/post/occs/</link>
+      <pubDate>Wed, 05 Apr 2017 11:23:40 +0900</pubDate>
+      
+      <guid>/post/occs/</guid>
+      <description>오라클은 2015년에 Stack Engine이라는 Docker 전문 업체를 인수하였고, 이 업체의 솔루션을 클라우드 서비스 형태로 제공하고 있습니다. 이 서비스가 Oracle Container Cloud Service입니다.
+OCCS(Oracle Container Cloud Service)에 대한 개요와 Docker의 개념을 소개하는 슬라이드를 공유합니다.
+ 작성일: 2017-02-07   </description>
+    </item>
+    
+    <item>
+      <title>오라클 클라우드에서 window VM 인스턴스 생성</title>
+      <link>/post/win-vm/</link>
+      <pubDate>Fri, 31 Mar 2017 22:42:46 +0900</pubDate>
+      
+      <guid>/post/win-vm/</guid>
+      <description>오라클 클라우드(Oracle Public Cloud, OPC)의 Compute 서비스에서 Window VM 인스턴스를 생성하는 절차를 정리합니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud 계정이 필요합니다. 현재 OPC 계정이 없다면 &amp;ldquo;오라클 클라우드 계정 생성하기&amp;rdquo;를 먼저 확인하시기 바랍니다.
+Oracle Cloud VM 인스턴스 생성 실습 본 문서는 OS X(Mac) 환경에서 작성되었습니다. 이 문서의 실습에 있어서 윈도우와 &amp;ldquo;OS X&amp;rdquo;의 차이는 거의 없습니다. Window VM을 생성한 후, RDP로 Window VM에 접속하는 부분만 차이가 있습니다. 이 부분은 Window와 &amp;ldquo;OS X&amp;rdquo;를 구분하여 작성했습니다.</description>
+    </item>
+    
+    <item>
+      <title>Oracle Storage Cloud Service 활성화</title>
+      <link>/post/objest-storage-replication/</link>
+      <pubDate>Mon, 06 Mar 2017 08:54:32 +0900</pubDate>
+      
+      <guid>/post/objest-storage-replication/</guid>
+      <description>Oracle Storage Cloud Service(이하 Storage Cloud)는 오라클 클라우드의 핵심 서비스입니다. 오라클 클라우드의 대부분의 서비스는 데이터 저장 목적으로 Storage Cloud를 사용합니다. 오라클 클라우드에서 Storage Cloud를 사용하는 서비스는 다음과 같습니다.
+   서비스 설명     Java Cloud Service(이하 JCS) JCS는 클러스터 백업 및 메타 정보 저장을 위해서 Storage Cloud를 사용합니다. JCS 설정시 Storage Cloud 정보 입력이 필 수 사항입니다.   Database CS (이하 DBCS) DBCS는 데이터베이스 백업에 Storage Cloud를 사용합니다.</description>
+    </item>
+    
+    <item>
+      <title>오라클 IaaS를 이용한 VM 인스턴스 생성</title>
+      <link>/post/iaas_vm/</link>
+      <pubDate>Sun, 05 Mar 2017 22:20:25 +0900</pubDate>
+      
+      <guid>/post/iaas_vm/</guid>
+      <description>오라클 클라우드의 IaaS 서비스에서 Ubuntu 14.04를 VM 인스턴스로 만드는 절차를 정리합니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 &amp;ldquo;오라클 클라우드 계정 생성하기&amp;rdquo; 를 참조하시기 바랍니다.
+Oracle Cloud VM 인스턴스 생성 실습 본 문서는 OS X(Mac) 환경에서 작성되었습니다. 이 문서를 윈도우에서 실습하실 경우에는 PUTTY와 같은 Terminal을 사용하는 부분과 SSH-KEYGEN 을 사용하는 절차가 달라질 것입니다. 이 부분에 대해서는 별도 문서로 정리하겠습니다.
+오라클 클라우드 VM 생성 실습은 약 10~15분 정도 소요됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>

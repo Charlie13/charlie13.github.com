@@ -93,6 +93,15 @@
     </item>
     
     <item>
+      <title>Cli</title>
+      <link>/tags/cli/</link>
+      <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
+      
+      <guid>/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cloud</title>
       <link>/tags/cloud/</link>
       <pubDate>Sat, 26 Aug 2017 08:54:32 +0900</pubDate>
@@ -161,15 +170,6 @@
       <pubDate>Mon, 01 Aug 2011 10:50:36 +0900</pubDate>
       
       <guid>/tags/encoding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Essay</title>
-      <link>/tags/essay/</link>
-      <pubDate>Mon, 25 Jul 2005 00:17:44 +0900</pubDate>
-      
-      <guid>/tags/essay/</guid>
       <description></description>
     </item>
     
@@ -320,7 +320,7 @@
     <item>
       <title>Junit</title>
       <link>/tags/junit/</link>
-      <pubDate>Wed, 01 Mar 2006 21:59:47 +0900</pubDate>
+      <pubDate>Tue, 09 Nov 2010 10:50:36 +0900</pubDate>
       
       <guid>/tags/junit/</guid>
       <description></description>
@@ -332,6 +332,15 @@
       <pubDate>Thu, 21 Oct 2010 10:50:36 +0900</pubDate>
       
       <guid>/tags/license/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life Story Think</title>
+      <link>/tags/life-story-think/</link>
+      <pubDate>Mon, 25 Jul 2005 00:17:44 +0900</pubDate>
+      
+      <guid>/tags/life-story-think/</guid>
       <description></description>
     </item>
     
@@ -473,7 +482,7 @@
     <item>
       <title>Paas</title>
       <link>/tags/paas/</link>
-      <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
+      <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
       
       <guid>/tags/paas/</guid>
       <description></description>
@@ -584,6 +593,15 @@
       <pubDate>Sat, 09 Sep 2017 08:54:32 +0900</pubDate>
       
       <guid>/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>/tags/testing/</link>
+      <pubDate>Tue, 09 Nov 2010 10:50:36 +0900</pubDate>
+      
+      <guid>/tags/testing/</guid>
       <description></description>
     </item>
     
@@ -705,11 +723,38 @@
     </item>
     
     <item>
+      <title>더커</title>
+      <link>/tags/%EB%8D%94%EC%BB%A4/</link>
+      <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
+      
+      <guid>/tags/%EB%8D%94%EC%BB%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>마소기고</title>
       <link>/tags/%EB%A7%88%EC%86%8C%EA%B8%B0%EA%B3%A0/</link>
       <pubDate>Wed, 23 Aug 2017 21:59:47 +0900</pubDate>
       
       <guid>/tags/%EB%A7%88%EC%86%8C%EA%B8%B0%EA%B3%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>오라클</title>
+      <link>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4/</link>
+      <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
+      
+      <guid>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>클라우드</title>
+      <link>/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
+      <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
+      
+      <guid>/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
       <description></description>
     </item>
     

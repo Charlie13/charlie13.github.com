@@ -21,26 +21,5 @@
  오라클은 엔터프라이즈 자바 개발에서 리더십을 내려놓기를 원하며 이를 맡아줄 오픈소스 재단을 찾고 있다. 아파치(Apache)와 이클립스(Eclipse)가 자바 EE를 인수할 가능성이 높다. 오라클은 오픈소스 커뮤니티, 라이선스 사용자, 후보 재단들에게 자바 EE를 떠넘기려는 계획이다. 마이크로프로파일(MicroProfile)이라 부르는 오라클의 새로운 계획에 대해 오픈소스 그룹 가운데 가장 선두에 자리한 레드햇(Red Hat)은 갈채를 보냈다 자바 EE에 오라클의 목표는 리더십을 떠넘기려는 것일 뿐 프로젝트에는 지속적으로 참여할 것이다.</description>
     </item>
     
-    <item>
-      <title>&#39;오라클은 Java EE를 떠넘기려한다&#39; 기사의 팩트 체크</title>
-      <link>/post/misunderstanding_on_oracle/</link>
-      <pubDate>Sun, 03 Sep 2017 08:54:32 +0900</pubDate>
-      
-      <guid>/post/misunderstanding_on_oracle/</guid>
-      <description>2017년 08월 18일에 &amp;ldquo;Itworld&amp;ldquo;에서 &amp;ldquo;오라클, 더 이상 자바 EE를 이끌 생각 없다&amp;rdquo;라는 기사가 공개되었습니다.1 기사의 내용을 요약하면 다음과 같습니다.
- 오라클은 엔터프라이즈 자바 개발에서 리더십을 내려놓기를 원하며 이를 맡아줄 오픈소스 재단을 찾고 있다. 아파치(Apache)와 이클립스(Eclipse)가 자바 EE를 인수할 가능성이 높다. 오라클은 오픈소스 커뮤니티, 라이선스 사용자, 후보 재단들에게 자바 EE를 떠넘기려는 계획이다. 마이크로프로파일(MicroProfile)이라 부르는 오라클의 새로운 계획에 대해 오픈소스 그룹 가운데 가장 선두에 자리한 레드햇(Red Hat)은 갈채를 보냈다 자바 EE에 오라클의 목표는 리더십을 떠넘기려는 것일 뿐 프로젝트에는 지속적으로 참여할 것이다.</description>
-    </item>
-    
-    <item>
-      <title>Oracle Container Cloud Service 소개와 Docker 개요</title>
-      <link>/post/occs/</link>
-      <pubDate>Wed, 05 Apr 2017 11:23:40 +0900</pubDate>
-      
-      <guid>/post/occs/</guid>
-      <description>오라클은 2015년에 Stack Engine이라는 Docker 전문 업체를 인수하였고, 이 업체의 솔루션을 클라우드 서비스 형태로 제공하고 있습니다. 이 서비스가 Oracle Container Cloud Service입니다.
-OCCS(Oracle Container Cloud Service)에 대한 개요와 Docker의 개념을 소개하는 슬라이드를 공유합니다.
- 작성일: 2017-02-07   </description>
-    </item>
-    
   </channel>
 </rss>

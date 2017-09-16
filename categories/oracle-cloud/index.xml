@@ -30,6 +30,16 @@
     </item>
     
     <item>
+      <title>Oracle PaaS Service Manager 소개 및 설치</title>
+      <link>/post/installing_pms/</link>
+      <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
+      
+      <guid>/post/installing_pms/</guid>
+      <description>Oracle PaaS Service Manager(이하 PSM)는 오라클 클라우드의 PaaS 서비스 관리에 사용되는 CLI(Command Line Interface)입니다. Oracle 클라우드는 PaaS 서비스를 관리하는 REST API를 제공합니다. 이 REST API를 이용하여 PaaS 서비스를 인스턴스 생성, 중지 그리고 삭제를 할 수 있습니다. Oracle PSM은 PaaS REST API에 대한 CLI 유형의 클라이언트 구현체입니다. Oracle PSM를 이용하여 오라클 클라우드 PaaS 서비스의 프로비저닝, 모니터링, 관리(생성, 중지, 삭제) 자동화 환경을 구축할 수 있습니다.
+Oracle PSM 지원 PaaS 서비스    Oracle PaaS 비고     Oracle Application Container Cloud Service Container 서비스, Polyglot 환경, Java, Python, PHP, Ruby 지원   Oracle Analytics Cloud 데이터 분석 클라우드 서비스   Oracle Big Data Cloud Service - Compute Edition 빅데이터 클라우드 서비스   Oracle Database Cloud Service Managed Oracle Database 서비스   Java Cloud Service.</description>
+    </item>
+    
+    <item>
       <title>Oracle Cloud 트라이얼 계정 지원 방식 변경</title>
       <link>/post/changing_trial_account/</link>
       <pubDate>Tue, 01 Aug 2017 04:20:12 +0900</pubDate>
@@ -46,15 +56,6 @@
       
       <guid>/post/container_infographics/</guid>
       <description>Oracle Container Cloud Service에 대한 개요와 특징이 잘 정리된 Infographics입니다.</description>
-    </item>
-    
-    <item>
-      <title>Oracle Big Data Cloud Service Compute-Edition</title>
-      <link>/post/bdcsce01/</link>
-      <pubDate>Thu, 27 Jul 2017 11:59:47 +0900</pubDate>
-      
-      <guid>/post/bdcsce01/</guid>
-      <description>빅데이터 기술을 사용하면서 가장 어려운 부분은 오픈소스로 구성된 빅데이터 에코 기술을 설치하고 관리하는 부분입니다. 빅데이터 에코 기술들은 여러 오픈소스 프로젝트로 구성되어 있고, 각 오픈소스 프로젝트는 특정 오픈소스 프로젝트의 버전에 의존성을 갖고 있습니다. 또한, 각 오픈소스는 개별적인 업그레이드 주기를 갖습니다. 여러 오픈소스 프로젝트가 상호 버전 의존성을 갖고 있고, 개별적인 업그레이드 주기를 갖는 기술들로 빅데이터 환경을 구성하고 관리하기 위해서는 많은 노력이 필요합니다. 이 문제를 해결하기 위해서 Cloudera와 Hotonworks는 빅데이터 오픈소스 프로젝트들의 검증된 버전을 모아 패키지로 관리합니다.</description>
     </item>
     
     <item>
@@ -76,17 +77,6 @@
       <guid>/post/compute_instance/</guid>
       <description>2017년 04월 오라클 클라우드 Compute Service에는 17.1.2 버전1이 적용되었습니다. 17.1.2 버전에는 네트워크 구성에 대한 새로운 기능이 추가되었습니다. 기존의 Shared Network와 별개로 IPNetwork를 이용하여 서브넷을 구성할 수 있습니다. 새로운 기능 추가와 함께, 가상머신을 만드는 UI와 가상머신을 생성하는 오케스트레이션에 변경된 부분이 있습니다.
 매년 4월은 Ubuntu 새 버전이 출시되는 시점입니다. 올해에도 지난 4월에 Ubuntu 17.04 버전이 출시되었습니다. 새로 출시된 Ubuntu 17.04 설치 이미지는 현재 오라클 클라우드 마켓 플레이스에 등록된 상태이며, 이 이미지를 이용하여 가상머신을 만들 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>오라클 IaaS를 이용한 VM 인스턴스 생성</title>
-      <link>/post/iaas_vm/</link>
-      <pubDate>Sun, 05 Mar 2017 22:20:25 +0900</pubDate>
-      
-      <guid>/post/iaas_vm/</guid>
-      <description>오라클 클라우드의 IaaS 서비스에서 Ubuntu 14.04를 VM 인스턴스로 만드는 절차를 정리합니다. 오라클 클라우드에서 가상머신을 생성하기 위해서는 Oracle Cloud의 계정이 필요합니다. 계정을 생성하는 방법에 대해서는 &amp;ldquo;오라클 클라우드 계정 생성하기&amp;rdquo; 를 참조하시기 바랍니다.
-Oracle Cloud VM 인스턴스 생성 실습 본 문서는 OS X(Mac) 환경에서 작성되었습니다. 이 문서를 윈도우에서 실습하실 경우에는 PUTTY와 같은 Terminal을 사용하는 부분과 SSH-KEYGEN 을 사용하는 절차가 달라질 것입니다. 이 부분에 대해서는 별도 문서로 정리하겠습니다.
-오라클 클라우드 VM 생성 실습은 약 10~15분 정도 소요됩니다.</description>
     </item>
     
     <item>

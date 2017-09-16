@@ -279,12 +279,6 @@
   </url>
   
   <url>
-    <loc>/categories/agile/</loc>
-    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/ansible/</loc>
     <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
@@ -309,19 +303,7 @@
   </url>
   
   <url>
-    <loc>/categories/bdcsce/</loc>
-    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/big-data/</loc>
-    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/big-data/</loc>
     <lastmod>2017-07-31T11:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -345,14 +327,7 @@
   </url>
   
   <url>
-    <loc>/categories/career/</loc>
-    <lastmod>2017-09-02T10:50:36+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
-    <lastmod>2016-02-03T14:01:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -363,14 +338,14 @@
   </url>
   
   <url>
-    <loc>/tags/cloud/</loc>
-    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
+    <loc>/tags/cli/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/cloud/</loc>
-    <lastmod>2017-04-05T11:23:40+09:00</lastmod>
+    <loc>/tags/cloud/</loc>
+    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -393,12 +368,6 @@
   </url>
   
   <url>
-    <loc>/categories/container/</loc>
-    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/database/</loc>
     <lastmod>2017-05-10T15:48:24+09:00</lastmod>
     <priority>0</priority>
@@ -417,26 +386,8 @@
   </url>
   
   <url>
-    <loc>/categories/docker/</loc>
-    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/encoding/</loc>
     <lastmod>2011-08-01T10:50:36+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/essay/</loc>
-    <lastmod>2005-07-25T00:17:44+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/event/</loc>
-    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -489,31 +440,13 @@
   </url>
   
   <url>
-    <loc>/categories/humor/</loc>
-    <lastmod>2011-04-17T00:17:44+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/iaas/</loc>
     <lastmod>2017-03-31T22:42:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/iaas/</loc>
-    <lastmod>2017-03-31T22:42:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/java/</loc>
-    <lastmod>2017-08-23T21:59:47+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/java/</loc>
     <lastmod>2017-08-23T21:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -562,19 +495,31 @@
   
   <url>
     <loc>/tags/junit/</loc>
-    <lastmod>2006-03-01T21:59:47+09:00</lastmod>
+    <lastmod>2010-11-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/language/</loc>
-    <lastmod>2017-08-22T21:59:47+09:00</lastmod>
+    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/license/</loc>
     <lastmod>2010-10-21T10:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/life-story-think/</loc>
+    <lastmod>2005-07-25T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/life-story-think/</loc>
+    <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -604,12 +549,6 @@
   
   <url>
     <loc>/tags/mysql/</loc>
-    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/mysql/</loc>
     <lastmod>2017-05-10T15:48:24+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -651,12 +590,6 @@
   </url>
   
   <url>
-    <loc>/categories/opensource/</loc>
-    <lastmod>2016-01-27T10:50:36+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/oracle/</loc>
     <lastmod>2017-09-03T08:54:32+09:00</lastmod>
     <priority>0</priority>
@@ -687,6 +620,24 @@
   </url>
   
   <url>
+    <loc>/categories/oracle-cloud-big-data/</loc>
+    <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/oracle-cloud-database/</loc>
+    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/oracle-cloud-iaas/</loc>
+    <lastmod>2017-04-28T23:02:33+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/oracle-code/</loc>
     <lastmod>2017-09-02T10:50:36+09:00</lastmod>
     <priority>0</priority>
@@ -700,12 +651,6 @@
   
   <url>
     <loc>/tags/paas/</loc>
-    <lastmod>2017-05-10T15:48:24+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/paas/</loc>
     <lastmod>2017-08-06T22:20:25+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -736,12 +681,6 @@
   
   <url>
     <loc>/tags/pyenv/</loc>
-    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/python/</loc>
     <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -789,20 +728,32 @@
   </url>
   
   <url>
-    <loc>/categories/storage/</loc>
-    <lastmod>2017-04-28T23:02:33+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/</loc>
     <lastmod>2017-04-19T19:01:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/categories/tech-event/</loc>
+    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/tech-tip/</loc>
+    <lastmod>2017-09-05T16:50:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/terraform/</loc>
     <lastmod>2017-09-09T08:54:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/testing/</loc>
+    <lastmod>2010-11-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -815,12 +766,6 @@
   <url>
     <loc>/tags/tip/</loc>
     <lastmod>2016-04-04T13:47:07+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/tip/</loc>
-    <lastmod>2018-09-09T10:50:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -857,12 +802,6 @@
   <url>
     <loc>/tags/virtualization/</loc>
     <lastmod>2017-03-31T22:42:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/virtualization/</loc>
-    <lastmod>2016-02-06T20:47:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -909,8 +848,32 @@
   </url>
   
   <url>
+    <loc>/tags/%EB%8D%94%EC%BB%A4/</loc>
+    <lastmod>2017-04-24T19:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/%EB%A7%88%EC%86%8C%EA%B8%B0%EA%B3%A0/</loc>
     <lastmod>2017-08-23T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/%EC%A7%9C%ED%88%AC%EB%A6%AC/</loc>
+    <lastmod>2016-03-25T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</loc>
+    <lastmod>2017-08-06T22:20:25+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,116 +6,25 @@
     <description>Recent content in Categories on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Feb 2016 14:01:55 +0900</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Agile</title>
-      <link>/categories/agile/</link>
-      <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
-      
-      <guid>/categories/agile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bdcsce</title>
-      <link>/categories/bdcsce/</link>
-      <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
-      
-      <guid>/categories/bdcsce/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Big Data</title>
-      <link>/categories/big-data/</link>
-      <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
-      
-      <guid>/categories/big-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Career</title>
-      <link>/categories/career/</link>
-      <pubDate>Sat, 02 Sep 2017 10:50:36 +0900</pubDate>
-      
-      <guid>/categories/career/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloud</title>
-      <link>/categories/cloud/</link>
-      <pubDate>Wed, 05 Apr 2017 11:23:40 +0900</pubDate>
-      
-      <guid>/categories/cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Container</title>
-      <link>/categories/container/</link>
-      <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
-      
-      <guid>/categories/container/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>/categories/docker/</link>
-      <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
-      
-      <guid>/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Event</title>
-      <link>/categories/event/</link>
-      <pubDate>Sat, 09 Sep 2017 08:54:32 +0900</pubDate>
-      
-      <guid>/categories/event/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Humor</title>
-      <link>/categories/humor/</link>
-      <pubDate>Sun, 17 Apr 2011 00:17:44 +0900</pubDate>
-      
-      <guid>/categories/humor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Iaas</title>
-      <link>/categories/iaas/</link>
-      <pubDate>Fri, 31 Mar 2017 22:42:46 +0900</pubDate>
-      
-      <guid>/categories/iaas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>/categories/java/</link>
-      <pubDate>Wed, 23 Aug 2017 21:59:47 +0900</pubDate>
-      
-      <guid>/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Language</title>
       <link>/categories/language/</link>
-      <pubDate>Tue, 22 Aug 2017 21:59:47 +0900</pubDate>
+      <pubDate>Sun, 09 Sep 2018 10:50:36 +0900</pubDate>
       
       <guid>/categories/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life Story Think</title>
+      <link>/categories/life-story-think/</link>
+      <pubDate>Mon, 25 Jul 2005 00:17:44 +0900</pubDate>
+      
+      <guid>/categories/life-story-think/</guid>
       <description></description>
     </item>
     
@@ -125,24 +34,6 @@
       <pubDate>Sat, 19 Mar 2016 01:50:05 +0900</pubDate>
       
       <guid>/categories/minsu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mysql</title>
-      <link>/categories/mysql/</link>
-      <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
-      
-      <guid>/categories/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Opensource</title>
-      <link>/categories/opensource/</link>
-      <pubDate>Wed, 27 Jan 2016 10:50:36 +0900</pubDate>
-      
-      <guid>/categories/opensource/</guid>
       <description></description>
     </item>
     
@@ -165,47 +56,47 @@
     </item>
     
     <item>
-      <title>Paas</title>
-      <link>/categories/paas/</link>
-      <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
+      <title>Oracle Cloud Big Data</title>
+      <link>/categories/oracle-cloud-big-data/</link>
+      <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
-      <guid>/categories/paas/</guid>
+      <guid>/categories/oracle-cloud-big-data/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>/categories/python/</link>
-      <pubDate>Sun, 09 Sep 2018 10:50:36 +0900</pubDate>
+      <title>Oracle Cloud Database</title>
+      <link>/categories/oracle-cloud-database/</link>
+      <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
       
-      <guid>/categories/python/</guid>
+      <guid>/categories/oracle-cloud-database/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Storage</title>
-      <link>/categories/storage/</link>
+      <title>Oracle Cloud Iaas</title>
+      <link>/categories/oracle-cloud-iaas/</link>
       <pubDate>Fri, 28 Apr 2017 23:02:33 +0900</pubDate>
       
-      <guid>/categories/storage/</guid>
+      <guid>/categories/oracle-cloud-iaas/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Tip</title>
-      <link>/categories/tip/</link>
-      <pubDate>Sun, 09 Sep 2018 10:50:36 +0900</pubDate>
+      <title>Tech Event</title>
+      <link>/categories/tech-event/</link>
+      <pubDate>Sat, 09 Sep 2017 08:54:32 +0900</pubDate>
       
-      <guid>/categories/tip/</guid>
+      <guid>/categories/tech-event/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Virtualization</title>
-      <link>/categories/virtualization/</link>
-      <pubDate>Sat, 06 Feb 2016 20:47:54 +0900</pubDate>
+      <title>Tech Tip</title>
+      <link>/categories/tech-tip/</link>
+      <pubDate>Tue, 05 Sep 2017 16:50:36 +0900</pubDate>
       
-      <guid>/categories/virtualization/</guid>
+      <guid>/categories/tech-tip/</guid>
       <description></description>
     </item>
     
@@ -215,6 +106,15 @@
       <pubDate>Sat, 19 Mar 2016 01:50:05 +0900</pubDate>
       
       <guid>/categories/youtube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>짜투리</title>
+      <link>/categories/%EC%A7%9C%ED%88%AC%EB%A6%AC/</link>
+      <pubDate>Fri, 25 Mar 2016 00:17:44 +0900</pubDate>
+      
+      <guid>/categories/%EC%A7%9C%ED%88%AC%EB%A6%AC/</guid>
       <description></description>
     </item>
     
