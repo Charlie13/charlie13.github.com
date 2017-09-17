@@ -32,9 +32,18 @@
     <item>
       <title>Autoenv</title>
       <link>/tags/autoenv/</link>
-      <pubDate>Sun, 09 Sep 2018 10:50:36 +0900</pubDate>
+      <pubDate>Sat, 09 Sep 2017 10:50:36 +0900</pubDate>
       
       <guid>/tags/autoenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Axis</title>
+      <link>/tags/axis/</link>
+      <pubDate>Sun, 17 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/axis/</guid>
       <description></description>
     </item>
     
@@ -408,6 +417,15 @@
     </item>
     
     <item>
+      <title>Numpy</title>
+      <link>/tags/numpy/</link>
+      <pubDate>Sun, 17 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Object Storage</title>
       <link>/tags/object-storage/</link>
       <pubDate>Mon, 06 Mar 2017 08:54:32 +0900</pubDate>
@@ -500,7 +518,7 @@
     <item>
       <title>Pip</title>
       <link>/tags/pip/</link>
-      <pubDate>Sun, 09 Sep 2018 10:50:36 +0900</pubDate>
+      <pubDate>Sat, 09 Sep 2017 10:50:36 +0900</pubDate>
       
       <guid>/tags/pip/</guid>
       <description></description>
@@ -518,9 +536,18 @@
     <item>
       <title>Pyenv</title>
       <link>/tags/pyenv/</link>
-      <pubDate>Sun, 09 Sep 2018 10:50:36 +0900</pubDate>
+      <pubDate>Sat, 09 Sep 2017 10:50:36 +0900</pubDate>
       
       <guid>/tags/pyenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sun, 17 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
@@ -680,7 +707,7 @@
     <item>
       <title>Virualenv</title>
       <link>/tags/virualenv/</link>
-      <pubDate>Sun, 09 Sep 2018 10:50:36 +0900</pubDate>
+      <pubDate>Sat, 09 Sep 2017 10:50:36 +0900</pubDate>
       
       <guid>/tags/virualenv/</guid>
       <description></description>
@@ -755,6 +782,15 @@
       <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
       
       <guid>/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>파이썬</title>
+      <link>/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</link>
+      <pubDate>Sun, 17 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</guid>
       <description></description>
     </item>
     

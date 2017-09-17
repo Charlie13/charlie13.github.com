@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<META http-equiv="Expires" content="-1">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="No-Cache">
+
+<title>Numpy에서 np.sum 함수의 axis 이해</title>
+<meta name="description" content="오라클 클라우드 기술 블로그">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="Numpy에서 np.sum 함수의 axis 이해" />
+<meta property="og:description" content="Numpy의 sum은 유용한 함수입니다. 그러나 처음 sum 함수를 사용할 때 axis 파라미터가 무엇을 의미하는지 혼동되는 것이 사살입니다. axis의 의미를 정리합니다. " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/numpy_sum_axis/" />
+
+
+
+<meta property="article:published_time" content="2017-09-17T21:28:14&#43;09:00"/>
+<meta property="article:modified_time" content="2017-09-17T21:28:14&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/minsu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/hybrid.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
+
+
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="taewan.kim" rel="home">
+						<h1 class="logo__title">taewan.kim</h1>
+						<h2 class="logo__tagline">Taewanme Blog - 우공이산(愚公移山)</h2>
+					</a>
+				</div>
+			</div>
+			<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
+		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >MY SON - MINSU</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		
+		<div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-8469722754608892"
+					 data-ad-slot="5594090168"
+					 data-ad-format="auto"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		  <hr/>
+		</div>
+		
+		<header class="post__header clearfix">
+			<h1 class="post__title">Numpy에서 np.sum 함수의 axis 이해</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2017-09-17 21:28:14 &#43;0900 KST">September 17, 2017</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/language" rel="category">Language</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+
+			<figure class="post__thumbnail">
+				<img src="https://taewanmerepo.github.io/2017/09/numpy_axis/post.jpg" alt="Numpy에서 np.sum 함수의 axis 이해">
+			</figure>
+			
+
+<p>통계 및 데이터 분석, 딥러닝을 하다보면 스칼라, 벡터, 행렬, 텐서와 같은 다양한 데이터 유형을 다루게 됩니다. 데이터 분석은 다양한 유형의 데이터 합을 구하고 빈도수와 확률을 계산하는 반복적인 작업이라고 말할 수 있습니다. 댜앙향 데이터의 선형대수 연산을 해야할 때, numpy의 sum 함수는 굉장히 유용하게 사용됩니다. 그러나 처음 numpy의 sum 함수를 사용할 때 axis 파라미터 때문에 굉장히 어렵게 느껴집니다. axis를 기준으로 합을 계산하는 의미를 파악하기 어렵습니다. 이제 부터 numpy의 sum 함수에서 axis가 무엇을 의미하는지 알아보겠습니다.</p>
+
+<h2 id="numpy의-sum-함수-사용-예">numpy의 sum 함수 사용 예</h2>
+
+<p>다음 코드는 다차원 3차원 배열을 만들고 axis를 기준으로 3차원 배열의 합을 구하는 코드입니다.</p>
+
+<pre><code>&gt;&gt;&gt; arr = np.arange(0, 4*2*4)
+&gt;&gt;&gt; len(arr)
+32
+&gt;&gt;&gt; arr
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31])
+&gt;&gt;&gt; v = arr.reshape([4,2,4]) ## 차원 변환 [4, 2, 4]; row: 4, column: 2, depth: 4
+&gt;&gt;&gt; v
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7]],
+
+       [[ 8,  9, 10, 11],
+        [12, 13, 14, 15]],
+
+       [[16, 17, 18, 19],
+        [20, 21, 22, 23]],
+
+       [[24, 25, 26, 27],
+        [28, 29, 30, 31]]])
+&gt;&gt;&gt; v.ndim      ## v의 차원
+3
+&gt;&gt;&gt; v.sum()     ## 모든 element의 합
+496
+&gt;&gt;&gt; res01=v.sum(axis=0) ## axis=0 기준 합계
+&gt;&gt;&gt; res01.shape
+(2, 4)
+&gt;&gt;&gt; res01
+array([[48, 52, 56, 60],
+       [64, 68, 72, 76]])
+&gt;&gt;&gt; res02=v.sum(axis=1)  ## axis=1 기준 합계
+&gt;&gt;&gt; res02.shape
+(4, 4)
+&gt;&gt;&gt; res02
+array([[ 4,  6,  8, 10],
+       [20, 22, 24, 26],
+       [36, 38, 40, 42],
+       [52, 54, 56, 58]])
+&gt;&gt;&gt; res03=v.sum(axis=2)  ## axis=2 기준 합계
+&gt;&gt;&gt; res03.shape
+(4, 2)
+&gt;&gt;&gt; res03
+array([[  6,  22],
+       [ 38,  54],
+       [ 70,  86],
+       [102, 118]])
+&gt;&gt;&gt;
+</code></pre>
+
+<p>sum 함수의 axis를 기준으로 변화가 많이 발생하는 것을 볼 수 있습니다.
+이제 부터 axis를 기준으로 합을 구하는 것이 어떤 의미인지 살펴 보도록 하겠습니다.</p>
+
+<h2 id="선형-대수의-데이터의-유형">선형 대수의 데이터의 유형</h2>
+
+<p>데이터 분석의 각종 계산을 돕는 학문이 바로 선형대수(linear algebra)입니다.
+선형대수를 사용하면 대량의 데이터를 포함하는 복잡한 계산 과정을 간단한 수식으로 표현할 수 있습니다.
+선형대수의 데이터 유형은 데이터의 수와 형태에 따라서 스칼라(scalar), 벡터(vector), 행렬(matrix), 텐서(Tensor)로 구분됩니다. 각 데이터 유형에 대하여 간단하게 살펴보겠습니다.</p>
+
+<h3 id="스칼라-scalar">스칼라: scalar</h3>
+
+<p>스칼라는 하나의 숫자만으로 이루어진 데이터를 의미합니다. 스칼라는 보통  <strong>R</strong> 와 같이 알파벳 소문자로 표기하며 실수(real number)인 숫자 중의 하나이므로 실수 집합  &ldquo;<strong>R</strong>&ldquo;의 원소라는 의미에서 다음과 같이 표기한다.</p>
+
+<p>$$ x \in {\Bbb R} $$</p>
+
+<h3 id="벡터-vector">벡터: vector</h3>
+
+<p>벡터는 여러 숫자가 순서대로 모여 있는 것으로, 일반적인 일차원 배열이 벡터입니다.</p>
+
+<p>$$
+x = \begin{bmatrix}x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix}
+$$</p>
+
+<p>하나의 벡터를 이루는 데이터의 개수를 차원(dimension)이라고 합니다. 위에서 예로든 벡터는 4개의 실수로 이루어져 있고, 4차원 벡터입니다. 이 벡터는 다음과 같이 표기할 수 있습니다.</p>
+
+<p>$$ x \in {\Bbb R^4} $$</p>
+
+<h3 id="행렬-matrix">행렬: matrix</h3>
+
+<p>행렬은 복수의 차원을 가지는 데이터가 다시 여러 개 있는 경우의 데이터를 합쳐서 표기한 것이다. 일반적으로 2차원 배열이 행렬입니다. 특히 3차원 이상 배열은 텐서(tensor)라고 합니다.</p>
+
+<h2 id="다차원-배열의-축-axis">다차원 배열의 축(axis)</h2>
+
+<p>다차원 배열의 경우 그림 1과 같은 축을 갖습니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/axis.jpg" alt="다차원 배열에서 axis(축)의 의미" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 1</strong>:
+        
+        다차원 배열에서 axis(축)의 의미
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>&lt;그림 1&gt;과 같이 벡터는 x 축만을 갖는 자료형 입니다. 1차원 배열에 해당하는 벡터의 개별 요소(Element)는 그 자체가 Row 입니다.</p>
+
+<p>2차원 배열 형태의 행렬(matrix)는 x축의 행과 y축의 컬럼을 갖습니다. 2차원 배열 행렬은 depth가 1이라고 간주됩니다.</p>
+
+<p>3차원 배열 형태의 Tensor는 행과 열 그리고 1보다 큰 depth를 갖습니다.</p>
+
+<p>4차원 이상의 배열은 z축의 depth 요소가 스칼라가 아니라 벡터 이상의 자료형을 갖는 것을 의미합니다. 이러한 체계로 데이터 형은 끝없이 확장 될 수 있습니다.</p>
+
+<h2 id="실습-데이터">실습 데이터</h2>
+
+<p>Numpy에서 sum함수의 동작 방식을 이해하기 위해서 다음과 같은 자료형을 준비하였습니다.</p>
+
+<pre><code>&gt;&gt;&gt; arr = np.arange(0, 32)
+&gt;&gt;&gt; len(arr)
+32
+&gt;&gt;&gt; arr
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31])
+&gt;&gt;&gt; v = arr.reshape([4,2,4])
+</code></pre>
+
+<p>32개의 요소를 이용하여  shape이 (4, 2, 4)인 텐서를 만들었습니다. 이 데이터는 4개의 row와 2개의 컬럼을 갖으며, 각 컬럼의 depth는 4입니다. 이 자료형은 &lt;그림 2&gt;와 &lt;그림 3&gt;과 같이 표현할 수 있습니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/shape1.png" alt="실습 데이터 다차원 배열의 shape: (4, 2, 4) " style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 2</strong>:
+        
+        실습 데이터 다차원 배열의 shape: (4, 2, 4) 
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/sample.jpg" alt="실습 데이터의 형태" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 3</strong>:
+        
+        실습 데이터의 형태
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>Shape: (4, 2, 4) 데이터 형은 &lt;그림 2&gt;와 &lt;그림 3&gt;을 참조하여 이해하시기 바랍니다.</p>
+
+<h2 id="numpy의-sum-함수-작동-방식">Numpy의 sum 함수 작동 방식</h2>
+
+<p>sum 함수의 axis 파라미터의 기본 값은 &ldquo;Non&rdquo;입니다. axis는 대상 데이터의 Dimmension보다 작은 값을 설정할 수 있습니다.</p>
+
+<pre><code>&gt;&gt;&gt; v.ndim      ## v의 차원
+3
+</code></pre>
+
+<p>예제 데이터의 Dimmension은 3이기 때문에 axis는 2까지 설정 가능합니다.</p>
+
+<h3 id="case-1-axis-none">case 1: axis=None</h3>
+
+<p>axis를 기본값으로 실행하면 대상 데이터의 모든 요소의 합을 반환합니다.</p>
+
+<pre><code>&gt;&gt;&gt; v.sum()     ## 모든 element의 합
+496
+</code></pre>
+
+<p>대상 데이터에 포함된 모든 요소를 단순하게 합산하기 때문에 이해에 문제는 없습니다.</p>
+
+<h3 id="case-2-axis-0">case 2: axis=0</h3>
+
+<p>axis =0는 x축을 기준으로 합을 구하는 방식입니다. x축 row를 합치는 합산입니다. shape이 (4, 2, 4)인 데이터를  x축을 기준으로 합산하면 결과 shape는 row를 제거한 (2, 4)가 반환 됩니다.</p>
+
+<pre><code>&gt;&gt;&gt; res01=v.sum(axis=0) ## axis=0 기준 합계
+&gt;&gt;&gt; res01.shape
+(2, 4)
+&gt;&gt;&gt; res01
+array([[48, 52, 56, 60],
+       [64, 68, 72, 76]])
+</code></pre>
+
+<p>axis=0의 합산 방향은 &lt;그림 4&gt;와 같습니다. 결과적으로 row를 합치는 과정입니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/axis0-cube.jpg" alt="다차원 배열에서 axis=0의 합산 방향 " style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 4</strong>:
+        
+        다차원 배열에서 axis=0의 합산 방향 
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>axis=0는 가장 외각의 괄호를 제거하는 이미지를 상상하시면 편리합니다. &lt;그림 5&gt;과 같이 가장 외각의 괄호를 제거하고, 각 row에 데이터는 위치별로 합산합니다. 결과적으로 컬럼과 depth이 위치별 합이 계산됩니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/axis0.png" alt="다차원 배열에서 axis=0의 합 " style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 5</strong>:
+        
+        다차원 배열에서 axis=0의 합 
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>&lt;그림 5&gt;는 shape (4, 2, 4)의 데이터에 sum(axis=0)를 적용하는 과정을 설명합니다. 각 요소에 객은 합산되는 그룹을 의미합니다. 총 8번의 sum이 계산되고 Shape(2, 4)가 반환됩니다. 모든 row에 컬럼과 depth이 같은 위치이 요소들의 합입니다.</p>
+
+<h3 id="case-3-axis-1">case 3: axis=1</h3>
+
+<p>axis=1은 y축을 기준으로 합을 구하는 방식입니다. y축 컬럼을 합치는 합산입니다. shape이 (4, 2, 4)인 데이터를  y축을 기준으로 합산하면 결과 shape은 컬럼을 제거한 (4, 4)가 반환 됩니다. 2개의 컴럼이 1개로 축소됩니다.</p>
+
+<pre><code>&gt;&gt;&gt; res02=v.sum(axis=1)  ## axis=1 기준 합계
+&gt;&gt;&gt; res02.shape
+(4, 4)
+&gt;&gt;&gt; res02
+array([[ 4,  6,  8, 10],
+       [20, 22, 24, 26],
+       [36, 38, 40, 42],
+       [52, 54, 56, 58]])
+&gt;&gt;&gt;
+</code></pre>
+
+<p>axis=1의 합산 방향은 &lt;그림 6&gt;와 같습니다. 결과적으로 컬럼(column)을 합치는 과정입니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/axis1-cube.jpg" alt="다차원 배열에서 axis=1의 합산 방향" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 6</strong>:
+        
+        다차원 배열에서 axis=1의 합산 방향
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>axis=1은 가장 외각에서 두번째 괄호를 제거하는 이미지를 상상하시면 편리합니다. &lt;그림 7&gt;과 같이 각 row에서 컬럼을 구분하는 괄호를 제거하고, 각 컬럼의 데이터는 위치별로 합산합니다. 결과적으로 row별고 컬럼의 depth 위치별 합이 계산됩니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/axis1.png" alt="다차원 배열에서 axis=0의 합 " style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 7</strong>:
+        
+        다차원 배열에서 axis=0의 합 
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>&lt;그림 7&gt;은 shape (4, 2, 4)의 데이터에 sum(axis=1)를 적용하는 과정을 설명합니다. 각 요소에 색은 합산되는 그룹을 의미합니다. row 별로 4번의 합이 계산되고 4개의 row에서 16번의 합이 계산됩니다. Shape(4, 4)이 반환됩니다. 각 row별로 컬럼들의 depth 요소들의 합이 반환 됩니다.</p>
+
+<h3 id="case-4-axis-2">case 4: axis=2</h3>
+
+<p>axis=2는 z축을 기준으로 합을 구하는 방식입니다. z축 dpeth 요소를 합치는 연산입니다. shape이 (4, 2, 4)인 데이터를  y축을 기준으로 합산하면 결과 shape은 depth를 제거한 (4, 4)가 반환 됩니다. 각 컬럼의 depth는 1개의 스칼라 값으로 변환됩니다.</p>
+
+<pre><code>&gt;&gt;&gt; res03=v.sum(axis=2)  ## axis=2 기준 합계
+&gt;&gt;&gt; res03.shape
+(4, 2)
+&gt;&gt;&gt; res03
+array([[  6,  22],
+       [ 38,  54],
+       [ 70,  86],
+       [102, 118]])
+&gt;&gt;&gt;
+</code></pre>
+
+<p>axis=1의 합산 방향은 &lt;그림 8&gt;과 같습니다. 결과적으로 Depth는 1개의 스칼라 값으로 변환되는 고정입니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/axis2-cube.jpg" alt="다차원 배열에서 axis=2의 합산 방향" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 8</strong>:
+        
+        다차원 배열에서 axis=2의 합산 방향
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>axis=2는 depth를 묶는 괄호를 제거하는 이미지를 상상하시면 편리합니다. &lt;그림 9&gt;와 같이 각 column에서 Depth를 구분하는 괄호를 제거하고, 모든 Depth 요소를 합산합니다. 결과적으로 예제에서 각 row의 컬럼들은 1개의 스칼라 값으로 변환됩니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/09/numpy_axis/axis2.png" alt="다차원 배열에서 axis=2의 합 " style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 9</strong>:
+        
+        다차원 배열에서 axis=2의 합 
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>&lt;그림 9&gt;는 shape (4, 2, 4)의 데이터에 sum(axis=2)를 적용하는 과정을 설명합니다. 각 요소에 색은 합산되는 그룹을 의미합니다. row 별로 2번의 합이 계산되고 4개의 row에서 총 8번의 합이 계산됩니다. Shape(4, 2)가 반환됩니다. 각 row별로 depth의 요소가 총 합으로 각 컬럼 값는 교체됩니다.</p>
+
+<h2 id="마치며">마치며</h2>
+
+<p>Numpy로 선형대수를 프로그래밍할 때 자료형의 Dimension과 각 자료형의 기준축에 대하여 정리해 보았습니다.</p>
+
+<ul>
+<li>axis=0은 x축을 기준으로 여러 row를 한개로 합치는 과정입니다.</li>
+<li>axis=1은 y축을 기준으로 row별로 존재하는 column들의 값을 합쳐 1개로 축소하는 과정입니다.</li>
+<li>axis=2는 z축을 기준으로 column의 depth를 축소하는 과정입니다.</li>
+</ul>
+
+<p>3차원 배열로 만들어진 Tensor의 경우 axis=2를 계산할 때 column은 스칼라 값이 됩니다.
+4차원 이상의 배열로 확장될 경우 이와 같은 방향으로 개념을 적용하면 확장 가능합니다.</p>
+
+<h2 id="참고자료">참고자료</h2>
+
+<ul>
+<li><a href="https://datascienceschool.net/view-notebook/cd600e9627cd4f16bc4f6078231ab28c/">https://datascienceschool.net/view-notebook/cd600e9627cd4f16bc4f6078231ab28c/</a></li>
+</ul>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">python</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/numpy/" rel="tag">numpy</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" rel="tag">파이썬</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/axis/" rel="tag">axis</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="김태완 avatar" src="/img/author/taewan1.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<div class="authorbox__description">
+		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다.
+	</div>
+	<div class="authorbox__description">
+		E-mail: taewanme@gmail.com
+	</div>
+</div>
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/python_virtual_env/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">파이썬 가상 개발 환경 구성: pyenv, virtualenv, autoenv, pip</p></a>
+	</div>
+</nav>
+
+	
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://taewankim.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+	<div>
+		<hr />
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-8469722754608892"
+				 data-ad-slot="5594090168"
+				 data-ad-format="auto"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="taewan.kim" />
+	</form>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">ToC (목차)</h4>
+	<div class="widget__content">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#numpy의-sum-함수-사용-예">numpy의 sum 함수 사용 예</a></li>
+<li><a href="#선형-대수의-데이터의-유형">선형 대수의 데이터의 유형</a>
+<ul>
+<li><a href="#스칼라-scalar">스칼라: scalar</a></li>
+<li><a href="#벡터-vector">벡터: vector</a></li>
+<li><a href="#행렬-matrix">행렬: matrix</a></li>
+</ul></li>
+<li><a href="#다차원-배열의-축-axis">다차원 배열의 축(axis)</a></li>
+<li><a href="#실습-데이터">실습 데이터</a></li>
+<li><a href="#numpy의-sum-함수-작동-방식">Numpy의 sum 함수 작동 방식</a>
+<ul>
+<li><a href="#case-1-axis-none">case 1: axis=None</a></li>
+<li><a href="#case-2-axis-0">case 2: axis=0</a></li>
+<li><a href="#case-3-axis-1">case 3: axis=1</a></li>
+<li><a href="#case-4-axis-2">case 4: axis=2</a></li>
+</ul></li>
+<li><a href="#마치며">마치며</a></li>
+<li><a href="#참고자료">참고자료</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">최신글</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/numpy_sum_axis/" title="Numpy에서 np.sum 함수의 axis 이해">
+							Numpy에서 np.sum 함수의 axis 이해</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/python_virtual_env/" title="파이썬 가상 개발 환경 구성: pyenv, virtualenv, autoenv, pip">
+							파이썬 가상 개발 환경 구성: pyenv, virtualenv, ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_code_iac_youtube/" title="2017 Oracle Code in Seoul: IaC 발표 동영상">
+							2017 Oracle Code in Seoul: IaC 발표 동영상</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/updating_fork/" title="Fork된 Git 레파지토리에 원본 레파지토리 업데이트">
+							Fork된 Git 레파지토리에 원본 레파지토리 업데이트</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/misunderstanding_on_oracle/" title="&#39;오라클은 Java EE를 떠넘기려한다&#39; 기사의 팩트 체크">
+							&#39;오라클은 Java EE를 떠넘기려한다&#39; 기사의 팩트 체크</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/review_oracle_code/" title="2017 Oracle Code in Seoul을 마치며">
+							2017 Oracle Code in Seoul을 마치며</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_code_provisioning/" title="2017 Oracle Code In Seoul: How to control cloud resources 데모">
+							2017 Oracle Code In Seoul: How to c ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_cloud_reg/" title="오라클 클라우드 트라이얼 신청: $300 Credit">
+							오라클 클라우드 트라이얼 신청: $300 Credit</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/jsf/" title="자바 웹 개발의 페이스오프: JavaServer Faces">
+							자바 웹 개발의 페이스오프: JavaServer Faces</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/2006_javaone/" title="The Power Of The Java:2006 자바원 컨퍼런스 후기">
+							The Power Of The Java:2006 자바원 컨퍼런스 후기</a>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">카테고리</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/language">Language</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/life-story-think">Life-Story-Think</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/minsu">Minsu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle">Oracle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud">Oracle-Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-big-data">Oracle-Cloud-Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-database">Oracle-Cloud-Database</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-iaas">Oracle-Cloud-Iaas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-event">Tech-Event</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-tip">Tech-Tip</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/youtube">Youtube</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%ec%a7%9c%ed%88%ac%eb%a6%ac">짜투리</a></li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+	<h4 class="widget__title">SNS(Social Network Service)</h4>
+	<div class="widget__content">
+		<a href="https://github.com/oracloud-kr-team" target="_blank" title="github"><img src="/img/icon/github.png" width="50px" height="50px"/></a>
+		<a href="https://www.slideshare.net/ssusercda07e" target="_blank" title="slideshare"><img src="/img/icon/slideshare.png" width="50px" height="50px"/></a>
+		<a href="https://www.youtube.com/channel/UCboJr3TLlqeDqpBURRdb_lg" target="_blank" title="youtube"><img src="/img/icon/youtube.png" width="50px" height="50px"/></a>
+		<a href="mailto:oracloud.kr@gmail.com" title="email"><img src="/img/icon/email.png" width="50px" height="50px"/></a>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">관심 사이트</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="http://www.oracloud.kr/">
+				Oracle Cloud 기술 블로그</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72835175-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+
