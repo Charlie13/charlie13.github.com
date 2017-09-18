@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/sigmoid_diff/</loc>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/numpy_sum_axis/</loc>
     <lastmod>2017-09-17T21:28:14+09:00</lastmod>
   </url>
@@ -391,6 +396,18 @@
   </url>
   
   <url>
+    <loc>/tags/deep-learning/</loc>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/differential/</loc>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/docker/</loc>
     <lastmod>2017-04-24T19:34:26+09:00</lastmod>
     <priority>0</priority>
@@ -523,13 +540,13 @@
   </url>
   
   <url>
-    <loc>/categories/life-story-think/</loc>
+    <loc>/tags/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/life-story-think/</loc>
+    <loc>/categories/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -543,6 +560,12 @@
   <url>
     <loc>/tags/log4j/</loc>
     <lastmod>2016-01-03T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/machine-learning/</loc>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -607,13 +630,13 @@
   </url>
   
   <url>
-    <loc>/categories/oracle/</loc>
+    <loc>/tags/oracle/</loc>
     <lastmod>2017-09-03T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/oracle/</loc>
+    <loc>/categories/oracle/</loc>
     <lastmod>2017-09-03T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -625,13 +648,13 @@
   </url>
   
   <url>
-    <loc>/categories/oracle-cloud/</loc>
+    <loc>/tags/oracle-cloud/</loc>
     <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/oracle-cloud/</loc>
+    <loc>/categories/oracle-cloud/</loc>
     <lastmod>2017-08-26T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -686,7 +709,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-09-17T21:28:14+09:00</lastmod>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -729,6 +752,12 @@
   <url>
     <loc>/tags/security/</loc>
     <lastmod>2017-05-04T13:23:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/sigmoid/</loc>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -853,20 +882,20 @@
   </url>
   
   <url>
-    <loc>/categories/youtube/</loc>
-    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/youtube/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/categories/youtube/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2017-09-17T21:28:14+09:00</lastmod>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -879,6 +908,18 @@
   <url>
     <loc>/tags/%EB%A7%88%EC%86%8C%EA%B8%B0%EA%B3%A0/</loc>
     <lastmod>2017-08-23T21:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EB%AF%B8%EB%B6%84/</loc>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EC%8B%9C%EA%B7%B8%EB%AA%A8%EC%9D%B4%EB%93%9C/</loc>
+    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
