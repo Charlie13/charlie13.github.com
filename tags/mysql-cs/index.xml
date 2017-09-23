@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql Cs on taewan.kim</title>
+    <link>/tags/mysql-cs/</link>
+    <description>Recent content in Mysql Cs on taewan.kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Sep 2017 21:28:14 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/mysql-cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Oracle Storage CS의 컨테이너 정보 형식</title>
+      <link>/post/stroage_cs_url/</link>
+      <pubDate>Sun, 24 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/post/stroage_cs_url/</guid>
+      <description>Oracle Cloud에서 Oracle BDCS1, Oracle MySQL CS2 그리고 Oracle BDCSCE3와 같은 PaaS 서비스 인스턴스를 생성 과정에서 Oracle Storage CS의 컨테이너를 등록 하는 과정을 포함합니다. 오라클 클라우드 PaaS는 백업 및 데이터 저장 용도로 Oracle Storage CS를 사용합니다. 지난 8월에 Oracle Cloud의 Trial 계정이 Credit 체제로 변경되면서 Storage CS 컨테이너를 등록하는 방식이 변경되었습니다. 본 문서에서는 Storage CS의 컨테이너 등록 정보를 확인하는 방법을 소개합니다.
+Oracle Storage CS 이용 Oracle PaaS 아래 &amp;lt;그림 1&amp;gt;, &amp;lt;그림 2&amp;gt;, &amp;lt;그림 3&amp;gt;은 각각 Oracle MySQL CS, Oracle Database CS 그리고 Oracle BDCSCE의 Oracle Storage CS의 설정 화면 입니다.</description>
+    </item>
+    
+  </channel>
+</rss>
