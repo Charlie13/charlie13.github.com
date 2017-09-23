@@ -8,11 +8,11 @@
 <META http-equiv="Pragma" content="no-cache">
 <META http-equiv="Cache-Control" content="No-Cache">
 
-<title>Oracle Storage CS의 컨테이너 정보 형식</title>
+<title>Oracle Storage CS의 컨테이너 설정 방식 형식</title>
 <meta name="description" content="오라클 클라우드 기술 블로그">
 <meta name="generator" content="Hugo 0.25.1" />
-<meta property="og:title" content="Oracle Storage CS의 컨테이너 정보 형식" />
-<meta property="og:description" content="Oracle Cloud에서 다수의 PaaS 서비스에서 인스턴스를 생성할 때 Oracle Storage CS의 컨테이너를 등록하는 설정을 포함합니다. 지난 8월에 Oracle Cloud의 Trial 계정이 Credit 체제로 변경되면서 Storage CS의 컨테이너를 등록하는 방식이 변경되었습니다. Storage CS의 컨테이너 등록 정보를 확인하는 방법을 소개합니다. " />
+<meta property="og:title" content="Oracle Storage CS의 컨테이너 설정 방식 형식" />
+<meta property="og:description" content="오라클 클라우드의 PaaS 서비스는 인스턴스를 생성하는 과정에 Oracle Storage CS의 컨테이너를 등록하는 설정을 포함합니다. 지난 8월에 오라클 클라우드의 Trial 계정이 Credit 체제로 변경되면서 Storage CS의 컨테이너를 등록하는 방식이 변경되었습니다. Storage CS의 컨테이너 등록 정보를 확인하는 방법을 소개합니다. " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/stroage_cs_url/" />
 
@@ -86,7 +86,7 @@
 		</div>
 		
 		<header class="post__header clearfix">
-			<h1 class="post__title">Oracle Storage CS의 컨테이너 정보 형식</h1>
+			<h1 class="post__title">Oracle Storage CS의 컨테이너 설정 방식 형식</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
 				<time class="post__meta-date" datetime="2017-09-24 21:28:14 &#43;0900 KST">September 24, 2017</time>
@@ -98,15 +98,15 @@
 		<div class="post__content clearfix">
 
 			<figure class="post__thumbnail">
-				<img src="https://oracloud-kr-teamrepo.github.io/2017/04/storage_cs/post_logo.png" alt="Oracle Storage CS의 컨테이너 정보 형식">
+				<img src="https://oracloud-kr-teamrepo.github.io/2017/04/storage_cs/post_logo.png" alt="Oracle Storage CS의 컨테이너 설정 방식 형식">
 			</figure>
 			
 
-<p>Oracle Cloud에서 Oracle BDCS<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>, Oracle MySQL CS<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup> 그리고 Oracle BDCSCE<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>와 같은 PaaS 서비스 인스턴스를 생성 과정에서 Oracle Storage CS의 컨테이너를 등록 하는 과정을 포함합니다. 오라클 클라우드 PaaS는 백업 및 데이터 저장 용도로 Oracle Storage CS를 사용합니다. 지난 8월에 Oracle Cloud의 Trial 계정이 Credit 체제로 변경되면서 Storage CS 컨테이너를 등록하는 방식이 변경되었습니다. 본 문서에서는 Storage CS의 컨테이너 등록 정보를 확인하는 방법을 소개합니다.</p>
+<p>오라클 클라우드에서 Oracle BDCS<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>, Oracle MySQL CS<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup> 그리고 Oracle BDCSCE<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>와 같은 PaaS 서비스는 인스턴스 생성 과정에 Oracle Storage CS의 컨테이너를 등록 하는 항목을 포함합니다. 오라클 클라우드 PaaS는 백업 및 데이터 저장 용도로 Oracle Storage CS를 사용합니다. 지난 8월에 오라클 클라우드의 트라이얼 계정이 Credit 체제로 변경되는 과정에서 Storage CS 컨테이너 등록 형식이 변경되었습니다. 본 문서에는 Storage CS의 컨테이너 등록 정보를 확인하는 방법과 방법을 소개합니다.</p>
 
 <h2 id="oracle-storage-cs-이용-oracle-paas">Oracle Storage CS 이용 Oracle PaaS</h2>
 
-<p>아래 &lt;그림 1&gt;, &lt;그림 2&gt;, &lt;그림 3&gt;은 각각 Oracle MySQL CS, Oracle Database CS 그리고 Oracle BDCSCE의 Oracle Storage CS의 설정 화면 입니다.</p>
+<p>아래 &lt;그림 1&gt;, &lt;그림 2&gt;, &lt;그림 3&gt;은 각각 Oracle MySQL CS, Oracle Database CS 그리고 Oracle BDCSCE의 Oracle Storage CS의 설정 화면입니다.</p>
 
 
 <blockquote id="img">
@@ -206,23 +206,23 @@
 </tbody>
 </table>
 
-<h2 id="oracle-storage-cs-설정-포멧">Oracle Storage CS 설정 포멧</h2>
+<h2 id="oracle-storage-cs-설정-형식">Oracle Storage CS 설정 형식</h2>
 
-<p>기존에 Storage Cloud Service 설정 포멧은 다음과 같습니다.</p>
+<p>기존에 Storage Cloud Service 설정 형식은 다음과 같습니다.</p>
 
 <pre><code>{SERVICE_NAME}-{IDENTITY_DOMAIN_NAME}/{CONTAINER_NAME}
 </code></pre>
 
-<p>2017년 8월 Oracle Cloud의 트라이얼 계정의 지원이 Credit 방식으로 전환되면서, Storage Cloud Service 설정 포멧은 다음과 같이 변경되었습니다.</p>
+<p>2017년 8월 오라클 클라우드의 트라이얼 계정의 지원이 Credit 방식으로 전환되면서, Storage Cloud Service 설정 형식은 다음과 같이 변경되었습니다.</p>
 
 <pre><code>http://&lt;storagedomain&gt;/v1/&lt;schema name&gt;/&lt;container name&gt;
 </code></pre>
 
-<p>위 PaaS 서비스 설정시 새로운 포멧으로 Storage CS의 컨테이너 주소를 등록해야 합니다.</p>
+<p>위 PaaS 서비스 설정에 새로운 형식으로 Storage CS의 컨테이너 주소를 등록해야 합니다.</p>
 
 <h2 id="oracle-storage-cs-주소-확인">Oracle Storage CS 주소 확인</h2>
 
-<p>현재 사용중인 Identity Domain의 Storage CS의 주소 정보는 Oracle Storage CS의 &ldquo;<strong>서비스 세부 정보</strong>&ldquo;에서 확인할 수 있습니다. Oracle Storage CS의 &ldquo;<strong>서비스 세부 정보</strong>&rdquo; 페이지는 다음과 같은 경로 찾아 갈 수 있습니다. Oracle Storage CS의 &ldquo;<strong>서비스 세부 정보</strong>&rdquo; 페이지는 &lt;그림 4&gt; ~ &lt;그림 7&gt;과 같이 이동할 수 있습니다.</p>
+<p>Identity Domain의 Storage CS 정보는 Oracle Storage CS의 &ldquo;<strong>서비스 세부 정보</strong>&rdquo; 페이지에서 확인할 수 있습니다. Oracle Storage CS의 &ldquo;<strong>서비스 세부 정보</strong>&rdquo; 페이지는 다음과 같은 경로로 찾아갈 수 있습니다. Oracle Storage CS의 &ldquo;<strong>서비스 세부 정보</strong>&rdquo; 페이지는 &lt;그림 4&gt; ~ &lt;그림 7&gt;과 같이 이동할 수 있습니다.</p>
 
 
 <blockquote id="img">
@@ -333,8 +333,8 @@
 <p>위 REST Endpoint에서 스토리지 도메인과 스키마 명은 다음과 같이 확인 할 수 있습니다.</p>
 
 <ul>
-<li><storagedomain>: Storage-a514707.storage.oraclecloud.com</li>
-<li><schema name>: Storage-0961de4eaa364afc937598c31b21ff91</li>
+<li>storagedomain: Storage-a514707.storage.oraclecloud.com</li>
+<li>schema name: Storage-0961de4eaa364afc937598c31b21ff91</li>
 </ul>
 
 <h2 id="oracle-storage-container-설정">Oracle Storage Container 설정</h2>
@@ -386,9 +386,9 @@
 <hr />
 
 <ol>
-<li id="fn:1">Oracle BDCS는 Oracle Database를 오라클 클라우드에서 서비스하는 데이터베이스 PaaS 서비스 입니다. 오라클은 Oracle Database를 DaaS(Database as a Service)로 표현합니다.
+<li id="fn:1">Oracle BDCS는 Oracle Database를 오라클 클라우드에서 서비스하는 데이터베이스 PaaS 서비스입니다. 오라클은 Oracle Database를 DaaS(Database as a Service)로 표현합니다.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2">Oracle MySQL CS는 Mysql Enterprise Edtion을 오라클 클라우드에서 PaaS 형태로 서비스하는 데이터베이스 PaaS 서비스 입니다. 오라클은 Oracle Database를 DaaS(Database as a Service)로 표현합니다.
+<li id="fn:2">Oracle MySQL CS는 Mysql Enterprise Edition을 오라클 클라우드에서 PaaS 형태로 서비스하는 데이터베이스 PaaS 서비스 입니다. 오라클은 Oracle Database를 DaaS(Database as a Service)로 표현합니다.
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 <li id="fn:3">Oracle BDCSCE는 Oracle Big Data Cloud Service - Compute Edition의 약자입니다. 오라클 클라우드에서 PaaS 형태로 제공하는 빅데이터 하둡 클러스터 클라우드 서비스입니다.
  <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
@@ -488,7 +488,7 @@ s.setAttribute('data-timestamp', +new Date());
 <li>
 <ul>
 <li><a href="#oracle-storage-cs-이용-oracle-paas">Oracle Storage CS 이용 Oracle PaaS</a></li>
-<li><a href="#oracle-storage-cs-설정-포멧">Oracle Storage CS 설정 포멧</a></li>
+<li><a href="#oracle-storage-cs-설정-형식">Oracle Storage CS 설정 형식</a></li>
 <li><a href="#oracle-storage-cs-주소-확인">Oracle Storage CS 주소 확인</a></li>
 <li><a href="#oracle-storage-container-설정">Oracle Storage Container 설정</a></li>
 <li><a href="#요약">요약</a></li>
@@ -505,8 +505,8 @@ s.setAttribute('data-timestamp', +new Date());
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/post/stroage_cs_url/" title="Oracle Storage CS의 컨테이너 정보 형식">
-							Oracle Storage CS의 컨테이너 정보 형식</a>
+				<a class="widget__link" href="/post/stroage_cs_url/" title="Oracle Storage CS의 컨테이너 설정 방식 형식">
+							Oracle Storage CS의 컨테이너 설정 방식 형식</a>
 		  </li>
 			<li class="widget__item">
 				<a class="widget__link" href="/post/sigmoid_diff/" title="Sigmoid 함수 미분 정리">
