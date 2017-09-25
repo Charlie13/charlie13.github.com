@@ -129,6 +129,15 @@
     </item>
     
     <item>
+      <title>Cncf</title>
+      <link>/tags/cncf/</link>
+      <pubDate>Mon, 25 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/cncf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Compute Cs</title>
       <link>/tags/compute-cs/</link>
       <pubDate>Tue, 02 May 2017 11:59:47 +0900</pubDate>
@@ -185,7 +194,7 @@
     <item>
       <title>Docker</title>
       <link>/tags/docker/</link>
-      <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
+      <pubDate>Mon, 25 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/docker/</guid>
       <description></description>
@@ -354,6 +363,15 @@
     </item>
     
     <item>
+      <title>Kubernetes</title>
+      <link>/tags/kubernetes/</link>
+      <pubDate>Mon, 25 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>License</title>
       <link>/tags/license/</link>
       <pubDate>Thu, 21 Oct 2010 10:50:36 +0900</pubDate>
@@ -491,7 +509,7 @@
     <item>
       <title>Oracle</title>
       <link>/tags/oracle/</link>
-      <pubDate>Sun, 03 Sep 2017 08:54:32 +0900</pubDate>
+      <pubDate>Mon, 25 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/oracle/</guid>
       <description></description>
@@ -530,6 +548,15 @@
       <pubDate>Thu, 04 May 2017 13:23:35 +0900</pubDate>
       
       <guid>/tags/oracle-compute-cs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Orchestration</title>
+      <link>/tags/orchestration/</link>
+      <pubDate>Mon, 25 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/orchestration/</guid>
       <description></description>
     </item>
     
@@ -806,7 +833,7 @@
     <item>
       <title>더커</title>
       <link>/tags/%EB%8D%94%EC%BB%A4/</link>
-      <pubDate>Mon, 24 Apr 2017 19:34:26 +0900</pubDate>
+      <pubDate>Mon, 25 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%EB%8D%94%EC%BB%A4/</guid>
       <description></description>
