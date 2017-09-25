@@ -113,11 +113,11 @@
 
 <hr />
 
-<p>더커(Docker) 현상에 힘입어, 클라우드에 소프트웨어 애플리케이션을 배포하고 작은 서비스를 패키징하는 가장 적합한 기술로 리눅스 컨테이너가 부각되고 있습니다. 사실 리눅스 컨테이너는 현재 주류 기술로 자리를 잡은 상태입니다. 그러나 개발자들은 컨테이너화 된 애플리케이션을 오케스트레이션 하는 방법, 여러 클라우드에 배포된 컨테이너 관리하는 방법 등의 문제에 직면하고 있고, 서버리스 컴퓨팅(Serverless Computing)으로 이런 모든 문제를 해결할 수 있는지에 대한 의문을 갖고 있습니다.</p>
+<p>더커(Docker) 현상에 힘입어, 클라우드에 소프트웨어 애플리케이션을 배포하고 작은 서비스를 패키징하는 가장 적합한 기술로 리눅스 컨테이너가 부각되고 있습니다. 사실 리눅스 컨테이너는 현재 주류 기술로 자리를 잡은 상태입니다. 현재 개발자들은 컨테이너화 된 애플리케이션을 오케스트레이션 하는 방법, 여러 클라우드에 배포된 컨테이너 관리하는 방법 등의 문제 해결에 고민하고 있습니다. 또한 서버리스 컴퓨팅(Serverless Computing)으로 이런 모든 문제를 해결할 수 있는지에 대한 의문을 갖고 있습니다.</p>
 
-<p>개발자에게 반가운 소식은 이런 문제를 해결하는데 엄청난 에너지가 집중되고 있다는 것입니다. 이런 예로 이번 주 Oracle은 리눅스 재단의 Cloud Native Computing Foundation에 합류했습니다<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>. 이 재단은 엔터프라이즈 규모에서 컨테이너 패키지화된 마이크로 서비스 지향 컴퓨팅 적용 강화에 집중하고 있습니다. Kubernetes라는 컨테이너 오케스트레이션 툴이 CNCF의 핵심 기술입니다. 오라클은 CNCF에 프리미엄 멤버로 가입하면서, Oracle Linux에 Kubernetes를 공개했고, Kubernetes 프로젝트에 전담 엔지니어를 할당했습니다. <a href="https://blogs.oracle.com/developers/the-microcontainer-manifesto">Smith</a><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>, <a href="https://blogs.oracle.com/developers/hardcore-container-debugging">CrachCart</a><sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup> 및 Oracle Cloud Infrastructure에서 Kubernetes를 설치하는 <a href="https://github.com/oracle/terraform-kubernetes-installer">테라폼 인스톨러</a><sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>와 같은 몇 가지 툴을 오픈소스로 공개했습니다.</p>
+<p>개발자에게 반가운 소식은 이런 문제 해결에 엄청난 에너지가 집중되고 있다는 것입니다. 이번 주 Oracle은 리눅스 재단 산하의 Cloud Native Computing Foundation(CNCF)에 합류했습니다<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>. 이 재단은 엔터프라이즈의 규모에 컨테이너로 패키지된 마이크로서비스 지향 컴퓨팅 적용 및 강화를 핵심 주제로 운영되는 곳입니다. 컨테이너 오케스트레이션 툴인 Kubernetes가 CNCF의 핵심 기술입니다. 지난주 오라클은 CNCF에 프리미엄 멤버로 가입하면서, Oracle Linux에 Kubernetes를 공개했고, Kubernetes 프로젝트에 전담 엔지니어를 할당했습니다. <a href="https://blogs.oracle.com/developers/the-microcontainer-manifesto">Smith</a><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>, <a href="https://blogs.oracle.com/developers/hardcore-container-debugging">CrachCart</a><sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup> 및 Oracle Cloud Infrastructure에서 Kubernetes를 설치하는 <a href="https://github.com/oracle/terraform-kubernetes-installer">테라폼 인스톨러</a><sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>와 같은 툴을 오픈소스로 공개했습니다.</p>
 
-<p>시스템을 클라우드에 이전은 하지만, 특정 벤더에 종속되는 것을 경계하는 클라우드 네이티브 개발자에게는 업계의 이러한 움직임은 반가운 징조입니다. Bob Quillin은 &ldquo;여러분이 어떤 클라우드를 사용할지를 Kubernetes로 결정할 수 있으며, Kubernetes를 통해서 여러분은 가장 적합한 클라우드 환경을 선택하는 최상의 유연성을 확보하게 됩니다.&rdquo; Bob Quillin은 Oracle Container Native Group 개발 부문 부사장입니다. 또한 Bob Quillin은 &ldquo;앞으로 더 많은 고객들이 복수 클라우드 전략을 사용하실 겁니다.&ldquo;라고 강조했습니다.</p>
+<p>시스템을 클라우드에 이전하지만, 특정 벤더에 종속되는 것을 경계하는 클라우드 네이티브 개발자에게 이러한 업계의 움직임은 매우 반가운 징조입니다. Bob Quillin은 &ldquo;Kubernetes가 여러분이 사용할 클라우드를 선택하는 기능을 제공한다면, 여러분들은 최적의 환경을 선택하는 최상의 유연성을 확보하게 될 것입니다.<sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">4</a></sup>&rdquo; Bob Quillin은 Oracle Container Native Group 개발 부문 부사장입니다. 또한 Bob Quillin은 &ldquo;앞으로 점차 더 많은 고객들이 복수 클라우드 전략을 구사할 것&rdquo;이라고 강조했습니다.</p>
 
 <h3 id="많아도-너무-많은-마이크로서비스">많아도 너무 많은 마이크로서비스</h3>
 
@@ -159,7 +159,7 @@
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 <li id="fn:3">Oracle Cloud Infrastructure에 Kubernetes를 설치하는 Terraform 파일입니다. 프로젝트 위치: <a href="https://github.com/oracle/terraform-kubernetes-installer">https://github.com/oracle/terraform-kubernetes-installer</a>
  <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
-<li id="fn:4">여기서 컨테이너는 실질적인 배포 단위를 의미합니다.
+<li id="fn:4">여기서 컨테이너는 Docker 컨테이너의 실질적인 배포 단위를 의미합니다.
  <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
 </ol>
 </div>
