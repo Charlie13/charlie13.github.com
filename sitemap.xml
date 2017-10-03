@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/terraform_jupyter_installer/</loc>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/oracle_cncf/</loc>
     <lastmod>2017-09-25T21:28:14+09:00</lastmod>
   </url>
@@ -549,6 +554,12 @@
   </url>
   
   <url>
+    <loc>/tags/jupyter/</loc>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/kubernetes/</loc>
     <lastmod>2017-09-25T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -567,13 +578,13 @@
   </url>
   
   <url>
-    <loc>/categories/life-story-think/</loc>
+    <loc>/tags/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/life-story-think/</loc>
+    <loc>/categories/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -587,6 +598,12 @@
   <url>
     <loc>/tags/log4j/</loc>
     <lastmod>2016-01-03T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -669,14 +686,14 @@
   </url>
   
   <url>
-    <loc>/categories/oracle/</loc>
-    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <loc>/tags/oracle/</loc>
+    <lastmod>2017-09-25T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/oracle/</loc>
-    <lastmod>2017-09-25T21:28:14+09:00</lastmod>
+    <loc>/categories/oracle/</loc>
+    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -687,14 +704,14 @@
   </url>
   
   <url>
-    <loc>/categories/oracle-cloud/</loc>
-    <lastmod>2017-09-25T21:28:14+09:00</lastmod>
+    <loc>/tags/oracle-cloud/</loc>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/oracle-cloud/</loc>
-    <lastmod>2017-08-26T08:54:32+09:00</lastmod>
+    <loc>/categories/oracle-cloud/</loc>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -754,7 +771,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-09-25T21:28:14+09:00</lastmod>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -850,7 +867,7 @@
   
   <url>
     <loc>/tags/terraform/</loc>
-    <lastmod>2017-09-09T08:54:32+09:00</lastmod>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -933,20 +950,20 @@
   </url>
   
   <url>
-    <loc>/categories/youtube/</loc>
-    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/youtube/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/categories/youtube/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2017-09-25T21:28:14+09:00</lastmod>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -987,6 +1004,12 @@
   </url>
   
   <url>
+    <loc>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</loc>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/%EC%A7%9C%ED%88%AC%EB%A6%AC/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
@@ -995,6 +1018,12 @@
   <url>
     <loc>/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</loc>
     <lastmod>2017-08-06T22:20:25+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%ED%85%8C%EB%9D%BC%ED%8F%BC/</loc>
+    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
