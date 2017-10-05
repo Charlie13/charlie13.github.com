@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/oracle_blog_fn/</loc>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/terraform_jupyter_installer/</loc>
     <lastmod>2017-10-03T21:28:14+09:00</lastmod>
   </url>
@@ -363,7 +368,14 @@
   </url>
   
   <url>
+    <loc>/categories/blogs.oracle.com/</loc>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -428,6 +440,12 @@
   </url>
   
   <url>
+    <loc>/tags/devops/</loc>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/differential/</loc>
     <lastmod>2017-09-18T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -435,7 +453,7 @@
   
   <url>
     <loc>/tags/docker/</loc>
-    <lastmod>2017-09-25T21:28:14+09:00</lastmod>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -501,7 +519,7 @@
   
   <url>
     <loc>/tags/java/</loc>
-    <lastmod>2017-08-23T21:59:47+09:00</lastmod>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -771,7 +789,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -814,6 +832,12 @@
   <url>
     <loc>/tags/security/</loc>
     <lastmod>2017-05-04T13:23:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/serverless/</loc>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -963,7 +987,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-10-03T21:28:14+09:00</lastmod>
+    <lastmod>2017-10-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
