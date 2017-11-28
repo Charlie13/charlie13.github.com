@@ -127,7 +127,7 @@
 <ul>
 <li>JSP 코드 예제</li>
 </ul>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span> <span style="color: #f92672">&lt;h:form&gt;</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"> <span style="color: #f92672">&lt;h:form&gt;</span>
     <span style="color: #f92672">&lt;h:inputText</span> <span style="color: #a6e22e">value=</span><span style="color: #e6db74">&quot;#{person.name}&quot;</span> <span style="color: #f92672">/&gt;&lt;br/&gt;</span>
     <span style="color: #f92672">&lt;h:commandButton</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;submit&quot;</span>  <span style="color: #a6e22e">value=</span><span style="color: #e6db74">&quot;submit&quot;</span>
         <span style="color: #a6e22e">action=</span><span style="color: #e6db74">&quot;#{manager.sayHello}&quot;</span> <span style="color: #f92672">/&gt;</span>
@@ -148,7 +148,7 @@
 <ul>
 <li>Person 객체</li>
 </ul>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #a6e22e">@Entity</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #a6e22e">@Entity</span>
 <span style="color: #a6e22e">@Name</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;person&quot;</span><span style="color: #f92672">)</span>
 <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Person</span> <span style="color: #66d9ef">implements</span> <span style="color: #f8f8f2">Serializable</span><span style="color: #f92672">{</span>
   <span style="color: #66d9ef">private</span> <span style="color: #66d9ef">long</span> <span style="color: #f8f8f2">id</span><span style="color: #f92672">;</span>
@@ -168,7 +168,7 @@
 <ul>
 <li>manager 컴포넌트</li>
 </ul>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #a6e22e">@Stateless</span>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #a6e22e">@Stateless</span>
 <span style="color: #a6e22e">@Name</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;manager&quot;</span><span style="color: #f92672">)</span>
 <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">ManagerAction</span> <span style="color: #66d9ef">implements</span> <span style="color: #f8f8f2">Manager</span><span style="color: #f92672">{</span>
     <span style="color: #a6e22e">@In</span> <span style="color: #a6e22e">@Out</span> <span style="color: #f8f8f2">Person</span> <span style="color: #f8f8f2">person</span><span style="color: #f92672">;</span>
@@ -321,6 +321,10 @@ s.setAttribute('data-timestamp', +new Date());
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
+				<a class="widget__link" href="/post/simple_nn/" title="[번역]Fn–An Open Source Serverless Functions Platform">
+							[번역]Fn–An Open Source Serverless Fu ......</a>
+		  </li>
+			<li class="widget__item">
 				<a class="widget__link" href="/post/oracle_blog_fn/" title="[번역]Fn–An Open Source Serverless Functions Platform">
 							[번역]Fn–An Open Source Serverless Fu ......</a>
 		  </li>
@@ -355,10 +359,6 @@ s.setAttribute('data-timestamp', +new Date());
 			<li class="widget__item">
 				<a class="widget__link" href="/post/updating_fork/" title="Fork된 Git 레파지토리에 원본 레파지토리 업데이트">
 							Fork된 Git 레파지토리에 원본 레파지토리 업데이트</a>
-		  </li>
-			<li class="widget__item">
-				<a class="widget__link" href="/post/misunderstanding_on_oracle/" title="&#39;오라클은 Java EE를 떠넘기려한다&#39; 기사의 팩트 체크">
-							&#39;오라클은 Java EE를 떠넘기려한다&#39; 기사의 팩트 체크</a>
 		  </li>
 		</ul>
 	</div>
@@ -425,16 +425,6 @@ s.setAttribute('data-timestamp', +new Date());
 	var navigation = responsiveNav(".menu", {
 		navClass: "menu--collapse",
 	});
-</script>
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-72835175-1', 'auto');
-ga('send', 'pageview');
 </script>
 
 
