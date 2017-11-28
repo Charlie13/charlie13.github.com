@@ -176,7 +176,7 @@
     <item>
       <title>Deep Learning</title>
       <link>/tags/deep-learning/</link>
-      <pubDate>Mon, 18 Sep 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/deep-learning/</guid>
       <description></description>
@@ -185,7 +185,7 @@
     <item>
       <title>Devops</title>
       <link>/tags/devops/</link>
-      <pubDate>Tue, 10 Oct 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 04 Oct 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/devops/</guid>
       <description></description>
@@ -203,7 +203,7 @@
     <item>
       <title>Docker</title>
       <link>/tags/docker/</link>
-      <pubDate>Tue, 10 Oct 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 04 Oct 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/docker/</guid>
       <description></description>
@@ -293,7 +293,7 @@
     <item>
       <title>Java</title>
       <link>/tags/java/</link>
-      <pubDate>Tue, 10 Oct 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 04 Oct 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/java/</guid>
       <description></description>
@@ -489,6 +489,15 @@
     </item>
     
     <item>
+      <title>Notation</title>
+      <link>/tags/notation/</link>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/notation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Numpy</title>
       <link>/tags/numpy/</link>
       <pubDate>Sun, 17 Sep 2017 21:28:14 +0900</pubDate>
@@ -680,7 +689,7 @@
     <item>
       <title>Serverless</title>
       <link>/tags/serverless/</link>
-      <pubDate>Tue, 10 Oct 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 04 Oct 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/serverless/</guid>
       <description></description>
@@ -953,6 +962,15 @@
       <pubDate>Sun, 17 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>표기법</title>
+      <link>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</link>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</guid>
       <description></description>
     </item>
     

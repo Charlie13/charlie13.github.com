@@ -6,19 +6,10 @@
     <description>Recent content in Docker on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 Oct 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>[번역]Fn–An Open Source Serverless Functions Platform</title>
-      <link>/post/simple_nn/</link>
-      <pubDate>Tue, 10 Oct 2017 21:28:14 +0900</pubDate>
-      
-      <guid>/post/simple_nn/</guid>
-      <description>Step0: MNIST 데이터 로딩  Tenforflow &amp;#48260;&amp;#51204; &amp;#54869;&amp;#51064;&amp;#182;    In&amp;nbsp;[1]: import tensorflow tensorflow.__version__     Out[1]: &amp;#39;1.3.0&amp;#39;       MNIST &amp;#45936;&amp;#51060;&amp;#53552; &amp;#47196;&amp;#46377;&amp;#182;    In&amp;nbsp;[2]: from tensorflow.examples.tutorials.mnist import input_data mnist = input_data.read_data_sets(&amp;quot;MNIST_data/&amp;quot;, one_hot=True)      Extracting MNIST_data/train-images-idx3-ubyte.gz Extracting MNIST_data/train-labels-idx1-ubyte.gz Extracting MNIST_data/t10k-images-idx3-ubyte.gz Extracting MNIST_data/t10k-labels-idx1-ubyte.gz        MNIST &amp;#45936;&amp;#51060;&amp;#53552; &amp;#54869;&amp;#51064;&amp;#182;    In&amp;nbsp;[3]: print(&amp;quot;Shape of images for training: {}&amp;quot;.</description>
-    </item>
     
     <item>
       <title>[번역]Fn–An Open Source Serverless Functions Platform</title>

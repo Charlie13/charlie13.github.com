@@ -6,10 +6,20 @@
     <description>Recent content in Deep Learning on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Sep 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Neural Network 표기법(Feat: Anndrew NG)</title>
+      <link>/post/nn_notation/</link>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/post/nn_notation/</guid>
+      <description>그림 1: Neural Network 예제    Neural Network에 대한 Forward Propagation, Backpropagation, predict, Cost Function 등을 정리할 때 뉴럴 네트워크에 대한 구분이 혼동되어 어려움을 겪는 경우가 많습니다. Coursera에서 deeplearning.ai가 진행하는 Neural Networks and Deep Learning 강의에서 Neural Network 표기법 잘 정리하고 있습니다. Andrew NG 교수가 소개한 Neural Network 표기법을 정리합니다. 이 표기법을 사용하면 Neural Network의 여러 수식과 알고리즘을 다룰 때 혼동을 피할 수 있습니다.
+Neural Network의 레이어 표기법 Neural Netowk의 레이어 표기법은 Input Feature를 &amp;ldquo;Layer 0&amp;rdquo;로 표시합니다.</description>
+    </item>
     
     <item>
       <title>Sigmoid 함수 미분 정리</title>
