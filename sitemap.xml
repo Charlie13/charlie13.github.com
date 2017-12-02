@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/backprop_formula/</loc>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/nn_matrix_demension/</loc>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/nn_notation/</loc>
     <lastmod>2017-11-28T21:28:14+09:00</lastmod>
   </url>
@@ -268,6 +278,11 @@
   </url>
   
   <url>
+    <loc>/post/backpropagation/</loc>
+    <lastmod>2014-12-01T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/tomcat_encoding/</loc>
     <lastmod>2011-08-01T10:50:36+09:00</lastmod>
   </url>
@@ -339,6 +354,12 @@
   <url>
     <loc>/tags/axis/</loc>
     <lastmod>2017-09-17T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/backpropagation/</loc>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -427,6 +448,12 @@
   </url>
   
   <url>
+    <loc>/tags/coursera/</loc>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/database/</loc>
     <lastmod>2017-05-10T15:48:24+09:00</lastmod>
     <priority>0</priority>
@@ -440,7 +467,13 @@
   
   <url>
     <loc>/tags/deep-learning/</loc>
-    <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/deeplearning.ai/</loc>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -632,7 +665,7 @@
   
   <url>
     <loc>/categories/machine-learning/</loc>
-    <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -680,7 +713,7 @@
   
   <url>
     <loc>/tags/notation/</loc>
-    <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -800,7 +833,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -998,7 +1031,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1070,7 +1103,7 @@
   
   <url>
     <loc>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</loc>
-    <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <lastmod>2017-11-29T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   

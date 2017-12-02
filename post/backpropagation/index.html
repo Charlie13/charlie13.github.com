@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<META http-equiv="Expires" content="-1">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="No-Cache">
+
+<title>Neural Network의 Backward Propagation의 일반화</title>
+<meta name="description" content="오라클 클라우드 기술 블로그">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="Neural Network의 Backward Propagation의 일반화" />
+<meta property="og:description" content="Neural Network에서 사용되는 표기법을 정리합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/backpropagation/" />
+
+
+
+<meta property="article:published_time" content="2014-12-01T21:28:14&#43;09:00"/>
+<meta property="article:modified_time" content="2014-12-01T21:28:14&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="/css/jupyter.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/minsu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/hybrid.css" type="text/css" media="all" />
+
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
+
+
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="taewan.kim" rel="home">
+						<h1 class="logo__title">taewan.kim</h1>
+						<h2 class="logo__tagline">Taewanme Blog - 우공이산(愚公移山)</h2>
+					</a>
+				</div>
+			</div>
+			<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
+		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >MY SON - MINSU</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		
+		<div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-8469722754608892"
+					 data-ad-slot="5594090168"
+					 data-ad-format="auto"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		  <hr/>
+		</div>
+		
+		<header class="post__header clearfix">
+			<h1 class="post__title">Neural Network의 Backward Propagation의 일반화</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2014-12-01 21:28:14 &#43;0900 KST">December 01, 2014</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/machine-learning" rel="category">Machine Learning</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+
+			<figure class="post__thumbnail">
+				<img src="https://taewanmerepo.github.io/2017/12/backpropatation/post.jpg" alt="Neural Network의 Backward Propagation의 일반화">
+			</figure>
+			
+
+<p>Coursera에서 deeplearning.ai가 진행하는 <strong>Neural Networks and Deep Learning</strong> 강의(4주차: Forward and Backward Propagation)에서 다룬 &ldquo;<strong>Neural Network의 Forward Propagation과 Backward Propagation 일반화</strong>&ldquo;를 정리합니다.</p>
+
+<p>Neural Network에서는 Forward Propagation을 이용하여 입력한 데이터의 추정결과를 계산합니다.
+지도학습에서는 입력 데이터의 추정결과와 해당 데이터의 실제 정답인 레이블(Label)과의 오차를 계산합니다. 이때 &ldquo;<strong>Error Function/Loss Function</strong>&ldquo;을 사용하여 추정결과와 레이블의 오차를 계산합니다. &ldquo;<strong>Error Function/Loss Function</strong>&ldquo;을 각 레이어의 출력값과 Weight, Bias로 미분하여 각 레이어의 Weight 와 Bias가 오차에 미치는 영향도를 계산합니다. 이 결과를 각 레이어의 Weight와 Bias에 반영(업데이트) 합니다. 이렇게 입력 데이터에 대한 추정결과의 오차를 줄이고자 각 레이어의 Weight와 Bias를 업데이트하는 반복적인 작업을 &ldquo;<strong>학습(Training)</strong>&ldquo;이라고 합니다. 이렇게 입력 데이터의 추정결과와 레이블 오차에 각 레이어의 Weight와 Bias가 미치는 영향을 계산하는 일련의 과정을 &ldquo;<strong>Backward Propagation</strong>&ldquo;이라고 합니다.</p>
+
+<p>Error Function에 대한 미분 결과를 바탕으로 각 레이어의 Weight와 Bias가 오차에 미치는 영향을 계산하고 기존 Weight와 Bias 반영하는 학습을 수학적으로 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+&amp; W^{[l]} := W^{[l]} - \alpha \frac{\partial }{\partial W} L(a, y) \\<br />
+&amp; b^{[l]} := b^{[l]} - \alpha \frac{\partial }{\partial b} L(a, y)
+\end{align}
+$$</p>
+</blockquote>
+
+<ul>
+<li>𝜶 : Learning rate</li>
+<li>a : 노드의 Output</li>
+<li>dL/dw[l] : 해당 레이어에서 weight 미분 결과<br /></li>
+<li>dL/db[l] : 해당 레이어에서 bias 미분 결과<br /></li>
+</ul>
+
+<p>Forward Propagation과 Backward Propagation 계산을 일반화하기 위해서 다음과 같은 Neural Network를 예제로 사용합니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/12/backpropatation/nn.jpg" alt="예제 Neural Network: L=4" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 1</strong>:
+        
+        예제 Neural Network: L=4
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>&lt;그림 1&gt; Neural Network은 다음과 같이 정리할 수 있습니다.</p>
+
+<ul>
+<li>Network Layer(L): 4</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>Layer 0</th>
+<th>Layer 1</th>
+<th>Layer 2</th>
+<th>Layer 3</th>
+<th>Labyer 4</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$$Input Data Shape$$</td>
+<td>(3,1)</td>
+<td>(5,1)</td>
+<td>(3,1)</td>
+<td>(2,1)</td>
+<td>(1,1)</td>
+</tr>
+
+<tr>
+<td>$$W^{[l]} Shape$$</td>
+<td>X</td>
+<td>(5,3)</td>
+<td>(3,5)</td>
+<td>(2,3)</td>
+<td>(1,2)</td>
+</tr>
+
+<tr>
+<td>$$b^{[l]} Shape$$</td>
+<td>X</td>
+<td>(5,1)</td>
+<td>(3,1)</td>
+<td>(2,1)</td>
+<td>(1,1)</td>
+</tr>
+
+<tr>
+<td>$$Activation function$$</td>
+<td>X</td>
+<td>relu</td>
+<td>relu</td>
+<td>relu</td>
+<td>sigmoid</td>
+</tr>
+
+<tr>
+<td>$$n^{[l]}$$</td>
+<td>3</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="forward-propagation">Forward Propagation</h2>
+
+<p>Forward Propagation를 표현함에 있어서 사용하는 문자는 다음과 같습니다.</p>
+
+<ul>
+<li>a[l]: 각 레이어의 출력값</li>
+<li>g[l]: 각 레이어의 활성화 함수(Activation Function)</li>
+<li>W[l]: 해당 레이어의 Weight 벡터</li>
+<li>b[l]: 해당 레이어의 bias 컬럼 벡터</li>
+</ul>
+
+<p>각 레이어의 Forward Propagation은 다음과 같이 표현할 수 있습니다.</p>
+
+<h3 id="layer-1의-forward-propagation">Layer 1의 Forward Propagation</h3>
+
+<p>Layer 1의 Forward Propagation은 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+Z^{[1]} &amp; = W^{[1]}X + b^{[1]} \\<br />
+A^{[^1]} &amp; = g^{[1]}(Z^{[1]}) \\<br />
+\end{align}
+$$</p>
+</blockquote>
+
+<p>Input Feature인 x를 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+X = a^{[0]}
+\end{align}
+$$</p>
+</blockquote>
+
+<p>X를 치환하여 Layer 1의 Forward Propagation은 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+Z^{[1]} &amp; = W^{[1]}a^{[0]} + b^{[1]} \\<br />
+A^{[^1]} &amp; = g^{[1]}(Z^{[1]})
+\end{align}
+$$</p>
+</blockquote>
+
+<h3 id="layer-2의-forward-propagation">Layer 2의 Forward Propagation</h3>
+
+<p>Layer 2의 Forward Propagation은 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+Z^{[2]} &amp; = W^{[2]}a^{[1]} + b^{[2]} \\<br />
+A^{[2]} &amp; = g^{[2]}(Z^{[2]})
+\end{align}
+$$</p>
+</blockquote>
+
+<h3 id="layer-3의-forward-propagation">Layer 3의 Forward Propagation</h3>
+
+<p>Layer 3의 Forward Propagation은 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+Z^{[3]} &amp; = W^{[3]}a^{[2]} + b^{[3]} \\<br />
+A^{[3]} &amp; = g^{[3]}(Z^{[3]})
+\end{align}
+$$</p>
+</blockquote>
+
+<h3 id="layer-4의-forward-propagation">Layer 4의 Forward Propagation</h3>
+
+<p>Layer 4의 Forward Propagation은 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+Z^{[4]} &amp; = W^{[4]}a^{[3]} + b^{[4]} \\<br />
+A^{[^4]} &amp; = g^{[4]}(Z^{[4]})
+\end{align}
+$$</p>
+</blockquote>
+
+<h2 id="forward-propagation-일반화">Forward Propagation 일반화</h2>
+
+<p>Layer 1부터 Layer 4의 Forward Propagation은 다음과 같이 일반화 할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+a^{[0]} &amp; = Input Feature X \\<br />
+Z^{[l]} &amp; = W^{[l]}a^{[l-1]} + b^{[l]} \\<br />
+A^{[l]} &amp; = g^{[l]}(Z^{[l]})
+\end{align}
+$$</p>
+</blockquote>
+
+<h2 id="loss-function">Loss Function</h2>
+
+<p>마지막 레이어의 activation function이 sigmoid이기 때문에 출력값(a[4])은 확률의 형태(0&lt;a[4]&lt;1)입니다.<br />
+마지막 레이어의 Forward Propagation은 다음과 같이 표현할 수 있습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+L &amp; = 4 \\<br />
+Z^{[4]} &amp; = W^{[4]}a^{[3]} + b^{[4]} \\<br />
+A^{[^4]} &amp; = g^{[4]}(Z^{[4]}) \\<br />
+\hat{y} &amp; =  A^{[L]} = g^{[L]}(Z^{[L]}) \\<br />
+\end{align}
+$$</p>
+</blockquote>
+
+<p>마지막 레이어의 활성화 함수가 sigmoid로 &lt;그림 1&gt; Neural Network은 Binary Classification로 예상됩니다. 따라서 이 네트어크의 Loss Function으로는 Cross Entropy를 사용합니다. Cross Entropy는 다음과 같이 정의 됩니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+L(\hat{y}, y) &amp; =  -(ylog(\hat{y}) + (1-y)log(1-\hat{y}))
+\end{align}
+$$</p>
+</blockquote>
+
+<h2 id="backward-propagation">Backward Propagation</h2>
+
+<p>Loss Function을 Neural Network의 출력값(a[L])으로 미분하면 다음과 같습니다. 여기서 a[4], a[L], y_hat은 모두 같은 표현입니다. 일반적으로 Neural Network의 최종 출력 값을 y_hat으로 표현합니다. a[L]는 마지막 레이어의 활성함수 출력값입니다. 본문에서 예제로 사용하는 Neural Network은 4개 레이어로 구성되어있기 때문에 a[4]와 a[L], y_hat은 모두 마지막 레이어의 출력을 의미합니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+\frac{\partial L(a^{[L]} , y)}{\partial a^{[L]} } &amp; = \frac{-y}{a^{[L]}} - \frac{1-y}{1-a^{[L]} }(1-a^{[L]})&rsquo; \\<br />
+&amp; = \frac{-y}{a^{[L]} } - \frac{1-y}{1-a^{[L]}}(-1) \\<br />
+&amp; = \frac{-y}{a^{[L]} } + \frac{1-y}{1-a^{[L]} } \\<br />
+da^{[L]} &amp; = \frac{-y}{a^{[L]} } + \frac{1-y}{1-a^{[L]} }
+\end{align}
+$$</p>
+</blockquote>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/12/backpropatation/backprop01.jpg" alt="Backward Propagation의 Input: Layer 4의 입력" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 2</strong>:
+        
+        Backward Propagation의 Input: Layer 4의 입력
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>Backward Propagation에서 첫 번째 Layer 4의 입력은 da[4]입니다. da[4]의 입력을 편미분하여 dw[4]와 db[4]를 구할 수 있습니다. dw[4]와 db[4]를 구하기 위한 사전 준비는 다음과 같습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+a^{[^l]} &amp; = g^{[l]}(Z^{[l]}) \\<br />
+z^{[l]} &amp; = W^{[l]}a^{[l-1]} + b^{[l]} \\<br />
+\frac{\partial a^{[^l]}}{\partial z^{[l]}} &amp; = \frac{\partial}{\partial z}g^{[l]}(z^{[l]}) = g^{[l]&rsquo;}(z^{[l]}) \\<br />
+\frac{\partial z^{[^l]}}{\partial W^{[l]}} &amp; = \frac{\partial}{\partial W^{[l]}}(W^{[l]}a^{[l-1]} + b^{[l]}) = a^{[l-1]} \\<br />
+\frac{\partial z^{[^l]}}{\partial b^{[l]}} &amp; = \frac{\partial}{\partial b^{[l]}}(W^{[l]}a^{[l-1]} + b^{[l]}) = 1
+\end{align}
+$$</p>
+</blockquote>
+
+<p>dw[4]와 db[4]는 다음과 같습니다.</p>
+
+<blockquote>
+<p>$$
+\begin{align}
+\frac{\partial L(a^{[4]}, y)}{\partial z^{[4]}} &amp; =  \frac{\partial L(a^{[4]}, y)}{\partial a^{[4]}}\frac{\partial a^{[4]}}{\partial z^{[4]}} \\<br />
+&amp; = da^{[4]} * g^{[4]&rsquo;}(z^{[4]}) \\<br />
+dz^{[4]} &amp; = da^{[4]} * g^{[4]&rsquo;}(z^{[4]}) \\<br />
+\frac{\partial L(a^{[4]}, y)}{\partial W^{[4]}} &amp; = \frac{\partial L(a^{[4]}, y)}{\partial a^{[4]}}\frac{\partial a^{[4]}}{\partial z^{[4]}}\frac{\partial z^{[4]}}{\partial W^{[4]}} \\<br />
+&amp; = da^{[4]} * g^{[4]&rsquo;}(z^{[4]}) * a^{[3]} \\<br />
+&amp; = dz^{[4]} * a^{[3]} \\<br />
+\frac{\partial L(a^{[4]}, y)}{\partial b^{[4]}} &amp; = \frac{\partial L(a^{[4]}, y)}{\partial a^{[4]}}\frac{\partial a^{[4]}}{\partial z^{[4]}}\frac{\partial z^{[4]}}{\partial b^{[4]}} \\<br />
+&amp; = da^{[4]} * g^{[4]&rsquo;}(z^{[4]}) \\<br />
+&amp; = dz^{[4]}
+\end{align}
+$$</p>
+</blockquote>
+
+<h4 id="ㅇㅇㅇ">ㅇㅇㅇ</h4>
+
+<blockquote>
+<p>$$
+\begin{align}
+&amp; dZ^{[L]} = A^{[L]} - Y \\<br />
+&amp; dW^{[L]} = \frac{1}{m}dZ^{[L]}A^{[L]^T} \\<br />
+&amp; db^{[L]} = \frac{1}{m}np.sum(dZ^{[L]}, axis=1, keepdims=True) \\<br />
+&amp; dZ^{[L-1]} = dW^{[L]^T}dZ^{[L]}g&rsquo;^{[L]}(Z^{[L]}) \\<br />
+&amp; &hellip;. \\<br />
+&amp; dZ^{[1]} = dW^{[L]^T}dZ^{[2]}g&rsquo;^{[1]}(Z^{[1]}) \\<br />
+&amp; dW^{[1]} = \frac{1}{m}dZ^{[1]}A^{[1]^T} \\<br />
+&amp; db^{[1]} = \frac{1}{m}np.sum(dZ^{[1]}, axis=1, keepdims=True)<br />
+\end{align}
+$$</p>
+</blockquote>
+
+<h2 id="참고자료">참고자료</h2>
+
+<ul>
+<li><a href="https://www.coursera.org/learn/neural-networks-deep-learning/lecture/Rz47X/getting-your-matrix-dimensions-right">Coursera: Neural Networks and Deep Learning by deeplearning.ai, 4Week: Deep Neural Networks - Getting your matrix dimensions right</a></li>
+</ul>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/deep-learning/" rel="tag">deep learning</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/backpropagation/" rel="tag">backpropagation</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/coursera/" rel="tag">Coursera</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/deeplearning.ai/" rel="tag">deeplearning.ai</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="김태완 avatar" src="/img/author/taewan1.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<div class="authorbox__description">
+		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다.
+	</div>
+	<div class="authorbox__description">
+		E-mail: taewanme@gmail.com
+	</div>
+</div>
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/tomcat_encoding/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Tomcat 5.0 ~ 7.0 한글 인코딩 설정</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/log4j_perf/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Log4J 로깅 비용 계산</p></a>
+	</div>
+</nav>
+
+	
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://taewankim.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+	<div>
+		<hr />
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-8469722754608892"
+				 data-ad-slot="5594090168"
+				 data-ad-format="auto"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="taewan.kim" />
+	</form>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">ToC (목차)</h4>
+	<div class="widget__content">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#forward-propagation">Forward Propagation</a>
+<ul>
+<li><a href="#layer-1의-forward-propagation">Layer 1의 Forward Propagation</a></li>
+<li><a href="#layer-2의-forward-propagation">Layer 2의 Forward Propagation</a></li>
+<li><a href="#layer-3의-forward-propagation">Layer 3의 Forward Propagation</a></li>
+<li><a href="#layer-4의-forward-propagation">Layer 4의 Forward Propagation</a></li>
+</ul></li>
+<li><a href="#forward-propagation-일반화">Forward Propagation 일반화</a></li>
+<li><a href="#loss-function">Loss Function</a></li>
+<li><a href="#backward-propagation">Backward Propagation</a>
+<ul>
+<li>
+<ul>
+<li><a href="#ㅇㅇㅇ">ㅇㅇㅇ</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#참고자료">참고자료</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">최신글</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/backprop_formula/" title="신경망 Weight&amp;Bias Shape의 일반화">
+							신경망 Weight&amp;Bias Shape의 일반화</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/nn_matrix_demension/" title="신경망 Weight&amp;Bias Shape의 일반화">
+							신경망 Weight&amp;Bias Shape의 일반화</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/nn_notation/" title="Neural Network 표기법(Feat: Andrew NG)">
+							Neural Network 표기법(Feat: Andrew NG)</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_blog_fn/" title="[번역]Fn–An Open Source Serverless Functions Platform">
+							[번역]Fn–An Open Source Serverless Fu ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/terraform_jupyter_installer/" title="Terraform Jupyter Installer: Machine Learning 환경 프로비저닝 ">
+							Terraform Jupyter Installer: Machin ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_cncf/" title="[번역]오라클의 CNCF(Cloud Native Computing Foundation) 가입 의미">
+							[번역]오라클의 CNCF(Cloud Native Computin ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/stroage_cs_url/" title="Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경">
+							Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/sigmoid_diff/" title="Sigmoid 함수 미분 정리">
+							Sigmoid 함수 미분 정리</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/numpy_sum_axis/" title="Numpy에서 np.sum 함수의 axis 이해">
+							Numpy에서 np.sum 함수의 axis 이해</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/python_virtual_env/" title="파이썬 가상 개발 환경 구성: pyenv, virtualenv, autoenv, pip">
+							파이썬 가상 개발 환경 구성: pyenv, virtualenv, ......</a>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">카테고리</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blogs.oracle.com">Blogs.Oracle.Com</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/language">Language</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/life-story-think">Life-Story-Think</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/machine-learning">Machine-Learning</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/minsu">Minsu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle">Oracle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud">Oracle-Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-big-data">Oracle-Cloud-Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-database">Oracle-Cloud-Database</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-iaas">Oracle-Cloud-Iaas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-event">Tech-Event</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-tip">Tech-Tip</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/youtube">Youtube</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%ec%a7%9c%ed%88%ac%eb%a6%ac">짜투리</a></li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+	<h4 class="widget__title">SNS(Social Network Service)</h4>
+	<div class="widget__content">
+		<a href="https://github.com/oracloud-kr-team" target="_blank" title="github"><img src="/img/icon/github.png" width="50px" height="50px"/></a>
+		<a href="https://www.slideshare.net/ssusercda07e" target="_blank" title="slideshare"><img src="/img/icon/slideshare.png" width="50px" height="50px"/></a>
+		<a href="https://www.youtube.com/channel/UCboJr3TLlqeDqpBURRdb_lg" target="_blank" title="youtube"><img src="/img/icon/youtube.png" width="50px" height="50px"/></a>
+		<a href="mailto:oracloud.kr@gmail.com" title="email"><img src="/img/icon/email.png" width="50px" height="50px"/></a>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">관심 사이트</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="http://www.oracloud.kr/">
+				Oracle Cloud 기술 블로그</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72835175-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+

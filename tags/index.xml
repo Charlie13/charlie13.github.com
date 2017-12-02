@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>Backpropagation</title>
+      <link>/tags/backpropagation/</link>
+      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/backpropagation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bdcsce</title>
       <link>/tags/bdcsce/</link>
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
@@ -156,6 +165,15 @@
     </item>
     
     <item>
+      <title>Coursera</title>
+      <link>/tags/coursera/</link>
+      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/coursera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Database</title>
       <link>/tags/database/</link>
       <pubDate>Wed, 10 May 2017 15:48:24 +0900</pubDate>
@@ -176,9 +194,18 @@
     <item>
       <title>Deep Learning</title>
       <link>/tags/deep-learning/</link>
-      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deeplearning.Ai</title>
+      <link>/tags/deeplearning.ai/</link>
+      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/deeplearning.ai/</guid>
       <description></description>
     </item>
     
@@ -491,7 +518,7 @@
     <item>
       <title>Notation</title>
       <link>/tags/notation/</link>
-      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/notation/</guid>
       <description></description>
@@ -968,7 +995,7 @@
     <item>
       <title>표기법</title>
       <link>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</link>
-      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</guid>
       <description></description>
