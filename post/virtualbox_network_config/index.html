@@ -42,6 +42,23 @@
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        //inlineMath: [ ['$', '$'], ["\(", "\)"] ],
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+      //,
+      //displayAlign: "left",
+      //displayIndent: "2em"
+    });
+</script>
+
 <link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
 
 
@@ -323,12 +340,8 @@ s.setAttribute('data-timestamp', +new Date());
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/post/backprop_formula/" title="신경망 Weight&amp;Bias Shape의 일반화">
-							신경망 Weight&amp;Bias Shape의 일반화</a>
-		  </li>
-			<li class="widget__item">
-				<a class="widget__link" href="/post/nn_matrix_demension/" title="신경망 Weight&amp;Bias Shape의 일반화">
-							신경망 Weight&amp;Bias Shape의 일반화</a>
+				<a class="widget__link" href="/post/error_in_hidden/" title="Hidden Layer의 오차 계산하기">
+							Hidden Layer의 오차 계산하기</a>
 		  </li>
 			<li class="widget__item">
 				<a class="widget__link" href="/post/nn_notation/" title="Neural Network 표기법(Feat: Andrew NG)">
@@ -361,6 +374,10 @@ s.setAttribute('data-timestamp', +new Date());
 			<li class="widget__item">
 				<a class="widget__link" href="/post/python_virtual_env/" title="파이썬 가상 개발 환경 구성: pyenv, virtualenv, autoenv, pip">
 							파이썬 가상 개발 환경 구성: pyenv, virtualenv, ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_code_iac_youtube/" title="2017 Oracle Code in Seoul: IaC 발표 동영상">
+							2017 Oracle Code in Seoul: IaC 발표 동영상</a>
 		  </li>
 		</ul>
 	</div>

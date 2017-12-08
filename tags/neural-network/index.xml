@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neural Network on taewan.kim</title>
+    <link>/tags/neural-network/</link>
+    <description>Recent content in Neural Network on taewan.kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Dec 2017 21:28:14 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/neural-network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hidden Layer의 오차 계산하기</title>
+      <link>/post/error_in_hidden/</link>
+      <pubDate>Fri, 08 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/post/error_in_hidden/</guid>
+      <description>그림 1: Neural Network 예제: L=2, 2 Layer Neural Network     그림 2: Input Feature를 이용한 Forward Propagation     그림 3: Layer 2에서 Forward Propagation     그림 4: Layer 2(출력층)의 출력을 이용한 오차 계산     그림 5: 출력층의 첫 번째 노드의 오차에 영향을 미치는 요소     그림 6: 출력층의 두 번째 노드의 오차에 영향을 미치는 요소     그림 7: Layer 2(출력층) 첫번째 노드 오차를 Layer 1에 분배     그림 8: Lyaer 1의 첫번째 노드 오차 계산하기     그림 9: Layer 1의 오차 계산 행렬식     그림 10: Layer 1의 오차 계산 단순화하기     그림 11: Layer 1의 오차 계산 결과    은닉층 오차 계산식 일반화 참고자료  Coursera: Neural Networks and Deep Learning by deeplearning.</description>
+    </item>
+    
+  </channel>
+</rss>

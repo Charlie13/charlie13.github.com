@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths on taewan.kim</title>
+    <link>/math/</link>
+    <description>Recent content in Maths on taewan.kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Dec 2017 10:50:36 +0900</lastBuildDate>
+    
+	<atom:link href="/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>파이썬 설치</title>
+      <link>/math/gradient_of_function/</link>
+      <pubDate>Tue, 05 Dec 2017 10:50:36 +0900</pubDate>
+      
+      <guid>/math/gradient_of_function/</guid>
+      <description>참고자료 https://ko.wikipedia.org/wiki/%EA%B8%B0%EC%9A%B8%EA%B8%B0_(%EB%B2%A1%ED%84%B0)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -50,7 +50,7 @@
     <item>
       <title>Backpropagation</title>
       <link>/tags/backpropagation/</link>
-      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 08 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/backpropagation/</guid>
       <description></description>
@@ -167,7 +167,7 @@
     <item>
       <title>Coursera</title>
       <link>/tags/coursera/</link>
-      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/coursera/</guid>
       <description></description>
@@ -194,7 +194,7 @@
     <item>
       <title>Deep Learning</title>
       <link>/tags/deep-learning/</link>
-      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 08 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/deep-learning/</guid>
       <description></description>
@@ -203,7 +203,7 @@
     <item>
       <title>Deeplearning.Ai</title>
       <link>/tags/deeplearning.ai/</link>
-      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/deeplearning.ai/</guid>
       <description></description>
@@ -242,6 +242,15 @@
       <pubDate>Mon, 01 Aug 2011 10:50:36 +0900</pubDate>
       
       <guid>/tags/encoding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Error</title>
+      <link>/tags/error/</link>
+      <pubDate>Fri, 08 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/error/</guid>
       <description></description>
     </item>
     
@@ -498,6 +507,15 @@
     </item>
     
     <item>
+      <title>Neural Network</title>
+      <link>/tags/neural-network/</link>
+      <pubDate>Fri, 08 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/neural-network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>News</title>
       <link>/tags/news/</link>
       <pubDate>Sun, 17 Apr 2011 00:17:44 +0900</pubDate>
@@ -518,7 +536,7 @@
     <item>
       <title>Notation</title>
       <link>/tags/notation/</link>
-      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/notation/</guid>
       <description></description>
@@ -995,7 +1013,7 @@
     <item>
       <title>표기법</title>
       <link>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</link>
-      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</guid>
       <description></description>

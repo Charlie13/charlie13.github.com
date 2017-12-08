@@ -6,23 +6,10 @@
     <description>Recent content in 표기법 on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Nov 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>신경망 Weight&amp;Bias Shape의 일반화</title>
-      <link>/post/nn_matrix_demension/</link>
-      <pubDate>Wed, 29 Nov 2017 21:28:14 +0900</pubDate>
-      
-      <guid>/post/nn_matrix_demension/</guid>
-      <description>Coursera에서 deeplearning.ai가 진행하는 Neural Networks and Deep Learning 강의(4주차: Getting your matrix dimensions)에서 다룬 &amp;ldquo;Neural Network의 Weight와 Bias Shape 계산 일반화&amp;ldquo;를 정리합니다.
-layer 1의 연산 Input Feature로 단일 데이터(Single Instance)로 데이터가 유일될 경우 Layer 1에서는 다음과 같은 연산이 이루어 집니다.
- $$ \begin{align} Z^{[1]} &amp;amp; = W^{[1]}X + b^{[1]} \\
-A^{[^1]} &amp;amp; = g^{[1]}(Z^{[1]}) \end{align} $$
- Neural Network의 레이어 표기법 Neural Netowk의 레이어 표기법은 Input Feature를 &amp;ldquo;Layer 0&amp;rdquo;로 표시합니다.</description>
-    </item>
     
     <item>
       <title>Neural Network 표기법(Feat: Andrew NG)</title>

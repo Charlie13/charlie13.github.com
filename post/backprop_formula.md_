@@ -1,0 +1,62 @@
++++
+date = "2017-11-29T21:28:14+09:00"
+description = "Neural Network에서 사용되는 표기법을 정리합니다."
+title = "신경망 Weight&Bias Shape의 일반화"
+thumbnailInList = "https://taewanmerepo.github.io/2017/11/nn-notation/post.jpg"
+thumbnailInPost = "https://taewanmerepo.github.io/2017/11/nn-notation/nn.jpg"
+tags = ["deep learning", "backpropagation", "Coursera", "deeplearning.ai"]
+categories = ["Machine Learning"]
+author = "taewan.kim"
+language = ""  
+jupyter = "false"
++++
+
+Coursera에서 deeplearning.ai가 진행하는 __Neural Networks and Deep Learning__ 강의(4주차: Getting your matrix dimensions)에서 다룬 "__Neural Network의 Weight와 Bias Shape 계산 일반화__"를 정리합니다.
+
+
+
+## Forward Propagation
+
+L개의 레이어로 구성된 신경망의 Forward Propagation은 다음과 같이 유도할 수 있습니다.
+
+>$$
+\begin{align}
+Z^{\[1\]} & = W^{\[1\]}X + b^{\[2\]} \\\\\
+A^{[^1]} & = g^{[1]}(Z^{\[1\]}) \\\\\
+Z^{\[2\]} & = W^{\[2\]}A^{\[1\]}X + b^{\[2\]} \\\\\
+A^{[^2]} & = g^{[2]}(Z^{\[2\]}) \\\\\
+& .....  \\\\\
+Z^{\[l\]} & = W^{\[l\]}A^{\[l-1\]}X + b^{\[2\]}    \\\\\
+A^{[^l]} & = g^{[l]}(Z^{\[l\]})
+\end{align}
+$$
+
+Forward Propagation의 식은 다음과 같이 일반화 될 수 있습니다.
+
+>$$
+\begin{align}
+X & = A^{\[0\]} \\\\\
+Z^{\[l\]} & = W^{\[l\]}A^{\[l-1\]}X + b^{\[2\]}    \\\\\
+A^{[^l]} & = g^{[l]}(Z^{\[l\]})
+\end{align}
+$$
+
+## Backward Propagation
+
+Cost Function의 미분과 Backpropagation을 통해서 각 레이어의 Weight 미분값과 Bias 미분값을 구할 수 있습니다. Backward Propagation을 통해서 레이어별 Weight 미분값과 Bias 미분값을 구하는 일반화 공식은 다음과 같습니다.  
+
+>$$
+\begin{align}
+& dZ^{\[L\]} = A^{\[L\]} - Y \\\\\
+& dW^{\[L\]} = \frac{1}{m}dZ^{\[L\]}A^{\[L\]^T} \\\\\
+& db^{\[L\]} = \frac{1}{m}np.sum(dZ^{\[L\]}, axis=1, keepdims=True) \\\\\
+& dZ^{\[L-1\]} = dW^{\[L\]^T}dZ^{\[L\]}g'^{\[L\]}(Z^{\[L\]}) \\\\\
+& .... \\\\\
+& dZ^{\[1\]} = dW^{\[L\]^T}dZ^{\[2\]}g'^{\[1\]}(Z^{\[1\]}) \\\\\
+& dW^{\[1\]} = \frac{1}{m}dZ^{\[1\]}A^{\[1\]^T} \\\\\
+& db^{\[1\]} = \frac{1}{m}np.sum(dZ^{\[1\]}, axis=1, keepdims=True)  
+\end{align}
+$$
+
+## 참고자료
+- [Coursera: Neural Networks and Deep Learning by deeplearning.ai, 4Week: Deep Neural Networks - Getting your matrix dimensions right](https://www.coursera.org/learn/neural-networks-deep-learning/lecture/Rz47X/getting-your-matrix-dimensions-right)
