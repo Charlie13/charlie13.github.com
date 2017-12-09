@@ -105,13 +105,13 @@
 		<article class="loop__item post clearfix">
 			<figure class="loop__thumbnail">
 				<a href="/post/error_in_hidden/">
-					<img src="https://taewanmerepo.github.io/2017/12/computingerror/list.jpg" alt="Hidden Layer의 오차 계산하기" />
+					<img src="https://taewanmerepo.github.io/2017/12/computingerror/list.jpg" alt="Hidden Layer의 오차 계산" />
 				</a>
 			</figure>
 			<div class="loop__content clearfix">
 				<header class="loop__header">
 					<h3 class="loop__title post__title ">
-						<a href="/post/error_in_hidden/" rel="bookmark">Hidden Layer의 오차 계산하기</a>
+						<a href="/post/error_in_hidden/" rel="bookmark">Hidden Layer의 오차 계산</a>
 					</h3>
 					<div class="loop__meta meta">
 						<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
@@ -119,7 +119,8 @@
 					</div>
 				</header>
 				<div class="loop__excerpt">
-									  그림 1: Neural Network 예제: L=2, 2 Layer Neural Network     그림 2: Input Feature를 이용한 Forward Propagation     그림 3: Layer 2에서 Forward Propagation     그림 4: Layer 2(출력층)의 출력을 이용한 오차 계산     그림 5: 출력층의 첫 번째 노드의 오차에 영향을 미치는 요소     그림 6: 출력층의 두 번째 노드의 오차에 영향을 ......
+									  Neural Network에서는 Forward Propagation의 결과로 계산된 출력층의 출력과 해당 데이터의 레이블을의 차이를 계산하여 오차(손실, Error/Loss)를 계산합니다. 그리고 이 오차가 최소화 되도록 Hidden Layer의 Weight와 Bias를 업데이트 한 후, 네트워크에 데이터를 지속적으로 흘려보내고, 오차를 계산한 후 Weight와 Bias를 수정하는 작업을 반복합니다.
+출력층의 출력과 레이블의 차이를 계산하고 은 ......
 				</div>
 				<div class="loop__excerpt">
 						<a class="label" href="/tags/deep-learning/" rel="tag">deep learning</a></li>
@@ -424,8 +425,8 @@
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/post/error_in_hidden/" title="Hidden Layer의 오차 계산하기">
-							Hidden Layer의 오차 계산하기</a>
+				<a class="widget__link" href="/post/error_in_hidden/" title="Hidden Layer의 오차 계산">
+							Hidden Layer의 오차 계산</a>
 		  </li>
 			<li class="widget__item">
 				<a class="widget__link" href="/post/nn_notation/" title="Neural Network 표기법(Feat: Andrew NG)">
