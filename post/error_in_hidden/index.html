@@ -116,7 +116,7 @@
 		<div class="post__content clearfix">
 			
 
-<p>Neural Network에서는 Forward Propagation의 결과로 계산된 Output Layer 출력과 해당 입력 데이터 레이블의 차이를 계산하여 오차(손실, Error/Loss)를 계산합니다. 그리고 이 오차가 최소화되도록 Hidden Layer의 Weight(가중치)와 Bias(편향)를 업데이트합니다. 이렇게 Neural Network에 데이터를 지속해서 흘려보내고, 오차를 계산한 후 Weight와 Bias를 수정하는 작업을 반복하는 작업을 반복합니다.</p>
+<p>Neural Network에서는 Forward Propagation 결과로 계산된 Output Layer 출력과 해당 입력 데이터 레이블의 차이를 계산하여 오차(손실, Error/Loss)를 계산합니다. 그리고 이 오차 최소화를 목표로 Hidden Layer들의 Weight(가중치)와 Bias(편향)를 업데이트합니다. 이렇게 딥러닝에서는 Neural Network에 데이터를 지속해서 흘려보내고, 오차를 계산한 후 Weight와 Bias를 수정하는 작업을 반복합니다.</p>
 
 <p>Output Layer 출력과 레이블의 차이를 계산하고 은닉층의 Weight와 Bias를 업데이트하는 일련의 과정을 &ldquo;<strong>역전파</strong>&rdquo; 혹은 &ldquo;<strong>Backpropagation</strong>&ldquo;이라고 합니다. &ldquo;<strong>Backpropagation</strong>&ldquo;에서는 출력층의 오차로부터 은닉층의 노드별 오차를 계산하는 것이 핵심입니다. 은닉층의 노드별 오차를 알아야 은닉층의 Weight와 Bias를 수정할 수 있습니다.</p>
 
@@ -283,7 +283,7 @@ Input Sum과 활성화 함수 적용으로 구성됩니다.</p>
 
 
 
-<p>&ldquo;<strong>Layer 1</strong>&ldquo;에서는 다음과 같은 수식이 적용됩니다.</p>
+<p>&ldquo;<strong>Layer 1</strong>&ldquo;에서는 다음과 같은 수식이 수행됩니다.</p>
 
 <blockquote>
 <ul>
@@ -317,7 +317,7 @@ $$</li>
 <h3 id="layer-2-의-forward-propagation">&ldquo;<strong>Layer 2</strong>&ldquo;의 Forward Propagation</h3>
 
 <p>&lt;그림 3&gt;은 &ldquo;<strong>Layer 2</strong>&ldquo;의 Forward Propagation을 설명합니다.
-&ldquo;<strong>Layer 2</strong>&ldquo;에서 Forward Propagation은 Input Sum과 활성화 함수 적용, 출력에 대한 오차 계산으로 구성됩니다.</p>
+&ldquo;<strong>Layer 2</strong>&ldquo;에서 Forward Propagation은 Input Sum과 활성화 함수 적용, 출력에 대한 오차 계산을 수행합니다.</p>
 
 
 <blockquote id="img">
@@ -341,7 +341,7 @@ $$</li>
 
 
 
-<p>&ldquo;<strong>Layer 2</strong>&ldquo;에서는 Input sum과 활성화 함수는 다음과 같은 적용 됩니다.</p>
+<p>&ldquo;<strong>Layer 2</strong>&ldquo;에서 Input sum과 활성화 함수 적용 시 다음과 같은 수식이 적용됩니다.</p>
 
 <blockquote>
 <ul>
@@ -372,7 +372,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>출력층인 &ldquo;<strong>Layer 2</strong>&ldquo;의 출력으로부터 오차는 &lt;그림 4&gt;와 같이 계산됩니다.</p>
+<p>출력층인 &ldquo;<strong>Layer 2</strong>&rdquo; 출력으로부터 오차는 &lt;그림 4&gt;와 같이 계산됩니다.</p>
 
 
 <blockquote id="img">
@@ -396,7 +396,7 @@ $$</li>
 
 
 
-<p>Y는 Input Feature에 대한 실제 값인 레이블 행렬입니다.</p>
+<p>&ldquo;<strong>Y</strong>&ldquo;는 Input Feature의 실제 값인 레이블 행렬입니다.</p>
 
 <blockquote>
 <ul>
@@ -424,7 +424,7 @@ $$</li>
 <h3 id="오차에-영향을-주는-인자">오차에 영향을 주는 인자</h3>
 
 <p>지금까지 Neural Network를 Forward Propagation을 진행하고 출력층의 결과로부터 오차를 계산하였습니다.
-이제 이 오차를 이용하여 출력층의 $\frac{dc}{dW^{[2]}}$와 $\frac{dc}{db^{[2]}}$를 계산하고 $W^{[2]}$와 $b^{[2]}$를 업데이트할 수 있습니다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+이 오차를 이용하면 출력층의 $\frac{dc}{dW^{[2]}}$와 $\frac{dc}{db^{[2]}}$를 계산하고 $W^{[2]}$와 $b^{[2]}$를 업데이트할 수 있습니다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
 
 <p>우선 $E^2$의 첫 번째 노드의 오차 $e^{[2]}_1$에 영향을 미치는 요소는 무엇일까요?
 &lt;그림 5&gt;는 $e^{[2]}_1$에 영향을 미치는 요소를 설명합니다.</p>
@@ -451,7 +451,7 @@ $$</li>
 
 
 
-<p>$e^{[2]}_1$에 영향을 미치는 인지는 &ldquo;<strong>Layer 1</strong>&ldquo;의 출력 값인 $a^{[1]}_1$과 $a^{[1]}_2$이며, 이 두 출력값과 Input Sum(Z)에서 연결되는 $w^{[2]}11$와 $w^{[2]}12$입니다. 이 4개의 인자로 부터 Input Sum을 계산하고 Input Sum의 결과인 $Z^2$를 활성화 함수에 적용한 출력값으로부터 오차를 계산합니다. 따라서 오차에 영향을 미치는 핵심 인자는 2개의 출력과 2개의 Weight입니다.</p>
+<p>$e^{[2]}_1$에 영향을 미치는 인지는 &ldquo;<strong>Layer 1</strong>&ldquo;의 출력 값인 $a^{[1]}_1$과 $a^{[1]}_2$이며, 이 두 출력의 Input Sum(Z)에 이용되는 $w^{[2]}11$와 $w^{[2]}12$입니다. 이 4개의 인자로 부터 Input Sum을 계산합니다. 마지막으로 Input Sum의 결과인 $Z^2$를 활성화 함수에 적용한 출력값으로부터 오차를 계산합니다. 따라서 오차에 영향을 미치는 핵심 인자는 2개의 출력과 2개의 Weight입니다.</p>
 
 
 <blockquote id="img">
@@ -478,24 +478,25 @@ $$</li>
 <p>그렇다면 $e^{[2]}_2$에 영향을 미치는 요소를 무엇일까요? &lt;그림 6&gt;에서 확인할 수 있는 것처럼,
 $e^{[2]}_2$에 영향을 미치는 인지는 &ldquo;<strong>Layer 1</strong>&ldquo;의 출력 값인 $a^{[1]}_1$과 $a^{[1]}_2$, $w^{[2]}21$와 $w^{[2]}22$입니다.</p>
 
-<p>결과적으로 오차에 영향을 미치는 인자는 이전 레이어 출력 값과 해당 노드에 할당된 Weight 값입니다. Fully Connected Neural Network<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>에서 앞 레이어의 출력은 다음 레이어의 모든 노드에 같이 사용됩니다. 노드별로 달라지는 인자는 다른 노드에 지정된 Weight입니다. 따라서 오차에 영향을 미치는 핵심 인자는 해당 노드에 지정된 Weight값입니다. 노드에 지정된 Weight값은 이전 노드의 출력값에 가중치를 적용하여 노드별 Input Sum에 영향을 미치는 요소입니다.</p>
+<p>결과적으로 오차에 영향을 미치는 인자는 이전 레이어 출력 값과 해당 노드에 할당된 Weight 값입니다. Fully Connected Neural Network<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>에서 앞 레이어의 출력은 다음 레이어의 모든 노드에 같이 사용됩니다. 노드별로 달라지는 인자는 노드 별로 지정된 Weight입니다. 결과적으로 오차에 영향을 미치는 핵심 인자는 해당 노드에 지정된 Weight 입니다. 노드에 지정된 Weight는 이전 레이어 노드 출력에 적용될 가중치입니다.</p>
 
 <h2 id="hidden-layer의-오차-계산">Hidden Layer의 오차 계산</h2>
 
-<p>출력층에서는 출력값과 출력 노드의 결과를 레이블로 갖고 있기 때문에 오차를 계산할 수 있습니다.
+<p>출력층에서는 출력값과 출력 노드의 결과를 레이블로 갖고 있기 때문에 오차를 바로 계산할 수 있습니다.
 그러나 Hidden Layer에는 레이블이 없습니다. 그렇다면 Hidden Layer의 오차는 어떻게 계산할까요?</p>
 
 <p>다음과 같은 논리를 생각해 볼 수 있습니다.</p>
 
 <ul>
-<li>최종 출력층에서 계산된 오차는 이전 레이어의 영향을 받은 결과이다.</li>
-<li>최종 출력층의 오차는 이전 레이어의 영향도로 이전 레이어에 재분배할 수 있다.</li>
-<li>오차의 영향도라는 관점에서 출력층 오차 총합과 이전 레이어의 각 노드 오차 총합은 같다.</li>
+<li>출력층에서 계산된 오차는 이전 레이어의 영향을 받은 결과이다.</li>
+<li>출력층의 오차는 이전 레이어 출력으로 부터 영향을 받고 있으며, 그 영향도를 현재 오차에 반영하여 이전 레이어에 오차를 분배할 수 있다.</li>
+<li>오차의 영향도 관점에서 출력층의 각 노드 오차 총합과 이전 레이어의 각 노드 오차 총합은 같다.</li>
+<li>출력층을 제외한 모든 은닉층은 다음 레이어의 오차와 가중치 비율로 부터 현재 레이어의 오차를 계산할 수 있다.</li>
 </ul>
 
-<p>결과적으로 출력층의 오차를 비율로 이전 레이어에 순차적으로 재분배할 수 있고, 이 방식을 통해서 전체 은닉층에
-오차를 재 구성하고 학습<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>을 진행할 수 있습니다.
-Hidden Layer의 오차는 &lt;그림 7&gt;에서 설명하는 오차 재분배 방식으로 유추할 수 있습니다.</p>
+<p>결과적으로 출력층의 오차를 비율로 이전 레이어에 순차적으로 재분배할 수 있고, 이 방식을 통해서 전체 은닉층
+오차를 재 구성하여, 학습<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>을 진행할 수 있습니다.
+Hidden Layer의 오차는 &lt;그림 7&gt;에서 설명하는 오차 재분배 방식으로 계산될 수 있습니다.</p>
 
 
 <blockquote id="img">
