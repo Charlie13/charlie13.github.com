@@ -230,7 +230,7 @@
     <item>
       <title>Deep Learning</title>
       <link>/tags/deep-learning/</link>
-      <pubDate>Mon, 11 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/deep-learning/</guid>
       <description></description>
@@ -462,6 +462,24 @@
     </item>
     
     <item>
+      <title>L1 Norm</title>
+      <link>/tags/l1-norm/</link>
+      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/l1-norm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>L2 Norm</title>
+      <link>/tags/l2-norm/</link>
+      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/l2-norm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>License</title>
       <link>/tags/license/</link>
       <pubDate>Thu, 21 Oct 2010 10:50:36 +0900</pubDate>
@@ -509,7 +527,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/tags/machine-learning/</link>
-      <pubDate>Mon, 11 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/machine-learning/</guid>
       <description></description>
@@ -581,7 +599,7 @@
     <item>
       <title>Norm</title>
       <link>/tags/norm/</link>
-      <pubDate>Mon, 11 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/norm/</guid>
       <description></description>
@@ -755,6 +773,15 @@
       <pubDate>Wed, 23 Mar 2016 14:01:55 +0900</pubDate>
       
       <guid>/tags/rdbms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regularization</title>
+      <link>/tags/regularization/</link>
+      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/regularization/</guid>
       <description></description>
     </item>
     

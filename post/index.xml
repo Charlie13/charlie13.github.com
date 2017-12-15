@@ -6,10 +6,23 @@
     <description>Recent content in Posts on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Dec 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 Dec 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>딥러닝을 위한 그만큼 노름, Norm</title>
+      <link>/post/norm/</link>
+      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/post/norm/</guid>
+      <description>딥러닝에서 네트워크의 Overfitting(과적합) 문제를 해결하는 방법으로 3가지를 제시합니다.
+ 더 많은 데이터를 사용할 것 Cross Validation Regularization  이 중에서 Regularization을 할 경우 Lose 함수를 다음과 같이 표현됩니다.
+ $$ L&amp;rsquo; = L(W, b) + \lambda\frac{1}{2}||w||^2 $$ 
+ 위 수식은 기존 Lose 함수에 L2 Regularization을 위한 항을 추가한 새로운 Lose 함수입니다.
+L2 Regularization을 위해서 추가한 새로운 항은 L2 Norm을 사용하고 있습니다. 딥러닝의 Regularization, kNN 알고리즘, kmean 알고리즘 등에서 L1 Norm/L2 Norm을 사용합니다.</description>
+    </item>
     
     <item>
       <title>Hidden Layer의 오차 계산</title>
