@@ -127,7 +127,11 @@
 		<div class="post__content clearfix">
 			
 
-<p>딥러닝에서 네트워크의 Overfitting(과적합) 문제를 해결하는 방법으로 3가지를 제시합니다.</p>
+<p>기계학습 자료에서 간혹 Norm과 관련된 수식이나 표기법을 나오면 당황스러울 때가 있습니다.
+선형대수에 익숙하지 않다면 Norm이 이상하게 보일 수 있습니다.
+본 문서에서는 인공신공망과 일부 일고리즘을 이해하는 사용하는 Norm을 이해하는 것을 목표로 최소한도의 Norm의 개념을 정리합니다.</p>
+
+<p>일반적으로 딥러닝에서 네트워크의 Overfitting(과적합) 문제를 해결하는 방법으로 다음과 같은 3가지 방법을 제시합니다.</p>
 
 <ol>
 <li>더 많은 데이터를 사용할 것</li>
@@ -135,7 +139,7 @@
 <li>Regularization</li>
 </ol>
 
-<p>이 중에서 Regularization을 할 경우 Lose 함수를 다음과 같이 표현됩니다.</p>
+<p>더 이상 학습 데이터를 추가할 수 없거나 학습 데이터를 늘려도 과적합 문제가 해결되지 않을 때에는 3번  Regularization을 사용해야 합니다. Regularization에서는 Lose 함수를 다음과 같이 변형하여 사용합니다.</p>
 
 <blockquote>
 <p><font size=4>$$
@@ -144,9 +148,9 @@ $$
 </font></p>
 </blockquote>
 
-<p>위 수식은 기존 Lose 함수에 L2 Regularization을 위한 항을 추가한 새로운 Lose 함수입니다.</p>
+<p>위 수식은 기존 Lose 함수에 L2 Regularization을 위한 새로운 항을 추가한 변형된 형태의 Lose 함수입니다.</p>
 
-<p>L2 Regularization을 위해서 추가한 새로운 항은 L2 Norm을 사용하고 있습니다. 딥러닝의 Regularization, kNN 알고리즘, kmean 알고리즘 등에서 L1 Norm/L2 Norm을 사용합니다. 몇몇 머신러닝에서 사용하는 가장 기본적인 수준에서의 Norm<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>을 정리합니다.</p>
+<p>여기서 L2 Regularization을 위해서 추가한 새로운 항은 L2 Norm을 사용하고 있습니다. 딥러닝의 Regularization, kNN 알고리즘, kmean 알고리즘 등에서 L1 Norm/L2 Norm을 사용합니다.</p>
 
 <h2 id="norm">Norm</h2>
 
@@ -161,10 +165,10 @@ $$
 
 <ul>
 <li>p는 Lorm의 차수를 의미합니다. p가 1이면 L1 Norm이고 p가 2이면 L2 Norm입니다.</li>
-<li>n은 대상 벡터의 요소 수 입니다.</li>
+<li>n은 대상 벡터의 요소 수입니다.</li>
 </ul>
 
-<p>Norm은 각 요소 별로 요소의 절대값을 p번 곱한 값의 합을 p제곱근한 값입니다.</p>
+<p>Norm은 각 요소별로 요소 절대값을 p번 곱한 값의 합을 p 제곱근한 값입니다.</p>
 
 <p>주로 사용되는 Norm은 L1 Norm과 L2 Norm, Maxium norm입니다. 주요 Norm에 대하여 살펴보겠습니다.</p>
 
@@ -183,9 +187,9 @@ $$
 </blockquote>
 
 <p>L1 Norm을 Taxicab Norm 혹은 맨허튼 노름(Manhattan norm) 이라고도 합니다.
-L1 norm은 벡터의 요소에 대한 절대값의 합입니다. 요소의 값 변화를 정확하게 파악할 수 있습니다.</p>
+L1 norm은 벡터의 요소에 대한 절댓값의 합입니다. 요소의 값 변화를 정확하게 파악할 수 있습니다.</p>
 
-<p>벡터 x의 L1 Norm은 다음과 같이 계산 됩니다.</p>
+<p>벡터 x의 L1 Norm은 다음과 같이 계산됩니다.</p>
 
 <blockquote>
 <p><font size=4>$$
@@ -207,8 +211,8 @@ $$
 
 <h3 id="l2-norm">L2 Norm</h3>
 
-<p>L2 Norm은 p가 2인 norm입니다.
-L2 Norm은 n차원 좌표평면(유클리드 공간)에서의 벡터의 크기를 계산하기 때문에 유클리드 노름(Euclidean norm)이라고도 합니다.
+<p>L2 Norm은 p가 2인 Norm입니다.
+L2 Norm은 n 차원 좌표평면(유클리드 공간)에서의 벡터의 크기를 계산하기 때문에 유클리드 노름(Euclidean norm)이라고도 합니다.
 L2 Norm 공식은 다음과 같습니다.</p>
 
 <blockquote>
@@ -237,7 +241,7 @@ $$
 
 <p>피타고라스 정리는 2차원 좌표 평면상의 최단 거리를 계산하는 L2 Norm입니다.</p>
 
-<p>다음 벡터 x의 L2 Norm은 다음과 같이 계산 됩니다.</p>
+<p>다음 벡터 x의 L2 Norm은 다음과 같이 계산됩니다.</p>
 
 <blockquote>
 <p><font size=4>$$
@@ -262,7 +266,7 @@ $$
 
 <h3 id="maxium-norm-상한-노름">Maxium Norm(상한 노름)</h3>
 
-<p>상한 노름은 p값을 무한대로 보냈을때의 Norm입니다. 벡터 성분의 최대 값을 구합니다.</p>
+<p>상한 노름은 p 값을 무한대로 보냈을 때의 Norm입니다. 벡터 성분의 최댓값을 구합니다.</p>
 
 <blockquote>
 <p><font size="4">$$
@@ -273,18 +277,24 @@ $$
 </font></p>
 </blockquote>
 
+<p>L1 Norm은 각 요소 절댓값 크기의 합이고 L2 Norm은 해당 차원의 좌표평면에서 원점에서 벡터 좌표까지의 최단거리입니다.</p>
+
 <h2 id="좌표-공간에서-l1과-l2-norm-시각화">좌표 공간에서 L1과 L2 Norm 시각화</h2>
 
 <p>$B = [\beta_0, \beta_1]$ 벡터가 있을 때, B 벡터의 L2 Norm이 1이라면 다음과 같이 표현할 수 있습니다.</p>
 
-<p>$$
+<blockquote>
+<p><font size="4">$$
 \begin{align}
 ||B||_2 &amp; = 1 \\<br />
 &amp; = \sqrt{\beta_0^2 + \beta_1^2}
 \end{align}
-$$</p>
+$$
+</font></p>
+</blockquote>
 
-<p>이 L2 Norm이 가능한 벡터는 다음과 같이 표현할 수 있습니다.</p>
+<p>이 L2 Norm이 가능한 벡터는 다음과 같이 표현할 수 있습니다.
+즉 벡터 B는 &lt;그림 1&gt;의 빨간색 원에 위치하게 됩니다. 이러한 원을 &ldquo;<strong>Unit Circle</strong>&ldquo;이라고 합니다.</p>
 
 
 <blockquote id="img">
@@ -310,14 +320,18 @@ $$</p>
 
 <p>B 벡터의 L1 Norm도 1이라면 다음과 같이 표현할 수 있습니다.</p>
 
-<p>$$
+<blockquote>
+<p><font size="4">$$
 \begin{align}
 ||B||_1 &amp; = 1 \\<br />
 &amp; = |\beta_0| + |\beta_1|
 \end{align}
-$$</p>
+$$
+</font></p>
+</blockquote>
 
-<p>이 L2 Norm이 가능한 벡터는 다음과 같이 표현할 수 있습니다.</p>
+<p>이 L1 Norm이 가능한 벡터는 다음과 같이 표현할 수 있습니다.
+즉 벡터 B는 &lt;그림 2&gt;의 빨간색 마름모 선 위에 위치하게 됩니다.</p>
 
 
 <blockquote id="img">
@@ -386,7 +400,7 @@ $$</p>
   <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L1_norm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1_norm</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">&ldquo;shape:&ldquo;,  L1_norm</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -396,7 +410,8 @@ $$</p>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre><a href="5,"> 23.  17.  20.  20.  14.</a>
+<pre>[ 23.  17.  20.  20.  14.]
+shape: (5,)
 </pre>
 </div>
 </div>
@@ -423,8 +438,8 @@ $$</p>
 <div class="inner_cell">
   <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">L2_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L2_norm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L2_norm</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n"> L2_norm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">&ldquo;shape:&ldquo;, L2_norm</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -434,7 +449,8 @@ $$</p>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre><a href="5,"> 13.45362405  10.63014581  11.91637529  11.5758369    9.69535971</a>
+<pre>[ 13.45362405  10.63014581  11.91637529  11.5758369    9.69535971]
+shape: (5,)
 </pre>
 </div>
 </div>
@@ -451,15 +467,6 @@ $$</p>
 <li>norm(wikipedia): <a href="https://en.wikipedia.org/wiki/Norm">https://en.wikipedia.org/wiki/Norm</a></li>
 <li>노름(wikipedia): <a href="https://ko.wikipedia.org/wiki/%EB%85%B8%EB%A6%84">https://ko.wikipedia.org/wiki/%EB%85%B8%EB%A6%84</a></li>
 </ul>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:1">Norm은 &ldquo;<strong>노름</strong>&ldquo;이라고 읽습니다.
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-</ol>
-</div>
 
 		</div>
 		

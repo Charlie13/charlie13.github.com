@@ -17,11 +17,9 @@
       <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/post/norm/</guid>
-      <description>딥러닝에서 네트워크의 Overfitting(과적합) 문제를 해결하는 방법으로 3가지를 제시합니다.
- 더 많은 데이터를 사용할 것 Cross Validation Regularization  이 중에서 Regularization을 할 경우 Lose 함수를 다음과 같이 표현됩니다.
- $$ L&amp;rsquo; = L(W, b) + \lambda\frac{1}{2}||w||^2 $$ 
- 위 수식은 기존 Lose 함수에 L2 Regularization을 위한 항을 추가한 새로운 Lose 함수입니다.
-L2 Regularization을 위해서 추가한 새로운 항은 L2 Norm을 사용하고 있습니다. 딥러닝의 Regularization, kNN 알고리즘, kmean 알고리즘 등에서 L1 Norm/L2 Norm을 사용합니다.</description>
+      <description>기계학습 자료에서 간혹 Norm과 관련된 수식이나 표기법을 나오면 당황스러울 때가 있습니다. 선형대수에 익숙하지 않다면 Norm이 이상하게 보일 수 있습니다. 본 문서에서는 인공신공망과 일부 일고리즘을 이해하는 사용하는 Norm을 이해하는 것을 목표로 최소한도의 Norm의 개념을 정리합니다.
+일반적으로 딥러닝에서 네트워크의 Overfitting(과적합) 문제를 해결하는 방법으로 다음과 같은 3가지 방법을 제시합니다.
+ 더 많은 데이터를 사용할 것 Cross Validation Regularization  더 이상 학습 데이터를 추가할 수 없거나 학습 데이터를 늘려도 과적합 문제가 해결되지 않을 때에는 3번 Regularization을 사용해야 합니다.</description>
     </item>
     
   </channel>
