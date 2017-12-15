@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<META http-equiv="Expires" content="-1">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="No-Cache">
+
+<title>딥러닝의 주요 활성화 함수(Activation function)</title>
+<meta name="description" content="오라클 클라우드 기술 블로그">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="딥러닝의 주요 활성화 함수(Activation function)" />
+<meta property="og:description" content="Deep Learning에서 주로 사용되는 Activation Function의 미분과 파이썬 구현 코드를 소개합니다. Introduces the derivative of the Activation Function and the Python implementation code that are commonly used in Deep Learning." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/writing/activation_function_derivative/" />
+
+
+
+<meta property="article:published_time" content="2017-12-11T21:28:14&#43;09:00"/>
+<meta property="article:modified_time" content="2017-12-11T21:28:14&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="/css/jupyter.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/minsu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/hybrid.css" type="text/css" media="all" />
+
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        //inlineMath: [ ['$', '$'], ["\(", "\)"] ],
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+      //,
+      //displayAlign: "left",
+      //displayIndent: "2em"
+    });
+</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
+
+
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="taewan.kim" rel="home">
+						<h1 class="logo__title">taewan.kim</h1>
+						<h2 class="logo__tagline">Taewanme Blog - 우공이산(愚公移山)</h2>
+					</a>
+				</div>
+			</div>
+			<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
+		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >MY SON - MINSU</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.11&appId=404519239985000';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		
+		<div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-8469722754608892"
+					 data-ad-slot="5594090168"
+					 data-ad-format="auto"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		  <hr/>
+		</div>
+		
+		<header class="post__header clearfix">
+			<h1 class="post__title">딥러닝의 주요 활성화 함수(Activation function) <div class="fb-like" data-href="/writing/activation_function_derivative/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2017-12-11 21:28:14 &#43;0900 KST">December 11, 2017</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/machine-learning" rel="category">Machine Learning</a>
+				</span>
+			</p>
+		</header>
+
+		<div class="post__content clearfix">
+
+			<figure class="post__thumbnail">
+				<img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/post.jpg" alt="딥러닝의 주요 활성화 함수(Activation function)">
+			</figure>
+			
+
+<p>Artificial Neural Network (ANN, 인공 신경망) 모델을 구성 할 때 가장 중요한 결정사항은 레이어 갯수와
+은닉층(Hidden Layer)과 출력층(Output Layer)에서 사용할 활성화 함수를 결정하는 것입니다.
+인공 신경망에서 활성화 함수(Activation function)는 노드에 입력값에 대한 변환 함수입니다.<br />
+노드의 입력 데이터는 활성화 함수를 거쳐 출력 함수로 변환 됩니다. (&lt;그림 1&gt; 참조)</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/010.jpg" alt="인공 신경망에서 노드의 입력 값을 변환하는 활성화 함수" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 1</strong>:
+        
+        인공 신경망에서 노드의 입력 값을 변환하는 활성화 함수
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<h2 id="인공-신경망에서-활성화-함수가-필요한-이유">인공 신경망에서 활성화 함수가 필요한 이유</h2>
+
+<p>여러개의 레이어로 구성되어 있고, 이전 레이어의 출력은 다음 레이어의 입력이 되는 신경망에서 모든 레이어가 Activation 함수로 선형 함수를 사용한다면, 이 신경망은 1개의 레이어로 표현 가능합니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/020.jpg" alt="선형적인 활성화 함수 사용시 레이어 압축" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 2</strong>:
+        
+        선형적인 활성화 함수 사용시 레이어 압축
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>여러 레이어로 스택을 쌓고 레이어 사이의 차원을 변형시키고 입력 데이터를 편향 시키기 위해서는 비선형 함수를 활성화 함수로 적용하여 각 노드의 입력 데이터를 변환시켜야 합니다.</p>
+
+<h2 id="일반적으로-사용되는-활성화-함수">일반적으로 사용되는 활성화 함수</h2>
+
+<p>인공 신경망에서는 일반적으로 다음과 같은 활성화 함수 유형과 그래프 입니다.</p>
+
+<ul>
+<li>Identity Function</li>
+<li>Logistic Sigmoid Function</li>
+<li>Hyperbolic Tangent(tanh) Function</li>
+<li>ReLU Function</li>
+<li>Leaky ReLU Function</li>
+</ul>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/050.jpg" alt="주요 활성화 함수 시각화 비교" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 3</strong>:
+        
+        주요 활성화 함수 시각화 비교
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<p>본 문서에서는 주요 활성화 함수에 대하여 살펴보고, 각 활성화 함수 정의와 활성화 함수의 미분을 유도하겠습니다. 또한 Python으로 활성화 함수와 각 활성화 함수의 미분 함수를 구해 보겠습니다.</p>
+
+<h3 id="활성화-함수의-미분-함수가-필요한-이유">활성화 함수의 미분 함수가 필요한 이유?</h3>
+
+<p>활성화 함수에 대한 미분 함수가 필요한 이유는 신경망 학습에 반드시 필요한 항(Term)을 계산하기 위함입니다.
+신경망을 만들고 학습 데이터를 입력하여 Forward Propagation을 통해서 네트워크 출력 값을 만들고, 이 출력 값으로 부터 해당 학습 데이터의 Label(레이블)과 값을 비교하여 오차(Error, Cost)를 계산합니다. 이 오차값으로 부터 각 레이어이 W(Wegiht) 변화가 오차에 미치는 영향도를 계산합니다.</p>
+
+<blockquote>
+<p>식1. Weight가 오차에 미치는 영향도L($L:  Loss Function$)
+$$
+\begin{align}
+\frac{\partial L}{\partial W^{[l]}} &amp; = \frac{\partial L}{\partial a^{[l]}} \odot g&rsquo;^{[l]}(Z^{[l]})A^{[l-1]}\\<br />
+W^{[l]} &amp; := W^{[l]} -\alpha \frac{\partial L}{\partial W^{[l]}}
+\end{align}
+$$</p>
+</blockquote>
+
+<p>현재 레이어의 W가 오차에 미치는 영향도를 구하고, 이 영향도로 부터 현재 W를 업데이트하기 위해서는 활성화 함수의 미분함수가 반드시 필요합니다. 식1에서 $g&rsquo;^{[l]}(Z^{[l]})$가 바로 활성화 함수의 미분 함수입니다. &lt;식1&gt;과 같이 W가 오차에 미치는 영향도($\frac{\partial L}{\partial W^{[l]}} $)로 부터 W를 업데이트하는 것이 바로 딥러닝에서는 말하는 &ldquo;<strong>Learning(학습)</strong>&rdquo; 입니다.</p>
+
+<h3 id="미분의-성질-정리">미분의 성질 정리</h3>
+
+<p>본 문서에서는 활성화 함수 중에서 Sigmoid와 Hyperbolic Tangent에 대해서는 미분식을 유도해 볼 것입니다. 이때 참고할 미분의 주요 성질은 다음과 같습니다.</p>
+
+<ul>
+<li>미분 기본 성질: $ \frac{d}{dx}c = 0 $</li>
+<li>미분 기본 성질: $ \frac{d}{dx}(x^n) = nx^{n-1} $</li>
+<li>미분 기본 성질: $ (cf)&rsquo;  = cf&rsquo; $</li>
+<li>미분 기본 성질: $ (f + g)&rsquo; = f&rsquo; + g&rsquo; $</li>
+<li>미분 기본 성질: $ (f - g)&rsquo; = f&rsquo; + g&rsquo; $</li>
+<li>미분 기본 성질: $ (fg)&rsquo; = f&rsquo;g + g&rsquo;f $</li>
+<li>미분 기본 성질: $ \frac{f}{g} = \frac{f&rsquo;g - fg&rsquo;}{g^2} $</li>
+<li>지수함수 미분: $ (e^{x})&rsquo; = e^{x} $</li>
+<li>지수함수 미분: $ (e^{-x})&rsquo; = -e^{x} $</li>
+<li>지수함수 미분: $ (a^{x})&rsquo; = a^{x}lna $</li>
+<li>로그함수 미분: $ (log_ax)&rsquo; = \frac{1}{xlna} $</li>
+<li>로그함수 미분: $ (log_ex)&rsquo; = \frac{1}{x} $</li>
+<li>Chain Rule: $ f(g(x))&rsquo; = f&rsquo;(g(x))g&rsquo;(x) $</li>
+</ul>
+
+<h2 id="sigmoid-함수">Sigmoid 함수</h2>
+
+<p>Sigmoid는 오랫동안 사용된 대표적인 활성화 함수입니다. Sigmoid는 s자 모양의 출력을 갖는 비선형 함수입니다.
+Sigmoid는 실수 범위의 수를 [0, 1] 범위의 수로 맵핑합니다. 즉 실수를 입력 받아서 0보다 크고 1보다 작은 수를 반환합니다. 큰 음수 입력은 0으로 수렴하는 결과를 반환하고 큰 양수는 1로 수렴하는 값을 반환합니다. Sigmoid는 입력 값을 확률로 변환하는 특징을 갖습니다.</p>
+
+<p>Sigmoid 함수는 다음과 같이 정의 됩니다.</p>
+
+<blockquote>
+<p>식2. Sigmoid 함수 정의
+$$
+sigmoid(z) = \frac{1}{(1+e^{-z})}
+$$</p>
+</blockquote>
+
+<p>&lt;식2&gt;의 Sigmoid를 &lt;그림 3&gt;과 같은 그래프로 표현될 수 있습니다.</p>
+
+
+<blockquote id="img">
+<figure >
+    
+        <img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/030.jpg" alt="Sigmoid 함수 그래프" style="border:2px solid black"/>
+    
+    
+    <figcaption>
+        <strong>그림 3</strong>:
+        
+        Sigmoid 함수 그래프
+        
+            
+        
+        
+    </figcaption>
+    
+</figure>
+</blockquote>
+
+
+
+<h3 id="sigmoid-함수-미분">Sigmoid 함수 미분</h3>
+
+<p>sigmoid 함수 미분 절차는 다음과 같습니다.</p>
+
+<blockquote>
+<p>$$ 식3. Sigmoid 함수 미분
+\begin{align}
+\frac{d}{dx}sigmoid(x) &amp; = \frac{d}{dx}{(1+e^{-x})^{-1}} \\<br />
+&amp; = (-1)\frac{1}{(1+e^{-x})^{2}}\frac{d}{dx}(1+e^{-x}) \\<br />
+&amp; = (-1)\frac{1}{(1+e^{-x})^{2}}(0+e^{-x})\frac{d}{dx}(-x) \\<br />
+&amp; = (-1)\frac{1}{(1+e^{-x})^{2}}e^{-x}(-1)  \\<br />
+&amp; = \frac{e^{-x}}{(1+e^{-x})^{2}}  \\<br />
+&amp; = \frac{1+e^{-x}-1}{(1+e^{-x})^{2}}  \\<br />
+&amp; = \frac{(1+e^{-x})}{(1+e^{-x})^{2}}-\frac{1}{(1+e^{-x})^{2}}  \\<br />
+&amp; = \frac{1}{1+e^{-x}}-\frac{1}{(1+e^{-x})^{2}}  \\<br />
+&amp; = \frac{1}{1+e^{-x}}(1-\frac{1}{1+e^{-x}}) \\<br />
+&amp; = sigmoid(x)(1-sigmoid(x))
+\end{align}
+$$
+</font></p>
+</blockquote>
+
+<p>sigmoid의 미분 결과(도함수)는 다음과 같습니다.
+앞에서 언급한 것처럼 sigmoid의 미분 결과는 매우 간결한 것 을 확인할 수 있습니다.</p>
+
+<blockquote>
+<p>식4. Sigmoid 함수 미분 결과
+$$
+\frac{d}{dx}sigmoid(x) = sigmoid(x)(1-sigmoid(x))
+$$</p>
+</blockquote>
+
+<p>다음은 sigmoid 미분결과(도함수)로 그래프를 그린 결과입니다.</p>
+
+<p><img src="https://taewanmerepo.github.io/2017/09/sigmoid/differential_sigmoid.jpg" alt="" /></p>
+
+<p>그래프의 미분계수를 보면 최댓값은 0.25입니다. deep learning에서 학습을 위하여 역전파(Backpropagation)를 계산하는 과정에서 activation function의 미분 값을 곱하는 과정이 포함됩니다. sigmoid를 활성 함수로 사용하는 경우 은닉층의 깊이가 깊다면 오차율 계산이 어렵다는 문제가 발생합니다. 이것이 딥러닝에 sigmoid를 사용할 때  &ldquo;<strong>vanishing gradient problem</strong>&ldquo;이 발행하는 이유입니다.</p>
+
+<h3 id="sigmoid-함수-구현">sigmoid 함수 구현</h3>
+
+<p>sigmoid 코드 구현은 매우 간단합니다. sigmoid의 구현 코드를 정리합니다.</p>
+
+<p>파이썬으로 구현한 sigmoid 함수는 다음과 같습니다.</p>
+
+<pre><code>import numpy as np
+
+def sigmoid(z):
+    return 1 / (1 + np.exp(-z))
+</code></pre>
+
+<p>파이썬으로 구현한 sigmoid 미분 함수는 다음과 같습니다.</p>
+
+<pre><code>import numpy as np
+
+def sigmoid_diff(z):
+    return sigmoid(x)*(1-sigmoid(x))
+</code></pre>
+
+<h2 id="hyperbolic-tangent-tanh-함수">Hyperbolic Tangent(tanh) 함수</h2>
+
+<blockquote>
+<p>식4. Hyperbolic Tangent(Tanh) 함수 정의
+$$
+\tanh(z) = \frac{ e^z - e^{-z} }{ e^z + e^{-z} }
+$$</p>
+</blockquote>
+
+<p>jjjj</p>
+
+<blockquote>
+<p>식5. Hyperbolic Tangent(Tanh) 함수 미분
+$$
+\begin{align}
+\tanh&rsquo;(z) &amp; = \bigg[ \frac{ e^z - e^{-z} }{ e^z + e^{-z} } \bigg]&rsquo;  \\<br />
+&amp;= (e^z - e^{-z})&rsquo;\bigg[ (e^z - e^{-z})^{-1} \bigg]  + (e^z - e^{-z})\bigg[ (e^z + e^{-z})^{-1} \bigg]&rsquo; \\<br />
+&amp;= (e^z - e^{-z})\bigg[ (e^z - e^{-z})^{-1} \bigg]  + (e^z - e^{-z})\bigg[ (-1)(e^z + e^{-z})^{-2}(e^z - e^{-z}) \bigg] \\<br />
+&amp;= \frac{(e^z - e^{-z})}{(e^z - e^{-z})}  - \frac{(e^z - e^{-z})(e^z - e^{-z})}{(e^z + e^{-z})^{2}} \\<br />
+&amp; = 1 - \frac{(e^z - e^{-z})^2}{(e^z + e^{-z})^{2}} \\<br />
+&amp; = 1 - \bigg[ \frac{(e^z - e^{-z})}{(e^z + e^{-z})} \bigg]^2 \\<br />
+&amp; = 1 - \tanh^2(z) = (1-\tanh(z))(1+\tanh(z))
+\end{align}
+$$</p>
+</blockquote>
+
+<p>##
+##
+##</p>
+
+<h2 id="어떤">어떤</h2>
+
+<h2 id="참고자료">참고자료</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Activation_function#Comparison_of_activation_functions">위키피디아-Activation Function</a></li>
+<li><a href="http://numpydl.readthedocs.io/en/latest/tutorials/activations/">http://numpydl.readthedocs.io/en/latest/tutorials/activations/</a></li>
+<li><a href="https://ko.wikipedia.org/wiki/%EB%AF%B8%EB%B6%84">위키피디아-미분</a>: <a href="https://ko.wikipedia.org/wiki/%EB%AF%B8%EB%B6%84">https://ko.wikipedia.org/wiki/%EB%AF%B8%EB%B6%84</a></li>
+</ul>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/deep-learning/" rel="tag">deep learning</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/machine-learning/" rel="tag">Machine Learning</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/norm/" rel="tag">Norm</a></li>
+	</ul>
+</div>
+<hr/>
+<div class="post__tags tags clearfix">
+
+  <center><div class="fb-like" data-href="/writing/activation_function_derivative/"
+		data-layout="standard"
+		data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></center>
+
+
+
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<figure class="authorbox__avatar">
+		<img alt="김태완 avatar" src="/img/author/taewan1.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<div class="authorbox__description">
+		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다.
+	</div>
+	<div class="authorbox__description">
+		E-mail: taewanme@gmail.com
+	</div>
+</div>
+
+
+
+
+			>
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/writing/logistic_regression_diff/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Logistic regression의 Cost Function과 미분</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/writing/norm/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Hidden Layer의 오차 계산</p></a>
+	</div>
+</nav>
+
+	
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://taewankim.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+	<div>
+		<hr />
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-8469722754608892"
+				 data-ad-slot="5594090168"
+				 data-ad-format="auto"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="taewan.kim" />
+	</form>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">ToC (목차)</h4>
+	<div class="widget__content">
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#인공-신경망에서-활성화-함수가-필요한-이유">인공 신경망에서 활성화 함수가 필요한 이유</a></li>
+<li><a href="#일반적으로-사용되는-활성화-함수">일반적으로 사용되는 활성화 함수</a>
+<ul>
+<li><a href="#활성화-함수의-미분-함수가-필요한-이유">활성화 함수의 미분 함수가 필요한 이유?</a></li>
+<li><a href="#미분의-성질-정리">미분의 성질 정리</a></li>
+</ul></li>
+<li><a href="#sigmoid-함수">Sigmoid 함수</a>
+<ul>
+<li><a href="#sigmoid-함수-미분">Sigmoid 함수 미분</a></li>
+<li><a href="#sigmoid-함수-구현">sigmoid 함수 구현</a></li>
+</ul></li>
+<li><a href="#hyperbolic-tangent-tanh-함수">Hyperbolic Tangent(tanh) 함수</a></li>
+<li><a href="#어떤">어떤</a></li>
+<li><a href="#참고자료">참고자료</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">최신글</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/error_in_hidden/" title="Hidden Layer의 오차 계산">
+							Hidden Layer의 오차 계산</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/nn_notation/" title="Neural Network 표기법(Feat: Andrew NG)">
+							Neural Network 표기법(Feat: Andrew NG)</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_blog_fn/" title="[번역]Fn–An Open Source Serverless Functions Platform">
+							[번역]Fn–An Open Source Serverless Fu ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/terraform_jupyter_installer/" title="Terraform Jupyter Installer: Machine Learning 환경 프로비저닝 ">
+							Terraform Jupyter Installer: Machin ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_cncf/" title="[번역]오라클의 CNCF(Cloud Native Computing Foundation) 가입 의미">
+							[번역]오라클의 CNCF(Cloud Native Computin ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/stroage_cs_url/" title="Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경">
+							Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/sigmoid_diff/" title="Sigmoid 함수 미분 정리">
+							Sigmoid 함수 미분 정리</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/tanh_diff/" title="Sigmoid 함수 미분 정리">
+							Sigmoid 함수 미분 정리</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/numpy_sum_axis/" title="Numpy에서 np.sum 함수의 axis 이해">
+							Numpy에서 np.sum 함수의 axis 이해</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/python_virtual_env/" title="파이썬 가상 개발 환경 구성: pyenv, virtualenv, autoenv, pip">
+							파이썬 가상 개발 환경 구성: pyenv, virtualenv, ......</a>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">카테고리</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blogs.oracle.com">Blogs.Oracle.Com</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/language">Language</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/life-story-think">Life-Story-Think</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/machine-learning">Machine-Learning</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/minsu">Minsu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle">Oracle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud">Oracle-Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-big-data">Oracle-Cloud-Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-database">Oracle-Cloud-Database</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-iaas">Oracle-Cloud-Iaas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-event">Tech-Event</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-tip">Tech-Tip</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/youtube">Youtube</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%ec%a7%9c%ed%88%ac%eb%a6%ac">짜투리</a></li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+	<h4 class="widget__title">SNS(Social Network Service)</h4>
+	<div class="widget__content">
+		<a href="https://github.com/oracloud-kr-team" target="_blank" title="github"><img src="/img/icon/github.png" width="50px" height="50px"/></a>
+		<a href="https://www.slideshare.net/ssusercda07e" target="_blank" title="slideshare"><img src="/img/icon/slideshare.png" width="50px" height="50px"/></a>
+		<a href="https://www.youtube.com/channel/UCboJr3TLlqeDqpBURRdb_lg" target="_blank" title="youtube"><img src="/img/icon/youtube.png" width="50px" height="50px"/></a>
+		<a href="mailto:oracloud.kr@gmail.com" title="email"><img src="/img/icon/email.png" width="50px" height="50px"/></a>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">관심 사이트</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="http://www.oracloud.kr/">
+				Oracle Cloud 기술 블로그</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72835175-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+
