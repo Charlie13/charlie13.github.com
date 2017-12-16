@@ -143,12 +143,12 @@
 
 <blockquote>
 <p><font size=4>$$
-L_r(W, b) = L(W, b) + \lambda\frac{1}{2}||w||^2
+cost(W, b) = \frac{1}{m}L(hat{y^i}, y^i) + \lambda\frac{1}{2}||w||^2
 $$
 </font></p>
 </blockquote>
 
-<p>위 수식은 기존 Lose 함수에 L2 Regularization을 위한 새로운 항을 추가한 변형된 형태의 Lose 함수입니다.</p>
+<p>위 수식은 기존 Cost 함수에 L2 Regularization을 위한 새로운 항을 추가한 변형된 형태의 Cost 함수입니다.</p>
 
 <p>여기서 Weight의 Regularization을 위해서 Weight의 L2 Norm을 새로운 항으로 추가하고 있습니다. 딥러닝의 Regularization, kNN 알고리즘, kmean 알고리즘 등에서 L1 Norm/L2 Norm을 사용합니다.</p>
 
