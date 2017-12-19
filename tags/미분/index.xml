@@ -6,10 +6,20 @@
     <description>Recent content in 미분 on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Sep 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 19 Sep 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/%EB%AF%B8%EB%B6%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hyperbolic Tangent(tanh) 함수 미분 정리</title>
+      <link>/post/tanh_diff/</link>
+      <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/post/tanh_diff/</guid>
+      <description>Hyperbolic Tangent(tanh) 함수는 Sigmoid의 대체제로 사용될 수 있는 활성화 함수입니다. Hyperbolic Tangent(tanh)는 Sigmoid와 매우 유사합니다. 실제로, Hyperbolic Tangent 함수는 확장 된 시그모이드 함수입니다. tanh와 Sigmoid의 차이점은 Sigmoid의 출력 범위가 0에서 1 사이인 반면 tanh와 출력 범위는 -1에서 1사이라는 점입니다. Sigmoid와 비교하여 tanh와는 출력 범위가 더 넓고 경사면이 큰 범위가 더 크기 때문에 더 빠르게 수렴하여 학습하는 특성이 있습니다.
+Sigmoid와 비교하여 중심점이 0이고 범위가 기울기 넓은 차이점이 있지만 Sigmoid의 치명적인 단점인 Vanishing gradient problem 문제를 그대로 갖고 있습니다.</description>
+    </item>
     
     <item>
       <title>Sigmoid 함수 미분 정리</title>

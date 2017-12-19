@@ -53,6 +53,11 @@
   </url>
   
   <url>
+    <loc>/post/tanh_diff/</loc>
+    <lastmod>2017-09-19T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/sigmoid_diff/</loc>
     <lastmod>2017-09-18T21:28:14+09:00</lastmod>
   </url>
@@ -360,6 +365,12 @@
   </url>
   
   <url>
+    <loc>/tags/activation-function/</loc>
+    <lastmod>2017-09-19T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/andrew-ng/</loc>
     <lastmod>2017-12-11T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -529,7 +540,7 @@
   
   <url>
     <loc>/tags/differential/</loc>
-    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
+    <lastmod>2017-09-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -596,6 +607,12 @@
   <url>
     <loc>/tags/hadoop/</loc>
     <lastmod>2017-07-31T11:59:47+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hyperbolic-tangent/</loc>
+    <lastmod>2017-09-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1014,6 +1031,12 @@
   </url>
   
   <url>
+    <loc>/tags/tanh/</loc>
+    <lastmod>2017-09-19T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/tech-event/</loc>
     <lastmod>2017-09-09T08:54:32+09:00</lastmod>
     <priority>0</priority>
@@ -1165,7 +1188,7 @@
   
   <url>
     <loc>/tags/%EB%AF%B8%EB%B6%84/</loc>
-    <lastmod>2017-09-18T21:28:14+09:00</lastmod>
+    <lastmod>2017-09-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1220,6 +1243,12 @@
   <url>
     <loc>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</loc>
     <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%A8%EC%88%98/</loc>
+    <lastmod>2017-09-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   

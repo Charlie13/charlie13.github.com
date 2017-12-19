@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Activation Function</title>
+      <link>/tags/activation-function/</link>
+      <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/activation-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Andrew Ng</title>
       <link>/tags/andrew-ng/</link>
       <pubDate>Mon, 11 Dec 2017 21:28:14 +0900</pubDate>
@@ -257,7 +266,7 @@
     <item>
       <title>Differential</title>
       <link>/tags/differential/</link>
-      <pubDate>Mon, 18 Sep 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/differential/</guid>
       <description></description>
@@ -350,6 +359,15 @@
       <pubDate>Mon, 31 Jul 2017 11:59:47 +0900</pubDate>
       
       <guid>/tags/hadoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hyperbolic Tangent</title>
+      <link>/tags/hyperbolic-tangent/</link>
+      <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/hyperbolic-tangent/</guid>
       <description></description>
     </item>
     
@@ -867,6 +885,15 @@
     </item>
     
     <item>
+      <title>Tanh</title>
+      <link>/tags/tanh/</link>
+      <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/tanh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Terraform</title>
       <link>/tags/terraform/</link>
       <pubDate>Tue, 03 Oct 2017 21:28:14 +0900</pubDate>
@@ -1049,7 +1076,7 @@
     <item>
       <title>미분</title>
       <link>/tags/%EB%AF%B8%EB%B6%84/</link>
-      <pubDate>Mon, 18 Sep 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%EB%AF%B8%EB%B6%84/</guid>
       <description></description>
@@ -1124,6 +1151,15 @@
       <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%ED%91%9C%EA%B8%B0%EB%B2%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>활성화 함수</title>
+      <link>/tags/%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%A8%EC%88%98/</link>
+      <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%A8%EC%88%98/</guid>
       <description></description>
     </item>
     
