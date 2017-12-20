@@ -289,7 +289,7 @@ $$</li>
 
 <h2 id="backpropagation-중-이전-레이어-출력의-전치">Backpropagation 중 이전 레이어 출력의 전치?</h2>
 
-<p>이제부터 앞 계층의 출력을 전치(Transpose)하는 이유에 대해서 살펴보겠습니다.</p>
+<p>이제부터 cost 함수 미분 과정에서 앞 계층의 출력을 전치(Transpose)하는 이유에 대해서 살펴보겠습니다.</p>
 
 <h3 id="step-1-w-요소-단위로-업데이트-공식-분해">Step 1: W 요소 단위로 업데이트 공식 분해</h3>
 
@@ -323,7 +323,7 @@ $$</li>
 $$
 \begin{align}
 \Delta w^{[2]}11 &amp; = \frac{\partial Cost}{\partial w^{[2]}11} \\<br />
-&amp; =  \frac{\partial Cost}{\partial a^{[2]}_1}\frac{\partial a^{[2]}_1}{\partial z^{[2]}_1}\frac{\partial z^{[2]}_1}{\partial w^{[2]}_1} \\<br />
+&amp; =  \frac{\partial Cost}{\partial a^{[2]}_1}\frac{\partial a^{[2]}_1}{\partial z^{[2]}_1}\frac{\partial z^{[2]}_1}{\partial w^{[2]}11} \\<br />
 &amp; =  (\hat{y}-y)\frac{\partial a^{[2]}_1}{\partial z^{[2]}_1}\frac{\partial z^{[2]}_1}{\partial w^{[2]}11} \\<br />
 &amp; =  (\hat{y}-y)g&rsquo;(z^{[2]}_1)\frac{\partial z^{[2]}_1}{\partial w^{[2]}11} \\<br />
 &amp; =  (\hat{y}-y)sigmoid&rsquo;(z^{[2]}_1)\frac{\partial z^{[2]}_1}{\partial w^{[2]}11} \\<br />
@@ -355,7 +355,7 @@ $$</li>
     
     
     <figcaption>
-        <strong>그림 4</strong>:
+        <strong>그림 3</strong>:
         
         Layer 2의 w12의 요소단위 업데이트(W12)
         
@@ -369,7 +369,7 @@ $$</li>
 
 
 
-<p>&lt;그림 4&gt;와 같이 Layer 2의 w12가 Cost에 미치는 영향도는 &lt;식 7&gt;을 참조하여 다음과 같이 정리할 수 있습니다.</p>
+<p>&lt;그림 3&gt;와 같이 Layer 2의 w12가 Cost에 미치는 영향도는 &lt;식 7&gt;을 참조하여 다음과 같이 정리할 수 있습니다.</p>
 
 <blockquote>
 <ul>
@@ -384,7 +384,7 @@ $$</li>
 
 <h3 id="step-2-delta-w-2-정리">Step 2: $\Delta W^{[2]}$ 정리</h3>
 
-<p>&lt;식 7&gt;과 &lt;식 8&gt;을 이용하여 $\Delta W^{[2]}$를 행렬로 정리하면 다음과 같습니다.</p>
+<p>&lt;식 7&gt;과 &lt;식 8&gt;의 수식을 $W^{[2]}$ 같은 Shape을 갖는 $\Delta W^{[2]}$ 행렬로 정리하면 사용하기 편리할 것 같습니다. &lt;식 7&gt;과 &lt;식 8&gt;의 두 수식을 Shape이 (1, 2)인 행렬로 정리하는 절차는 다음과 같습니다.</p>
 
 <blockquote>
 <ul>
@@ -471,10 +471,10 @@ $$</li>
 
 <h2 id="결론-수학에-대한-이미지">결론: 수학에 대한 이미지</h2>
 
-<p>수포자로서 수학적 감각이 떨어지는 상황에서 이 문제를 고민하는 과정에서 두 가지를 느꼈습니다.</p>
+<p>수학적 감각이 떨어지는 수포자로서, 이 문제를 고민하면서 두 가지를 느꼈습니다.</p>
 
 <ul>
-<li>수학은 복잡한 개념은 단순화 시키고 커뮤니케이션하기 위한 표기법이다.</li>
+<li>수학의 수식은 복잡한 개념은 단순화 시키고 커뮤니케이션하기 위한 표기법이다.</li>
 <li>단순화 시키는 과정에서 대수학과 선형대수가 사용된다.</li>
 </ul>
 
