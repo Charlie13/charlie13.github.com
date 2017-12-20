@@ -406,18 +406,33 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 9&gt;는 다음과 같이 정리할 수 있습니다.</p>
+<p>&lt;식 9&gt;에서 마지막 행렬은 다음과 같습니다.</p>
 
 <blockquote>
 <ul>
 <li>&lt;식 9&gt; Delta W 식 정리
 $$
-\Delta W^{[2]} = (\hat{y}-y)a^{[2]}_1(1-a^{[2]}_1)A^{[2]T}
+\begin{align}
+begin{bmatrix}
+a^{[1]}_1 &amp; a^{[1]}_2   \\<br />
+\end{bmatrix} = A^{[1]T}
+\end{align}
 $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 9&gt;는 결과적으로 &lt;식 5&gt;와 동일한 수식임을 알 수 있습니다.
+<p>&lt;식 9&gt;를 이용하여 최종 식을 &lt;식 10&gt;과 같이 정리할 수 있습니다.</p>
+
+<blockquote>
+<ul>
+<li>&lt;식 10&gt; Delta W 식 정리
+$$
+\Delta W^{[2]} = (\hat{y}-y)a^{[2]}_1(1-a^{[2]}_1)A^{[1]T}
+$$</li>
+</ul>
+</blockquote>
+
+<p>&lt;식 10&gt;는 결과적으로 &lt;식 5&gt;와 동일한 수식임을 알 수 있습니다.
 행렬이 포함된 Cost 함수를 W로 미분한 결과와 W의 개별 요소로 Cost 함수를 미분한 후 개별 수식을 행렬로 정리한 결과가 같음을 확인할 수 있습니다.</p>
 
 <h2 id="행렬이-전치되는-이유는-행렬을-미분한-결과가-아니다">행렬이 전치되는 이유는 행렬을 미분한 결과가 아니다.</h2>
