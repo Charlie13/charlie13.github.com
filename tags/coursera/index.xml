@@ -6,21 +6,10 @@
     <description>Recent content in Coursera on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Dec 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/coursera/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Coursera의 deeplearning.ai Course2 강좌 1주차 정리</title>
-      <link>/writing/deeplearning_course2_week1/</link>
-      <pubDate>Mon, 11 Dec 2017 21:28:14 +0900</pubDate>
-      
-      <guid>/writing/deeplearning_course2_week1/</guid>
-      <description>Coursera에서 deeplearning.ai가 진행하고 있는 Deep Learning 강좌 &amp;ldquo;5-course Specialization&amp;ldquo;의 두 번째 과정인 &amp;ldquo;Improving Deep Neural Network&amp;ldquo;의 1주차 강의를 정리합니다. 강좌의 세부 정보는 다음과 같습니다.
-0. 강의 소개 본 문서에서 정리하는 강의 정보는 다음과 같습니다.
-0.1 강좌 세부 정보  Mock: Coursera 운영: deeplearning.ai 과정명: 5-course Specialization 코스명: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimizatio 주차: Week 1 주제: Practical aspect of Deep Learning  0.2 1주차 강의 학습 목표 1주차 강의 학습 목표는 다음과 같습니다.</description>
-    </item>
     
     <item>
       <title>Neural Network 표기법(Feat: Andrew NG)</title>

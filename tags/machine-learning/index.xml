@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Backpropagation를 위한 편미분 과정에서 행렬의 전치(Transpose) 기준?</title>
+      <title>딥러닝 역전파 수식 행렬의 전치(Transpose) 기준?</title>
       <link>/post/backpropagation_matrix_transpose/</link>
       <pubDate>Wed, 20 Dec 2017 21:28:14 +0900</pubDate>
       
@@ -29,17 +29,6 @@
       <description>기계학습 자료에서 간혹 Norm과 관련된 수식이나 표기법을 나오면 당황스러울 때가 있습니다. 선형대수에 익숙하지 않다면 Norm이 이상하게 보일 수 있습니다. 본 문서에서는 인공신공망과 기계학습 일고리즘에서 사용되는 Norm을 이해하는 것을 목표로 최소한도의 Norm 개념을 정리합니다.
 일반적으로 딥러닝에서 네트워크의 Overfitting(과적합) 문제를 해결하는 방법으로 다음과 같은 3가지 방법을 제시합니다.
  더 많은 데이터를 사용할 것 Cross Validation Regularization  더 이상 학습 데이터를 추가할 수 없거나 학습 데이터를 늘려도 과적합 문제가 해결되지 않을 때에는 3번 Regularization을 사용해야 합니다.</description>
-    </item>
-    
-    <item>
-      <title>딥러닝의 주요 활성화 함수(Activation function)</title>
-      <link>/writing/activation_function_derivative/</link>
-      <pubDate>Mon, 11 Dec 2017 21:28:14 +0900</pubDate>
-      
-      <guid>/writing/activation_function_derivative/</guid>
-      <description>Artificial Neural Network (ANN, 인공 신경망) 모델을 구성 할 때 가장 중요한 결정사항은 레이어 갯수와 은닉층(Hidden Layer)과 출력층(Output Layer)에서 사용할 활성화 함수를 결정하는 것입니다. 인공 신경망에서 활성화 함수(Activation function)는 노드에 입력값에 대한 변환 함수입니다.
-노드의 입력 데이터는 활성화 함수를 거쳐 출력 함수로 변환 됩니다. (&amp;lt;그림 1&amp;gt; 참조)
- 그림 1: 인공 신경망에서 노드의 입력 값을 변환하는 활성화 함수    인공 신경망에서 활성화 함수가 필요한 이유 여러개의 레이어로 구성되어 있고, 이전 레이어의 출력은 다음 레이어의 입력이 되는 신경망에서 모든 레이어가 Activation 함수로 선형 함수를 사용한다면, 이 신경망은 1개의 레이어로 표현 가능합니다.</description>
     </item>
     
     <item>

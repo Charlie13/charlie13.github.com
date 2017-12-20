@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Backpropagation를 위한 편미분 과정에서 행렬의 전치(Transpose) 기준?</title>
+      <title>딥러닝 역전파 수식 행렬의 전치(Transpose) 기준?</title>
       <link>/post/backpropagation_matrix_transpose/</link>
       <pubDate>Wed, 20 Dec 2017 21:28:14 +0900</pubDate>
       

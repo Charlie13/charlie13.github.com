@@ -1,0 +1,192 @@
++++
+date = "2017-12-11T21:28:14+09:00"
+description = "Deep Learning에서 주로 사용되는 Activation Function의 미분과 파이썬 구현 코드를 소개합니다. Introduces the derivative of the Activation Function and the Python implementation code that are commonly used in Deep Learning."
+title = "딥러닝의 주요 활성화 함수(Activation function)"
+thumbnailInList = "https://taewanmerepo.github.io/2017/12/activation_functions_derivative/list.jpg"
+thumbnailInPost = "https://taewanmerepo.github.io/2017/12/activation_functions_derivative/post.jpg"
+tags = ["deep learning", "Machine Learning", "Norm"]
+categories = ["Machine Learning"]
+author = "taewan.kim"
+language = ""  
+jupyter = "false"
++++
+
+Artificial Neural Network (ANN, 인공 신경망) 모델을 구성 할 때 가장 중요한 결정사항은 레이어 갯수와
+은닉층(Hidden Layer)과 출력층(Output Layer)에서 사용할 활성화 함수를 결정하는 것입니다.
+인공 신경망에서 활성화 함수(Activation function)는 노드에 입력값에 대한 변환 함수입니다.  
+노드의 입력 데이터는 활성화 함수를 거쳐 출력 함수로 변환 됩니다. (<그림 1> 참조)
+
+{{< img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/010.jpg"
+title="그림 1"
+caption="인공 신경망에서 노드의 입력 값을 변환하는 활성화 함수" >}}
+
+## 인공 신경망에서 활성화 함수가 필요한 이유
+
+여러개의 레이어로 구성되어 있고, 이전 레이어의 출력은 다음 레이어의 입력이 되는 신경망에서 모든 레이어가 Activation 함수로 선형 함수를 사용한다면, 이 신경망은 1개의 레이어로 표현 가능합니다.
+
+{{< img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/020.jpg"
+title="그림 2"
+caption="선형적인 활성화 함수 사용시 레이어 압축" >}}
+
+여러 레이어로 스택을 쌓고 레이어 사이의 차원을 변형시키고 입력 데이터를 편향 시키기 위해서는 비선형 함수를 활성화 함수로 적용하여 각 노드의 입력 데이터를 변환시켜야 합니다.
+
+
+## 일반적으로 사용되는 활성화 함수
+
+인공 신경망에서는 일반적으로 다음과 같은 활성화 함수 유형과 그래프 입니다.
+
+- Identity Function
+- Logistic Sigmoid Function
+- Hyperbolic Tangent(tanh) Function
+- ReLU Function
+- Leaky ReLU Function
+
+{{< img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/050.jpg"
+title="그림 3"
+caption="주요 활성화 함수 시각화 비교" >}}
+
+본 문서에서는 주요 활성화 함수에 대하여 살펴보고, 각 활성화 함수 정의와 활성화 함수의 미분을 유도하겠습니다. 또한 Python으로 활성화 함수와 각 활성화 함수의 미분 함수를 구해 보겠습니다.
+
+### 활성화 함수의 미분 함수가 필요한 이유?
+
+활성화 함수에 대한 미분 함수가 필요한 이유는 신경망 학습에 반드시 필요한 항(Term)을 계산하기 위함입니다.
+신경망을 만들고 학습 데이터를 입력하여 Forward Propagation을 통해서 네트워크 출력 값을 만들고, 이 출력 값으로 부터 해당 학습 데이터의 Label(레이블)과 값을 비교하여 오차(Error, Cost)를 계산합니다. 이 오차값으로 부터 각 레이어이 W(Wegiht) 변화가 오차에 미치는 영향도를 계산합니다.
+
+> 식1. Weight가 오차에 미치는 영향도L($L:  Loss Function$)
+$$
+\begin{align}
+\frac{\partial L}{\partial W^{\[l\]}} & = \frac{\partial L}{\partial a^{\[l\]}} \odot g'^{\[l\]}(Z^{\[l\]})A^{\[l-1\]}\\\\\
+W^{\[l\]} & := W^{\[l\]} -\alpha \frac{\partial L}{\partial W^{\[l\]}}
+\end{align}
+$$
+
+현재 레이어의 W가 오차에 미치는 영향도를 구하고, 이 영향도로 부터 현재 W를 업데이트하기 위해서는 활성화 함수의 미분함수가 반드시 필요합니다. 식1에서 $g'^{\[l\]}(Z^{\[l\]})$가 바로 활성화 함수의 미분 함수입니다. <식1>과 같이 W가 오차에 미치는 영향도($\frac{\partial L}{\partial W^{\[l\]}} $)로 부터 W를 업데이트하는 것이 바로 딥러닝에서는 말하는 "__Learning(학습)__" 입니다.  
+
+### 미분의 성질 정리
+
+본 문서에서는 활성화 함수 중에서 Sigmoid와 Hyperbolic Tangent에 대해서는 미분식을 유도해 볼 것입니다. 이때 참고할 미분의 주요 성질은 다음과 같습니다.
+
+- 미분 기본 성질: $ \frac{d}{dx}c = 0 $
+- 미분 기본 성질: $ \frac{d}{dx}(x^n) = nx^{n-1} $
+- 미분 기본 성질: $ (cf)'  = cf' $
+- 미분 기본 성질: $ (f + g)' = f' + g' $
+- 미분 기본 성질: $ (f - g)' = f' + g' $
+- 미분 기본 성질: $ (fg)' = f'g + g'f $
+- 미분 기본 성질: $ \frac{f}{g} = \frac{f'g - fg'}{g^2} $
+- 지수함수 미분: $ (e^{x})' = e^{x} $
+- 지수함수 미분: $ (e^{-x})' = -e^{x} $
+- 지수함수 미분: $ (a^{x})' = a^{x}lna $
+- 로그함수 미분: $ (log_ax)' = \frac{1}{xlna} $
+- 로그함수 미분: $ (log_ex)' = \frac{1}{x} $
+- Chain Rule: $ f(g(x))' = f'(g(x))g'(x) $
+
+## Sigmoid 함수
+
+Sigmoid는 오랫동안 사용된 대표적인 활성화 함수입니다. Sigmoid는 s자 모양의 출력을 갖는 비선형 함수입니다.
+Sigmoid는 실수 범위의 수를 [0, 1] 범위의 수로 맵핑합니다. 즉 실수를 입력 받아서 0보다 크고 1보다 작은 수를 반환합니다. 큰 음수 입력은 0으로 수렴하는 결과를 반환하고 큰 양수는 1로 수렴하는 값을 반환합니다. Sigmoid는 입력 값을 확률로 변환하는 특징을 갖습니다.
+
+Sigmoid 함수는 다음과 같이 정의 됩니다.
+
+> 식2. Sigmoid 함수 정의
+$$
+sigmoid(z) = \frac{1}{(1+e^{-z})}
+$$
+
+<식2>의 Sigmoid를 <그림 3>과 같은 그래프로 표현될 수 있습니다.
+
+{{< img src="https://taewanmerepo.github.io/2017/12/activation_functions_derivative/030.jpg"
+title="그림 3"
+caption="Sigmoid 함수 그래프" >}}
+
+
+### Sigmoid 함수 미분
+
+sigmoid 함수 미분 절차는 다음과 같습니다.
+
+>$$ 식3. Sigmoid 함수 미분
+\begin{align}
+\frac{d}{dx}sigmoid(x) & = \frac{d}{dx}{(1+e^{-x})^{-1}} \\\\\
+& = (-1)\frac{1}{(1+e^{-x})^{2}}\frac{d}{dx}(1+e^{-x}) \\\\\
+& = (-1)\frac{1}{(1+e^{-x})^{2}}(0+e^{-x})\frac{d}{dx}(-x) \\\\\
+& = (-1)\frac{1}{(1+e^{-x})^{2}}e^{-x}(-1)  \\\\\
+& = \frac{e^{-x}}{(1+e^{-x})^{2}}  \\\\\
+& = \frac{1+e^{-x}-1}{(1+e^{-x})^{2}}  \\\\\
+& = \frac{(1+e^{-x})}{(1+e^{-x})^{2}}-\frac{1}{(1+e^{-x})^{2}}  \\\\\
+& = \frac{1}{1+e^{-x}}-\frac{1}{(1+e^{-x})^{2}}  \\\\\
+& = \frac{1}{1+e^{-x}}(1-\frac{1}{1+e^{-x}}) \\\\\
+& = sigmoid(x)(1-sigmoid(x))
+\end{align}
+$$
+</font>
+
+sigmoid의 미분 결과(도함수)는 다음과 같습니다.
+앞에서 언급한 것처럼 sigmoid의 미분 결과는 매우 간결한 것 을 확인할 수 있습니다.
+
+> 식4. Sigmoid 함수 미분 결과
+$$
+\frac{d}{dx}sigmoid(x) = sigmoid(x)(1-sigmoid(x))
+$$
+
+다음은 sigmoid 미분결과(도함수)로 그래프를 그린 결과입니다.
+
+![](https://taewanmerepo.github.io/2017/09/sigmoid/differential_sigmoid.jpg)
+
+그래프의 미분계수를 보면 최댓값은 0.25입니다. deep learning에서 학습을 위하여 역전파(Backpropagation)를 계산하는 과정에서 activation function의 미분 값을 곱하는 과정이 포함됩니다. sigmoid를 활성 함수로 사용하는 경우 은닉층의 깊이가 깊다면 오차율 계산이 어렵다는 문제가 발생합니다. 이것이 딥러닝에 sigmoid를 사용할 때  "__vanishing gradient problem__"이 발행하는 이유입니다.
+
+### sigmoid 함수 구현
+
+sigmoid 코드 구현은 매우 간단합니다. sigmoid의 구현 코드를 정리합니다.
+
+파이썬으로 구현한 sigmoid 함수는 다음과 같습니다.
+
+```
+import numpy as np
+
+def sigmoid(z):
+    return 1 / (1 + np.exp(-z))
+```
+
+파이썬으로 구현한 sigmoid 미분 함수는 다음과 같습니다.
+
+```
+import numpy as np
+
+def sigmoid_diff(z):
+    return sigmoid(x)*(1-sigmoid(x))
+```
+
+
+
+
+## Hyperbolic Tangent(tanh) 함수
+
+> 식4. Hyperbolic Tangent(Tanh) 함수 정의
+$$
+\tanh(z) = \frac{ e^z - e^{-z} }{ e^z + e^{-z} }
+$$
+
+jjjj
+
+> 식5. Hyperbolic Tangent(Tanh) 함수 미분
+$$
+\begin{align}
+\tanh'(z) & = \bigg[ \frac{ e^z - e^{-z} }{ e^z + e^{-z} } \bigg]'  \\\\\
+&= (e^z - e^{-z})'\bigg[ (e^z - e^{-z})^{-1} \bigg]  + (e^z - e^{-z})\bigg[ (e^z + e^{-z})^{-1} \bigg]' \\\\\
+&= (e^z - e^{-z})\bigg[ (e^z - e^{-z})^{-1} \bigg]  + (e^z - e^{-z})\bigg[ (-1)(e^z + e^{-z})^{-2}(e^z - e^{-z}) \bigg] \\\\\
+&= \frac{(e^z - e^{-z})}{(e^z - e^{-z})}  - \frac{(e^z - e^{-z})(e^z - e^{-z})}{(e^z + e^{-z})^{2}} \\\\\
+& = 1 - \frac{(e^z - e^{-z})^2}{(e^z + e^{-z})^{2}} \\\\\
+& = 1 - \bigg[ \frac{(e^z - e^{-z})}{(e^z + e^{-z})} \bigg]^2 \\\\\
+& = 1 - \tanh^2(z) = (1-\tanh(z))(1+\tanh(z))
+\end{align}
+$$
+
+
+##
+##
+##
+## 어떤
+
+## 참고자료
+- [위키피디아-Activation Function]( https://en.wikipedia.org/wiki/Activation_function#Comparison_of_activation_functions)
+- http://numpydl.readthedocs.io/en/latest/tutorials/activations/
+- [위키피디아-미분](https://ko.wikipedia.org/wiki/%EB%AF%B8%EB%B6%84): https://ko.wikipedia.org/wiki/%EB%AF%B8%EB%B6%84
