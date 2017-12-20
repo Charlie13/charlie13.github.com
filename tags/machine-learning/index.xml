@@ -6,7 +6,7 @@
     <description>Recent content in Machine Learning on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Dec 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Backpropagation를 위한 편미분 과정에서 행렬 Transpose의 발생 이유?</title>
       <link>/post/backpropagation_matrix_transpose/</link>
-      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Wed, 20 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/post/backpropagation_matrix_transpose/</guid>
       <description>Backpropagation을 직접 구현하는 과정에서 이유를 알 수 없는 갑작스런 행렬 Transpose와 관련된 의구심이 오랜기간 절 괴롭혔습니다. 그 의문은 Cost Function을 해당 레이어의 W(가중치)로 편미분하여 현재 W를 수정하는 식을 유도하는 과정에서 일부 행렬이 전치행렬로 갑지기 변경되는 이유에 대한 궁금증이었습니다. 행렬이 전치(Transpose)되는 근거와 이유를 알수 없다는 답답함 이었습니다. 딥러닝 책이나 웹 문서를 찾아보면 &amp;ldquo;편미분 과정에서 적당히 행렬을 맞춰준다.&amp;ldquo;라는 표현으로 이 부분을 대충 넘어가고 있습니다. Backpropagation 미분 과정에서 행렬의 방향성(Transpose 할 것이나 말것이냐)은 어떻게 결정할 것인가라는 질문이었습니다.</description>
