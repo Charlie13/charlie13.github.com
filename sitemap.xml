@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/backpropagation_matrix_transpose/</loc>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/norm/</loc>
     <lastmod>2017-12-15T21:28:14+09:00</lastmod>
   </url>
@@ -402,7 +407,7 @@
   
   <url>
     <loc>/tags/backpropagation/</loc>
-    <lastmod>2017-12-08T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -522,7 +527,7 @@
   
   <url>
     <loc>/tags/deep-learning/</loc>
-    <lastmod>2017-12-15T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -744,13 +749,13 @@
   
   <url>
     <loc>/tags/machine-learning/</loc>
-    <lastmod>2017-12-15T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/machine-learning/</loc>
-    <lastmod>2017-12-15T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -923,6 +928,12 @@
   </url>
   
   <url>
+    <loc>/tags/partial-derivative/</loc>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/patch/</loc>
     <lastmod>2017-08-20T23:20:25+09:00</lastmod>
     <priority>0</priority>
@@ -936,7 +947,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-12-15T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1079,6 +1090,12 @@
   </url>
   
   <url>
+    <loc>/tags/transpose/</loc>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/trial-account/</loc>
     <lastmod>2017-08-01T04:20:12+09:00</lastmod>
     <priority>0</priority>
@@ -1158,7 +1175,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-12-15T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1217,6 +1234,12 @@
   </url>
   
   <url>
+    <loc>/tags/%EC%A0%84%EC%B9%98%ED%96%89%EB%A0%AC/</loc>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/%EC%A7%9C%ED%88%AC%EB%A6%AC/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
@@ -1237,6 +1260,12 @@
   <url>
     <loc>/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</loc>
     <lastmod>2017-09-17T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%ED%8E%B8%EB%AF%B8%EB%B6%84/</loc>
+    <lastmod>2017-12-19T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -77,7 +77,7 @@
     <item>
       <title>Backpropagation</title>
       <link>/tags/backpropagation/</link>
-      <pubDate>Fri, 08 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/backpropagation/</guid>
       <description></description>
@@ -239,7 +239,7 @@
     <item>
       <title>Deep Learning</title>
       <link>/tags/deep-learning/</link>
-      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/deep-learning/</guid>
       <description></description>
@@ -545,7 +545,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/tags/machine-learning/</link>
-      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/machine-learning/</guid>
       <description></description>
@@ -737,6 +737,15 @@
       <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
       
       <guid>/tags/paas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Partial Derivative</title>
+      <link>/tags/partial-derivative/</link>
+      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/partial-derivative/</guid>
       <description></description>
     </item>
     
@@ -939,6 +948,15 @@
     </item>
     
     <item>
+      <title>Transpose</title>
+      <link>/tags/transpose/</link>
+      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/transpose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Trial Account</title>
       <link>/tags/trial-account/</link>
       <pubDate>Tue, 01 Aug 2017 04:20:12 +0900</pubDate>
@@ -1119,6 +1137,15 @@
     </item>
     
     <item>
+      <title>전치행렬</title>
+      <link>/tags/%EC%A0%84%EC%B9%98%ED%96%89%EB%A0%AC/</link>
+      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%EC%A0%84%EC%B9%98%ED%96%89%EB%A0%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>클라우드</title>
       <link>/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
       <pubDate>Sun, 06 Aug 2017 22:20:25 +0900</pubDate>
@@ -1142,6 +1169,15 @@
       <pubDate>Sun, 17 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>편미분</title>
+      <link>/tags/%ED%8E%B8%EB%AF%B8%EB%B6%84/</link>
+      <pubDate>Tue, 19 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%ED%8E%B8%EB%AF%B8%EB%B6%84/</guid>
       <description></description>
     </item>
     
