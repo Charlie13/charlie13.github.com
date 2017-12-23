@@ -156,6 +156,15 @@
     </item>
     
     <item>
+      <title>Column Vector</title>
+      <link>/tags/column-vector/</link>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/column-vector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Compute Cs</title>
       <link>/tags/compute-cs/</link>
       <pubDate>Tue, 02 May 2017 11:59:47 +0900</pubDate>
@@ -203,7 +212,7 @@
     <item>
       <title>Deep Learning</title>
       <link>/tags/deep-learning/</link>
-      <pubDate>Wed, 20 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/deep-learning/</guid>
       <description></description>
@@ -500,7 +509,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/tags/machine-learning/</link>
-      <pubDate>Wed, 20 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/machine-learning/</guid>
       <description></description>
@@ -777,6 +786,15 @@
     </item>
     
     <item>
+      <title>Row Vector</title>
+      <link>/tags/row-vector/</link>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/row-vector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Seam</title>
       <link>/tags/seam/</link>
       <pubDate>Wed, 27 Jan 2016 10:50:36 +0900</pubDate>
@@ -1004,7 +1022,7 @@
     <item>
       <title>기계학습</title>
       <link>/tags/%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/</link>
-      <pubDate>Fri, 15 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/</guid>
       <description></description>
@@ -1016,6 +1034,24 @@
       <pubDate>Mon, 25 Sep 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%EB%8D%94%EC%BB%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>딥러닝</title>
+      <link>/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</link>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>로벡터</title>
+      <link>/tags/%EB%A1%9C%EB%B2%A1%ED%84%B0/</link>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%EB%A1%9C%EB%B2%A1%ED%84%B0/</guid>
       <description></description>
     </item>
     
@@ -1079,6 +1115,15 @@
       <pubDate>Wed, 20 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%EC%A0%84%EC%B9%98%ED%96%89%EB%A0%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>컬럼벡터</title>
+      <link>/tags/%EC%BB%AC%EB%9F%BC%EB%B2%A1%ED%84%B0/</link>
+      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%EC%BB%AC%EB%9F%BC%EB%B2%A1%ED%84%B0/</guid>
       <description></description>
     </item>
     

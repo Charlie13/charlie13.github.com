@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/wij_and_wji/</loc>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/backpropagation_matrix_transpose/</loc>
     <lastmod>2017-12-20T21:28:14+09:00</lastmod>
   </url>
@@ -457,6 +462,12 @@
   </url>
   
   <url>
+    <loc>/tags/column-vector/</loc>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/compute-cs/</loc>
     <lastmod>2017-05-02T11:59:47+09:00</lastmod>
     <priority>0</priority>
@@ -488,7 +499,7 @@
   
   <url>
     <loc>/tags/deep-learning/</loc>
-    <lastmod>2017-12-20T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -704,13 +715,13 @@
   
   <url>
     <loc>/tags/machine-learning/</loc>
-    <lastmod>2017-12-20T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/machine-learning/</loc>
-    <lastmod>2017-12-20T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -902,7 +913,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-12-20T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -939,6 +950,12 @@
   <url>
     <loc>/tags/remark/</loc>
     <lastmod>2016-03-22T10:23:15+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/row-vector/</loc>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1118,19 +1135,31 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-12-20T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5/</loc>
-    <lastmod>2017-12-15T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/%EB%8D%94%EC%BB%A4/</loc>
     <lastmod>2017-09-25T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</loc>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EB%A1%9C%EB%B2%A1%ED%84%B0/</loc>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1179,6 +1208,12 @@
   <url>
     <loc>/categories/%EC%A7%9C%ED%88%AC%EB%A6%AC/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EC%BB%AC%EB%9F%BC%EB%B2%A1%ED%84%B0/</loc>
+    <lastmod>2017-12-22T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
