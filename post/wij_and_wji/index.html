@@ -299,7 +299,7 @@ $$</li>
 
 <h2 id="2-w-ji-는-무엇이-이상한가">2. $W_{ji}$는 무엇이 이상한가?</h2>
 
-<p>Andrew NG 교수님의 Coursera 강좌를 보면 각 레이어의 W 행렬의 요소를 다음과 같은 표현합니다.</p>
+<p>Andrew NG 교수님의 Coursera 강좌를 보면 각 레이어의 W 행렬의 요소를 &lt;그림 2&gt;와 표현합니다.</p>
 
 
 <blockquote id="img">
@@ -323,15 +323,15 @@ $$</li>
 
 
 
-<p>그림 2는 다음과 같이 정리할 수 있습니다.</p>
+<p>&lt;그림 2&gt;의 각 요소는 다음과 같이 정리할 수 있습니다.</p>
 
 <ul>
-<li><strong>l</strong>: W 행렬이 적용될 레이어 인덱스</li>
-<li><strong>j</strong>: l 계층의 노드 위치 인덱스</li>
-<li><strong>i</strong>: &ldquo;l-1&rdquo; 계층의 노드 위치 인덱스<br /></li>
+<li><strong>l</strong>: <strong>W</strong> 행렬이 적용될 레이어 인덱스</li>
+<li><strong>j</strong>: <strong>l</strong> 계층의 노드 위치 인덱스</li>
+<li><strong>i</strong>: <strong>l-1</strong> 계층의 노드 위치 인덱스<br /></li>
 </ul>
 
-<p>&lt;그림 3&gt;은 W 행렬 요소의 표기법의 예제입니다. $W^{[1]}_{12}$는 &lt;그림 3&gt;의 빨간색으로 표기된 W 행렬 요소입니다. 이 표현은 다음과 같이 정리할 수 있습니다.</p>
+<p>&lt;그림 3&gt;은 W 행렬 요소의 표기법 예제입니다. $W^{[1]}_{12}$는 &lt;그림 3&gt;의 빨간색으로 표기된 W 행렬 요소입니다. 이 표현은 다음과 같이 정리할 수 있습니다.</p>
 
 <ul>
 <li>$W^{[1]}_{12}$: 첫 번째 레이어의 위치한 가중치 요소
@@ -342,7 +342,7 @@ $$</li>
 </ul></li>
 </ul>
 
-<p>여기에서 &ldquo;i&rdquo;와 &ldquo;j&rdquo;는 네트워크에서 레이어의 노드 위치 표현과 W 행렬의 요소 위치를 지정하는 두 가지 의미를 모두 포함합니다. 알파벳 &ldquo;i&rdquo; 다음 문자가 &ldquo;j&rdquo; 입니다. &ldquo;i&rdquo;는 입력 레이어 j는 출력 레이어의 노드 위치를 나타내는 문자입니다. 또한 행렬의 관점에서 볼 때 W 행렬의 요소 위치를 나타내기도 합니다. $W^{[1]}_{12}$는 W 행렬 첫 번째 행의 두번째 컬럼 요소를 의미합니다.</p>
+<p>여기에서 &ldquo;i&rdquo;와 &ldquo;j&rdquo;는 두 가지 의미로 사용됩니다. 첫 번째 의미는 신경망의 W 행렬의 요소와 연관되는 관련 노드의 입력/출력 노드 정보입니다. 두 번째 의미는 W 행렬에서 요소의 위치를 나타내는 정보입니다. 이렇게 관련 노드 정보와 W 행렬의 요소  위치를 지정하는 두 가지 의미를 모두 포함합니다. 알파벳 &ldquo;i&rdquo; 다음 문자가 &ldquo;j&rdquo; 입니다. &ldquo;i&rdquo;는 입력 레이어의 노드 번호를 j는 출력 레이어의 노드 번호를 나타내는 문자입니다. 또한 행렬의 관점에서 볼 때 W 행렬의 요소 위치를 나타내기도 합니다. $W^{[1]}_{12}$는 W 행렬 첫 번째 행의 두번째 컬럼 요소를 의미합니다.</p>
 
 
 <blockquote id="img">
@@ -546,7 +546,7 @@ $$</p>
 <li>(2): Backpropagation의 Hidden Layer의 오차 계산 (W 전치)</li>
 </ul>
 
-<h2 id="andrew-ng-강좌에서-w의-ji-표기법-사용이유">Andrew NG 강좌에서 W의 &ldquo;<strong>ji</strong>&rdquo; 표기법 사용이유</h2>
+<h2 id="5-andrew-ng-강좌에서-w의-ji-표기법-사용이유">5. Andrew NG 강좌에서 W의 &ldquo;<strong>ji</strong>&rdquo; 표기법 사용이유</h2>
 
 <p>앞에서 설명한 것 처럼 W의 &ldquo;<strong>ji</strong>&ldquo;와 &ldquo;<strong>ij</strong>&rdquo; 표기법을 사용할 때 다음과 같은 부분을 주의해야 합니다.</p>
 
@@ -578,7 +578,7 @@ $$</li>
 <li>(2): g함수는 활성화 함수입니다.</li>
 </ul>
 
-<h2 id="딥러닝-프레임워크의-선택">딥러닝 프레임워크의 선택</h2>
+<h2 id="6-딥러닝-프레임워크의-선택">6. 딥러닝 프레임워크의 선택</h2>
 
 <p>Tensorflow, Keras, Pytorch 등 모든 딥러닝 프레임워크는 W 행렬을 &ldquo;ij&rdquo; 표기법으로 사용합니다.
 따라서 W 행렬 정의 및 초기화에 $(n_{l-1}, n_l)$로 shape을 사용합니다.</p>
@@ -606,7 +606,7 @@ model = Sequential()
 model.add(Dense(units=2, input_dim=3, activation='relu'))
 </code></pre>
 
-<h2 id="결론">결론</h2>
+<h2 id="7-결론">7. 결론</h2>
 
 <p>W 행렬의 표기법은 딥러닝을 처음에 학습할 때 어렵게 느껴지는 부분입니다. 그러나 딥러닝 프레임워크를 사용할 때 W 행렬을 요소 단위로 접근하는 일은 없습니다. 자료를 볼 때, W 행렬을 &ldquo;<strong>ij</strong>&ldquo;방식을 사용하느냐 &ldquo;<strong>ji</strong>&rdquo; 방식을 사용하느냐에 따라서 W 행렬의 Shape 정의와 Weight Sum 연산, Backpropagation의 은닉층 오차 연산의 수식 변화를 예측하면 됩니다.</p>
 
@@ -750,9 +750,9 @@ s.setAttribute('data-timestamp', +new Date());
 <li><a href="#case-2-ji-표기법-사용-시">Case 2. ji 표기법 사용 시</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#andrew-ng-강좌에서-w의-ji-표기법-사용이유">Andrew NG 강좌에서 W의 &ldquo;<strong>ji</strong>&rdquo; 표기법 사용이유</a></li>
-<li><a href="#딥러닝-프레임워크의-선택">딥러닝 프레임워크의 선택</a></li>
-<li><a href="#결론">결론</a></li>
+<li><a href="#5-andrew-ng-강좌에서-w의-ji-표기법-사용이유">5. Andrew NG 강좌에서 W의 &ldquo;<strong>ji</strong>&rdquo; 표기법 사용이유</a></li>
+<li><a href="#6-딥러닝-프레임워크의-선택">6. 딥러닝 프레임워크의 선택</a></li>
+<li><a href="#7-결론">7. 결론</a></li>
 </ul></li>
 </ul>
 </nav>
