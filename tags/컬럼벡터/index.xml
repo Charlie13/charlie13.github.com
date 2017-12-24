@@ -17,9 +17,9 @@
       <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/post/wij_and_wji/</guid>
-      <description>제가 처음에 딥러닝을 학습할 때 가장 혼란 스러웠던것은 은틱층의 입력 데이터와 가중치 W의 합을 표현하는 &amp;ldquo;Z(Weighted Sum)&amp;ldquo;을 표현하는 수식이 문서마다 다른 것 이었습니다.
+      <description>제가 처음에 딥러닝을 학습할 때 가장 혼란 스러웠던것은 입력 레이어의 데이터와 가중치 W의 합 표현하는 &amp;ldquo;Z(Weighted Sum)&amp;rdquo; 수식이 문서마다 다른 것 이었습니다.
   &amp;lt;식 1&amp;gt;. Z(Weighted Sum)을 표현하는 수식 $$ \begin{align} Z^{[l]} &amp;amp; = W^{[l]T}A^{[l-1]} &amp;amp; (1) \\
-Z^{[l]} &amp;amp; = W^{[l]}A^{[l-1]} &amp;amp; (2) \end{align} $$   &amp;lt;식 1&amp;gt;의 (1)과 (2)는 다른 수식임에도 어떤 자료는 (1)과 같이 표현하고 어떤 자료는 (2)와 같이 표현합니다. &amp;lt;식 1&amp;gt; 수식의 표기법은 다음과 정리할 수 있습니다.</description>
+Z^{[l]} &amp;amp; = W^{[l]}A^{[l-1]} &amp;amp; (2) \end{align} $$   &amp;lt;식 1&amp;gt;의 (1)과 (2)는 다른 수식임에도 어떤 자료는 (1)과 같이 표현하고 어떤 자료는 (2)와 같이 표현합니다. &amp;lt;식 1&amp;gt; 표기법의 각 요소는 다음과 정리할 수 있습니다.</description>
     </item>
     
   </channel>
