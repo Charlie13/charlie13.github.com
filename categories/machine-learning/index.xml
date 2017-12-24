@@ -6,7 +6,7 @@
     <description>Recent content in Machine Learning on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Dec 2017 21:28:14 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 Dec 2017 21:28:14 +0900</lastBuildDate>
     
 	<atom:link href="/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>신경망 W 행렬 표기법: __ij__/__ji__ 의 차이점?</title>
       <link>/post/wij_and_wji/</link>
-      <pubDate>Fri, 22 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Sat, 23 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/post/wij_and_wji/</guid>
       <description>제가 처음에 딥러닝을 학습할 때 가장 혼란스러웠던 것은 입력 레이어의 데이터와 가중치 W의 합 표현하는 &amp;ldquo;Z(Weighted Sum)&amp;rdquo; 수식이 문서마다 다른 것이었습니다.
