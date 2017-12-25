@@ -737,5 +737,15 @@ RESTFul를 구현할때 Jersey를 많이 사용합니다. 아무래도 JAX-RS �
 간혹 새로운 기술을 너무 밝힌다는 핀잔을 듣는다. &amp;ldquo;새로운 기술을 너무 좋아해서 코드가 너무 어렵다.&amp;rdquo; 라는 말을 들으면 또다른 벽을 느끼게 된다. 다시 한번 내가 새로운 기술을을 보편화된 기술에 녹여내지 못하는 수준이라는 안타까운 사실을 발견하게 된다. 내 자신이 새로운 기술을 선호하는 이유는 대략 5가지 인것 같다. 아마도 더 있겠지만 지금 생각나는 변명거리(?</description>
     </item>
     
+    <item>
+      <title>[번역]2017 KubeCon 오라클 발표: Kubernetes와 Serverless</title>
+      <link>/post/trans_kubernetes_serverless/</link>
+      <pubDate>Mon, 25 Dec 2000 21:28:14 +0900</pubDate>
+      
+      <guid>/post/trans_kubernetes_serverless/</guid>
+      <description>본문은 blogs.oracle.com의 MODERN DEVELOPER 블로그에 포스트의 번역글 입니다. 오라클은 최근 KubeCon에서 Serverless 배포 및 멀티 클라우드 관리를 위해 Kubernetes 툴 2 가지를 추가로 공개하고 있습니다. 이와 관련한 오라클 공식 블러그의 포스트를 번역합니다. 이 기능은 2018년 초에 공개될 오라클 Serverless 클라우드 서비스에 포함될 예정입니다. 원문 정보는 다음과 같습니다.
+  출처: 오라클 공식 블로그, blogs.oracle.com 원문: https://blogs.oracle.com/kubernetes-and-serverless%3a-oracle-at-kubecon-2017 제목: Kubernetes and Serverless: Oracle at KubeCon 2017 문서작성 일시: 2017. 12. 7 작성자: Bob Quillin, Developer Relations 부사장   Kubernetes and Serverless: Oracle at KubeCon 2017 오늘 텍사스 주 오스틴에서 개최된 KubeCon + CloudNativeCon 2017 컨퍼런스에서, 오라클 컨테이너 네이티브 애플리케이션 개발 팀은 새로운 Kubernetes 관련 프로젝트를 2 개를 오픈소스로 공개하였으며, 데모를 진행하였습니다.</description>
+    </item>
+    
   </channel>
 </rss>

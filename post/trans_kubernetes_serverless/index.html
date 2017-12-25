@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<META http-equiv="Expires" content="-1">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="No-Cache">
+
+<title>[번역]2017 KubeCon 오라클 발표: Kubernetes와 Serverless</title>
+<meta name="description" content="오라클 클라우드 기술 블로그">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="[번역]2017 KubeCon 오라클 발표: Kubernetes와 Serverless" />
+<meta property="og:description" content="blogs.oracle.com 블러그의 2017년 Kubernetes와 Serverless 마지막 포스팅 번역입니다. 오라클의 2018년 방향을 감지할 수 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/trans_kubernetes_serverless/" />
+
+
+
+<meta property="article:published_time" content="2000-12-25T21:28:14&#43;09:00"/>
+<meta property="article:modified_time" content="2000-12-25T21:28:14&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="/css/jupyter.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/minsu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/hybrid.css" type="text/css" media="all" />
+
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        //inlineMath: [ ['$', '$'], ["\(", "\)"] ],
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+      //,
+      //displayAlign: "left",
+      //displayIndent: "2em"
+    });
+</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/icon/oracle.png" />
+
+
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="taewan.kim" rel="home">
+						<h1 class="logo__title">taewan.kim</h1>
+						<h2 class="logo__tagline">Taewanme Blog - 우공이산(愚公移山)</h2>
+					</a>
+				</div>
+			</div>
+			<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
+		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >MY SON - MINSU</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.11&appId=404519239985000';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		
+		<div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-8469722754608892"
+					 data-ad-slot="5594090168"
+					 data-ad-format="auto"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		  <hr/>
+		</div>
+		
+		<header class="post__header clearfix">
+			<h1 class="post__title">[번역]2017 KubeCon 오라클 발표: Kubernetes와 Serverless </h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2000-12-25 21:28:14 &#43;0900 KST">December 25, 2000</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/oracle-cloud" rel="category">Oracle-Cloud</a>
+				</span>
+			</p>
+		</header>
+
+		<div class="post__content clearfix">
+
+			<figure class="post__thumbnail">
+				<img src="https://taewanmerepo.github.io/2017/12/transplation_kubecon/post.jpg" alt="[번역]2017 KubeCon 오라클 발표: Kubernetes와 Serverless">
+			</figure>
+			
+
+<p>본문은 blogs.oracle.com의 MODERN DEVELOPER 블로그에 포스트의 번역글 입니다. 오라클은 최근 KubeCon에서 Serverless 배포 및 멀티 클라우드 관리를 위해 Kubernetes 툴 2 가지를 추가로 공개하고 있습니다. 이와 관련한 오라클 공식 블러그의 포스트를 번역합니다. 이 기능은 2018년 초에 공개될 오라클 Serverless 클라우드 서비스에 포함될 예정입니다. 원문 정보는 다음과 같습니다.</p>
+
+<blockquote>
+<ul>
+<li>출처: 오라클 공식 블로그, blogs.oracle.com</li>
+<li>원문: <a href="https://blogs.oracle.com/kubernetes-and-serverless%3a-oracle-at-kubecon-2017">https://blogs.oracle.com/kubernetes-and-serverless%3a-oracle-at-kubecon-2017</a></li>
+<li>제목: Kubernetes and Serverless: Oracle at KubeCon 2017</li>
+<li>문서작성 일시: 2017. 12. 7</li>
+<li>작성자: Bob Quillin, Developer Relations 부사장</li>
+</ul>
+</blockquote>
+
+<hr />
+
+<h1 id="kubernetes-and-serverless-oracle-at-kubecon-2017">Kubernetes and Serverless: Oracle at KubeCon 2017</h1>
+
+<p>오늘 텍사스 주 오스틴에서 개최된 KubeCon + CloudNativeCon 2017 컨퍼런스에서, 오라클 컨테이너 네이티브 애플리케이션 개발 팀은 새로운 Kubernetes 관련 프로젝트를 2 개를 오픈소스로 공개하였으며, 데모를 진행하였습니다. 이번에 공개한 첫 번째 오픈소스 프로젝트는 Kubernetes 용 &ldquo;<strong>Fn Installer</strong>&ldquo;입니다. Fn은 2017년 10월 오라클 오픈월드에서 공개한 오픈소스 서버리스 프로젝트입니다. 이번에 공개한 Fn용 헬름차트를 사용하면, 오라클 관리형 Kubernetes 서비스 Oracle Container Engine(OCE)<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>를 포함한 모든 Kubernetes 배포에서 Fn을 쉽게 설치하고 실행할 수 있습니다.</p>
+
+<p>First, we open-sourced an Fn Installer for Kubernetes. Fn is an open source serverless project announced this October at Oracle OpenWorld.</p>
+
+<p>This Helm Chart for Fn enables organizations to easily install and run Fn on any Kubernetes deployment including on top of the new Oracle managed Kubernetes service Oracle Container Engine (OCE).</p>
+
+<p>텍사스 주 오스틴에서 개최 된 KubeCon + CloudNativeCon 2017 컨퍼런스에서 Oracle Container 네이티브 애플리케이션 개발 팀은 새로운 Kubernetes 관련 프로젝트 2 개를 오픈 소스로 발표했습니다. 첫째, 우리는 Kubernetes 용 Fn 설치 프로그램을 오픈 소스했습니다. Fn은 올 10 월 Oracle OpenWorld에서 발표 한 오픈 소스 서버리스 프로젝트입니다. Fn 용 헬름 차트를 사용하면 조직에서 새로운 Oracle 관리 Kubernetes 서비스 인 Oracle Container Engine (OCE)을 비롯하여 모든 Kubernetes 배포에 Fn을 쉽게 설치하고 실행할 수 있습니다.</p>
+
+<p>Second, we have open sourced Global Multi-Cluster Management(<a href="https://github.com/oracle/navarkos">https://github.com/oracle/navarkos</a>), a new set of distributed cluster management features for Kubernetes federation that intelligently manages highly distributed applications—“planet-scale” if you will—that are multi-region, hybrid, or even multi-cloud. In a federated world, many operational challenges emerge—imagine how you would manage and auto-scale global applications or deploy spot clusters on-demand. For more, check out the Multi-Cluster Ops in a Hybrid World(<a href="https://kccncna17.sched.com/event/CU7i">https://kccncna17.sched.com/event/CU7i</a>) session by Kire Filipovski and Vitaliy Zinchenko on Thursday, December 7, at 3:50pm!</p>
+
+<h2 id="pushing-ahead-keep-it-open-integrated-and-enterprise-grade">Pushing Ahead: Keep It Open, Integrated, and Enterprise-Grade</h2>
+
+<p>Customers are seeking an open, cloud-neutral, and community-driven container-native technology stack that avoids cloud lock-in and allows them to run the same stack in the public cloud as they run locally. This was our vision when we launched the Container Native Application Development Platform(<a href="https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java">https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java</a>) at Oracle OpenWorld 2017 in October.</p>
+
+<p>Since then Oracle Container Engine was in the first wave of Certified Kubernetes platforms announced in November 2017, helping developers and dev teams be confident that there is consistency and portability among products and implementations.</p>
+
+<p>So, the community is now looking for the same assurances from their serverless technology choice: make it open and built in a consistent way to match the rest of their cloud native stack. In other words, make it open and on top of Kubernetes. And if the promise of an open-source based solution is to avoid cloud lock-in, the next logical request is to make it easy for DevOps teams to operate across clouds or in a hybrid mode. This lines up with the three major “asks” we hear from customers, development teams and enterprises: their container native platform must be open, integrated, and enterprise-grade:</p>
+
+<p>Open: Open on Open</p>
+
+<p>Both the Fn project and Global Multi-Cluster Management are cloud neutral and open source. Doubling down on open, the Fn Helm Chart enables the open serverless project (Fn) to run on the leading open container orchestration platform (Kubernetes).  (Sure beats closed on closed!) The Helm Chart deploys a fully functioning cluster of Fn github.com/fnproject/fn on a Kubernetes cluster using the Helm helm.sh/ package manager.</p>
+
+<p>Integrated: Coherent and Connected</p>
+
+<p>Delivering on the promise of an integrated platform, both the Fn Installer Helm Charts and Global Multi-Cluster Management are built to run on top of Kubernetes and thus integrate natively into Oracle’s Container Native Platform. While having one of everything works in a Home Depot or Costco, it’s no way to create an integrated, effortless application developer experience—especially at scale across hundreds if not thousands of developers across an organization.  Both the Fn installer and Global Multi-Cluster Management will be available on top of OCE, our managed Kubernetes service.</p>
+
+<p>Enterprise-Grade: HA, Secure, and Operationally Aware</p>
+
+<p>With the ability to deploy Fn to an enterprise-grade Kubernetes service such as Oracle Container Engine you can run serverless on a highly-available and secure back-end platform. Furthermore, Global Multi-Cluster Management extends the enterprise platform to multiple clusters and clouds and delivers on the enterprise desire for better utilization and capacity management.</p>
+
+<p>Production operations for large distributed systems is hard enough in a single cloud or on-prem, but becomes even more complex with federated deployments—such as multiple clusters applied across multi-regions, hybrid (cloud/on-prem), and multi-cloud scenarios. So, in these situations, DevOps teams need to deploy and auto-scale global applications or spot clusters on-demand and enable cloud migrations and hybrid scenarios.</p>
+
+<p><a href="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/a3e7d69b-5a30-44b2-af3c-3f7ef2882cd6/Image/d2f4f40a79477f19e27594fa6eae3826/kubernetes4blog.jpg">https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/a3e7d69b-5a30-44b2-af3c-3f7ef2882cd6/Image/d2f4f40a79477f19e27594fa6eae3826/kubernetes4blog.jpg</a></p>
+
+<p>With Great Power Comes Great Responsibility (and Complexity)</p>
+
+<p>So, with the power of Kubernetes federation comes great responsibility and new complexities: how to deal with challenge of applying application-aware decision logic to container native deployments. Thorny business and operational issues could include cost, regional affinity, performance, quality of service, and compliance. When DevOps teams are faced with managing multiple Kubernetes deployments they can also struggle with multiple cluster profiles, deployed on a mix of on-prem and public cloud environments.</p>
+
+<p>These are basic DevOps question that are hard questions to answer:</p>
+
+<ul>
+<li>How many clusters should we operate?</li>
+<li>Do we need separate clusters for each environment?</li>
+<li>How much capacity do we allocate for each cluster?</li>
+<li>Who will manage the lifecycle of the clusters?</li>
+<li>Which cloud is best suited for my application?</li>
+<li>How do we avoid cloud lock-in?</li>
+<li>How do we deploy applications to multiple clusters?</li>
+</ul>
+
+<p>The three open source components that make up Global Multi-Cluster Management are: (1) Navarkos (which means Admiral in Greek) enables a Kubernetes federated deployment to automatically manage multi-cluster infrastructure and manage clusters in response to federated Kubernetes application deployments; (2) Cluster Managerprovides lifecycle management for Kubernetes clusters using a Kubernetes federation backend; and (3) the Federated Ingress Controller is an alternative implementation of federated ingress using external DNS.</p>
+
+<p>Global Multi-Cluster Management works with Kubernetes federation to solve these problems in several ways:</p>
+
+<ul>
+<li>Creates Kubernetes clusters on demand and deploys apps to them (only when there is a need)</li>
+<li>Clusters can be run on any public or private cloud platform</li>
+<li>Runs the application matching supply and demand</li>
+<li>Manages cluster consistency and cluster life-cycle</li>
+<li>Ingress, nodes, network</li>
+<li>Control multi-cloud application deployments</li>
+<li>Control applications independently of cloud provider</li>
+<li>Application-aware clusters</li>
+<li>Clusters are offline when idle</li>
+<li>Workloads can be auto-scaled automatically</li>
+<li>Provides the basis to help decide where apps run based on factors that could include cost, regional affinity, performance, quality of service and compliance</li>
+</ul>
+
+<p>Global Multi-Cluster Management ensures that all of the Kubernetes clusters are created, - - sized and destroyed only when there is a need for them based on the requested application - deployments. If there are no application deployments, then there are no clusters.</p>
+
+<p>As DevOps teams deploy various applications to a federated environment, then Global Multi-Cluster Management makes intelligent decisions if any clusters should be created, how many of them, and where. At any point in time the live clusters are in tune with the current demand for applications, and the Kubernetes infrastructure becomes more application and operationally aware.</p>
+
+<p>See us at Booth G8, join our sessions, and learn more at KubeCon + CloudNativeCon 2017</p>
+
+<p>Come see us at Booth G8 and meet our engineers and contributors!  As a local Austin native (and for the rest of the old StackEngine team) we’re excited to welcome you all (y’all) to Austin. Make sure to join in to “Keep Cloud Native Weird.”</p>
+
+<p>And be fixin’ to check out these sessions:</p>
+
+<ul>
+<li>Multi-Cluster Ops in a Hybrid World deep dive session by Kire Filipovski, Cloud Architect at Oracle, and Vitaliy Zinchenko, cloud architect at Oracle Thursday December 7 at 3:50 p.m. – 4:25 p.m., Meeting Room 8ABC, Level 3.</li>
+<li>Running MySQL on Kubernetes - Patrick Galbraith, principal platform engineer at Oracle. Thursday, December 7, 3:50 p.m. – 4:25 p.m., Meeting Room 9C, Level 3</li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">[역자주]: Oracle Container Engine는 Oracle Cloud infrastructure(OCI) 위에서 동작하는 Docker Container 서비스 입니다. 서비스 URL: <a href="https://cloud.oracle.com/ko_KR/containers">https://cloud.oracle.com/ko_KR/containers</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/oracle/" rel="tag">ORACLE</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/oracle-cloud/" rel="tag">Oracle Cloud</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/oci/" rel="tag">OCI</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/kubernetes/" rel="tag">kubernetes</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/serverless/" rel="tag">serverless</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%EC%98%A4%EB%9D%BC%ED%81%B4-%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/" rel="tag">오라클 쿠버네티스</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/" rel="tag">오라클 클라우드</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<figure class="authorbox__avatar">
+		<img alt="김태완 avatar" src="/img/author/taewan1.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">작성자: 김태완</span>
+	</div>
+	<div class="authorbox__description">
+		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다. 최근에는 Deep Learning 열공 중입니다.
+	</div>
+	<div class="authorbox__description">
+		E-mail: taewanme@gmail.com
+	</div>
+</div>
+
+
+
+
+			>
+
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/i_like_new_techs/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">나는 새로운 기술을 좋아한다. </p></a>
+	</div>
+</nav>
+
+	
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://taewankim.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+	<div>
+		<hr />
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-8469722754608892"
+				 data-ad-slot="5594090168"
+				 data-ad-format="auto"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="taewan.kim" />
+	</form>
+</div>
+
+	<div class="widget-categories widget">
+	<div class="fb-like" data-href="/post/trans_kubernetes_serverless/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">ToC (목차)</h4>
+	<div class="widget__content">
+	<nav id="TableOfContents">
+<ul>
+<li><a href="#kubernetes-and-serverless-oracle-at-kubecon-2017">Kubernetes and Serverless: Oracle at KubeCon 2017</a>
+<ul>
+<li><a href="#pushing-ahead-keep-it-open-integrated-and-enterprise-grade">Pushing Ahead: Keep It Open, Integrated, and Enterprise-Grade</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">최신글</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/wij_and_wji/" title="신경망 W 행렬 표기법: &#39;ij&#39;/&#39;ji&#39; 의 차이점?">
+							신경망 W 행렬 표기법: &#39;ij&#39;/&#39;ji&#39; 의 차이점?</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/backpropagation_matrix_transpose/" title="딥러닝 역전파 수식 행렬의 전치(Transpose) 기준?">
+							딥러닝 역전파 수식 행렬의 전치(Transpose) 기준?</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/norm/" title="딥러닝을 위한 Norm, 노름">
+							딥러닝을 위한 Norm, 노름</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/error_in_hidden/" title="Hidden Layer의 오차 계산">
+							Hidden Layer의 오차 계산</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/nn_notation/" title="Neural Network 표기법(Feat: Andrew NG)">
+							Neural Network 표기법(Feat: Andrew NG)</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_blog_fn/" title="[번역]Fn–An Open Source Serverless Functions Platform">
+							[번역]Fn–An Open Source Serverless Fu ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/terraform_jupyter_installer/" title="Terraform Jupyter Installer: Machine Learning 환경 프로비저닝 ">
+							Terraform Jupyter Installer: Machin ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/oracle_cncf/" title="[번역]오라클의 CNCF(Cloud Native Computing Foundation) 가입 의미">
+							[번역]오라클의 CNCF(Cloud Native Computin ......</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/stroage_cs_url/" title="Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경">
+							Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경</a>
+		  </li>
+			<li class="widget__item">
+				<a class="widget__link" href="/post/tanh_diff/" title="tanh 미분 정리">
+							tanh 미분 정리</a>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">카테고리</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blogs.oracle.com">Blogs.Oracle.Com</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/language">Language</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/life-story-think">Life-Story-Think</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/machine-learning">Machine-Learning</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/minsu">Minsu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle">Oracle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud">Oracle-Cloud</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-big-data">Oracle-Cloud-Big-Data</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-database">Oracle-Cloud-Database</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/oracle-cloud-iaas">Oracle-Cloud-Iaas</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-event">Tech-Event</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tech-tip">Tech-Tip</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/youtube">Youtube</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%ec%a7%9c%ed%88%ac%eb%a6%ac">짜투리</a></li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+	<h4 class="widget__title">SNS(Social Network Service)</h4>
+	<div class="widget__content">
+		<a href="https://github.com/oracloud-kr-team" target="_blank" title="github"><img src="/img/icon/github.png" width="50px" height="50px"/></a>
+		<a href="https://www.slideshare.net/ssusercda07e" target="_blank" title="slideshare"><img src="/img/icon/slideshare.png" width="50px" height="50px"/></a>
+		<a href="https://www.youtube.com/channel/UCboJr3TLlqeDqpBURRdb_lg" target="_blank" title="youtube"><img src="/img/icon/youtube.png" width="50px" height="50px"/></a>
+		<a href="mailto:taewanme@gmail.com" title="email"><img src="/img/icon/email.png" width="50px" height="50px"/></a>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">관심 사이트</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="http://www.oracloud.kr/">
+				Oracle Cloud 기술 블로그</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	<div class="widget-categories widget">
+<script type="text/javascript" src="//ra.revolvermaps.com/0/0/7.js?i=00xvkd43pz7&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0" async="async"></script>
+</div>
+
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-72835175-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+
