@@ -131,7 +131,7 @@
 			</figure>
 			
 
-<p>본문은 blogs.oracle.com의 MODERN DEVELOPER 블로그에 포스트의 번역 글 입니다. 오라클은 최근 KubeCon에서 Serverless 배포 및 멀티 클라우드 관리를 위해 Kubernetes 툴 2 가지를 추가로 공개하고 있습니다. 이와 관련한 오라클 공식 블로그의 포스트를 번역합니다. 이 기능은 2018년 초에 공개될 오라클 Serverless 클라우드 서비스에 포함될 예정입니다. 원문 정보는 다음과 같습니다.</p>
+<p>본문은 blogs.oracle.com에서 운영중인 MODERN DEVELOPER 블로그의 12월 7일자 포스트를 번역한 문서입니다. 오라클은 최근 KubeCon에서 Serverless 배포와 멀티 클라우드를 관리하는 Kubernetes 툴 2 가지를 공개하고 있습니다. 이와 관련한 오라클 공식 블로그의 포스트를 번역합니다. 원문 정보는 다음과 같습니다.</p>
 
 <blockquote>
 <ul>
@@ -147,37 +147,37 @@
 
 <h1 id="kubernetes-and-serverless-oracle-at-kubecon-2017">Kubernetes and Serverless: Oracle at KubeCon 2017</h1>
 
-<p>오늘 텍사스주 오스틴에서 개최된 KubeCon + CloudNativeCon 2017 컨퍼런스에서, 오라클 컨테이너 네이티브 애플리케이션 개발팀은 새로운 Kubernetes 관련 프로젝트를 2개를 오픈소스로 공개하였으며, 데모를 진행하였습니다. 이번에 공개한 첫 번째 오픈소스 프로젝트는 Kubernetes 용 &ldquo;<strong>Fn Installer</strong>&ldquo;입니다. Fn은 2017년 10월 오라클 오픈 월드에서 공개한 오픈소스 서버리스 프로젝트입니다. 이번에 공개한 Fn용 헬름차트(Helm Charts)<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>를 사용하면, 오라클 관리형 Kubernetes 서비스 Oracle Container Engine(OCE)<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>를 포함한 모든 Kubernetes 배포에서 Fn을 쉽게 설치하고 실행할 수 있습니다.</p>
+<p>오늘 텍사스주 오스틴에서 개최된 <strong>KubeCon + CloudNativeCon 2017</strong> 컨퍼런스에서, 오라클 컨테이너 네이티브 애플리케이션 개발팀은 새로운 Kubernetes 관련 프로젝트 2개를 오픈소스로 공개했고, 현장에서 데모를 진행하였습니다. 이번에 공개한 첫 번째 오픈소스 프로젝트는 Kubernetes 용 &ldquo;<strong>Fn Installer</strong>&ldquo;입니다. Fn은 2017년 10월 오라클 오픈 월드에서 공개한 오픈소스 서버리스 프로젝트입니다. 이번에 공개한 Fn용 헬름차트(Helm Charts)<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>를 사용하면, 오라클 관리형 Kubernetes 서비스인 Oracle Container Engine(OCE)<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>를 포함한 모든 Kubernetes 배포에서 Fn을 쉽게 설치하고 실행할 수 있습니다.</p>
 
-<p>두 번째로, 오라클은 <a href="https://github.com/oracle/navarkos">글로벌 다중 클러스터 관리</a> 오픈소스 프로젝트를 운영하고 있습니다. 이 프로젝트는 고도로 분산된 행성급 규모(planet-scale) 애플리케이션을 지능적으로 관리하는 Kubernetes federation<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>을 위한 분산 클러스터 관리 기능을 제공하는 프로젝트입니다. Kubernetes federation을 통해서 복수 리전, 하이브리드 심지어 복수 클라우드에 분산된 Kubernetes 클러스터를 연합하여 운영할 수 있습니다. 이렇게 연합된(Federated) 세상에서는 많은 운영상의 문제가 발생할 수 있습니다. 글로벌 애플리케이션을 어떻게 관리하고 자동 확장할 것인가? 그리고 필요에 따라서 임시 클러스터(Spot Cluster)에 어떻게 배치할지를 상상해 보시기 바랍니다. 이것을 주제로 2017년 12월 7일 15시 50분에 &ldquo;<a href="https://kccncna17.sched.com/event/CU7i">Multi-Cluster Ops in a Hybrid World</a>&rdquo; 세션이 진행될 예정입니다. 이 세션은 Kire Filipovski 와 Vitaliy Zinchenko이 진행할 것입니다.</p>
+<p>두 번째로 오라클이 공개한 오픈소스 프로젝트는 <a href="https://github.com/oracle/navarkos">Global Multi-Cluster Management</a> 입니다. 이 프로젝트는 고도로 분산된 행성급 규모(planet-scale)의 애플리케이션을 지능적으로 관리하기 위해서 분산 클러스터 관리 기능을 Kubernetes federation<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>에 제공하는 프로젝트입니다. Kubernetes federation을 통해서 복수 리전, 하이브리드 심지어 복수 클라우드에 분산된 Kubernetes 클러스터를 연합하여 운영할 수 있습니다. 이렇게 연합된(Federated) 세상에서는 많은 운영상의 문제가 발생할 수 있습니다. 글로벌 애플리케이션을 관리하고 자동 확장하는 방법 그리고 필요에 따라서 임시 클러스터(Spot Cluster)를 생성하고 애플리켕션을 배치하는 방안을 상상해 보시기 바랍니다. 이것을 주제로 2017년 12월 7일 15시 50분에 &ldquo;<a href="https://kccncna17.sched.com/event/CU7i">Multi-Cluster Ops in a Hybrid World</a>&rdquo; 세션이 진행될 예정입니다. 이 세션은 Kire Filipovski 와 Vitaliy Zinchenko이 진행할 것입니다.</p>
 
 <h2 id="전망-개방-통합-그리고-엔터프라이즈-급-경향-유지">전망: 개방, 통합 그리고 엔터프라이즈-급 경향 유지</h2>
 
-<p>고객은 클라우드 종속을 방지하고 기존에 로컬에서 사용하는 기술 스텍을 그대로 클라우드에서 사용하기를 원합니다. 고객은 이러한 요구사항이 반영된 개방적이고, 클라우드 중립적이면서 커뮤니티가 주도하는 컨테이너-네이티브(Container-native) 기술 스텍을 찾고 있습니다. 이것이 바로 2017년 10월 오라클 오픈월드에서 &ldquo;<a href="https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java">Container Native Application Development Platform</a>&ldquo;을 출시할 때 밝힌 오라클의 비전이었습니다.</p>
+<p>고객은 특정 클라우드에 종속됨 없이 기존에 로컬에서 사용하는 기술 스텍을 그대로 클라우드에서 사용하기를 원합니다. 고객은 이러한 요구사항이 반영된 개방적이고, 클라우드 중립적이면서 커뮤니티가 주도하는 컨테이너-네이티브(Container-native) 기술 스텍을 찾고 있습니다. 이것이 바로 2017년 10월 오라클 오픈월드에서 &ldquo;<a href="https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java">Container Native Application Development Platform</a>&ldquo;을 출시할 때 밝힌 오라클의 비전이었습니다.</p>
 
-<p>그 후, 2017년 11월에 공개된 Oracle Container Engine(OCE)은 &ldquo;<strong>Certified Kubernetes</strong>&ldquo;을 획득한 첫 번째 서비스입니다. 개발자와 개발팀은  &ldquo;<strong>Certified Kubernetes</strong>&ldquo;을 획득한 OCE를 사용함으로써 프로덕션과 개발 구현체 사이에 일관성과 이식성을 확신할 수 있습니다.</p>
+<p>그 후, 2017년 11월에 공개된 Oracle Container Engine(OCE)은 &ldquo;<strong>Certified Kubernetes</strong>&ldquo;를 획득한 첫 번째 서비스입니다. 개발자와 개발팀은  &ldquo;<strong>Certified Kubernetes</strong>&ldquo;을 획득한 OCE를 사용함으로써 프로덕션과 개발 구현체 사이에 일관성과 이식성을 확신할 수 있습니다.</p>
 
-<p>현재 커뮤니티는 서비리스 기술(Serverless Technology) 선정에서도 개방적이고 그들의 클라우드 네이티브 스텍과 일치하는 일관된 방식으로 구축된다는 것을 보장하는 방법을 찾고 있습니다. 다른 표현으로 개방적이면서 Kubernetes 위에서 동작하는 Serverless 기술을 찾고 있습니다. 오픈소스 기반의 솔루션이 클라우드 종속(Cloud lock-in)의 해법일 수 있습니다. 핵심은 DevOps 팀이 여러 클라우드에 걸치거나 혹은 하이브리드 모드에서도 운영을 쉽게 할 수 있어야 합니다. 이는 고객, 개발팀 및 기업으로부터 들려오는 세 가지 주요 &ldquo;요구 사항&rdquo;과 일치합니다. 따라서 컨테이너 네이티브 플랫폼은 개방적이고 통합형이며 엔터프라이즈 급이어야 합니다.</p>
+<p>현재 커뮤니티는 서비리스 기술(Serverless Technology) 선정에서도 개방적이면서 그들의 클라우드 네이티브 스텍과 일치하는 일관된 방식으로 구축됨을 보장하는 방법을 찾고 있습니다. 다시 말해서 개방적이면서 Kubernetes 위에서 동작하는 Serverless 기술을 찾고 있습니다. 오픈소스 기반의 솔루션이 클라우드 종속(Cloud lock-in)의 해법일 수 있습니다. 핵심은 DevOps 팀이 클러스터가 여러 클라우드에 걸쳐있거나 혹은 하이브리드 모드로 운영되는 사황에서도 쉽게 관리할 수 있어야 합니다. 이는 고객, 개발팀 및 기업으로부터 들려오는 세 가지 주요 &ldquo;요구 사항&rdquo;과 일치합니다. 따라서 컨테이너 네이티브 플랫폼은 개방적이고 통합형이며 엔터프라이즈급이어야 합니다.</p>
 
 <h3 id="개방-개방-위에-개방">개방: 개방 위에 개방</h3>
 
-<p>Fn 프로젝트와 Global Multi-Cluster Management는 클라우드 중립적인 오픈소스입니다. 프로젝트의 개방성이 강화되었습니다. 이제 Fn Helm Chart를 통해서 선도적인 오픈 컨테이너 오케스트레이션 플렛폼인 Kubernetes 위에서 오픈 서버리스 프로젝트(Fn)를 실행할 수 있게 되었습니다. Helm 패키지 관리자(helm.sh)을 사용하여 Kubernetes 클러스터에 <a href="https://github.com/fnproject/fn">Fn</a>을 완전한 기능을 수행하는 클러스터로 배포할 수 있습니다.</p>
+<p>Fn 프로젝트와 Global Multi-Cluster Management는 클라우드 중립적인 오픈소스입니다. 프로젝트의 개방성이 강화되었습니다. 이제 Fn Helm Chart를 통해서 선도적인 오픈 컨테이너 오케스트레이션 플렛폼인 Kubernetes 위에서 오픈 서버리스 프로젝트(Fn)를 실행할 수 있게 되었습니다. Helm 패키지 관리자(helm.sh)을 사용하여 Kubernetes 클러스터에 <a href="https://github.com/fnproject/fn">Fn</a>을 배포할 수 있습니다. 이렇게 배포된 Fn은 기능적인 제약이 없습니다.</p>
 
 <h3 id="통합-일관성과-연결">통합: 일관성과 연결</h3>
 
-<p>통합 플랫폼에 대한 보장을 제공하기 위해서, Fn Installer Helm Charts와 Global Multi-Cluster Management는 Kubernetes 위에서 동작하도록 빌드되었습니다. 그리고 오라클의 컨테이너 네이티브 플랫폼에 완전히 통합되어 있습니다. 홈 데포<sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">4</a></sup>와 코스트코는 모든 것을 할 수 있지만, 종합적인 애플리케이션 개발자 경험을 만들 수는 없습니다. 특히 수백 클러스터 규모의 경험은 불가능합니다. 이는 수천 명의 개발 조직을 갖춘 상황에서도 어렵습니다. Fn Installer와 Global Multi-Cluster Management는 오라클의 관리형 Kubernetes 서비스인 OCE 위에서 이용 가능합니다.</p>
+<p>통합 플랫폼에 대한 보장을 제공하기 위해서, Fn Installer Helm Charts와 Global Multi-Cluster Management를 Kubernetes 위에서 동작하도록 빌드하였습니다. 이 두 프로젝트는 오라클의 컨테이너 네이티브 플랫폼에 완전히 통합되어 있습니다. 홈 데포<sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">4</a></sup>와 코스트코에서 모든 것을 할 수는 있지만, 종합적인 애플리케이션 개발자 경험을 만들 수는 없습니다. 특히 수백 클러스터 규모의 경험은 불가능합니다. 이는 수천 명의 개발 조직을 갖춘 상황에서도 어렵습니다. Fn Installer와 Global Multi-Cluster Management는 오라클의 관리형 Kubernetes 서비스인 OCE 위에서 이용 가능합니다.</p>
 
 <h3 id="엔터프라이즈급-ha-보안-및-운영-인식">엔터프라이즈급 : HA, 보안 및 운영 인식</h3>
 
-<p>Oracle Container Engine 같은 엔터프라이즈급 Kubernetes 서비스에 Fn을 배포할 수 있으므로 가용성이 높고 안전한 백엔드 플랫폼에 서버리스(Serverless)를 실행할 수 있게 되었습니다. 또한 Global Multi-Cluster Management는 엔터프라이즈 플랫폼을 여러 클러스터 및 클라우드로 확장하고 더 나은 활용 및 용량 관리를 원하는 기업의 요구에 부응합니다.</p>
+<p>Oracle Container Engine 같은 엔터프라이즈급 Kubernetes 서비스에 Fn을 배포할 수 있으므로 고 가용성의 안전한 백엔드 플랫폼에 서버리스(Serverless)를 배포하고 실행할 수 있게 되었습니다. 또한 Global Multi-Cluster Management는 엔터프라이즈 플랫폼을 여러 클러스터 및 클라우드로 확장하고 더 나은 활용 및 용량 관리를 원하는 기업의 요구를 만족시키는 기술입니다.</p>
 
-<p>대형 부산 시스템의 프로덕션 운영은 단일 클라우드와 온-프라미스에서 조차도 상당히 어렵습니다. 더군다나 복수 리전, 하이브리드(클라우드+온-프라미스) 혹은 복수 클라우드에 걸쳐 복수 클러스터를 적용하는 연합 배포(federated deployments)는 더 복잡합니다. 이런 상황에서, DevOps 팀은 필요한 시점에 애플리케이션 혹은 임시 클러스터를 배포하고 자동 확장해야 합니다. 그리고 클라우드 이전과 하이브리드 시나리오를 실행할 수 있어야 합니다.</p>
+<p>대형 분산 시스템의 프로덕션 운영은 단일 클라우드와 온-프라미스에서 조차도 상당히 어렵습니다. 더군다나 복수 리전, 하이브리드(클라우드+온-프라미스) 혹은 복수 클라우드에 걸쳐 여러 클러스터를 사용하는 연합 배포(federated deployments)는 더 복잡합니다. 이런 상황에서, DevOps 팀은 필요한 시점에 애플리케이션 혹은 임시 클러스터를 배포하고 자동 확장할 수 있어야 합니다. 그리고 클라우드 이전과 하이브리드 시나리오를 실행할 수 있어야 합니다.</p>
 
 <p><img src="https://taewanmerepo.github.io/2017/12/transplation_kubecon/kubernetes4blog.jpg" alt="" /></p>
 
 <h2 id="거대한-파워와-함께-찾아온-거대한-책임감-그리고-복잡성">거대한 파워와 함께 찾아온 거대한 책임감(그리고 복잡성)</h2>
 
-<p>Kubernetes federation은 엄청난 가능성과 힘을 제공함과 동시에 커다란 책임과 새로운 복잡성을 발생시켰습니다. 컨테이너 네이티브 배포에 애플리케이션 인지 결정 로직<sup class="footnote-ref" id="fnref:5"><a rel="footnote" href="#fn:5">5</a></sup>을 적용하는 과제가 대표적인 예입니다. 험난한 비즈니스 및 운영 문제에는 비용, 지역적 유사성, 성능, 서비스 품질 및 준수가 포함될 수 있습니다. 여러 Kubernetes 클러스터 배포를 관리할 경우, 온-프라미스 및 퍼블릭 클라우드 환경을 혼합하여 배포하는 상황이 발생할 수 있습니다. 이 때 DevOps팀은 여러 클러스터 프로파일 때문에 어려움을 겪을 수 있습니다.</p>
+<p>Kubernetes federation은 엄청난 기능과 가능성을 제공함과 동시에 커다란 책임과 새로운 복잡성을 발생시켰습니다. 컨테이너 네이티브 배포에 애플리케이션 인지 결정 로직<sup class="footnote-ref" id="fnref:5"><a rel="footnote" href="#fn:5">5</a></sup>을 적용하는 과제가 대표적인 예입니다. 험난한 비즈니스 및 운영 문제에는 비용, 지역적 유사성, 성능, 서비스 품질 및 준수가 포함될 수 있습니다. 여러 Kubernetes 클러스터 배포를 관리할 경우, 온-프라미스 및 퍼블릭 클라우드 환경을 혼합하여 배포하는 상황이 발생할 수 있습니다. 이 때 DevOps팀은 여러 클러스터 프로파일 때문에 어려움을 겪을 수 있습니다.</p>
 
 <p>다음은 기본적이지만 답변하기는 까다로운 DevOps 관련 질문입니다.</p>
 
@@ -242,7 +242,7 @@
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
 <li id="fn:2">[역자주]: Oracle Container Engine는 Oracle Cloud infrastructure(OCI) 위에서 동작하는 Docker Container 서비스입니다. 서비스 URL: <a href="https://cloud.oracle.com/ko_KR/containers">https://cloud.oracle.com/ko_KR/containers</a>
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
-<li id="fn:3">[역자주]Kubernetes federation은 다른 지역에 위치한 여러 Kubernetes 클러스터에서 배포 및 서비스를 관리 할 수 있는 기능으로 Kubernetes의 핵심 기능입니다. 참고 URL: <a href="https://kubernetes.io/docs/concepts/cluster-administration/federation/">https://kubernetes.io/docs/concepts/cluster-administration/federation/</a>
+<li id="fn:3">[역자주]Kubernetes federation은 다른 지역에 위치한 여러 Kubernetes 클러스터에 애플리케이션을 배포하고 관리하는 Kubernetes의 핵심 기능입니다. 참고 URL: <a href="https://kubernetes.io/docs/concepts/cluster-administration/federation/">https://kubernetes.io/docs/concepts/cluster-administration/federation/</a>
  <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
 <li id="fn:4">Home Depo(홈 데포): 미국의 대표적인 가정용 건축자재 제조 및 판매업체.
  <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
