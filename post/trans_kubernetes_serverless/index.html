@@ -155,7 +155,7 @@
 
 <p>고객은 특정 클라우드에 종속됨 없이 기존에 로컬에서 사용하는 기술 스텍을 그대로 클라우드에서 사용하기를 원합니다. 고객은 이러한 요구사항이 반영된 개방적이고, 클라우드 중립적이면서 커뮤니티가 주도하는 컨테이너-네이티브(Container-native) 기술 스텍을 찾고 있습니다. 이것이 바로 2017년 10월 오라클 오픈월드에서 &ldquo;<a href="https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java">Container Native Application Development Platform</a>&ldquo;을 출시할 때 밝힌 오라클의 비전이었습니다.</p>
 
-<p>그 후, 2017년 11월에 공개된 Oracle Container Engine(OCE)은 &ldquo;<strong>Certified Kubernetes</strong>&ldquo;를 획득한 첫 번째 서비스입니다. 개발자와 개발팀은  &ldquo;<strong>Certified Kubernetes</strong>&ldquo;을 획득한 OCE를 사용함으로써 프로덕션과 개발 구현체 사이에 일관성과 이식성을 확신할 수 있습니다.</p>
+<p>그 후, <a href="https://www.cncf.io/announcement/2017/11/13/cloud-native-computing-foundation-launches-certified-kubernetes-program-32-conformant-distributions-platforms/">2017년 11월에 공개된</a> Oracle Container Engine(OCE)은 &ldquo;<a href="https://github.com/cncf/k8s-conformance"><strong>Certified Kubernetes</strong></a>&ldquo;를 획득한 첫 번째 서비스입니다. 개발자와 개발팀은  &ldquo;<strong>Certified Kubernetes</strong>&ldquo;을 획득한 OCE를 사용함으로써 프로덕션과 개발 구현체 사이에 일관성과 이식성을 확신할 수 있습니다.</p>
 
 <p>현재 커뮤니티는 서비리스 기술(Serverless Technology) 선정에서도 개방적이면서 그들의 클라우드 네이티브 스텍과 일치하는 일관된 방식으로 구축됨을 보장하는 방법을 찾고 있습니다. 다시 말해서 개방적이면서 Kubernetes 위에서 동작하는 Serverless 기술을 찾고 있습니다. 오픈소스 기반의 솔루션이 클라우드 종속(Cloud lock-in)의 해법일 수 있습니다. 핵심은 DevOps 팀이 클러스터가 여러 클라우드에 걸쳐있거나 혹은 하이브리드 모드로 운영되는 사황에서도 쉽게 관리할 수 있어야 합니다. 이는 고객, 개발팀 및 기업으로부터 들려오는 세 가지 주요 &ldquo;요구 사항&rdquo;과 일치합니다. 따라서 컨테이너 네이티브 플랫폼은 개방적이고 통합형이며 엔터프라이즈급이어야 합니다.</p>
 
@@ -173,7 +173,7 @@
 
 <p>대형 분산 시스템의 프로덕션 운영은 단일 클라우드와 온-프라미스에서 조차도 상당히 어렵습니다. 더군다나 복수 리전, 하이브리드(클라우드+온-프라미스) 혹은 복수 클라우드에 걸쳐 여러 클러스터를 사용하는 연합 배포(federated deployments)는 더 복잡합니다. 이런 상황에서, DevOps 팀은 필요한 시점에 애플리케이션 혹은 임시 클러스터를 배포하고 자동 확장할 수 있어야 합니다. 그리고 클라우드 이전과 하이브리드 시나리오를 실행할 수 있어야 합니다.</p>
 
-<p><img src="https://taewanmerepo.github.io/2017/12/transplation_kubecon/kubernetes4blog.jpg" alt="" /></p>
+<p><img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/66fa09c5-4231-4306-b7e8-071282e381e2/Image/d2f4f40a79477f19e27594fa6eae3826/fn_300x125.png" alt="" /></p>
 
 <h2 id="거대한-파워와-함께-찾아온-거대한-책임감-그리고-복잡성">거대한 파워와 함께 찾아온 거대한 책임감(그리고 복잡성)</h2>
 
@@ -182,8 +182,12 @@
 <p>다음은 기본적이지만 답변하기는 까다로운 DevOps 관련 질문입니다.</p>
 
 <ul>
-<li>얼마나 많은 클러스터를 운영해야 합니까?</li>
+<li>얼마나 많은 클러스터를 운영해야 합니까?
+
+<ul>
 <li>각 환경에 대해서 개별적인 클러스터가 필요합니까?</li>
+<li>각 클러스터에 얼마나 많은 용량을 할당해야 하는가?</li>
+</ul></li>
 <li>누가 클러스터의 생명주기(Lifecycle)을 관리하나요?</li>
 <li>어떤 클라우드가 내 애플리케이션에 가장 적합합니까?</li>
 <li>어떻게 클라우드 종속을 피할 수 있나요?</li>
@@ -195,16 +199,29 @@
 <p>Global Multi-Cluster Management는 Kubernetes federation과 함께 다음과 같은 여러 가지 문제를 해결합니다.</p>
 
 <ul>
-<li>필요한 시점에 Kubernetes 클러스터 생성 및 클러스터에 앱 배포</li>
+<li>필요한 시점에 Kubernetes 클러스터 생성 및 클러스터에 앱 배포
+
+<ul>
 <li>클러스터는 퍼블릭 클라우드와 프라이빗 클라우드에서 모두 실행 가능</li>
 <li>수요와 공급에 맞춰 애플리케이션 실행</li>
-<li>클러스터 일관성과 클러스터 생명주기(life-cycle) 관리</li>
+</ul></li>
+<li>클러스터 일관성과 클러스터 생명주기(life-cycle) 관리
+
+<ul>
 <li>Ingress, nodes, network</li>
-<li>다중 클라우드 응용 프로그램 배포 제어</li>
+</ul></li>
+<li>다중 클라우드 응용 프로그램 배포 제어
+
+<ul>
 <li>클라우드 제공 업체에 독립적으로 애플리케이션 제어</li>
-<li>애플리케이션 인지 클러스터(Application-aware clusters)</li>
+</ul></li>
+<li>애플리케이션 인지 클러스터(Application-aware clusters)
+
+<ul>
+<li>클러스터는 idle 시점에 오프라인 전환</li>
 <li>워크로드에 따른 자동 확장(auto-scaled) 기능 자동화</li>
 <li>비용, 지역적 유사성, 성능, 서비스 품질 및 준수를 포함한 여러 요소를 근간으로 앱을 실행하는 위치를 결정하는 기반 제공</li>
+</ul></li>
 </ul>
 
 <p>&ldquo;<strong>Global Multi-Cluster Management</strong>&ldquo;는 애플리케이션 배포를 기준으로 필요한 시점에 Kubernets 클러스터를 생성하고 규모를 조절하고, 제거합니다. 모든 클러스터 관리는 애플리케이션 배포 요청을 기준으로 관리됩니다. 배포된 애플리케이션이 없는 상황에서는 Kubernetes 클러스터는 어디에도 존재하지 않습니다.</p>
