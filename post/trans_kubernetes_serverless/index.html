@@ -18,8 +18,8 @@
 
 
 
-<meta property="article:published_time" content="2000-12-25T21:28:14&#43;09:00"/>
-<meta property="article:modified_time" content="2000-12-25T21:28:14&#43;09:00"/>
+<meta property="article:published_time" content="2017-12-25T21:28:14&#43;09:00"/>
+<meta property="article:modified_time" content="2017-12-25T21:28:14&#43;09:00"/>
 
 
 
@@ -116,7 +116,7 @@
 			<h1 class="post__title">[번역]2017 KubeCon 오라클 발표: Kubernetes와 Serverless </h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2000-12-25 21:28:14 &#43;0900 KST">December 25, 2000</time>
+				<time class="post__meta-date" datetime="2017-12-25 21:28:14 &#43;0900 KST">December 25, 2017</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/oracle-cloud" rel="category">Oracle-Cloud</a>
@@ -131,7 +131,7 @@
 			</figure>
 			
 
-<p>본문은 blogs.oracle.com의 MODERN DEVELOPER 블로그에 포스트의 번역글 입니다. 오라클은 최근 KubeCon에서 Serverless 배포 및 멀티 클라우드 관리를 위해 Kubernetes 툴 2 가지를 추가로 공개하고 있습니다. 이와 관련한 오라클 공식 블러그의 포스트를 번역합니다. 이 기능은 2018년 초에 공개될 오라클 Serverless 클라우드 서비스에 포함될 예정입니다. 원문 정보는 다음과 같습니다.</p>
+<p>본문은 blogs.oracle.com의 MODERN DEVELOPER 블로그에 포스트의 번역 글 입니다. 오라클은 최근 KubeCon에서 Serverless 배포 및 멀티 클라우드 관리를 위해 Kubernetes 툴 2 가지를 추가로 공개하고 있습니다. 이와 관련한 오라클 공식 블로그의 포스트를 번역합니다. 이 기능은 2018년 초에 공개될 오라클 Serverless 클라우드 서비스에 포함될 예정입니다. 원문 정보는 다음과 같습니다.</p>
 
 <blockquote>
 <ul>
@@ -147,95 +147,109 @@
 
 <h1 id="kubernetes-and-serverless-oracle-at-kubecon-2017">Kubernetes and Serverless: Oracle at KubeCon 2017</h1>
 
-<p>오늘 텍사스 주 오스틴에서 개최된 KubeCon + CloudNativeCon 2017 컨퍼런스에서, 오라클 컨테이너 네이티브 애플리케이션 개발 팀은 새로운 Kubernetes 관련 프로젝트를 2 개를 오픈소스로 공개하였으며, 데모를 진행하였습니다. 이번에 공개한 첫 번째 오픈소스 프로젝트는 Kubernetes 용 &ldquo;<strong>Fn Installer</strong>&ldquo;입니다. Fn은 2017년 10월 오라클 오픈월드에서 공개한 오픈소스 서버리스 프로젝트입니다. 이번에 공개한 Fn용 헬름차트를 사용하면, 오라클 관리형 Kubernetes 서비스 Oracle Container Engine(OCE)<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>를 포함한 모든 Kubernetes 배포에서 Fn을 쉽게 설치하고 실행할 수 있습니다.</p>
+<p>오늘 텍사스주 오스틴에서 개최된 KubeCon + CloudNativeCon 2017 컨퍼런스에서, 오라클 컨테이너 네이티브 애플리케이션 개발팀은 새로운 Kubernetes 관련 프로젝트를 2개를 오픈소스로 공개하였으며, 데모를 진행하였습니다. 이번에 공개한 첫 번째 오픈소스 프로젝트는 Kubernetes 용 &ldquo;<strong>Fn Installer</strong>&ldquo;입니다. Fn은 2017년 10월 오라클 오픈 월드에서 공개한 오픈소스 서버리스 프로젝트입니다. 이번에 공개한 Fn용 헬름차트(Helm Charts)<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>를 사용하면, 오라클 관리형 Kubernetes 서비스 Oracle Container Engine(OCE)<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>를 포함한 모든 Kubernetes 배포에서 Fn을 쉽게 설치하고 실행할 수 있습니다.</p>
 
-<p>First, we open-sourced an Fn Installer for Kubernetes. Fn is an open source serverless project announced this October at Oracle OpenWorld.</p>
+<p>두 번째로, 오라클은 <a href="https://github.com/oracle/navarkos">글로벌 다중 클러스터 관리</a> 오픈소스 프로젝트를 운영하고 있습니다. 이 프로젝트는 고도로 분산된 행성급 규모(planet-scale) 애플리케이션을 지능적으로 관리하는 Kubernetes federation<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>을 위한 분산 클러스터 관리 기능을 제공하는 프로젝트입니다. Kubernetes federation을 통해서 복수 리전, 하이브리드 심지어 복수 클라우드에 분산된 Kubernetes 클러스터를 연합하여 운영할 수 있습니다. 이렇게 연합된(Federated) 세상에서는 많은 운영상의 문제가 발생할 수 있습니다. 글로벌 애플리케이션을 어떻게 관리하고 자동 확장할 것인가? 그리고 필요에 따라서 임시 클러스터(Spot Cluster)에 어떻게 배치할지를 상상해 보시기 바랍니다. 이것을 주제로 2017년 12월 7일 15시 50분에 &ldquo;<a href="https://kccncna17.sched.com/event/CU7i">Multi-Cluster Ops in a Hybrid World</a>&rdquo; 세션이 진행될 예정입니다. 이 세션은 Kire Filipovski 와 Vitaliy Zinchenko이 진행할 것입니다.</p>
 
-<p>This Helm Chart for Fn enables organizations to easily install and run Fn on any Kubernetes deployment including on top of the new Oracle managed Kubernetes service Oracle Container Engine (OCE).</p>
+<h2 id="전망-개방-통합-그리고-엔터프라이즈-급-경향-유지">전망: 개방, 통합 그리고 엔터프라이즈-급 경향 유지</h2>
 
-<p>텍사스 주 오스틴에서 개최 된 KubeCon + CloudNativeCon 2017 컨퍼런스에서 Oracle Container 네이티브 애플리케이션 개발 팀은 새로운 Kubernetes 관련 프로젝트 2 개를 오픈 소스로 발표했습니다. 첫째, 우리는 Kubernetes 용 Fn 설치 프로그램을 오픈 소스했습니다. Fn은 올 10 월 Oracle OpenWorld에서 발표 한 오픈 소스 서버리스 프로젝트입니다. Fn 용 헬름 차트를 사용하면 조직에서 새로운 Oracle 관리 Kubernetes 서비스 인 Oracle Container Engine (OCE)을 비롯하여 모든 Kubernetes 배포에 Fn을 쉽게 설치하고 실행할 수 있습니다.</p>
+<p>고객은 클라우드 종속을 방지하고 기존에 로컬에서 사용하는 기술 스텍을 그대로 클라우드에서 사용하기를 원합니다. 고객은 이러한 요구사항이 반영된 개방적이고, 클라우드 중립적이면서 커뮤니티가 주도하는 컨테이너-네이티브(Container-native) 기술 스텍을 찾고 있습니다. 이것이 바로 2017년 10월 오라클 오픈월드에서 &ldquo;<a href="https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java">Container Native Application Development Platform</a>&ldquo;을 출시할 때 밝힌 오라클의 비전이었습니다.</p>
 
-<p>Second, we have open sourced Global Multi-Cluster Management(<a href="https://github.com/oracle/navarkos">https://github.com/oracle/navarkos</a>), a new set of distributed cluster management features for Kubernetes federation that intelligently manages highly distributed applications—“planet-scale” if you will—that are multi-region, hybrid, or even multi-cloud. In a federated world, many operational challenges emerge—imagine how you would manage and auto-scale global applications or deploy spot clusters on-demand. For more, check out the Multi-Cluster Ops in a Hybrid World(<a href="https://kccncna17.sched.com/event/CU7i">https://kccncna17.sched.com/event/CU7i</a>) session by Kire Filipovski and Vitaliy Zinchenko on Thursday, December 7, at 3:50pm!</p>
+<p>그 후, 2017년 11월에 공개된 Oracle Container Engine(OCE)은 &ldquo;<strong>Certified Kubernetes</strong>&ldquo;을 획득한 첫 번째 서비스입니다. 개발자와 개발팀은  &ldquo;<strong>Certified Kubernetes</strong>&ldquo;을 획득한 OCE를 사용함으로써 프로덕션과 개발 구현체 사이에 일관성과 이식성을 확신할 수 있습니다.</p>
 
-<h2 id="pushing-ahead-keep-it-open-integrated-and-enterprise-grade">Pushing Ahead: Keep It Open, Integrated, and Enterprise-Grade</h2>
+<p>현재 커뮤니티는 서비리스 기술(Serverless Technology) 선정에서도 개방적이고 그들의 클라우드 네이티브 스텍과 일치하는 일관된 방식으로 구축된다는 것을 보장하는 방법을 찾고 있습니다. 다른 표현으로 개방적이면서 Kubernetes 위에서 동작하는 Serverless 기술을 찾고 있습니다. 오픈소스 기반의 솔루션이 클라우드 종속(Cloud lock-in)의 해법일 수 있습니다. 핵심은 DevOps 팀이 여러 클라우드에 걸치거나 혹은 하이브리드 모드에서도 운영을 쉽게 할 수 있어야 합니다. 이는 고객, 개발팀 및 기업으로부터 들려오는 세 가지 주요 &ldquo;요구 사항&rdquo;과 일치합니다. 따라서 컨테이너 네이티브 플랫폼은 개방적이고 통합형이며 엔터프라이즈 급이어야 합니다.</p>
 
-<p>Customers are seeking an open, cloud-neutral, and community-driven container-native technology stack that avoids cloud lock-in and allows them to run the same stack in the public cloud as they run locally. This was our vision when we launched the Container Native Application Development Platform(<a href="https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java">https://blogs.oracle.com/developers/meet-the-new-application-development-stack-kubernetes-serverless-registry-cicd-java</a>) at Oracle OpenWorld 2017 in October.</p>
+<h3 id="개방-개방-위에-개방">개방: 개방 위에 개방</h3>
 
-<p>Since then Oracle Container Engine was in the first wave of Certified Kubernetes platforms announced in November 2017, helping developers and dev teams be confident that there is consistency and portability among products and implementations.</p>
+<p>Fn 프로젝트와 Global Multi-Cluster Management는 클라우드 중립적인 오픈소스입니다. 프로젝트의 개방성이 강화되었습니다. 이제 Fn Helm Chart를 통해서 선도적인 오픈 컨테이너 오케스트레이션 플렛폼인 Kubernetes 위에서 오픈 서버리스 프로젝트(Fn)를 실행할 수 있게 되었습니다. Helm 패키지 관리자(helm.sh)을 사용하여 Kubernetes 클러스터에 <a href="https://github.com/fnproject/fn">Fn</a>을 완전한 기능을 수행하는 클러스터로 배포할 수 있습니다.</p>
 
-<p>So, the community is now looking for the same assurances from their serverless technology choice: make it open and built in a consistent way to match the rest of their cloud native stack. In other words, make it open and on top of Kubernetes. And if the promise of an open-source based solution is to avoid cloud lock-in, the next logical request is to make it easy for DevOps teams to operate across clouds or in a hybrid mode. This lines up with the three major “asks” we hear from customers, development teams and enterprises: their container native platform must be open, integrated, and enterprise-grade:</p>
+<h3 id="통합-일관성과-연결">통합: 일관성과 연결</h3>
 
-<p>Open: Open on Open</p>
+<p>통합 플랫폼에 대한 보장을 제공하기 위해서, Fn Installer Helm Charts와 Global Multi-Cluster Management는 Kubernetes 위에서 동작하도록 빌드되었습니다. 그리고 오라클의 컨테이너 네이티브 플랫폼에 완전히 통합되어 있습니다. 홈 데포<sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">4</a></sup>와 코스트코는 모든 것을 할 수 있지만, 종합적인 애플리케이션 개발자 경험을 만들 수는 없습니다. 특히 수백 클러스터 규모의 경험은 불가능합니다. 이는 수천 명의 개발 조직을 갖춘 상황에서도 어렵습니다. Fn Installer와 Global Multi-Cluster Management는 오라클의 관리형 Kubernetes 서비스인 OCE 위에서 이용 가능합니다.</p>
 
-<p>Both the Fn project and Global Multi-Cluster Management are cloud neutral and open source. Doubling down on open, the Fn Helm Chart enables the open serverless project (Fn) to run on the leading open container orchestration platform (Kubernetes).  (Sure beats closed on closed!) The Helm Chart deploys a fully functioning cluster of Fn github.com/fnproject/fn on a Kubernetes cluster using the Helm helm.sh/ package manager.</p>
+<h3 id="엔터프라이즈급-ha-보안-및-운영-인식">엔터프라이즈급 : HA, 보안 및 운영 인식</h3>
 
-<p>Integrated: Coherent and Connected</p>
+<p>Oracle Container Engine 같은 엔터프라이즈급 Kubernetes 서비스에 Fn을 배포할 수 있으므로 가용성이 높고 안전한 백엔드 플랫폼에 서버리스(Serverless)를 실행할 수 있게 되었습니다. 또한 Global Multi-Cluster Management는 엔터프라이즈 플랫폼을 여러 클러스터 및 클라우드로 확장하고 더 나은 활용 및 용량 관리를 원하는 기업의 요구에 부응합니다.</p>
 
-<p>Delivering on the promise of an integrated platform, both the Fn Installer Helm Charts and Global Multi-Cluster Management are built to run on top of Kubernetes and thus integrate natively into Oracle’s Container Native Platform. While having one of everything works in a Home Depot or Costco, it’s no way to create an integrated, effortless application developer experience—especially at scale across hundreds if not thousands of developers across an organization.  Both the Fn installer and Global Multi-Cluster Management will be available on top of OCE, our managed Kubernetes service.</p>
+<p>대형 부산 시스템의 프로덕션 운영은 단일 클라우드와 온-프라미스에서 조차도 상당히 어렵습니다. 더군다나 복수 리전, 하이브리드(클라우드+온-프라미스) 혹은 복수 클라우드에 걸쳐 복수 클러스터를 적용하는 연합 배포(federated deployments)는 더 복잡합니다. 이런 상황에서, DevOps 팀은 필요한 시점에 애플리케이션 혹은 임시 클러스터를 배포하고 자동 확장해야 합니다. 그리고 클라우드 이전과 하이브리드 시나리오를 실행할 수 있어야 합니다.</p>
 
-<p>Enterprise-Grade: HA, Secure, and Operationally Aware</p>
+<p><img src="https://taewanmerepo.github.io/2017/12/transplation_kubecon/kubernetes4blog.jpg" alt="" /></p>
 
-<p>With the ability to deploy Fn to an enterprise-grade Kubernetes service such as Oracle Container Engine you can run serverless on a highly-available and secure back-end platform. Furthermore, Global Multi-Cluster Management extends the enterprise platform to multiple clusters and clouds and delivers on the enterprise desire for better utilization and capacity management.</p>
+<h2 id="거대한-파워와-함께-찾아온-거대한-책임감-그리고-복잡성">거대한 파워와 함께 찾아온 거대한 책임감(그리고 복잡성)</h2>
 
-<p>Production operations for large distributed systems is hard enough in a single cloud or on-prem, but becomes even more complex with federated deployments—such as multiple clusters applied across multi-regions, hybrid (cloud/on-prem), and multi-cloud scenarios. So, in these situations, DevOps teams need to deploy and auto-scale global applications or spot clusters on-demand and enable cloud migrations and hybrid scenarios.</p>
+<p>Kubernetes federation은 엄청난 가능성과 힘을 제공함과 동시에 커다란 책임과 새로운 복잡성을 발생시켰습니다. 컨테이너 네이티브 배포에 애플리케이션 인지 결정 로직<sup class="footnote-ref" id="fnref:5"><a rel="footnote" href="#fn:5">5</a></sup>을 적용하는 과제가 대표적인 예입니다. 험난한 비즈니스 및 운영 문제에는 비용, 지역적 유사성, 성능, 서비스 품질 및 준수가 포함될 수 있습니다. 여러 Kubernetes 클러스터 배포를 관리할 경우, 온-프라미스 및 퍼블릭 클라우드 환경을 혼합하여 배포하는 상황이 발생할 수 있습니다. 이 때 DevOps팀은 여러 클러스터 프로파일 때문에 어려움을 겪을 수 있습니다.</p>
 
-<p><a href="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/a3e7d69b-5a30-44b2-af3c-3f7ef2882cd6/Image/d2f4f40a79477f19e27594fa6eae3826/kubernetes4blog.jpg">https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/a3e7d69b-5a30-44b2-af3c-3f7ef2882cd6/Image/d2f4f40a79477f19e27594fa6eae3826/kubernetes4blog.jpg</a></p>
-
-<p>With Great Power Comes Great Responsibility (and Complexity)</p>
-
-<p>So, with the power of Kubernetes federation comes great responsibility and new complexities: how to deal with challenge of applying application-aware decision logic to container native deployments. Thorny business and operational issues could include cost, regional affinity, performance, quality of service, and compliance. When DevOps teams are faced with managing multiple Kubernetes deployments they can also struggle with multiple cluster profiles, deployed on a mix of on-prem and public cloud environments.</p>
-
-<p>These are basic DevOps question that are hard questions to answer:</p>
+<p>다음은 기본적이지만 답변하기는 까다로운 DevOps 관련 질문입니다.</p>
 
 <ul>
-<li>How many clusters should we operate?</li>
-<li>Do we need separate clusters for each environment?</li>
-<li>How much capacity do we allocate for each cluster?</li>
-<li>Who will manage the lifecycle of the clusters?</li>
-<li>Which cloud is best suited for my application?</li>
-<li>How do we avoid cloud lock-in?</li>
-<li>How do we deploy applications to multiple clusters?</li>
+<li>얼마나 많은 클러스터를 운영해야 합니까?</li>
+<li>각 환경에 대해서 개별적인 클러스터가 필요합니까?</li>
+<li>누가 클러스터의 생명주기(Lifecycle)을 관리하나요?</li>
+<li>어떤 클라우드가 내 애플리케이션에 가장 적합합니까?</li>
+<li>어떻게 클라우드 종속을 피할 수 있나요?</li>
+<li>애플리케이션을 여러 클러스터에 어떻게 배치합니까?</li>
 </ul>
 
-<p>The three open source components that make up Global Multi-Cluster Management are: (1) Navarkos (which means Admiral in Greek) enables a Kubernetes federated deployment to automatically manage multi-cluster infrastructure and manage clusters in response to federated Kubernetes application deployments; (2) Cluster Managerprovides lifecycle management for Kubernetes clusters using a Kubernetes federation backend; and (3) the Federated Ingress Controller is an alternative implementation of federated ingress using external DNS.</p>
+<p>&ldquo;<strong>Global Multi-Cluster Management</strong>&ldquo;는 세 개의 오픈 소스 컴포넌트(Navarkos, Cluster Manager, Federated Ingress Controller)로 구성됩니다. Navarkos는 그리스어로 &ldquo;제독(Admiral)&ldquo;을 의미합니다. Kubernetes 연합 배포는 Navarkos를 이용하여 복수 클러스터 인프라스트럭처를 자동으로 관리할 수 있습니다. 그리고 연합된 Kubernetes 애플리케이션 배포의 반응을 기준으로 클러스터를 관리할 수 있습니다. Cluster Manager는 Kubernetes federation 백엔드를 이용하여 Kubernetes 클러스터의 생명주기(Lifecycle)를 관리합니다. 마지막으로 Federated Ingress Controller는 외부 DNS를 사용하는 Ingress를 대체합니다.</p>
 
-<p>Global Multi-Cluster Management works with Kubernetes federation to solve these problems in several ways:</p>
+<p>Global Multi-Cluster Management는 Kubernetes federation과 함께 다음과 같은 여러 가지 문제를 해결합니다.</p>
 
 <ul>
-<li>Creates Kubernetes clusters on demand and deploys apps to them (only when there is a need)</li>
-<li>Clusters can be run on any public or private cloud platform</li>
-<li>Runs the application matching supply and demand</li>
-<li>Manages cluster consistency and cluster life-cycle</li>
+<li>필요한 시점에 Kubernetes 클러스터 생성 및 클러스터에 앱 배포</li>
+<li>클러스터는 퍼블릭 클라우드와 프라이빗 클라우드에서 모두 실행 가능</li>
+<li>수요와 공급에 맞춰 애플리케이션 실행</li>
+<li>클러스터 일관성과 클러스터 생명주기(life-cycle) 관리</li>
 <li>Ingress, nodes, network</li>
-<li>Control multi-cloud application deployments</li>
-<li>Control applications independently of cloud provider</li>
-<li>Application-aware clusters</li>
-<li>Clusters are offline when idle</li>
-<li>Workloads can be auto-scaled automatically</li>
-<li>Provides the basis to help decide where apps run based on factors that could include cost, regional affinity, performance, quality of service and compliance</li>
+<li>다중 클라우드 응용 프로그램 배포 제어</li>
+<li>클라우드 제공 업체에 독립적으로 애플리케이션 제어</li>
+<li>애플리케이션 인지 클러스터(Application-aware clusters)</li>
+<li>워크로드에 따른 자동 확장(auto-scaled) 기능 자동화</li>
+<li>비용, 지역적 유사성, 성능, 서비스 품질 및 준수를 포함한 여러 요소를 근간으로 앱을 실행하는 위치를 결정하는 기반 제공</li>
 </ul>
 
-<p>Global Multi-Cluster Management ensures that all of the Kubernetes clusters are created, - - sized and destroyed only when there is a need for them based on the requested application - deployments. If there are no application deployments, then there are no clusters.</p>
+<p>&ldquo;<strong>Global Multi-Cluster Management</strong>&ldquo;는 애플리케이션 배포를 기준으로 필요한 시점에 Kubernets 클러스터를 생성하고 규모를 조절하고, 제거합니다. 모든 클러스터 관리는 애플리케이션 배포 요청을 기준으로 관리됩니다. 배포된 애플리케이션이 없는 상황에서는 Kubernetes 클러스터는 어디에도 존재하지 않습니다.</p>
 
-<p>As DevOps teams deploy various applications to a federated environment, then Global Multi-Cluster Management makes intelligent decisions if any clusters should be created, how many of them, and where. At any point in time the live clusters are in tune with the current demand for applications, and the Kubernetes infrastructure becomes more application and operationally aware.</p>
+<p>DevOps 팀이 연합 Kubernetes 환경에 여러 유형의 애플리케이션을 배포할 때, Global Multi-Cluster Management는 어떤 클러스터를 만들어야 하는지, 얼마나 많이 만들지, 어디에 배치해야 하는지 지능적으로 결정합니다. 운영 중인 클러스터는 애플리케이션의 현재 시점의 요청을 기준으로 조절됩니다. Kubernetes 인프라스트럭처는 더 많은 애플리케이션을 운영하고 운영 상황을 인식하게 됩니다.</p>
 
-<p>See us at Booth G8, join our sessions, and learn more at KubeCon + CloudNativeCon 2017</p>
+<h2 id="g8-부스-방문에-주세요-오라클-세션에-참여해-주세요-kubecon-cloudnativecon-2017">G8 부스 방문에 주세요, 오라클 세션에 참여해 주세요(KubeCon + CloudNativeCon 2017)</h2>
 
-<p>Come see us at Booth G8 and meet our engineers and contributors!  As a local Austin native (and for the rest of the old StackEngine team) we’re excited to welcome you all (y’all) to Austin. Make sure to join in to “Keep Cloud Native Weird.”</p>
+<p>G8 부스에 오라클 엔지니어와 기여자(Contributor)들 만날 수 있습니다. 오스틴 네이티브<sup class="footnote-ref" id="fnref:6"><a rel="footnote" href="#fn:6">6</a></sup>도 격하게 환영합니다.</p>
 
-<p>And be fixin’ to check out these sessions:</p>
+<h2 id="세션-정보-수정">세션 정보 수정</h2>
 
 <ul>
-<li>Multi-Cluster Ops in a Hybrid World deep dive session by Kire Filipovski, Cloud Architect at Oracle, and Vitaliy Zinchenko, cloud architect at Oracle Thursday December 7 at 3:50 p.m. – 4:25 p.m., Meeting Room 8ABC, Level 3.</li>
-<li>Running MySQL on Kubernetes - Patrick Galbraith, principal platform engineer at Oracle. Thursday, December 7, 3:50 p.m. – 4:25 p.m., Meeting Room 9C, Level 3</li>
+<li><strong>Multi-Cluster Ops in a Hybrid World deep dive</strong> 세션
+
+<ul>
+<li>발표자: Kire Filipovski(오라클 클라우드 아키텍트), Vitaliy Zinchenko(오라클 클라우드 아키텍트),</li>
+<li>일시: 2017년 12월 7일 15:50 – 16:25</li>
+<li>장소: Room 8ABC, Level 3.</li>
+</ul></li>
+<li><strong>Running MySQL on Kubernetes</strong>
+
+<ul>
+<li>발표자: Patrick Galbraith(오라클 플랫폼 엔지니어)</li>
+<li>일시: 2017년 12월 7일 15:50 – 16:25</li>
+<li>장소: Room 9C, Level 3</li>
+</ul></li>
 </ul>
 <div class="footnotes">
 
 <hr />
 
 <ol>
-<li id="fn:1">[역자주]: Oracle Container Engine는 Oracle Cloud infrastructure(OCI) 위에서 동작하는 Docker Container 서비스 입니다. 서비스 URL: <a href="https://cloud.oracle.com/ko_KR/containers">https://cloud.oracle.com/ko_KR/containers</a>
+<li id="fn:1">[역자주]: Helm은 Kubernetes 용 패키지 관리 툴입니다. Kubernetes에 배포될 패지키를 설치하고 제거하는 역할을 담당합니다. Ubuntu의 apt-get, CentOS의 yum과 같은 역할을 담당합니다. Helm이 대상 패키지를 관리하는 단위가 Helm Charts 입니다.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">[역자주]: Oracle Container Engine는 Oracle Cloud infrastructure(OCI) 위에서 동작하는 Docker Container 서비스입니다. 서비스 URL: <a href="https://cloud.oracle.com/ko_KR/containers">https://cloud.oracle.com/ko_KR/containers</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3">[역자주]Kubernetes federation은 다른 지역에 위치한 여러 Kubernetes 클러스터에서 배포 및 서비스를 관리 할 수 있는 기능으로 Kubernetes의 핵심 기능입니다. 참고 URL: <a href="https://kubernetes.io/docs/concepts/cluster-administration/federation/">https://kubernetes.io/docs/concepts/cluster-administration/federation/</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+<li id="fn:4">Home Depo(홈 데포): 미국의 대표적인 가정용 건축자재 제조 및 판매업체.
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+<li id="fn:5">[역자주]애플리케이션 인지 결정 로직이란 애플리케이션에 대한 현재 부하와 애플리케이션 특성을 인지하여 어디에 배포할지를 결정하는 로직을 의미합니다. 배포 자동화와 자동 확장을 지능적으로 처리하는 방식입니다.
+ <a class="footnote-return" href="#fnref:5"><sup>[return]</sup></a></li>
+<li id="fn:6">[역자주]오스틴에는 StackEngine 팀이 위치합니다. 오라클은 현재 2 개의 Docker 기술을 지원합니다. 2016년에 오라클은 StackEngine을 인수하여 Oracle Container Cloud Service를 오라클 클라우드에서 서비스 중입니다.
+ <a class="footnote-return" href="#fnref:6"><sup>[return]</sup></a></li>
 </ol>
 </div>
 
@@ -281,8 +295,8 @@
 
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/i_like_new_techs/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">나는 새로운 기술을 좋아한다. </p></a>
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/wij_and_wji/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">신경망 W 행렬 표기법: &#39;ij&#39;/&#39;ji&#39; 의 차이점?</p></a>
 	</div>
 </nav>
 
@@ -345,7 +359,15 @@ s.setAttribute('data-timestamp', +new Date());
 <ul>
 <li><a href="#kubernetes-and-serverless-oracle-at-kubecon-2017">Kubernetes and Serverless: Oracle at KubeCon 2017</a>
 <ul>
-<li><a href="#pushing-ahead-keep-it-open-integrated-and-enterprise-grade">Pushing Ahead: Keep It Open, Integrated, and Enterprise-Grade</a></li>
+<li><a href="#전망-개방-통합-그리고-엔터프라이즈-급-경향-유지">전망: 개방, 통합 그리고 엔터프라이즈-급 경향 유지</a>
+<ul>
+<li><a href="#개방-개방-위에-개방">개방: 개방 위에 개방</a></li>
+<li><a href="#통합-일관성과-연결">통합: 일관성과 연결</a></li>
+<li><a href="#엔터프라이즈급-ha-보안-및-운영-인식">엔터프라이즈급 : HA, 보안 및 운영 인식</a></li>
+</ul></li>
+<li><a href="#거대한-파워와-함께-찾아온-거대한-책임감-그리고-복잡성">거대한 파워와 함께 찾아온 거대한 책임감(그리고 복잡성)</a></li>
+<li><a href="#g8-부스-방문에-주세요-오라클-세션에-참여해-주세요-kubecon-cloudnativecon-2017">G8 부스 방문에 주세요, 오라클 세션에 참여해 주세요(KubeCon + CloudNativeCon 2017)</a></li>
+<li><a href="#세션-정보-수정">세션 정보 수정</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -357,6 +379,10 @@ s.setAttribute('data-timestamp', +new Date());
 	<h4 class="widget__title">최신글</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/post/trans_kubernetes_serverless/" title="[번역]2017 KubeCon 오라클 발표: Kubernetes와 Serverless">
+							[번역]2017 KubeCon 오라클 발표: Kubernetes ......</a>
+		  </li>
 			<li class="widget__item">
 				<a class="widget__link" href="/post/wij_and_wji/" title="신경망 W 행렬 표기법: &#39;ij&#39;/&#39;ji&#39; 의 차이점?">
 							신경망 W 행렬 표기법: &#39;ij&#39;/&#39;ji&#39; 의 차이점?</a>
@@ -392,10 +418,6 @@ s.setAttribute('data-timestamp', +new Date());
 			<li class="widget__item">
 				<a class="widget__link" href="/post/stroage_cs_url/" title="Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경">
 							Oracle PaaS의 Storage CS 컨테이너 설정 형식 변경</a>
-		  </li>
-			<li class="widget__item">
-				<a class="widget__link" href="/post/tanh_diff/" title="tanh 미분 정리">
-							tanh 미분 정리</a>
 		  </li>
 		</ul>
 	</div>
