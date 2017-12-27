@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/translation/</loc>
+    <lastmod>2017-12-27T01:50:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/trans_data_hub/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/trans_kubernetes_serverless/</loc>
     <lastmod>2017-12-25T21:28:14+09:00</lastmod>
   </url>
@@ -431,6 +441,12 @@
   </url>
   
   <url>
+    <loc>/tags/cassandra/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2017-10-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -487,6 +503,12 @@
   <url>
     <loc>/tags/coursera/</loc>
     <lastmod>2017-11-28T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/data-hub/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -695,13 +717,13 @@
   </url>
   
   <url>
-    <loc>/categories/life-story-think/</loc>
+    <loc>/tags/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/life-story-think/</loc>
+    <loc>/categories/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -719,13 +741,13 @@
   </url>
   
   <url>
-    <loc>/categories/machine-learning/</loc>
+    <loc>/tags/machine-learning/</loc>
     <lastmod>2017-12-23T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/machine-learning/</loc>
+    <loc>/categories/machine-learning/</loc>
     <lastmod>2017-12-23T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -791,6 +813,12 @@
   </url>
   
   <url>
+    <loc>/tags/nosql/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/notation/</loc>
     <lastmod>2017-11-28T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -833,14 +861,14 @@
   </url>
   
   <url>
-    <loc>/categories/oracle/</loc>
-    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <loc>/tags/oracle/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/oracle/</loc>
-    <lastmod>2017-12-25T21:28:14+09:00</lastmod>
+    <loc>/categories/oracle/</loc>
+    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -851,14 +879,14 @@
   </url>
   
   <url>
-    <loc>/categories/oracle-cloud/</loc>
-    <lastmod>2017-12-25T21:28:14+09:00</lastmod>
+    <loc>/tags/oracle-cloud/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/oracle-cloud/</loc>
-    <lastmod>2017-12-25T21:28:14+09:00</lastmod>
+    <loc>/categories/oracle-cloud/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -924,7 +952,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-12-25T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1133,20 +1161,20 @@
   </url>
   
   <url>
-    <loc>/categories/youtube/</loc>
-    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/youtube/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/categories/youtube/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2017-12-25T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-27T01:50:05+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1187,6 +1215,12 @@
   </url>
   
   <url>
+    <loc>/categories/%EB%B2%88%EC%97%AD/</loc>
+    <lastmod>2017-12-27T01:50:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88/</loc>
     <lastmod>2017-09-24T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -1212,7 +1246,7 @@
   
   <url>
     <loc>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</loc>
-    <lastmod>2017-12-25T21:28:14+09:00</lastmod>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1225,6 +1259,12 @@
   <url>
     <loc>/categories/%EC%A7%9C%ED%88%AC%EB%A6%AC/</loc>
     <lastmod>2016-03-25T00:17:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EC%B9%B4%EC%82%B0%EB%93%9C%EB%9D%BC/</loc>
+    <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   

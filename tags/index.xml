@@ -111,6 +111,15 @@
     </item>
     
     <item>
+      <title>Cassandra</title>
+      <link>/tags/cassandra/</link>
+      <pubDate>Tue, 26 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/cassandra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ci</title>
       <link>/tags/ci/</link>
       <pubDate>Wed, 03 Feb 2016 14:01:55 +0900</pubDate>
@@ -188,6 +197,15 @@
       <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/coursera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Hub</title>
+      <link>/tags/data-hub/</link>
+      <pubDate>Tue, 26 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/data-hub/</guid>
       <description></description>
     </item>
     
@@ -588,6 +606,15 @@
     </item>
     
     <item>
+      <title>Nosql</title>
+      <link>/tags/nosql/</link>
+      <pubDate>Tue, 26 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/nosql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Notation</title>
       <link>/tags/notation/</link>
       <pubDate>Tue, 28 Nov 2017 21:28:14 +0900</pubDate>
@@ -653,7 +680,7 @@
     <item>
       <title>Oracle</title>
       <link>/tags/oracle/</link>
-      <pubDate>Mon, 25 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 26 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/oracle/</guid>
       <description></description>
@@ -671,7 +698,7 @@
     <item>
       <title>Oracle Cloud</title>
       <link>/tags/oracle-cloud/</link>
-      <pubDate>Mon, 25 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 26 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/oracle-cloud/</guid>
       <description></description>
@@ -1121,7 +1148,7 @@
     <item>
       <title>오라클 클라우드</title>
       <link>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
-      <pubDate>Mon, 25 Dec 2017 21:28:14 +0900</pubDate>
+      <pubDate>Tue, 26 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
       <description></description>
@@ -1133,6 +1160,15 @@
       <pubDate>Wed, 20 Dec 2017 21:28:14 +0900</pubDate>
       
       <guid>/tags/%EC%A0%84%EC%B9%98%ED%96%89%EB%A0%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>카산드라</title>
+      <link>/tags/%EC%B9%B4%EC%82%B0%EB%93%9C%EB%9D%BC/</link>
+      <pubDate>Tue, 26 Dec 2017 21:28:14 +0900</pubDate>
+      
+      <guid>/tags/%EC%B9%B4%EC%82%B0%EB%93%9C%EB%9D%BC/</guid>
       <description></description>
     </item>
     
