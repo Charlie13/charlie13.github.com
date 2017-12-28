@@ -81,7 +81,7 @@
 		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >HOME</a></li>
 		<li class="menu__item "><a class="menu__link" href="/translation/" title="번역 문서를 정리한 페이지입니다." >번역</a></li>
 		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >우리 민수</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="블로그 사용자간의 원할한 소통을 위해 준비한 Gitter 채팅 서비스로 이동합니다."target='_blank' >챗팅롬</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="채팅룸으로 이동합니다."target='_blank' >챗팅롬</a></li>
 	</ul>
 </nav>
 
@@ -182,11 +182,11 @@ Oracle Data Hub Cloud Service는 MySQL과 Oracle Database를 제외한 다른 �
 <li><p>완전한 제어권(Full Control) – 개발팀이 온-프라미스 환경을 클라우드로 이전(Migration)할 때, 데이터베이스 클러스터가 설치되고 운영될 가상 머신(VM)에 완전한 SSH 접근 권한이 개발팀에 제공됩니다. 따라서 개발팀은 기존에 온-프라미스에서 데이터베이스를 관리해오던 방식 그대로 사용할 수 있습니다. 클러스터를 구성하는 서버에 로그인하고 관리 작업을 수행할 수 있습니다.</p></li>
 </ul>
 
-<p>개발자는 자신의 애플리케이션에 관계형 데이터베이스보다 더 적합한 데이터베이스를 찾기도 합니다. MySQL과 오라클 데이터베이스는 오라클 클라우드에서 이미 상당 기간 운영돼왔습니다. 최근에 애플리케이션 개발자는 애플리케이션에서 사용하는 데이터 모델에 따라서 데이터베이스 기술을 선택하는 융통성을 갖추고 있습니다. 이러한 유스 케이스 별 접근 방식을 통해 개발자는 Oracle Database Cloud Service 혹은 MySQL, MongoDB, Redis, Apache Cassandra 등과 같은 다른 데이터베이스 기술을 상황에 맞게 선택할 수 있습니다. 이러한 선택의 다양성 이슈는 Oracle Data Hub Cloud Service로 해결할 수 있습니다.<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></p>
+<p>개발자는 자신의 애플리케이션에 관계형 데이터베이스보다 더 적합한 데이터베이스를 찾기도 합니다. MySQL과 오라클 데이터베이스는 오라클 클라우드에서 이미 상당 기간 운영돼왔습니다. 최근에 애플리케이션 개발자는 애플리케이션에서 사용될 데이터 모델에 따라서 데이터베이스 기술을 선택하는 융통성을 갖추고 있습니다. 이러한 유스 케이스 별 접근 방식을 통해 개발자는 Oracle Database Cloud Service 혹은 MySQL, MongoDB, Redis, Apache Cassandra 등과 같은 다른 데이터베이스 기술을 상황에 맞게 선택할 수 있습니다. 이 때 발생할 수 있는 선택의 다양성 이슈는 Oracle Data Hub Cloud Service로 해결할 수 있습니다.<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></p>
 
 <h2 id="data-hub-cloud-service-사용하기">Data Hub Cloud Service 사용하기</h2>
 
-<p>Data Hub Cloud Service를 사용하여 Apache Cassandra 데이터베이스 클러스터를 생성, 관리 및 모니터링하는 것은 정말 간단하고 쉽습니다. 여러분들은 2개 단계의 간단한 절차로 원하는 규모의 아파치 카산드라 데이터베이스 클러스터를 생성할 수 있습니다.</p>
+<p>Data Hub Cloud Service를 사용하여 Apache Cassandra 데이터베이스 클러스터를 생성, 관리 및 모니터링하는 것은 간단하고 쉽습니다. 여러분들은 두 단계의 간단한 절차로 원하는 규모의 아파치 카산드라 데이터베이스 클러스터를 생성할 수 있습니다.</p>
 
 <ul>
 <li>Step 1
@@ -198,7 +198,7 @@ Oracle Data Hub Cloud Service는 MySQL과 Oracle Database를 제외한 다른 �
 <li>Step 2
 
 <ul>
-<li>클러스터 규모(노드 수), 컴퓨터 Shape(CPU, Memory 설정 타입) 그리고 스토리지 크기 선택. 여기에서 설정한 항목은 변경 가능합니다. 컴퓨터 파워 혹은 스토리지가 더 필요할 경우 동적인(카산드라 서비스 다운 없이) 재조정 가능합니다.</li>
+<li>클러스터 규모(노드 수), 컴퓨터 Shape(CPU, Memory 설정 타입) 그리고 스토리지 크기 선택. 여기에서 설정한 항목은 변경 가능합니다. 컴퓨터 파워 혹은 스토리지가 더 필요할 경우 동적인(카산드라 서비스 다운 없이) 재조정아 가능합니다.</li>
 <li>데이터베이스 클러스터의 완전한 제어권을 확보하기 위한 SSH 접근 정보 입력</li>
 </ul></li>
 </ul>
@@ -231,7 +231,7 @@ Oracle Data Hub Cloud Service는 MySQL과 Oracle Database를 제외한 다른 �
 
 <h3 id="동적-확장-dynamic-scaling">동적 확장(Dynamic Scaling)</h3>
 
-<p>클러스터 프로비저닝을 하는 동안 클러스터 크기, 컴퓨터 노드의 Shape(CPU/Memory) 및 클러스터에 포함된 전체 노드의 스토리지 사이즈 등을 선택하는 유연성을 제공합니다. 이러한 유연성 덕분에 작업 부하 및 성능 요구 사항에 적합한 컴퓨팅 및 스토리지를 선택할 수 있습니다. 카산드라 클러스터에 &ldquo;<strong>노드를 추가</strong>&rdquo;(일반적으로 스케일 아웃이라고 함)해야 하거나, 스토리지를 추가해야할 경우, Data Hub Cloud Service API 혹은 웹 콘솔을 사용하여 쉽고 간단하게 클러스터 스케일을 관리할 수 있습니다. 따라서 클러스터를 프로비저닝 할 때 작업 부하의 크기를 최적화해야 한다는 부담이나 두려움을 가질 필요가 없습니다.</p>
+<p>클러스터 프로비저닝을 하는 동안 클러스터 크기, 컴퓨터 노드의 Shape(CPU/Memory) 및 클러스터에 포함된 전체 노드의 스토리지 사이즈 등을 선택할 수 있는 유연성을 제공합니다. 이러한 유연성 덕분에 작업 부하 및 성능 요구 사항에 적합한 컴퓨팅 및 스토리지를 선택할 수 있습니다. 카산드라 클러스터에 &ldquo;<strong>노드를 추가</strong>&rdquo;(일반적으로 스케일 아웃이라고 함)해야 하거나, 스토리지를 추가해야할 경우, Data Hub Cloud Service API 혹은 웹 콘솔을 사용하여 쉽고 간단하게 클러스터 스케일을 관리할 수 있습니다. 따라서 클러스터를 프로비저닝 할 때 작업 부하의 크기를 최적화해야 한다는 부담이나 두려움을 가질 필요가 없습니다.</p>
 
 
 <blockquote id="img">
@@ -257,7 +257,7 @@ Oracle Data Hub Cloud Service는 MySQL과 Oracle Database를 제외한 다른 �
 
 <h3 id="완전-제어-full-control">완전 제어(Full Control)</h3>
 
-<p>오라클 클라우드 사용자는 클러스터의 모든 노드에 대한 완전한 SSH 접근 권한을 갖습니다. 따라서 데이터베이스와 해당 저장 영역을 완전하게 제어할 수 있습니다. 또한, 여러분들의 확장과 성능 요구 사항에 맞게 노드에 로그인하여 데이터베이스 인스턴스를 구성하는 완전한 유연성을 갖추고 있습니다.</p>
+<p>오라클 클라우드 사용자는 클러스터의 모든 노드에 대한 완전한 SSH 접근 권한을 갖습니다. 따라서 데이터베이스와 해당 저장 영역을 완전하게 제어할 수 있습니다. 또한, 여러분들의 확장과 성능 요구 사항에 맞게 노드에 로그인하여 데이터베이스 인스턴스를 구성하는 완전한 유연성을 제공합니다.</p>
 
 
 <blockquote id="img">
@@ -281,7 +281,7 @@ Oracle Data Hub Cloud Service는 MySQL과 Oracle Database를 제외한 다른 �
 
 
 
-<p>&ldquo;<strong>Create</strong>&ldquo;를 선택하면 서비스는 컴퓨팅 인스턴스(노드, VM)를 생성하고 블록 볼륨을 노드에 연결합니다. 그리고 클러스터의 각 노드에 Apache Cassandra 바이너리를 배치합니다. Oracle Cloud Infrastructure Classic 플랫폼에서는 서비스가 자동으로 네트워크 액세스 규칙을 활성화합니다. 따라서 사용자는 CQL(Cassandra Query Language)을 사용하여 Cassandra 데이터베이스를 작성할 수 있습니다. Oracle Cloud Infrastructure 플랫폼에서 네트워크 액세스 규칙을 자동 활성화되지는 않습니다. 그러나 사용자는 가상 클라우드 네트워크(Virtual Cloud Network, VCN)의 특정 서브넷에 클러스터를 생성하는 모든 권한과 유연성을 가지며, 더 안전한 네트워크 및 보안 구성을 적용할 수 있습니다.</p>
+<p>&ldquo;<strong>Create</strong>&ldquo;를 선택하면 서비스는 컴퓨팅 인스턴스(노드, VM)를 생성하고 블록 볼륨을 노드에 연결합니다. 그리고 클러스터의 각 노드에 Apache Cassandra 바이너리를 배치합니다. Oracle Cloud Infrastructure Classic 플랫폼에서는 서비스가 자동으로 네트워크 액세스 규칙을 활성화합니다. 따라서 클러스터 생성이 끝나면 바로 사용자는 CQL(Cassandra Query Language)을 사용하여 Cassandra 데이터베이스를 작성할 수 있습니다. Oracle Cloud Infrastructure 플랫폼에서는 네트워크 액세스 규칙이 자동 활성화되지 않습니다. 그러나 사용자는 가상 클라우드 네트워크(Virtual Cloud Network, VCN)의 특정 서브넷에 클러스터를 생성하는 모든 권한과 유연성을 가지며, 더 안전한 네트워크 및 보안 구성을 적용할 수 있습니다.</p>
 
 <h2 id="첫걸음-getting-started">첫걸음&hellip;(Getting Started)</h2>
 
@@ -484,6 +484,7 @@ s.setAttribute('data-timestamp', +new Date());
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/categories/blogs.oracle.com">Blogs.Oracle.Com</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/java">Java</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/language">Language</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/life-story-think">Life-Story-Think</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/machine-learning">Machine-Learning</a></li>
