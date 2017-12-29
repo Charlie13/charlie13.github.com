@@ -1,0 +1,145 @@
++++
+date = "2017-12-27T19:35:14+09:00"
+description = "java9의 신규 기능인 JShell 공식 문서의 한글화 입니다."
+title = "JShell: 7. JShell 소개"
+thumbnailInList = "https://taewanmerepo.github.io/2017/12/trans-shell/head.jpg"
+thumbnailInPost = "https://taewanmerepo.github.io/2017/12/trans-shell/head.jpg"
+tags = ["ORACLE", "java9", "Java", "JShell","한글화", "번역", "script"]
+categories = ["java"]
+author = "taewan.kim"
+language = ""  
+jupyter = "false"
++++
+
+이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+
+>
+- 원문: https://docs.oracle.com/javase/9/jshell/scripts.htm
+- 제목: Java Platform, Standard Edition Java Shell User’s Guide: 7 Scripts
+  - 문서번호: E87478-01
+  - 릴리즈: 2017년 09월
+- 라이센스: 원본 문서 라이센스를 준수합니다.
+  - 원문: https://docs.oracle.com/javase/9/jshell/title.htm
+
+JShell 사용자 가이드의 한글화 문서는 다음과 같이 구성됩니다.
+
+- [1. JShell 소개](/trans/jshell/jshell01/)
+- [2. Snippets](/trans/jshell/jshell02/)
+- [3. 명령](/trans/jshell/jshell03/)
+- [4. 편집](/trans/jshell/jshell04/)
+- [5. 외부 코드](/trans/jshell/jshell05/)
+- [6. 피그백 모드](/trans/jshell/jshell06/)
+- __7. 스크립트__
+
+----
+
+A JShell script is a sequence of snippets and JShell commands in a file, one snippet or command per line.
+
+Scripts can be a local file, or one of the following predefined scripts:
+
+
+|A JShell script is a sequence of snippets and JShell commands in a file, one snippet or command per line.
+
+Scripts can be a local file, or one of the following predefined scripts:
+
+|Script Name|Script Contents|
+|---|---|
+|DEFAULT|
+Includes commonly needed import declarations. This script is used if no other startup script is provided.|
+|PRINTING|
+Defines JShell methods that redirect to the __print__, __println__, and __printf__ methods in __PrintStream__.|
+|JAVASE|Imports the core Java SE API defined by the __java.se__ module, which causes a noticeable delay in starting JShell due to the number of packages.|
+
+- 주제
+  - Startup Scripts
+  - Creating and Loading Scripts
+
+## Startup Scripts
+
+Startup scripts contain snippets and commands that are loaded when a JShell session is started. The default startup script contains common import statements. You can create custom scripts as needed.
+
+Startup scripts are loaded each time the jshell tool is reset. Reset occurs during the initial startup and with the __/reset__, __/reload__, and __/env__ commands. If you do not set the script, then, the default startup script, DEFAULT, is used. This default script defines commonly needed import declarations.
+
+> - __Note__
+The Java language defines that the java.lang package is automatically imported so this package doesn’t need to be explicitly imported.
+
+To set the startup script, use the /set start command:
+
+```
+jshell> /set start mystartup.jsh
+
+jshell> /reset
+|  Resetting state.
+```
+
+As with all /set commands, the duration of the setting is the current session unless the -retain option is used. Typically, the -retain option isn’t used when you test a startup script setting. When the desired setting is found, use the-retain option to preserve it:
+
+```
+jshell> /set start -retain
+```
+
+The startup script is then loaded the next time you start the jshell tool.
+
+Remember that the startup scripts are loaded into the current session only when the state is reset. The contents of the script is stored, not a reference to the script. The script is read only at the time the /set start command is run. However, predefined scripts are loaded by reference and can be updated with new releases of the JDK.
+
+Startup scripts can also be specified with the --startup command-line flag:
+
+```
+% jshell --startup mystartup.jsh
+```
+
+For experimentation, it is useful to have print methods that don't need the System.out. prefix. Use the predefined PRINTING script to access the print, println, and printf methods. You can specify more than one startup script with /set start. The following example sets the startup to load both the default imports and printing definitions:
+
+```
+jshell> /set start -retain DEFAULT PRINTING
+
+jshell> /exit
+|  Goodbye
+
+% jshell
+|  Welcome to JShell -- Version 9
+|  For an introduction type: /help intro
+
+jshell> println("Hello World!")
+Hello World!
+```
+
+The __-retain__ flag is used to set these predefined scripts as the startup scripts for future sessions of the __jshell__ tool. Use __/set start__ without arguments to see the details of what is defined by these startup scripts.
+
+To set more than one startup script on the command line, use the __--startup__ flag for each script:
+
+```
+% jshell --startup DEFAULT --startup PRINTING
+```
+
+## Creating and Loading Scripts
+
+Use scripts to set up your JShell session with import statements and code that you want available during the session.
+
+### Creating Scripts
+
+A script can be created externally in an editor, or generated from items entered in JShell. Use one of the following commands to create a script from the entries in a JShell session:
+
+```
+jshell> /save mysnippets.jsh
+
+jshell> /save -history myhistory.jsh
+
+jshell> /save -start mystartup.jsh
+```
+
+The first command shown in the example saves the current active snippets to __mysnippets.jsh__. The second command shown saves the history of all of the snippets and commands, both valid and invalid, to __myhistory.jsh__. The last command shown saves the contents of the current startup script setting to __mystartup.jsh__. The file name provided can be any valid file path and name.
+
+### Loading Scripts
+
+Scripts can be loaded from the command line when a JShell session is started:
+
+```
+% jshell mysnippets.jsh
+```
+
+Scripts can also be loaded within a JShell session by using the __/open__ command:
+
+```
+jshell> /open PRINTING
+```

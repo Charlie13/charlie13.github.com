@@ -1,0 +1,278 @@
++++
+date = "2017-12-27T19:30:14+09:00"
+description = "java9의 신규 기능인 JShell 공식 문서의 한글화 입니다."
+title = "JShell:6. 피드백 모드"
+thumbnailInList = "https://taewanmerepo.github.io/2017/12/trans-shell/head.jpg"
+thumbnailInPost = ""
+tags = ["ORACLE", "java9", "Java", "JShell","한글화", "번역", "feedback mode"]
+categories = ["java"]
+author = "taewan.kim"
+language = ""  
+jupyter = "false"
++++
+
+이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+
+>
+- 원문: https://docs.oracle.com/javase/9/jshell/feedback-modes.htm
+- 제목: Java Platform, Standard Edition Java Shell User’s Guide: 6 Feedback Modes
+  - 문서번호: E87478-01
+  - 릴리즈: 2017년 09월
+- 라이센스: 원본 문서 라이센스를 준수합니다.
+  - 원문: https://docs.oracle.com/javase/9/jshell/title.htm
+
+JShell 사용자 가이드의 한글화 문서는 다음과 같이 구성됩니다.
+
+- [1. JShell 소개](/trans/jshell/jshell01/)
+- [2. Snippets](/trans/jshell/jshell02/)
+- [3. 명령](/trans/jshell/jshell03/)
+- [4. 편집](/trans/jshell/jshell04/)
+- [5. 외부 코드](/trans/jshell/jshell05/)
+- __6. 피그백 모드__
+- [7. 스크립트](/trans/jshell/jshell07/)
+
+----
+
+The feedback mode determines the prompts, feedback, and other interactions within JShell. Predefined modes with different levels of feedback are provided. Custom modes can be created as needed.
+
+- 문서 구성
+  - Setting the Feedback Mode
+  - Defining a Feedback Mode
+
+## Setting the Feedback Mode
+
+A feedback mode defines the prompts and feedback that are used in your interaction with JShell. Predefined modes are provided for your convenience. You can create custom modes as needed.
+
+The predefined modes can’t be modified, but they can be used as the base of a custom mode. The predefined modes, in descending order of verbosity are verbose, normal, concise, and silent.
+
+The following table shows the differences in the predefined modes.
+
+//table
+
+- The Mode column indicates the mode that is being described.
+- The Value Snippets column indicates what is shown for snippets that have values, such as expressions, assignments, and variable declarations.
+- The Declaration column indicates if feedback is provided for declarations or methods, classes, enum, interfaces, and annotation interfaces.
+- The Updates column indicates if changes to other than the current snippet are shown.
+- The Commands column indicates if commands give feedback indicating success.
+- The Prompt column indicates the prompt that is used.
+
+The default feedback mode is normal. Change the feedback mode by setting a command-line option or using the /set feedback command as shown in the following example:
+
+```
+jshell> /set feedback verbose
+|  Feedback mode: verbose
+
+jshell> 2 + 2
+$1 ==> 4
+|  created scratch variable $1 : int
+
+jshell> /set feedback silent
+-> 2 + 2
+-> /set feedback normal
+|  Feedback mode: normal
+
+jshell> 2 + 2
+$3 ==> 4
+
+jshell> /set feedback concise
+jshell> 2 + 2
+$4 ==> 4
+jshell>
+```
+
+Notice that when the setting is normal or verbose, the command feedback shows you the setting, but concise and silent modes don't. Also notice that the three different forms of feedback for the expression 2+2 include no feedback when the mode is set to silent.
+
+To see the current and available feedback modes, use the /set feedback command without options. Notice that the current mode is shown as the command that set it:
+
+```
+jshell> /set feedback
+|  /set feedback verbose
+|  
+|  Available feedback modes:
+|     concise
+|     normal
+|     silent
+|     verbose
+```
+
+## Defining a Feedback Mode
+
+Custom feedback modes enable you to define the prompts that you want to see and the feedback that you want to receive for the different elements that you enter into JShell.
+
+A feedback mode has the following settings:
+
+- Prompts: Regular and continuation
+- Truncation: Maximum length of values displayed
+- Format: Format of the feedback provided
+
+The predefined modes can’t be changed, but you can easily create a copy of an existing mode, as shown in the following example:
+
+```
+jshell> /set mode mine normal -command
+|  Created new feedback mode: mine
+```
+
+The new mode mine is a copy of the normal mode. The -command option indicates that you want command feedback. If you don't want commands to describe the action that occurred, then use -quiet instead of -command.
+
+### Set Prompts
+
+As with all /set commands, use the /set prompt command without settings to show the current setting:
+
+```
+jshell> /set prompt normal
+|  /set prompt normal "\njshell> " "   ...> "
+```
+
+In the feedback provided for the previous example, the first string is the regular prompt, and the second string is the continuation prompt that is used if the snippet extends to multiple lines. The following example shows how to switch to the new mode to try it out:
+
+```
+jshell> /set prompt mine "\nmy mode: "  ".......: "
+
+jshell> /set feedback mine
+|  Feedback mode: mine
+
+my mode: class C {
+.......:    int x;
+.......: }
+|  created class C
+
+my mode:
+```
+
+The prompt strings can contain %s, which is substituted with the next snippet ID. However, if a command is entered or the snippet results in an error, then the value that users enter at the prompt might not be assigned that ID.
+
+All settings have a duration of the current session; they are not reset by the /reset command. If you want the settings to be the default for future sessions, then use the -retain option to keep them. The following example shows how to keep your custom mode across sessions:
+
+```
+my mode: /set mode mine -retain
+
+my mode: /set feedback mine -retain
+|  Feedback mode: mine
+
+my mode: /exit
+|  Goodbye
+% jshell
+|  Welcome to JShell -- Version 9
+|  For an introduction type: /help intro
+
+my mode:
+```
+
+### Set Truncation
+
+If the values are too long, then they are truncated when displayed. Use the /set truncation command to set the maximum length shown for a value. If no settings are entered with the command, then the current setting is displayed. The following example shows the settings that were inherited from the normal mode:
+
+
+```
+my mode: /set truncation mine
+|  /set truncation mine 80
+|  /set truncation mine 1000 expression,varvalue
+
+my mode: String big = IntStream.range(0,1200).mapToObj(n -> "" + (char) ('a' + n % 26)).collect(Collectors.joining())
+big ==> "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuv ... fghijklmnopqrstuvwxyzabcd"
+```
+
+The conditions under which a truncation setting is in effect is determined by the optional selectors that are entered after the truncation length. Two types of selectors (called selector kinds in the online help) are defined:
+
+- A case selector indicates the type of snippet whose value is displayed.
+- An action selector describes what happened to the snippet.
+
+Enter /help /set truncation for details about selectors.
+
+The setting shown in the previous example means that values are truncated to 80 characters unless the value is the value of an expression (the expression case selector) or the value of a variable, as explicitly requested by entering just the variable name (the varvalue case selector). The order is important; the last one entered is used. If the order were reversed, then all of the values would be truncated to 80 characters.
+
+The following example sets the default truncation to 100, and only shows long values if they are explicitly requested:
+
+```
+my mode: /set truncation mine 100
+
+my mode: /set truncation mine 300 varvalue
+
+my mode: big + big
+$2 ==> "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghi ... yzabcdefghijklmnopqrstuvwxyzabcd"
+
+my mode: big
+big ==> "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu
+vwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijkl ... jklmnopq
+rstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd"
+
+my mode: /set mode mine -retain
+```
+
+To keep the new settings, retain the changes as shown at the end of the example.
+
+### Set Formats
+
+Snippet output is another setting that you can customize. In the format inherited from the normal mode, an import doesn't give any feedback, and the type of a value isn’t shown:
+
+```
+my mode: import java.beans.*
+
+my mode: Locale.CANADA.getUnicodeLocaleAttributes()
+$5 ==> []
+```
+
+The format of the snippet output is set with the /set format command. Enter this with the mode name and no settings to see the current format settings:
+
+```
+my mode: /set format mine
+```
+
+Extensive help about this command is available with the /help /set format command. You might want to bring it up to use as a reference for the remainder of this section, which mentions the fields that are used when defining the formats.
+
+The primary feedback displayed is determined by the display field. Other fields can be defined to assist in defining the display field. Predefined modes other than silent define several of these fields, as can be seen in the output from the /help /set format command. These fields are inherited in the example mode. Display definitions for import are shown in the following example:
+
+```
+my mode: /set format mine display "{pre}added import {name}{post}" import-added
+
+my mode: /set format mine display "{pre}re-added import {name}{post}" import-modified,replaced
+```
+
+The name field is predefined as the name of the snippet. The following example shows that feedback is now provided for imports:
+
+```
+my mode: import java.beans.*
+|  re-added import java.beans.*
+```
+
+The pre and post fields used in the display definition are the prefix and postfix characters for each line of feedback output. The following example changes the vertical bar prefix to the empty string:
+
+```
+my mode: /set format mine pre ""
+
+my mode: void m() {}
+created method m()
+
+my mode: import java.beans.*
+re-added import java.beans.*
+
+my mode: /set truncation mine
+/set truncation mine 100
+/set truncation mine 300 varvalue
+```
+
+> - Note:
+The change to the prefix character affects all feedback, including command feedback.
+
+To show the type when displaying values, change the result field defined by the predefined modes:
+
+```
+my mode: /set format mine result "{type} {name} = {value}{post}" added,modified,replaced-primary-ok
+
+my mode: Locale.CANADA.getUnicodeLocaleAttributes()
+Set<String> $11 = []
+
+my mode: 2 + 2
+int $12 = 4
+```
+
+This change makes result nonempty only when it is new or updated (added,modified,replaced), is on the entered snippet (primary), and doesn’t have errors (ok).
+
+To permanently delete a retained mode, use the -retain option with the -delete option:
+
+```
+my mode: /set feedback verbose -retain
+|  Feedback mode: verbose
+
+jshell> /set mode mine -delete -retain
+```

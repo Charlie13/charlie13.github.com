@@ -1,0 +1,179 @@
++++
+date = "2017-12-27T19:20:14+09:00"
+description = "java9의 신규 기능인 JShell 공식 문서의 한글화 입니다."
+title = "JShell: 4. 편집 "
+thumbnailInList = "https://taewanmerepo.github.io/2017/12/trans-shell/head.jpg"
+thumbnailInPost = ""
+tags = ["ORACLE", "java9", "Java", "JShell","한글화", "번역", "editing"]
+categories = ["java"]
+author = "taewan.kim"
+language = ""  
+jupyter = "false"
++++
+
+이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+
+>
+- 원문: https://docs.oracle.com/javase/9/jshell/editing.htm
+- 제목: Java Platform, Standard Edition Java Shell User’s Guide: 4 Editing
+  - 문서번호: E87478-01
+  - 배포: 2017년 09월
+- 라이센스: 원본 문서 라이센스를 준수합니다.
+  - 원문: https://docs.oracle.com/javase/9/jshell/title.htm
+
+JShell 사용자 가이드의 한글화 문서는 다음과 같이 구성됩니다.
+
+- [1. JShell 소개](/trans/jshell/jshell01/)
+- [2. Snippets](/trans/jshell/jshell02/)
+- [3. 명령](/trans/jshell/jshell03/)
+- __4. 편집__
+- [5. 외부 코드](/trans/jshell/jshell05/)
+- [6. 피그백 모드](/trans/jshell/jshell06/)
+- [7. 스크립트](/trans/jshell/jshell07/)
+
+----
+
+JShell은 jshell 프롬프트에 입력을 편집하는 것을 지원합니다. 또한, 여러분이 선택한 외부 편집기에서도 편집할 수도 있습니다.
+
+쉘 편집을 이용하여 스니펫과 명령을 입력한 후, 다시 스니펫과 명령을 편집할 수 있습니다. 이전에 입력했던 스니펫과 명령을 검색하고 변경하는 것이 가능합니다. 스니펫을 편집하고 생성할 때 외부 편집기를 사용할 수도 있습니다. 외부 편집기 이용은 여러 줄로 구성된 스니펫을 작성할 때 매우 유용합니다.
+
+- 문서 구성
+  - 쉡 편집
+  - 외부 편집기 사용
+
+## 쉡 편집
+
+명령 프롬프트에 입력을 수정 기능을 통해서 간단히 여러분의 입력을 고칠수 있고, 이전에 입력한 명령과 스니펫의 검색 및 수정할 수 있습니다.  
+Editing input at the command prompt makes it easy to correct your input and to retrieve and modify previously entered commands and snippets.
+
+Shell editing in JShell is built on JLine2, which is functionally similar to BSD editline and GNU readline in Emacs mode. See JLine2 user information and GNU Readline documentation.  
+
+명령 프롬프트에서 입력을 편집하면 입력을 쉽게 수정하고 이전에 입력 한 명령과 스 니펫을 검색하고 수정할 수 있습니다.
+
+JShell에서의 쉘 편집은 JLine2를 기반으로하며, 기능적으로는 Emacs 모드에서 BSD editline 및 GNU readline과 유사합니다. JLine2 사용자 정보 및 GNU Readline 설명서를 참조하십시오.
+
+### Input Line Navigation
+
+Shell editing is supported for editing the current line, or accessing the history through previous sessions of JShell.
+
+For navigating the input line, the Ctrl key and Meta key are used in key combinations. If your keyboard doesn’t have a Meta key, then the Alt key is often mapped to provide Meta key functionality.
+
+For basic navigation within a line, use the right and left arrow keys or Ctrl+B for backwards and Ctrl+F for forward. For navigation between lines in the history, use the up and down arrow keys. Pressing the up arrow once replaces the current line with the previous command or snippet line. Pressing the up arrow again brings you to the line previous to that. The history contains both commands and snippet lines. If a snippet has multiple lines, then the up and down arrows navigate through each line of a snippet.
+
+The following table identifies the keys used and the actions taken to navigate the input line.
+
+//테이블
+
+### History Navigation
+
+A history of snippets and commands is maintained across JShell sessions. This history provides you with access to items that you entered in the current and previous sessions.
+
+To reenter or edit prior input, navigate the history using the up, down, left, and right arrows. Entered text is inserted at the cursor. The Delete key is used to delete text. Press the Enter key to reenter the history line, modified or not.
+
+The up and down arrow keys move backward and forward through the history one line at a time, for example:
+
+```
+jshell> class C {
+   ...>    int x;
+   ...> }
+|  created class                                                                                           
+jshell> /list
+
+   1 : class C
+         int x;
+       }
+
+jshell> <up arrow>
+```
+
+The up arrow key shows the following line:
+
+```
+jshell> /list
+```
+
+Pressing the up arrow again shows the last line of the class definition:
+
+```
+jshell> }
+```
+
+Pressing the down arrow returns to the /list command. Pressing Enter executes it:
+
+```
+jshell> /list
+
+   1 : class C {
+         int x;
+       }
+```
+
+Ctrl+up arrow goes up by snippets. For single-line snippets, Ctrl+up arrow behaves the same as up arrow. For multiline snippets, such as class C, Ctrl+up arrow skips the additional lines and goes to the top of the snippet.
+
+### Input Line Modification
+
+Input lines retrieved from the history can be modified as needed and reentered, which saves you from having to retype a line just to make small changes.
+
+Add text at the current cursor position simply by entering it. See Input Line Navigation for the keys used move the cursor within a line.
+
+The following table identifies the keys used and the actions taken to modify the input line.
+
+//테이블
+
+### Search and More
+
+Searching the history is a feature of JShell that makes it easier to find the line you want without going through the history one line at a time.
+
+To start your search, press Ctrl-R. At the prompt, enter the search string. The search proceeds backward from your most-recent entry and includes previous sessions of JShell. The following example shows the prompt that is presented after pressing Ctrl-R:
+
+```
+jshell> <Ctrl+R>
+((reverse-i-search)`':
+```
+
+Based on the example in History Navigation, entering class changes the display to show the most-recent line with the text class:
+
+```
+(reverse-i-search)`class': class C {
+```
+
+The search is incremental, so this line is retrieved with just the first character c. You can continue to search earlier in the history by pressing Ctrl+R repeatedly. Ctrl+S moves the search forward towards the present.
+
+You can define a keyboard macro by entering Ctrl-x ( , then entering your text, and finally entering Ctrl-x ). To use your macro, enter Ctrl+x e.
+
+The following table shows the key combinations for searching and creating macros.
+
+//테이블
+
+## 외부 편집기 사용
+
+An alternative to editing at the command prompt is to use an external editor. This editor can be used to edit and create snippets, and is especially helpful for multiline snippets. You can configure JShell to use the editor of your choice.
+
+To edit all existing snippets at once in an editor, use /edit without an option. To edit a specific snippet in an editor, use the /edit command with the snippet name or ID. Use the /list command to get the snippet IDs. The following example opens an editor to edit the snippet named volume, which was defined in Forward References:
+
+```
+jshell> /edit volume
+```
+
+You can also enter new snippets in the editor. When you save in the editor, any snippet that is changed or new is entered into the JShell session. Feedback from the snippets is shown in the JShell window, however, no JShell prompt is shown. You can’t enter commands or snippets in the JShell window until the editor is closed.
+
+If you don’t specify an editor, then the following environment variables are checked in order: JSHELLEDITOR, VISUAL, and EDITOR. If none of those are set, then a simple default editor is used. To set up JShell to open the editor of your choice, use the /set editor command. The argument to the /set editor command is the command needed to start the external editor that you want to use. The following example sets kwrite as the editor and opens the editor with all existing snippets:
+
+```
+jshell> /set editor kwrite
+|  Editor set to: kwrite
+
+jshell> /edit
+```
+
+Defining x in the external editor window and saving the change generates the following output in the JShell window:
+
+```
+|  created variable x of type int with initial value 6
+```
+
+Closing the external editor restores the JShell prompt.
+
+```
+jshell>
+```

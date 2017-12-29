@@ -1,0 +1,77 @@
++++
+date = "2017-12-27T19:25:14+09:00"
+description = "java9의 신규 기능인 JShell 공식 문서의 한글화 입니다."
+title = "JShell:5. 외부 코드"
+thumbnailInList = "https://taewanmerepo.github.io/2017/12/trans-shell/head.jpg"
+thumbnailInPost = ""
+tags = ["ORACLE", "java9", "Java", "JShell","한글화", "번역", "external code"]
+categories = ["java"]
+author = "taewan.kim"
+language = ""  
+jupyter = "false"
++++
+
+이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+
+>
+- 원문: https://docs.oracle.com/javase/9/jshell/external-code.htm
+- 제목: Java Platform, Standard Edition Java Shell User’s Guide: 5 External Code
+  - 문서번호: E87478-01
+  - 배포: 2017년 09월
+- 라이센스: 원본 문서 라이센스를 준수합니다.
+  - 원문: https://docs.oracle.com/javase/9/jshell/title.htm
+
+JShell 사용자 가이드의 한글화 문서는 다음과 같이 구성됩니다.
+
+- [1. JShell 소개](/trans/jshell/jshell01/)
+- [2. Snippets](/trans/jshell/jshell02/)
+- [3. 명령](/trans/jshell/jshell03/)
+- [4. 편집](/trans/jshell/jshell04/)
+- __5. 외부 코드__
+- [6. 피그백 모드](/trans/jshell/jshell06/)
+- [7. 스크립트](/trans/jshell/jshell07/)
+
+----
+External classes are accessed from a JShell session through the class path. External modules are accessed through the module path, additional modules setting, and module exports setting.
+
+- 문서 구성
+  - Setting the Class Path
+  - Setting Module Options
+
+## Setting the Class Path
+
+You can use external code that is accessible through the class path in your JShell session.
+
+Set the class path on the command line as shown in the following example:
+
+```
+ % jshell --class-path myOwnClassPath
+```
+
+Point your class path to directories or JAR files that have the packages that you want to access. The code must be compiled into class files. Code in the default package, which is also known as the unnamed package, can’t be accessed from JShell. After you set the class path, these packages can be imported into your session:
+
+```
+jshell> import my.cool.code.*
+```
+
+You can also use the __/env__ command to set the class path, as shown in the following example:
+
+```
+jshell> /env --class-path myOwnClassPath
+|  Setting new options and restoring state.
+```
+
+The __/env__ command resets the execution state, reloading any current snippets with the new class path setting or other environment setting entered with the command.
+
+```
+jshell> /env
+|     --add-modules my.module
+|     --module-path myOwnModulePath
+|     --class-path myOwnClassPath
+```
+
+For details about the options, enter the following command:
+
+```
+jshell> /help context
+```
