@@ -7,7 +7,7 @@ thumbnailInPost = ""
 tags = ["ORACLE", "java9", "Java", "JShell","한글화", "번역", "editing"]
 categories = ["java"]
 author = "taewan.kim"
-language = ""  
+language = ""
 jupyter = "false"
 +++
 
@@ -24,7 +24,7 @@ jupyter = "false"
 JShell 사용자 가이드의 한글화 문서는 다음과 같이 구성됩니다.
 
 - [1. JShell 소개](/trans/jshell/jshell01/)
-- [2. Snippets](/trans/jshell/jshell02/)
+- [2. 스니펫](/trans/jshell/jshell02/)
 - [3. 명령](/trans/jshell/jshell03/)
 - __4. 편집__
 - [5. 외부 코드](/trans/jshell/jshell05/)
@@ -43,10 +43,10 @@ JShell은 jshell 프롬프트에 입력을 편집하는 것을 지원합니다. 
 
 ## 쉡 편집
 
-명령 프롬프트에 입력을 수정 기능을 통해서 간단히 여러분의 입력을 고칠수 있고, 이전에 입력한 명령과 스니펫의 검색 및 수정할 수 있습니다.  
+명령 프롬프트에 입력을 수정 기능을 통해서 간단히 여러분의 입력을 고칠수 있고, 이전에 입력한 명령과 스니펫의 검색 및 수정할 수 있습니다.
 Editing input at the command prompt makes it easy to correct your input and to retrieve and modify previously entered commands and snippets.
 
-Shell editing in JShell is built on JLine2, which is functionally similar to BSD editline and GNU readline in Emacs mode. See JLine2 user information and GNU Readline documentation.  
+Shell editing in JShell is built on JLine2, which is functionally similar to BSD editline and GNU readline in Emacs mode. See JLine2 user information and GNU Readline documentation.
 
 명령 프롬프트에서 입력을 편집하면 입력을 쉽게 수정하고 이전에 입력 한 명령과 스 니펫을 검색하고 수정할 수 있습니다.
 
@@ -76,7 +76,7 @@ The up and down arrow keys move backward and forward through the history one lin
 jshell> class C {
    ...>    int x;
    ...> }
-|  created class                                                                                           
+|  created class
 jshell> /list
 
    1 : class C

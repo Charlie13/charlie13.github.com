@@ -7,7 +7,7 @@ thumbnailInPost = "https://taewanmerepo.github.io/2017/12/trans-shell/head.jpg"
 tags = ["ORACLE", "java9", "Java", "JShell","한글화", "번역", "script"]
 categories = ["java"]
 author = "taewan.kim"
-language = ""  
+language = ""
 jupyter = "false"
 +++
 
@@ -24,7 +24,7 @@ jupyter = "false"
 JShell 사용자 가이드의 한글화 문서는 다음과 같이 구성됩니다.
 
 - [1. JShell 소개](/trans/jshell/jshell01/)
-- [2. Snippets](/trans/jshell/jshell02/)
+- [2. 스니펫](/trans/jshell/jshell02/)
 - [3. 명령](/trans/jshell/jshell03/)
 - [4. 편집](/trans/jshell/jshell04/)
 - [5. 외부 코드](/trans/jshell/jshell05/)
