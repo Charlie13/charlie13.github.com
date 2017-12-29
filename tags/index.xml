@@ -374,7 +374,7 @@
     <item>
       <title>Java</title>
       <link>/tags/java/</link>
-      <pubDate>Wed, 27 Dec 2017 19:10:14 +0900</pubDate>
+      <pubDate>Wed, 27 Dec 2017 19:15:14 +0900</pubDate>
       
       <guid>/tags/java/</guid>
       <description></description>
@@ -392,7 +392,7 @@
     <item>
       <title>Java9</title>
       <link>/tags/java9/</link>
-      <pubDate>Wed, 27 Dec 2017 19:10:14 +0900</pubDate>
+      <pubDate>Wed, 27 Dec 2017 19:15:14 +0900</pubDate>
       
       <guid>/tags/java9/</guid>
       <description></description>
@@ -455,7 +455,7 @@
     <item>
       <title>Jshell</title>
       <link>/tags/jshell/</link>
-      <pubDate>Wed, 27 Dec 2017 19:10:14 +0900</pubDate>
+      <pubDate>Wed, 27 Dec 2017 19:15:14 +0900</pubDate>
       
       <guid>/tags/jshell/</guid>
       <description></description>
@@ -698,7 +698,7 @@
     <item>
       <title>Oracle</title>
       <link>/tags/oracle/</link>
-      <pubDate>Wed, 27 Dec 2017 19:10:14 +0900</pubDate>
+      <pubDate>Wed, 27 Dec 2017 19:15:14 +0900</pubDate>
       
       <guid>/tags/oracle/</guid>
       <description></description>
@@ -1119,6 +1119,15 @@
     </item>
     
     <item>
+      <title>명령</title>
+      <link>/tags/%EB%AA%85%EB%A0%B9/</link>
+      <pubDate>Wed, 27 Dec 2017 19:15:14 +0900</pubDate>
+      
+      <guid>/tags/%EB%AA%85%EB%A0%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>미분</title>
       <link>/tags/%EB%AF%B8%EB%B6%84/</link>
       <pubDate>Tue, 19 Sep 2017 21:28:14 +0900</pubDate>
@@ -1130,7 +1139,7 @@
     <item>
       <title>번역</title>
       <link>/tags/%EB%B2%88%EC%97%AD/</link>
-      <pubDate>Wed, 27 Dec 2017 19:10:14 +0900</pubDate>
+      <pubDate>Wed, 27 Dec 2017 19:15:14 +0900</pubDate>
       
       <guid>/tags/%EB%B2%88%EC%97%AD/</guid>
       <description></description>
@@ -1265,7 +1274,7 @@
     <item>
       <title>한글화</title>
       <link>/tags/%ED%95%9C%EA%B8%80%ED%99%94/</link>
-      <pubDate>Wed, 27 Dec 2017 19:10:14 +0900</pubDate>
+      <pubDate>Wed, 27 Dec 2017 19:15:14 +0900</pubDate>
       
       <guid>/tags/%ED%95%9C%EA%B8%80%ED%99%94/</guid>
       <description></description>
