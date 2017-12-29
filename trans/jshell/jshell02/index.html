@@ -80,7 +80,7 @@
 		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >블로그</a></li>
 		<li class="menu__item "><a class="menu__link" href="/translation/" title="번역 문서를 정리한 페이지입니다." >한글화 작업</a></li>
 		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >우리 민수</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="채팅룸으로 이동합니다."target='_blank' >챗팅롬</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="블로그 사용자간의 원할한 소통을 위해 준비한 Gitter 채팅 서비스로 이동합니다."target='_blank' >챗팅롬</a></li>
 	</ul>
 </nav>
 
@@ -285,9 +285,7 @@ $5 ==&gt; 33.510321637333334
 
 <p>필요한 모든 정의가 완료되면, volume 메서드는 정상적으로 작동합니다.</p>
 
-<p>이제 volume 메서드를 이용하여 비호환 교체에 관해서 설명하겠습니다. 예를 들어 다음 예제와 같이 PI의 정밀도 변경[^2]하고  새로운 값을 입력하였습니다.</p>
-
-<p>[^2][역자주]&ldquo;정밀도 변경&rdquo;&ldquo;이란 변수 타입의 변경을 의미하고, &ldquo;새로운 값을 입력&rdquo;은 객체 생성 후 할당을 의미합니다.</p>
+<p>이제 volume 메서드를 이용하여 비호환 교체에 관해서 설명하겠습니다. 예를 들어 다음 예제와 같이 PI의 정밀도 변경<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>하고  새로운 값을 입력하였습니다.</p>
 
 <pre><code>jshell&gt; BigDecimal PI = new BigDecimal(&quot;3.141592653589793238462643383&quot;)
 PI ==&gt; 3.141592653589793238462643383
@@ -464,6 +462,8 @@ jshell&gt;
 <ol>
 <li id="fn:1">[역자주]스크래치 변수(Scratch variable) - 의미 있는 값을 갖지 않고 그때그때 상황에 따라 값들을 잠시 보관해 두기 위한 변수로, 대개 보유한 값이 얼마 후에 의미가 없어지거나 삭제됨.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">[역자주]&ldquo;정밀도 변경&rdquo;&ldquo;이란 변수 타입의 변경을 의미하고, &ldquo;새로운 값을 입력&rdquo;은 객체 생성 후 할당을 의미합니다.
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 </ol>
 </div>
 
