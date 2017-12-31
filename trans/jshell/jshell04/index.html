@@ -80,7 +80,7 @@
 		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >블로그</a></li>
 		<li class="menu__item "><a class="menu__link" href="/translation/" title="번역 문서를 정리한 페이지입니다." >한글화 작업</a></li>
 		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >우리 민수</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="블로그 사용자간의 원할한 소통을 위해 준비한 Gitter 채팅 서비스로 이동합니다."target='_blank' >챗팅롬</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="채팅룸으로 이동합니다."target='_blank' >챗팅롬</a></li>
 	</ul>
 </nav>
 
@@ -161,9 +161,9 @@
 
 <hr />
 
-<p>JShell에서 프롬프트에서 입력된 것을 편집할 수 있습니다. 또한, 이러한 수정은 여러분이 선택한 외부 편집기를 사용해서 작업할 수도 있습니다.</p>
+<p>JShell은 JShell 프롬프트에서 입력된 것을 수정하는 기능을 제공합니다. 또한, 이런 수정 작업에 여러분이 선택한 외부 편집기를 이용할 수 있습니다.</p>
 
-<p>쉘 편집을 이용하여 스니펫과 명령을 입력한 후, 다시 스니펫과 명령을 편집할 수 있습니다. 이전에 입력했던 스니펫과 명령을 검색하고 변경하는 것이 가능합니다. 스니펫을 편집하고 생성할 때 외부 편집기를 사용할 수도 있습니다. 외부 편집기 이용은 여러 줄로 구성된 스니펫을 작성할 때 매우 유용합니다.</p>
+<p>쉘 편집을 이용하여 스니펫과 명령을 입력한 후에 다시 스니펫과 명령을 편집할 수 있습니다. 이전에 입력했던 스니펫과 명령을 검색하고 변경하는 것이 가능합니다. 스니펫을 편집하고 생성할 때 외부 편집기를 사용할 수도 있습니다. 외부 편집기 이용은 여러 줄로 구성된 스니펫을 작성할 때 매우 유용합니다.</p>
 
 <ul>
 <li>문서 구성
@@ -176,17 +176,17 @@
 
 <h2 id="쉘-편집">쉘 편집</h2>
 
-<p>명령 프롬프트에 입력을 수정 기능을 통해서 간단히 여러분의 입력을 고칠 수 있고, 이전에 입력한 명령과 스니펫을 검색하고 수정할 수 있습니다.</p>
+<p>명령 프롬프트의 입력을 수정하는 기능을 이용하여 여러분의 입력을 손쉽게 고칠 수 있고, 이전에 입력한 명령과 스니펫을 검색하고 수정할 수 있습니다.</p>
 
-<p>JShell의 쉘 편집 기능은 JLine2<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>을 기반으로 만들었습니다. 기능적으로 BSD <strong>editline</strong>과 GNU <strong>readline</strong>과 유사합니다. 기능적으로는 Emacs 모드에서 BSD editline 및 GNU readline과 유사합니다. 더 자세한 내용은 JLine2 사용자 정보 및 GNU Readline 문서를 참조하십시오.</p>
+<p>JShell의 쉘 편집 기능은 JLine2<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>을 기반으로 만들었습니다. 기능적으로 Emacs 모드의 <strong>BSD editline</strong>과 <strong>GNU readline</strong>과 유사합니다. 더 자세한 내용은 <a href="https://github.com/jline/jline2/wiki/Using-JLine">JLine2 사용자 정보</a> 및 <a href="https://cnswww.cns.cwru.edu/php/chet/readline/rluserman.html">GNU Readline 문서</a>를 참조하십시오.</p>
 
 <h3 id="입력-행-탐색-input-line-navigation">입력 행 탐색(Input Line Navigation)</h3>
 
-<p>쉡 편집은 현재 행 편집을 지원합니다. JShell의 히스토리를 통해서 이전 세션 히스토리의 입력에도 접근할 수 있습니다.</p>
+<p>쉡 편집은 현재 행 편집을 지원합니다. JShell의 이전 세션에서 만들어진 히스토리에도 접근할 수 있습니다.</p>
 
-<p>입력 행 탐색을 위해서, 키 조합에 Ctrl 키와 Meta 키가 사용됩니다. 키보드에 Meta 키가 없으면, Alt 키가 Meta 키를 대체합니다.</p>
+<p>입력 행 탐색을 위한 키 조합에 Ctrl 키와 Meta 키를 사용합니다. 키보드에 Meta 키가 없으면, Alt 키가 Meta 키를 대체합니다.</p>
 
-<p>행(line) 안에서 이동은 왼쪽 화살표(&lt;-) 혹은 오른쪽 화살표(-&gt;)를 사용하거나 뒤로 이동할 때 <strong>Ctrl+B</strong>를, 앞으로 이동할 때 <strong>Ctrl+F</strong>를 사용합니다. 히스토리에서 행(line)을 탐색하는 경우에는 <strong>위 화살표</strong> 키와 <strong>아래 화살표</strong> 키를 사용합니다. <strong>위 화살표</strong> 키를 누르면, 현재 행이 이전 명령이나 스니펫 행으로 대체됩니다. <strong>위 화살표</strong> 키를 다시 누르면 현재 행은 그 이전 행으로 대체됩니다. 히스토리는 명령과 스니펫 라인을 모두 기록되어 있습니다. 스니펫이 여러 라인이라면, <strong>위 화살표</strong> 키와 <strong>아래 화살표</strong> 키는 스니펫의 개별 행을 탐색합니다.</p>
+<p>행(line) 안에서 이동은 왼쪽 화살표 방향키(&lt;-)와 오른쪽 화살표 방향키(-&gt;)를 사용하거나 뒤로 이동할 때 <strong>Ctrl+B</strong>를, 앞으로 이동할 때 <strong>Ctrl+F</strong>를 사용합니다. 히스토리에서 행(line)을 탐색하는 경우에는 <strong>위 화살표 방향키</strong>와 <strong>아래 화살표 방향키</strong>를 사용합니다. <strong>위 화살표</strong> 키를 누르면, 현재 행의 이전 명령이나 스니펫 행으로 대체됩니다. <strong>위 화살표</strong> 키를 다시 누르면 현재 행은 그 이전 행으로 대체됩니다. 히스토리에는 명령과 스니펫이 모두 기록됩니다. 여러 행으로 구성된 스니펫의 경우, <strong>위 화살표</strong> 키와 <strong>아래 화살표</strong> 키는 스니펫의 개별 행을 탐색하고 출력합니다.</p>
 
 <p>다음 표는 입력 행 탐색에 사용되는 키와 기능을 정리합니다.</p>
 
@@ -248,11 +248,11 @@
 
 <h3 id="히스토리-탐색-history-navigation">히스토리 탐색(History Navigation)</h3>
 
-<p>스니펫과 명령의 기록은 JShell 세션에서 유지됩니다. 이 기록을 통해서 현재 세션과 이전 세션에서 입력한 항목에 접근할 수 있습니다.</p>
+<p>히스토리에는 여러 JShell 세션의 스니펫과 명령이 기록되고 관리됩니다. 히스토리를 통해서 현재 세션과 이전 세션에서 입력한 항목에 접근할 수 있습니다.</p>
 
-<p>이전 입력을 다시 입력하거나 편집하려면 위, 아래 화살표 키, 왼쪽 및 오른쪽 화살표를 사용하여 기록을 탐색한 후 커서가 위치한 곳에 텍스트를 입력합니다. 텍스트를 삭제해야 할 경우 <strong>Delete</strong> 키를 사용합니다. <strong>Enter</strong> 키를 눌러 히스토리 행의 재입력 혹은 수정을 적용합니다.</p>
+<p>이전애 입력한 것을 다시 입력하거나 수정하려면, 위 혹은 아래 화살표 방향키, 왼쪽 및 오른쪽 화살표를 사용하여 기록을 탐색한 후 커서가 위치한 곳에 텍스트를 입력합니다. 텍스트를 삭제해야 할 경우 <strong>Delete</strong> 키를 사용합니다. <strong>Enter</strong> 키를 눌러 히스토리 행을 재입력합니다.</p>
 
-<p>위쪽 및 아래쪽 화살표 키는 한 번에 한 줄씩 기록을 앞뒤로 이동합니다</p>
+<p>다음 예제에서, 위쪽 및 아래쪽 화살표 키는 한 번에 한 줄씩 히스토리를 앞뒤로 이동합니다</p>
 
 <pre><code>jshell&gt; class C {
    ...&gt;    int x;
@@ -267,7 +267,7 @@ jshell&gt; /list
 jshell&gt; &lt;up arrow&gt;
 </code></pre>
 
-<p>위 방향 화살표 키를 입력하면 다음 행이 출력됩니다.</p>
+<p>위 화살표 방향키를 입력하면 다음과 같이 <strong>/list</strong> 명령이 출력됩니다.</p>
 
 <pre><code>jshell&gt; /list
 </code></pre>
@@ -286,13 +286,13 @@ jshell&gt; &lt;up arrow&gt;
        }
 </code></pre>
 
-<p><strong>Ctrl+up 화살표</strong>는 이전 스니펫으로 이동합니다.  스니펫이 한 줄이라면 <strong>Ctrl+위 화살표</strong><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>는 <strong>위 화살표</strong> 키와 결과는 같습니다. 클래스 C와 같이 여러 줄로 구성된 스니펫에서 <strong>Ctrl+up 화살표</strong>는 해당 스니펫의 첫 번째 행으로 이동합니다. 그 사이에 줄은 건너 뜁니다.</p>
+<p><strong>Ctrl+위 화살표 방향키</strong>는 이전 스니펫으로 이동합니다.  스니펫이 한 줄이라면 <strong>Ctrl+위 화살표 방향키</strong><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>는 <strong>위 화살표 방향키</strong> 와 결과가 같습니다. 클래스 C와 같이 여러 줄로 구성된 스니펫에서 <strong>Ctrl+위 화살표 방향키</strong>는 해당 스니펫의 첫 번째 행으로 이동합니다. 그 사이에 행은 건너 뜁니다.</p>
 
 <h3 id="입력-행-수정-input-line-modification">입력 행 수정(Input Line Modification)</h3>
 
 <p>히스토리로 부터 입력 행을 조회한 후, 필요에 따라서 코드를 변경하고 재입력할 수 있습니다. 이 기능을 사용할 경우, 코드의 일부분을 수정하기 위해서 행 전체를 다시 입력할 필요가 없습니다.</p>
 
-<p>현재 커서가 위치한 곳에서 텍스트를 입력하기만 하면 됩니다. 행에서 커서를 움직이는 키에 대해서는 &ldquo;<strong>입력 행 탐색</strong>&rdquo; 절을 확인하시기 바랍니다.</p>
+<p>현재 커서가 위치한 곳에서 텍스트를 입력하면 됩니다. 행에서 커서를 움직이는 키에 대해서는 &ldquo;<strong>입력 행 탐색</strong>&rdquo; 절을 확인하시기 바랍니다.</p>
 
 <p>다음 표는 입력 행 수정에 사용되는 키와 기능을 정리합니다.</p>
 
@@ -344,7 +344,7 @@ jshell&gt; &lt;up arrow&gt;
 
 <h3 id="검색과-기타">검색과 기타</h3>
 
-<p>히스토리 검색은  JShell의 기능으로, 이 기능을 통해서 한 번에 한 줄씩 히스토리를 보지 않고도 원하는 줄을 쉽게 찾을 수 있습니다.</p>
+<p>히스토리 검색은  JShell의 기능으로, 이 기능을 통해서 한 번에 한 줄씩 히스토리를 이동하지 않고도 원하는 줄을 쉽게 찾을 수 있습니다.</p>
 
 <p>검색을 시작하려면 <strong>Ctrl-R</strong>을 누릅니다. 프롬프트에서 검색 문자열을 입력합니다. 검색은 가장 최근 항목에서 뒤쪽으로 이동하며 처리됩니다. 검색은 JShell의 이전 세션을 포함합니다. 다음 예제는 <strong>Ctrl-R</strong>을 누른 후에 표시되는 프롬프트를 보여줍니다.</p>
 
@@ -354,16 +354,16 @@ jshell&gt; &lt;up arrow&gt;
 
 <p>히스토리 탐색의 예제를 기반으로 클래스를 입력하면 디스플레이가 텍스트 클래스와 함께 가장 최근의 행을 표시하도록 변경됩니다.</p>
 
-<p>히스토리 탐색의 예제에서, <strong>class</strong>를 입력하면 텍스트 &ldquo;class&rdquo;를 포함하는 가장 최근 입력 행을 출력하기 위해서 출력을 변경합니다.</p>
+<p>히스토리 탐색의 예제에서, <strong>class</strong>를 입력하면 텍스트 &ldquo;class&rdquo;를 포함하는 가장 최근 입력 행을 출력합니다.</p>
 
 <pre><code>(reverse-i-search)`class': class C {
 </code></pre>
 
 <p>검색은 점증적으로 처리됩니다. 첫 번째 문자 &ldquo;c&rdquo;로 검색하고 예제와 같이 결과를 출력합니다. <strong>Ctrl+R</strong>를 반복적으로 입력해서 히스토리의 이전 결과를 검색할 수 있습니다. <strong>Ctrl+S</strong>는 현재 위치에서 앞 방향으로 검색을 계속합니다.</p>
 
-<p>&ldquo;<strong>Ctrl-x (</strong>&ldquo;를 입력하여 키보드 매크로를 정의할 수 있습니다. 그 다음 텍스트를 입력합니다. 그 마지막에 &ldquo;<strong>Ctrl-x )</strong>&ldquo;를 입력합니다. 매크로를 사용을 위해서, &ldquo;<strong>Ctrl + x e</strong>&ldquo;를 입력하여 앞에서 정의한 매크로를 사용할 수 있습니다.</p>
+<p>&ldquo;<strong>Ctrl-x (</strong>&ldquo;를 입력하여 키보드 매크로를 정의할 수 있습니다. 그 다음 텍스트를 입력합니다. 매크로를 종료할 때 &ldquo;<strong>Ctrl-x )</strong>&ldquo;를 입력합니다. &ldquo;<strong>Ctrl + x e</strong>&ldquo;를 입력하면 앞에서 정의한 매크로가 실행됩니다.</p>
 
-<p>다음 표는 검색과 매크로 생성에 사용되는 키 조합을 정리합니다.</p>
+<p>다음 표에서는 검색과 매크로 생성에 사용되는 키 조합과 기능을 정리합니다.</p>
 
 <table>
 <thead>
@@ -403,16 +403,16 @@ jshell&gt; &lt;up arrow&gt;
 
 <h2 id="외부-편집기-사용">외부 편집기 사용</h2>
 
-<p>명령 프롬프트에서 편집하는 대신 외부 편집기를 사용할 수 있습니다. 이 편집기는 스니펫을 편집 및 생성에 사용될 수 있습니다. 특히 여러 줄로 작성된 스니펫에 유용합니다. 여러분이 선호하는 편집기를 사용하도록 JShell을 설정할 수 있습니다.</p>
+<p>명령 프롬프트에서 편집하는 대신 외부 편집기를 사용할 수도 있습니다. 이 편집기는 스니펫을 편집 및 생성에 사용될 수 있습니다. 특히 여러 줄로 작성된 스니펫에 유용합니다. 여러분이 선호하는 편집기를 JShell에 지정할 수 있습니다.</p>
 
-<p>기존에 만들어진 모든 스니펫을 편집기에서 한 번에 편집해야 할 경우, 별도 옵션 없는 <strong>/edit</strong> 명령을 사용합니다. 편집기에서 특정 스니펫을 편집할 경우, <strong>/edit</strong> 명령에 스니펫 이름 혹은 ID를 추가하여 실행합니다. 스니펫 ID를 얻기 위해서 <strong>/list</strong> 명령을 사용합니다. 다음 예제에서는 편집기를 열고 앞에서 정의한 volume 스니펫을 수정합니다.</p>
+<p>기존에 만들어진 모든 스니펫을 편집기에서 한 번에 편집할 경우, 별도 옵션 없이 <strong>/edit</strong> 명령을 사용합니다. 편집기에서 특정 스니펫을 지정하여 편집할 경우, <strong>/edit</strong> 명령에 스니펫 이름 혹은 ID를 추가하여 실행합니다. <strong>/list</strong> 명령을 사용 스니펫 ID를 얻을수 있습니다. 다음 예제를 실행하면 편집기를 열고, 앞에서 정의한 volume 스니펫 코드가 편집기에 출력됩니다.</p>
 
 <pre><code>jshell&gt; /edit volume
 </code></pre>
 
-<p>편집기에서 새로운 스니펫을 작성할 수 있습니다. 편집기를 저장하면, 변경되거나 새로 작성된 스니펫은 JShell 세션에 입력됩니다. 이때 스니펫 입력에 대한 피드백은 JShell 윈도우에서 확인할 수 있습니다. 그러나 현재 JShell에는 프롬프트가 없는 상태입니다. 편집기를 종료한 이후에 JShell 윈도우에 명령이나 스니펫 입력이 가능합니다.</p>
+<p>편집기에서 새로운 스니펫을 작성할 수 있습니다. 편집기를 저장하면, 변경되거나 새로 작성된 스니펫은 JShell 세션에 입력됩니다. 이때 스니펫 입력에 대한 피드백은 JShell 윈도우에서 확인할 수 있습니다. 그러나 현재 JShell 윈도우에는 프롬프트가 없는 상태입니다. 편집기를 종료한 이후에는 JShell 윈도우에 명령이나 스니펫을 다시 입력할 수 있습니다.</p>
 
-<p><strong>/edit</strong> 명령을 실행할 때 편집기를 지정하지 않으면, 환경 변수에 설정된 편집기가 실행됩니다. 환경 변수는 JSHELLEDITOR, VISUAL, 그리고 EDITOR 순서로 참조합니다. 설정된 환경 변수가 없다면, 단순한 디폴트 편집기<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>를 사용합니다. <strong>/set editor</strong> 명령을 사용하여, 여러분이 선호하는 편집기를 사용하도록 JShell을 설정할 수 있습니다. <strong>/set editor</strong> 명령의 매개 변수로 여러분이 사용하고자 하는 외부 편집기를 실행하는 명령을 추가합니다. 다음은 편집기로 &ldquo;kwrite&rdquo;를 설정하고 기존의 모든 스니펫을 편집기에 오픈하는 예제입니다.</p>
+<p><strong>/edit</strong> 명령을 실행할 때 편집기를 지정하지 않으면, 환경 변수에 설정된 편집기가 실행됩니다. 환경 변수는 JSHELLEDITOR, VISUAL, 그리고 EDITOR 순서로 참조합니다. 설정된 환경 변수가 없다면, JShell에 포함되어 있는 기본 편집기<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>를 사용합니다. <strong>/set editor</strong> 명령을 사용하여, 여러분이 선호하는 편집기를 사용하도록 JShell을 설정할 수 있습니다. <strong>/set editor</strong> 명령의 매개 변수로 여러분이 사용하고자 하는 외부 편집기를 실행하는 명령을 추가합니다. 다음은 편집기로 &ldquo;kwrite&rdquo;를 설정하고 기존의 모든 스니펫을 편집기에 오픈하는 예제입니다.</p>
 
 <pre><code>jshell&gt; /set editor kwrite
 |  Editor set to: kwrite
@@ -420,7 +420,7 @@ jshell&gt; &lt;up arrow&gt;
 jshell&gt; /edit
 </code></pre>
 
-<p>외부 편집기 윈도우에 x 변수를 정의한 다음에, 변경을 정리하면, JShell 윈도우에 다음과 메시지가 출력됩니다.</p>
+<p>외부 편집기 윈도우에 x 변수를 정의한 다음에, 외부 편집기에 변경을 저장하면, JShell 윈도우에 다음과 메시지가 출력됩니다.</p>
 
 <pre><code>|  created variable x of type int with initial value 6
 </code></pre>
@@ -436,9 +436,9 @@ jshell&gt; /edit
 <ol>
 <li id="fn:1">[역자주]JLine은 콘솔 입력을 처리하기 위한 Java 라이브러리입니다. bash의 명령 편집, 자동완성, 히스토리 기능을 제공합니다. <a href="https://github.com/jline/jline2">https://github.com/jline/jline2</a>
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2">Mac 환경에서 <strong>Ctrl+위 화살표</strong> 는 Missing Control로 맵핑되어 있습니다. 따라서 <strong>Ctrl+위 화살표</strong> 를 사용하기 위해서는 &ldquo;시스템 환경 설정&rdquo;에서 키 맵핑을 변경해야 합니다.
+<li id="fn:2">Mac 환경에서 <strong>Ctrl+위 화살표 방향키</strong> 는 Missing Control로 맵핑되어 있습니다. 따라서 <strong>Ctrl+위 화살표 방향키</strong> 를 사용하기 위해서는 &ldquo;시스템 환경 설정&rdquo;에서 Missing Control의 키 맵핑을 변경해야 합니다.
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
-<li id="fn:3">[역자주]JShell은 자바로 개발된 편집기를 표함합니다. JShell은 이 편집기를 기본 편집기로 사용합니다.
+<li id="fn:3">[역자주]JShell은 자바로 개발된 편집기를 표함합니다. JShell은 이 편집기를 기본 편집기로 사용합니다. <img src="https://taewanmerepo.github.io/2017/12/trans-shell/editor.jpg" alt="" />
  <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
 </ol>
 </div>
