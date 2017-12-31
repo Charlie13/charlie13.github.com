@@ -32,13 +32,15 @@ JShell 사용자 가이드의 한글화 문서는 다음과 같이 구성됩니�
 - [7. 스크립트](/trans/jshell/jshell07/)
 
 ----
-External classes are accessed from a JShell session through the class path. External modules are accessed through the module path, additional modules setting, and module exports setting.
+
+JShell 세션은 클래스 패스를 통해서 외부 클래스에 접근할 수 있습니다.
+외부 모듈은 모듈 경로, 추가 모듈 설정 및 모듈 내보내기 설정을 통해 액세스됩니다.
 
 - 문서 구성
   - Setting the Class Path
   - Setting Module Options
 
-## Setting the Class Path
+## 클래스 경로 설정
 
 You can use external code that is accessible through the class path in your JShell session.
 
