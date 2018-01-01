@@ -151,7 +151,7 @@
 
 <ul>
 <li><a href="/trans/jshell/jshell01/">1. JShell 소개</a></li>
-<li><a href="/trans/jshell/jshell02/">2. Snippets</a></li>
+<li><a href="/trans/jshell/jshell02/">2. 스니펫</a></li>
 <li><a href="/trans/jshell/jshell03/">3. 명령</a></li>
 <li><a href="/trans/jshell/jshell04/">4. 편집</a></li>
 <li><a href="/trans/jshell/jshell05/">5. 외부 코드</a></li>
@@ -161,37 +161,107 @@
 
 <hr />
 
-<p>The feedback mode determines the prompts, feedback, and other interactions within JShell. Predefined modes with different levels of feedback are provided. Custom modes can be created as needed.</p>
+<p>피드백 모드는 JShell에서 프롬프트, 피드백에 대한 정의입니다.
+여기서 피드백이란 JShell과 여러분의 상호작용에 사용됩니다.
+피드백 수준이 다른 미리 정의 된 모드가 제공됩니다.
+필요에 따라 사용자 정의 모드를 만들 수 있습니다.</p>
 
 <ul>
 <li>문서 구성
 
 <ul>
-<li>Setting the Feedback Mode</li>
-<li>Defining a Feedback Mode</li>
+<li>피드백 모드 설정</li>
+<li>피드백 모드 정의</li>
 </ul></li>
 </ul>
 
-<h2 id="setting-the-feedback-mode">Setting the Feedback Mode</h2>
+<h2 id="피드백-모드-설정">피드백 모드 설정</h2>
 
-<p>A feedback mode defines the prompts and feedback that are used in your interaction with JShell. Predefined modes are provided for your convenience. You can create custom modes as needed.</p>
+<p>피드백 모드는 JShell에서 프롬프트 및 피드백에 대한 정의입니다.
+여기서 피드백이란 JShell과 여러분의 상호작용에 사용됩니다.
+사용자 편의를 위해서 사전 정의 된 모드가 제공됩니다.
+필요에 따라 사용자 정의 모드를 만들 수 있습니다.</p>
 
-<p>The predefined modes can’t be modified, but they can be used as the base of a custom mode. The predefined modes, in descending order of verbosity are verbose, normal, concise, and silent.</p>
+<p>사전 정의되어 제공되는 피드백 모드는 수정할 수 없습니다. 그러나
+사전 정의된 피드백 모드를 사용하여 사용자 정의 모드를 만들 수 있습니다.</p>
 
-<p>The following table shows the differences in the predefined modes.</p>
+<p>사전 정의된 피드백 모드가 제공하는 정보의 양은 verbose, normal, consice, silent 순입니다.
+정보양이 가장 많은 것은 verbose 입니다.</p>
 
-<p>//table</p>
+<p>다음 표는 사전 정의 모드의 차이점을 정리합니다.</p>
+
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>값 스니펫</th>
+<th>선언</th>
+<th>업데이트</th>
+<th>명령</th>
+<th>프롬프트</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>verbose</td>
+<td>name ==&gt; value (설명)</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>\njshell&gt;</td>
+</tr>
+
+<tr>
+<td>normal</td>
+<td>name ==&gt; value</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>\njshell&gt;</td>
+</tr>
+
+<tr>
+<td>concise</td>
+<td>name ==&gt; value (식만 제공)</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td></td>
+</tr>
+
+<tr>
+<td>jshell&gt;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>concise</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>-&gt;</td>
+</tr>
+</tbody>
+</table>
 
 <ul>
-<li>The Mode column indicates the mode that is being described.</li>
-<li>The Value Snippets column indicates what is shown for snippets that have values, such as expressions, assignments, and variable declarations.</li>
-<li>The Declaration column indicates if feedback is provided for declarations or methods, classes, enum, interfaces, and annotation interfaces.</li>
-<li>The Updates column indicates if changes to other than the current snippet are shown.</li>
-<li>The Commands column indicates if commands give feedback indicating success.</li>
-<li>The Prompt column indicates the prompt that is used.</li>
+<li>Mode 컬럼은 설명할 모드를 나타냅니다.</li>
+<li>값 스니펫(Value Snippets) 컬럼은 식(expressions), 할당문, 변수 선언과 같은 값을 갖는 스니펫을 표현하는 방식을 설명합니다.</li>
+<li>선언(Declaration) 컬럼은 선언 혹은 메서드, 클래스, enum, 인터페이스 그리고 어노테이션 인터페이스에 대해 피드백 제공 여부를 설명합니다.</li>
+<li>업데이트 컴럼은 현재 스니펫 이외에 변경 사항의 출력 여부를 설명합니다.</li>
+<li>명령 컬럼은 명령에 대한 성공을 나타내는 피드백 제공 여부 설명합니다.</li>
+<li>프롬프트 컬럼은 어떤 프롬프트가 사용되는지 설명합니다.</li>
 </ul>
 
-<p>The default feedback mode is normal. Change the feedback mode by setting a command-line option or using the /set feedback command as shown in the following example:</p>
+<p>기본 피드백 모드는 &ldquo;<strong>normal</strong>&ldquo;입니다.</p>
+
+<p>피드백 모드는 다음 예제와 같이 커맨드 라인 옵션으로 설정하거나 <strong>/set feedback</strong> 명령을 사용하여 변경할 수 있습니다.</p>
 
 <pre><code>jshell&gt; /set feedback verbose
 |  Feedback mode: verbose
@@ -214,13 +284,16 @@ $4 ==&gt; 4
 jshell&gt;
 </code></pre>
 
-<p>Notice that when the setting is normal or verbose, the command feedback shows you the setting, but concise and silent modes don&rsquo;t. Also notice that the three different forms of feedback for the expression 2+2 include no feedback when the mode is set to silent.</p>
+<p>피드백 모드로 <strong>normal</strong>  혹은 <strong>verbose</strong>로 설정할 경우, 명령 피드백은 설정 모드를 출력합니다.<br />
+그러나 피드백 모드로 <strong>consise</strong> 혹은 <strong>silent</strong>를 설정될 때는, 명령 피드백으로 설정 모드를 출력하지 않습니다.<br />
+또한 식 <strong>2+2</strong>에 대한 피드백의 3 가지 다른 피드백 형식에 대해서 주의 깊이 살펴보시기 바랍니다.
+<strong>silent</strong>로 피드백 모드가 설정되면 식 <strong>2+2</strong>에 어떤 피드백도 제공하지 않습니다.</p>
 
-<p>To see the current and available feedback modes, use the /set feedback command without options. Notice that the current mode is shown as the command that set it:</p>
+<p>현재 및 사용 가능한 피드백 모드를 보려면 옵션없이 <strong>/set feedback</strong> 명령을 사용합니다. 현재 모드는 다음과 같이 피드백 모드를 설정하는 명령으로 표시됩니다.</p>
 
 <pre><code>jshell&gt; /set feedback
 |  /set feedback verbose
-|  
+|
 |  Available feedback modes:
 |     concise
 |     normal
@@ -228,35 +301,35 @@ jshell&gt;
 |     verbose
 </code></pre>
 
-<h2 id="defining-a-feedback-mode">Defining a Feedback Mode</h2>
+<h2 id="피드백-모드-정의">피드백 모드 정의</h2>
 
-<p>Custom feedback modes enable you to define the prompts that you want to see and the feedback that you want to receive for the different elements that you enter into JShell.</p>
+<p>사용자 정의 피드백 모드에서 사용자가 원하는 프롬프트를 정의할 수 있습니다. 또한 JShell에 입력된 요소들에 대해서 수신을 원하는 피드백을 정의할 수 있습니다.</p>
 
-<p>A feedback mode has the following settings:</p>
+<p>피드백 모드는 다음을 설정을 갖습니다.</p>
 
 <ul>
-<li>Prompts: Regular and continuation</li>
-<li>Truncation: Maximum length of values displayed</li>
-<li>Format: Format of the feedback provided</li>
+<li>Prompts: Regular과 continuation 문자</li>
+<li>Truncation: 출력할 값의 최대 길이</li>
+<li>Format: 제공할 피드백의 포멧</li>
 </ul>
 
-<p>The predefined modes can’t be changed, but you can easily create a copy of an existing mode, as shown in the following example:</p>
+<p>사전 정의 피드백 모드는 변경할 수 없습니다. 그러나 다음 예제와 같이 기존 사전 정의 피드백 모드의 복사본을 간단히 만들수 있습니다.</p>
 
 <pre><code>jshell&gt; /set mode mine normal -command
 |  Created new feedback mode: mine
 </code></pre>
 
-<p>The new mode mine is a copy of the normal mode. The -command option indicates that you want command feedback. If you don&rsquo;t want commands to describe the action that occurred, then use -quiet instead of -command.</p>
+<p>새로운 피드백 모드 <strong>mine</strong>은 &ldquo;<strong>normal</strong>&rdquo; 모드의 복사본입니다. &ldquo;<strong>-command</strong>&rdquo; 옵션은 명령 피드백을 원한다는 의미입니다. 만약 발생한 액션에 대한 설명을 원하지 않는다면, &ldquo;<strong>-command</strong>&rdquo; 옵션 대신에 &ldquo;<strong>-quiet</strong>&rdquo; 옵션을 사용합니다.</p>
 
-<h3 id="set-prompts">Set Prompts</h3>
+<h3 id="프롬프트-설정">프롬프트 설정</h3>
 
-<p>As with all /set commands, use the /set prompt command without settings to show the current setting:</p>
+<p>다은 <strong>/set</strong> 명령과 마찬가지로, 추가 설정이 없는 <strong>/set prompt</strong> 명령은 현제 설정을 출력합니다.</p>
 
 <pre><code>jshell&gt; /set prompt normal
 |  /set prompt normal &quot;\njshell&gt; &quot; &quot;   ...&gt; &quot;
 </code></pre>
 
-<p>In the feedback provided for the previous example, the first string is the regular prompt, and the second string is the continuation prompt that is used if the snippet extends to multiple lines. The following example shows how to switch to the new mode to try it out:</p>
+<p>앞 예제의 피드백을 보면, 첫번째 문자열이 <strong>regulaer</strong> 프롬프트이고, 두 번째 문자열이 <strong>continuation</strong> 프롬프트 입니다. <strong>continuation</strong> 프롬프트는 여러줄로 스니펫이 구성될 경우에 사용되는 프롬프트입니다. 다음 예제에서는 새로운 모드에서 프롬프트를 변경하는 방법을 소개합니다.</p>
 
 <pre><code>jshell&gt; /set prompt mine &quot;\nmy mode: &quot;  &quot;.......: &quot;
 
@@ -271,9 +344,9 @@ my mode: class C {
 my mode:
 </code></pre>
 
-<p>The prompt strings can contain %s, which is substituted with the next snippet ID. However, if a command is entered or the snippet results in an error, then the value that users enter at the prompt might not be assigned that ID.</p>
+<p>프롬프트 문자열은 <strong>%s</strong> 문자열을 포함할 수 있습니다. 이 문자는 다음 스니펫 ID로 변환됩니다. 그러나 명령이 입력되거나 에러로 스니펫을 반환할 경우, 프롬프트에 사용자가 입력한 값은 ID에 새로운 값이 할당되지 않습니다.</p>
 
-<p>All settings have a duration of the current session; they are not reset by the /reset command. If you want the settings to be the default for future sessions, then use the -retain option to keep them. The following example shows how to keep your custom mode across sessions:</p>
+<p>모든 설정은 현재 세션에서만 유지됩니다. <strong>/reset</strong> 명령으로 재설정되지 않습니다. 미래의 다른 세션에서도 현재 설정이 기본으로 유지되길 원한다면, 설정을 유지하기 위해서 <strong>-retain</strong> 옵션을 사용해야 합니다. 다음 예제는 사용자 정의 모드를 여러 세션에서 걸쳐서 유지하는 방법을 소개합니다.</p>
 
 <pre><code>my mode: /set mode mine -retain
 
@@ -289,9 +362,9 @@ my mode: /exit
 my mode:
 </code></pre>
 
-<h3 id="set-truncation">Set Truncation</h3>
+<h3 id="truncation-자름-설정">Truncation(자름) 설정</h3>
 
-<p>If the values are too long, then they are truncated when displayed. Use the /set truncation command to set the maximum length shown for a value. If no settings are entered with the command, then the current setting is displayed. The following example shows the settings that were inherited from the normal mode:</p>
+<p>출력할 값이 너무 길 경우에, 출력시점에 출력 데이터를 잘라야 합니다. <strong>/set truncation</strong> 명령을 사용하여 출력할 값의 최대 길이를 설정합니다. 별도의 옵션 없이 <strong>/set truncation</strong> 명령을 입력하면, 현재 설정을 출력합니다. 다음 예제는 normal 모드를 상속한 <strong>mine</strong> 모드의  설정을 보여줍니다.</p>
 
 <pre><code>my mode: /set truncation mine
 |  /set truncation mine 80
@@ -301,18 +374,21 @@ my mode: String big = IntStream.range(0,1200).mapToObj(n -&gt; &quot;&quot; + (c
 big ==&gt; &quot;abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuv ... fghijklmnopqrstuvwxyzabcd&quot;
 </code></pre>
 
-<p>The conditions under which a truncation setting is in effect is determined by the optional selectors that are entered after the truncation length. Two types of selectors (called selector kinds in the online help) are defined:</p>
+<p>Truncation(절단) 설정이 적용되는 조건은 Truncation(절단) 길이 다음에 입력될 선택자(selector)로 결정됩니다. 온라인 도움말에 따르면 선택자 유형으로 두 가지 타입이 정의되어 있습니다.</p>
 
 <ul>
 <li>A case selector indicates the type of snippet whose value is displayed.</li>
-<li>An action selector describes what happened to the snippet.</li>
+<li>액션 셀렉터는  스니펫에 무슨 일이 발생하는지를 설명합니다.</li>
 </ul>
 
-<p>Enter /help /set truncation for details about selectors.</p>
+<p>센렉터에 대한 자세한 설명은 <strong>/help /set truncation</strong> 명령으로 확인할 수 있습니다.</p>
 
-<p>The setting shown in the previous example means that values are truncated to 80 characters unless the value is the value of an expression (the expression case selector) or the value of a variable, as explicitly requested by entering just the variable name (the varvalue case selector). The order is important; the last one entered is used. If the order were reversed, then all of the values would be truncated to 80 characters.</p>
+<p>이전 예제에서의 설정은
+The setting shown in the previous example means that values are truncated to 80 characters unless the value is the value of an expression (the expression case selector) or the value of a variable, as explicitly requested by entering just the variable name (the varvalue case selector). The order is important; the last one entered is used. If the order were reversed, then all of the values would be truncated to 80 characters.</p>
 
-<p>The following example sets the default truncation to 100, and only shows long values if they are explicitly requested:</p>
+<p>앞의 예제에 표시된 설정은 변수 이름 (varvalue의 경우)을 명시 적으로 입력하여 값이 표현식 (표현식 대 / 소문자 선택자) 또는 변수의 값이 아닌 경우 값을 80 자로 잘 림트한다는 것을 의미합니다 선택자). 순서는 중요합니다. 마지막으로 입력 한 것이 사용됩니다. 주문이 취소 된 경우 모든 값은 80 자로 잘립니다.</p>
+
+<p>다음 예제에서 기본 Truncation(절단)을 100으로 설정합니다. 그리고 명시적으로 요청할 때에만 실제 전체 값을 출력합니다.</p>
 
 <pre><code>my mode: /set truncation mine 100
 
@@ -329,7 +405,7 @@ rstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrs
 my mode: /set mode mine -retain
 </code></pre>
 
-<p>To keep the new settings, retain the changes as shown at the end of the example.</p>
+<p>새로운 설정을 유지하기 위해서, 예제의 마지막에서 처럼 <strong>-retain</strong> 옵션을 사용하여 변경을 유지합니다.</p>
 
 <h3 id="set-formats">Set Formats</h3>
 
@@ -376,14 +452,11 @@ my mode: /set truncation mine
 /set truncation mine 300 varvalue
 </code></pre>
 
-<blockquote>
-<ul>
-<li>Note:
-The change to the prefix character affects all feedback, including command feedback.</li>
-</ul>
-</blockquote>
+<div class="notices note" ><p>접두 문자 변경은 명령 피드백을 포함한 모든 피디백에 영향을 미칩니다.</p>
+</div>
 
-<p>To show the type when displaying values, change the result field defined by the predefined modes:</p>
+
+<p>값을 표시 할 때 타입을 표시하려면, 사전 정의 모드에서 정의 된 결과 필드를 변경하십시오.</p>
 
 <pre><code>my mode: /set format mine result &quot;{type} {name} = {value}{post}&quot; added,modified,replaced-primary-ok
 
@@ -491,11 +564,11 @@ jshell&gt; /set mode mine -delete -retain
 <ul>
 <li>
 <ul>
-<li><a href="#setting-the-feedback-mode">Setting the Feedback Mode</a></li>
-<li><a href="#defining-a-feedback-mode">Defining a Feedback Mode</a>
+<li><a href="#피드백-모드-설정">피드백 모드 설정</a></li>
+<li><a href="#피드백-모드-정의">피드백 모드 정의</a>
 <ul>
-<li><a href="#set-prompts">Set Prompts</a></li>
-<li><a href="#set-truncation">Set Truncation</a></li>
+<li><a href="#프롬프트-설정">프롬프트 설정</a></li>
+<li><a href="#truncation-자름-설정">Truncation(자름) 설정</a></li>
 <li><a href="#set-formats">Set Formats</a></li>
 </ul></li>
 </ul></li>
@@ -610,7 +683,7 @@ jshell&gt; /set mode mine -delete -retain
 	</div>
 		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 			<div class="container container-inner">
-				<p class="footer__copyright">&copy; 2017 taewan.kim. </p>
+				<p class="footer__copyright">&copy; 2018 taewan.kim. </p>
 			</div>
 		</footer>
 	</div>

@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/trans/jshell/jshell07/</loc>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/trans/jshell/jshell06/</loc>
+    <lastmod>2017-12-27T19:30:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/trans/jshell/jshell05/</loc>
     <lastmod>2017-12-27T19:25:14+09:00</lastmod>
   </url>
@@ -610,6 +620,12 @@
   </url>
   
   <url>
+    <loc>/tags/feedback-mode/</loc>
+    <lastmod>2017-12-27T19:30:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/fork/</loc>
     <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
@@ -665,13 +681,13 @@
   
   <url>
     <loc>/tags/java/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/java/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -683,7 +699,7 @@
   
   <url>
     <loc>/tags/java9/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -725,7 +741,7 @@
   
   <url>
     <loc>/tags/jshell/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -917,7 +933,7 @@
   
   <url>
     <loc>/tags/oracle/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1054,6 +1070,12 @@
   </url>
   
   <url>
+    <loc>/tags/script/</loc>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/seam/</loc>
     <lastmod>2016-01-27T10:50:36+09:00</lastmod>
     <priority>0</priority>
@@ -1157,7 +1179,7 @@
   
   <url>
     <loc>/trans/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1235,7 +1257,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1283,7 +1305,7 @@
   
   <url>
     <loc>/tags/%EB%B2%88%EC%97%AD/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1385,7 +1407,7 @@
   
   <url>
     <loc>/tags/%ED%95%9C%EA%B8%80%ED%99%94/</loc>
-    <lastmod>2017-12-27T19:25:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
