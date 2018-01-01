@@ -406,7 +406,7 @@ my mode: /set mode mine -retain
 
 <h3 id="set-formats">Set Formats</h3>
 
-<p>Snippet output is another setting that you can customize. In the format inherited from the normal mode, an import doesn&rsquo;t give any feedback, and the type of a value isn’t shown:</p>
+<p>스니펫 출력은 사용자가 변경할 수 있는 설정입니다. <strong>normal</strong> 모드로 부터 상속한 출력 형식은 import 문에 대해서는 어떤 피드백도 제공하지 않습니다. 값의 유형도 출력하지 않습니다.</p>
 
 <pre><code>my mode: import java.beans.*
 
@@ -414,7 +414,7 @@ my mode: Locale.CANADA.getUnicodeLocaleAttributes()
 $5 ==&gt; []
 </code></pre>
 
-<p>The format of the snippet output is set with the /set format command. Enter this with the mode name and no settings to see the current format settings:</p>
+<p>스니펫 출력 형식은 <strong>/set format</strong> 명령으로 설정할 수 있습니다. <strong>/set format</strong> 명령을 모드 명만을 추가해서 실행하면 현재 포멧 설정을 출력합니다.</p>
 
 <pre><code>my mode: /set format mine
 </code></pre>
