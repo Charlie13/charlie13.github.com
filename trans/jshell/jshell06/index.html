@@ -419,22 +419,22 @@ $5 ==&gt; []
 <pre><code>my mode: /set format mine
 </code></pre>
 
-<p>Extensive help about this command is available with the /help /set format command. You might want to bring it up to use as a reference for the remainder of this section, which mentions the fields that are used when defining the formats.</p>
+<p>출력 포멧 설정 명령에 대한 자세한 도움말은 <strong>/help /set</strong> 명령을 통해서 이용 가능합니다. 포멧을 정의할 때 사용하는 필드를 설명하는 이 절의 나머지 부분에서 이 도움말을 참조로써 사용할 수 있습니다.</p>
 
-<p>The primary feedback displayed is determined by the display field. Other fields can be defined to assist in defining the display field. Predefined modes other than silent define several of these fields, as can be seen in the output from the /help /set format command. These fields are inherited in the example mode. Display definitions for import are shown in the following example:</p>
+<p>피드백에 출력됨은 display 필드로 결정합니다. 출력 필드 정의하는데 돕는 용도로 여러 필드를 정의할 수 있습니다. <strong>silent</strong> 모드를 제외한 사전 정의 모드는 <strong>/help /set format</strong> 명령에서 볼 수 있는 필드 중 몇 가지를 정의합니다. 이 필드는 예제 모드에서 상속됩니다. 다음 예제는 import 문의 출력 정의(Display Definition)하는 방법을 설명합니다.</p>
 
 <pre><code>my mode: /set format mine display &quot;{pre}added import {name}{post}&quot; import-added
 
 my mode: /set format mine display &quot;{pre}re-added import {name}{post}&quot; import-modified,replaced
 </code></pre>
 
-<p>The name field is predefined as the name of the snippet. The following example shows that feedback is now provided for imports:</p>
+<p>name 필드는 스니펫 이름으로 사전 정의된 필드입니다. 다음 예제는 import 문에 제공되는 피드백입니다.</p>
 
 <pre><code>my mode: import java.beans.*
 |  re-added import java.beans.*
 </code></pre>
 
-<p>The pre and post fields used in the display definition are the prefix and postfix characters for each line of feedback output. The following example changes the vertical bar prefix to the empty string:</p>
+<p>표시 정의(Display Definition)에 사용 된 <strong>pre</strong> 및 <strong>post</strong> 필드는 피드백 출력의 각 행에 대한 접두어 및 접미어 문자입니다. 다음 예제에서는 세로 막대 접두사를 빈 문자열로 변경하는 설정입니다.</p>
 
 <pre><code>my mode: /set format mine pre &quot;&quot;
 
@@ -464,9 +464,9 @@ my mode: 2 + 2
 int $12 = 4
 </code></pre>
 
-<p>This change makes result nonempty only when it is new or updated (added,modified,replaced), is on the entered snippet (primary), and doesn’t have errors (ok).</p>
+<p>이 변경은 새로 추가되거나 업데이트(추가, 수정, 대체)된 경우 입력된 스니펫(primary)에 에러가 없는 경우(ok)에만 결과를 만듭니다.</p>
 
-<p>To permanently delete a retained mode, use the -retain option with the -delete option:</p>
+<p>유지 설정된 모드를 영구적으로 삭제하기 위해서는 <strong>-delete</strong> 옵션과 함께 <strong>-retain</strong> 옵션을 함께 사용해야 합니다.</p>
 
 <pre><code>my mode: /set feedback verbose -retain
 |  Feedback mode: verbose
