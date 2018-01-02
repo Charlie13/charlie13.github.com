@@ -80,7 +80,7 @@
 		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >블로그</a></li>
 		<li class="menu__item "><a class="menu__link" href="/translation/" title="번역 문서를 정리한 페이지입니다." >한글화 작업</a></li>
 		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >우리 민수</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="블로그 사용자간의 원할한 소통을 위해 준비한 Gitter 채팅 서비스로 이동합니다."target='_blank' >챗팅롬</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="채팅룸으로 이동합니다."target='_blank' >챗팅롬</a></li>
 	</ul>
 </nav>
 
@@ -165,9 +165,13 @@
 
 <hr />
 
+<h1 id="jshell-사용자-가이드-7-스크립트">JShell 사용자 가이드: 7. 스크립트</h1>
+
+<hr />
+
 <p>JShell 스크립트는 한 개 파일에 기술된 일련의 스니펫과 JShell 명령이거나 한 줄로 기술된 스니펫 혹은 명령입니다.</p>
 
-<p>스크립트 형태는 파일 혹은 사전 정의 스크립트<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>입니다. 사전 정의 스크립트는 다음 표와 같이 정리할 수 있습니다.</p>
+<p>스크립트 형태로는 파일과 사전 정의 스크립트<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>가 있습니다. 다음 표사는 정의 스크립트에 대한 요약입니다.</p>
 
 <table>
 <thead>
@@ -180,12 +184,12 @@
 <tbody>
 <tr>
 <td>DEFAULT</td>
-<td>일반적으로 사용되는 임포트 문으로 구성됩니다. 이 스크립트는 다른 시작 스크립트를 지정하지 않을 때 사용됩니다.</td>
+<td>일반적으로 사용되는 임포트 문으로 구성됩니다. 이 스크립트는 별도로 시작 스크립트를 지정하지 않을 때 사용됩니다.</td>
 </tr>
 
 <tr>
 <td>PRINTING</td>
-<td><strong>PrintStream</strong> 클래스의 <strong>print</strong>, <strong>println</strong>, 그리고 <strong>printf</strong> 메서드에 직접 참조하는 JShelll 메서드를 정의합니다.</td>
+<td><strong>PrintStream</strong> 클래스의 <strong>print</strong>, <strong>println</strong>, 그리고 <strong>printf</strong> 메서드를 직접 참조하는 JShelll 메서드를 정의합니다.</td>
 </tr>
 
 <tr>
@@ -206,9 +210,9 @@
 
 <h2 id="시작-스크립트-startup-scripts">시작 스크립트(Startup Scripts)</h2>
 
-<p>시작 스크립트는 JShell 세션이 시작될 때 실행 될 스니펫과 명령으로 구성됩니다. 기본 시작 스크립트에는 공통으로 사용되는 import 문이 포함되어 있습니다. 필요한 경우 사용자 정의 스크립트를 작성할 수 있습니다.</p>
+<p>시작 스크립트는 JShell 세션이 시작될 때 실행되는 스니펫과 명령으로 구성됩니다. <strong>DEFAULT</strong> 스크립트는 일반적으로 자주 사용되는 import 문으로 구성되어 있습니다. 필요한 경우 사용자 정의 스크립트를 작성할 수 있습니다.</p>
 
-<p>Jshell이 &ldquo;reset(재설정)&rdquo; 될 때마다 시작 스크립트가 실행됩니다. &ldquo;Reset(재설정)&ldquo;은 처음 시작 및 <strong>/reset</strong>, <strong>/reload</strong>, <strong>/env</strong> 명령이 실행될 때 수행됩니다. 스크립트를 별도로 설정하지 않으면 기본 시작 스크립트인 <strong>DEFAULT</strong>가 실행됩니다. 이 <strong>DEFAULT</strong> 스크립트는 일반적으로 사용되는 import 문으로 구성되어 있습니다.</p>
+<p>Jshell이 &ldquo;reset(재설정)&rdquo; 될 때마다 시작 스크립트가 실행됩니다. JShell 세션은 처음 시작 및 <strong>/reset</strong>, <strong>/reload</strong>, <strong>/env</strong> 명령이 실행될때 &ldquo;Reset(재설정)&ldquo;됩니다. 스크립트를 별도로 설정하지 않으면 기본 시작 스크립트인 <strong>DEFAULT</strong> 스크립트가 실행됩니다. 이 <strong>DEFAULT</strong> 스크립트는 일반적으로 사용되는 import 문으로 구성되어 있습니다.</p>
 
 <div class="notices note" ><p>Java는 java.lang 패키지를 자동으로 import 합니다. 따라서 java.lang을 import 문을 사용하여 명시적으로 가져올 필요 없습니다.</p>
 </div>
@@ -228,14 +232,12 @@
 
 <p>시작 스크립트는 JShell이 시작할 때마다 실헹됩니다.</p>
 
-<p>시작 스크립트는 세션 상태가 재설정 될 때만 현재 세션에서 실행됩니다.
-스크립트 내용만이 저장되며, 스크립트 파일에 대한 참조가 저장되지 않습니다.
+<p>시작 스크립트는 세션 상태가 재설정(reset) 될 때만 현재 세션에 실행됩니다.
+스크립트 내용만 저장되며, 스크립트 파일에 대한 참조는 저장되지 않습니다.
 이 스크립트 파일은 <strong>/set start</strong> 명령이 실행될 때만 읽힙집니다.
-그러나 사전 정의 스크립트는 참조로 실행되고 새로운 JDK가 릴리즈될 때 업데이트될 수 있습니다.</p>
+사전 정의 스크립트는 참조로 실행되고 새로운 JDK가 릴리즈될 때만 업데이트됩니다.</p>
 
-<p>시작 스크립트는 상태가 재설정 될 때만 현재 세션에 로드됩니다. 스크립트의 내용이 저장되며 스크립트에 대한 참조는 저장되지 않습니다. 이 스크립트는 / set start 명령이 실행될 때만 읽힙니다. 그러나 미리 정의된 스크립트는 참조로 로드되며 JDK의 새 릴리스로 업데이트할 수 있습니다.</p>
-
-<p>시작 스크립트인 커맨드 라인 옵션인 <strong>&ndash;startup</strong>을 사용하여 지정할 수 있습니다.</p>
+<p>시작 스크립트는 커맨드 라인 옵션 <strong>&ndash;startup</strong>을 사용하여 지정할 수 있습니다.</p>
 
 <pre><code>% jshell --startup mystartup.jsh
 </code></pre>
@@ -254,10 +256,10 @@
 <span style="color: #f8f8f2">Hello</span> <span style="color: #f8f8f2">World</span><span style="color: #f92672">!</span>
 </pre></div>
 
-<p><strong>jshell</strong>이 실행될 때마다 실행되는 시작 스크립트로 사전 정의 스크립트을 설정할 때 <strong>-retain</strong> 옵션을 사용합니다.
+<p><strong>-retain</strong> 옵션을 사용하여 <strong>jshell</strong>이 실행될 때마다 사전 정의 스크립트가 실행하도록 설정할 수 있습니다.
 옵션 없이 <strong>/set start</strong> 명령을 사용하면 시작 스크립트에서 정의한 내용을 자세하게 확인할 수 있습니다.</p>
 
-<p>커맨드 라인에서 두 개 이상의 시작 스크립트를 설정하려면 각 스크립트에 <strong>&ndash; startup</strong> 플래그를 사용해야 합니다.</p>
+<p>커맨드 라인에서 두 개 이상의 시작 스크립트를 설정하려면 각 스크립트에 <strong>&ndash;startup</strong> 플래그를 사용해야 합니다.</p>
 
 <pre><code>% jshell --startup DEFAULT --startup PRINTING
 </code></pre>
@@ -294,7 +296,7 @@
 <hr />
 
 <ol>
-<li id="fn:1">사전 정의 스크립트는 별도 파일로 존재하지 않습니다. Java JDK의 API 형태로 존재합니다.
+<li id="fn:1">사전 정의 스크립트는 별도 파일로 존재하지 않습니다. Java JDK의 API 형태로 개발되어 있습니다.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
 </ol>
 </div>
@@ -383,7 +385,7 @@
 	<div class="widget__content">
 	<nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#jshell-사용자-가이드-7-스크립트">JShell 사용자 가이드: 7. 스크립트</a>
 <ul>
 <li><a href="#시작-스크립트-startup-scripts">시작 스크립트(Startup Scripts)</a></li>
 <li><a href="#스크립트-생성과-로딩">스크립트 생성과 로딩</a>

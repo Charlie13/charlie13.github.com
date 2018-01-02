@@ -80,7 +80,7 @@
 		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >블로그</a></li>
 		<li class="menu__item "><a class="menu__link" href="/translation/" title="번역 문서를 정리한 페이지입니다." >한글화 작업</a></li>
 		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >우리 민수</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="블로그 사용자간의 원할한 소통을 위해 준비한 Gitter 채팅 서비스로 이동합니다."target='_blank' >챗팅롬</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="채팅룸으로 이동합니다."target='_blank' >챗팅롬</a></li>
 	</ul>
 </nav>
 
@@ -161,10 +161,14 @@
 
 <hr />
 
+<h1 id="jshell-사용자-가이드-6-피그백-모드">JShell 사용자 가이드: 6. 피그백 모드</h1>
+
+<hr />
+
 <p>피드백 모드는 JShell에서 프롬프트, 피드백에 대한 정의입니다.
-여기서 피드백이란 JShell과 여러분의 상호작용에 사용됩니다.
-피드백 수준이 다른 미리 정의 된 모드가 제공됩니다.
-필요에 따라 사용자 정의 모드를 만들 수 있습니다.</p>
+피드백은 JShell과 사용자의 상호작용에 사용됩니다.
+피드백 수준이 다른 여러 사전 정의 피드백 모드가 제공됩니다.
+필요에 따라 사용자 정의 피드백 모드를 만들 수 있습니다.</p>
 
 <ul>
 <li>문서 구성
@@ -179,15 +183,15 @@
 
 <p>피드백 모드는 JShell에서 프롬프트 및 피드백에 대한 정의입니다.
 여기서 피드백이란 JShell과 여러분의 상호작용에 사용됩니다.
-사용자 편의를 위해서 사전 정의 된 모드가 제공됩니다.
-필요에 따라 사용자 정의 모드를 만들 수 있습니다.</p>
+사용자 편의를 위해서 사전 정의 피드백 모드가 제공됩니다.
+필요에 따라 사용자 정의 피드백 모드를 만들 수 있습니다.</p>
 
-<p>사전 정의되어 제공되는 피드백 모드는 수정할 수 없습니다. 그러나
+<p>사전 정의 피드백 모드는 수정할 수 없습니다. 그러나
 사전 정의된 피드백 모드를 사용하여 사용자 정의 모드를 만들 수 있습니다.
 사전 정의된 피드백 모드가 제공하는 정보의 양은 <strong>verbose</strong>, <strong>normal</strong>, <strong>consice</strong>, <strong>silent</strong> 순입니다.
 정보양이 가장 많은 것은 <strong>verbose</strong> 입니다.</p>
 
-<p>다음 표는 사전 정의 모드의 차이점을 정리합니다.</p>
+<p>다음 표는 사전 정의 피드백 모드에 대한 요약입니다.</p>
 
 <table>
 <thead>
@@ -250,7 +254,7 @@
 </table>
 
 <ul>
-<li>Mode 컬럼은 설명할 모드를 나타냅니다.</li>
+<li>Mode 컬럼은 설명할 피드백 모드를 나타냅니다.</li>
 <li>값 스니펫(Value Snippets) 컬럼은 식(expressions), 할당문, 변수 선언과 같은 값을 갖는 스니펫을 표현하는 방식을 설명합니다.</li>
 <li>선언(Declaration) 컬럼은 선언 혹은 메서드, 클래스, enum, 인터페이스 그리고 어노테이션 인터페이스에 대해 피드백 제공 여부를 설명합니다.</li>
 <li>업데이트 컴럼은 현재 스니펫 이외에 변경 사항의 출력 여부를 설명합니다.</li>
@@ -288,7 +292,7 @@ jshell&gt;
 또한 식 <strong>2+2</strong>에 대한 피드백의 3 가지 다른 피드백 형식에 대해서 주의 깊이 살펴보시기 바랍니다.
 <strong>silent</strong>로 피드백 모드가 설정되면 식 <strong>2+2</strong>에 어떤 피드백도 제공하지 않습니다.</p>
 
-<p>현재 및 사용 가능한 피드백 모드를 보려면 옵션없이 <strong>/set feedback</strong> 명령을 사용합니다. 현재 모드는 다음과 같이 피드백 모드를 설정하는 명령으로 표시됩니다.</p>
+<p>현재 및 사용 가능한 피드백 모드는 옵션없이 <strong>/set feedback</strong> 명령 사용하여 확인할 수 있습니다. 현재 모드는 다음과 같이 피드백 모드를 설정하는 명령으로 표시됩니다.</p>
 
 <pre><code>jshell&gt; /set feedback
 |  /set feedback verbose
@@ -307,22 +311,22 @@ jshell&gt;
 <p>피드백 모드는 다음을 설정을 갖습니다.</p>
 
 <ul>
-<li>Prompts: Regular과 continuation 문자</li>
+<li>Prompts: regular 프롬프트 문자, continuation 프롬프트 문자<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
 <li>Truncation: 출력할 값의 최대 길이</li>
 <li>Format: 제공할 피드백의 포멧</li>
 </ul>
 
-<p>사전 정의 피드백 모드는 변경할 수 없습니다. 그러나 다음 예제와 같이 기존 사전 정의 피드백 모드의 복사본을 간단히 만들수 있습니다.</p>
+<p>사전 정의 피드백 모드는 변경할 수 없습니다. 그러나 다음 예제와 같이 기존 사전 정의 피드백 모드의 복사본을 만들수 있습니다.</p>
 
 <pre><code>jshell&gt; /set mode mine normal -command
 |  Created new feedback mode: mine
 </code></pre>
 
-<p>새로운 피드백 모드 <strong>mine</strong>은 &ldquo;<strong>normal</strong>&rdquo; 모드의 복사본입니다. &ldquo;<strong>-command</strong>&rdquo; 옵션은 명령 피드백을 원한다는 의미입니다. 만약 발생한 액션에 대한 설명을 원하지 않는다면, &ldquo;<strong>-command</strong>&rdquo; 옵션 대신에 &ldquo;<strong>-quiet</strong>&rdquo; 옵션을 사용합니다.</p>
+<p>새로운 피드백 모드 <strong>mine</strong> 모드는 <strong>normal</strong> 모드의 복사본입니다. &ldquo;<strong>-command</strong>&rdquo; 옵션은 명령 피드백을 원한다는 의미입니다. 만약 발생한 액션에 대한 설명을 원하지 않는다면, &ldquo;<strong>-command</strong>&rdquo; 옵션 대신에 &ldquo;<strong>-quiet</strong>&rdquo; 옵션을 사용합니다.</p>
 
 <h3 id="프롬프트-설정">프롬프트 설정</h3>
 
-<p>다은 <strong>/set</strong> 명령과 마찬가지로, 추가 설정이 없는 <strong>/set prompt</strong> 명령은 현제 설정을 출력합니다.</p>
+<p>다른 <strong>/set</strong> 명령과 마찬가지로, 추가 설정이 없는 <strong>/set prompt</strong> 명령을 실행하면 현제 프롬프트 설정을 출력합니다.</p>
 
 <pre><code>jshell&gt; /set prompt normal
 |  /set prompt normal &quot;\njshell&gt; &quot; &quot;   ...&gt; &quot;
@@ -382,7 +386,7 @@ big ==&gt; &quot;abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuv ... fghijklmno
 
 <p>센렉터에 대한 자세한 설명은 <strong>/help /set truncation</strong> 명령으로 확인할 수 있습니다.</p>
 
-<p>이전 예제에서의 식의 결과 값(expression case selector) 혹은 변수의 값이 아닌, 변수 명을 입력하여 명시적으로 요청하는 것과 같은 상황이라면, 처럼 값이 식의 값(expression case selector)이거나 변수의 값이 아니라면, 변수 명(varvalue case selector)을 입력하여 명시적으로 출력을 요청할 때 80개 문자로 절단하라는 의미입니다. 이 순서는 중요합니다. 마지막 것이 사용됩니다. 만약에 순서가 반대라면, 모든 값은 80 개 문자에서 절달될 것입니다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+<p>이전 예제에서의 식의 결과 값(expression case selector) 혹은 변수의 값이 아닌, 변수 명을 입력하여 명시적으로 요청하는 것과 같은 상황이라면, 처럼 값이 식의 값(expression case selector)이거나 변수의 값이 아니라면, 변수 명(varvalue case selector)을 입력하여 명시적으로 출력을 요청할 때 80개 문자로 절단하라는 의미입니다. 이 순서는 중요합니다. 마지막 것이 사용됩니다. 만약에 순서가 반대라면, 모든 값은 80 개 문자에서 절달될 것입니다.<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></p>
 
 <p>다음 예제에서 기본 Truncation(절단)을 100으로 설정합니다. 그리고 명시적으로 요청할 때에만 실제 전체 값을 출력합니다.</p>
 
@@ -477,8 +481,10 @@ jshell&gt; /set mode mine -delete -retain
 <hr />
 
 <ol>
-<li id="fn:1">[역자주]expression과 varvalue 셀렉터를 설정함으로써 두 번째 설정은 범위를 한정하였습니다.
+<li id="fn:1">[역자주]regular 프롬프트 문자는 일반 프롬프트 문자를 의미하고, continuation 프롬프트 문자는 여려 줄로 스니펫을 작성할 때 출력하는 프롬프트 문자입니다. 기본 regular 프롬프트 문자는 &ldquo;<strong>|</strong>&ldquo;입니다. 기본 continuation 프롬프트 문자는 &ldquo;__  &hellip;&gt;__&ldquo;입니다.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">[역자주]expression과 varvalue 셀렉터를 설정함으로써 두 번째 설정은 범위를 한정하였습니다.
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 </ol>
 </div>
 
@@ -569,7 +575,7 @@ jshell&gt; /set mode mine -delete -retain
 	<div class="widget__content">
 	<nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#jshell-사용자-가이드-6-피그백-모드">JShell 사용자 가이드: 6. 피그백 모드</a>
 <ul>
 <li><a href="#피드백-모드-설정">피드백 모드 설정</a></li>
 <li><a href="#피드백-모드-정의">피드백 모드 정의</a>
