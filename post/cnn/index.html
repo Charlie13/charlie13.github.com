@@ -80,7 +80,7 @@
 		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >블로그</a></li>
 		<li class="menu__item "><a class="menu__link" href="/translation/" title="번역 문서를 정리한 페이지입니다." >한글화 작업</a></li>
 		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >우리 민수</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="채팅룸으로 이동합니다."target='_blank' >챗팅롬</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="블로그 사용자간의 원할한 소통을 위해 준비한 Gitter 채팅 서비스로 이동합니다."target='_blank' >챗팅롬</a></li>
 	</ul>
 </nav>
 
@@ -234,7 +234,7 @@
 
 <h3 id="1-3-필터-filter-stride">1.3 필터(Filter) &amp; Stride</h3>
 
-<p>필터는 이미지의 특징을 찾아내기 위한 공용 파라미터입니다. Filter를 Kernel이라고 하기도 합니다. CNN에서 Filter와 Kernel은 같은 의미입니다. 필터는 일반적으로 (4, 4)이나 (3, 3)과 같은 정사각 행렬로 정의됩니다. &lt;그림 1&gt;과 같이 입력 데이터를 지정된 간격으로 순회하며 채널별로 합성곱을 하고 모든 채널(컬러의 경우 3개)의 합성곱의 합을 Feature Map로 만듭니다. 필터는 지정된 간격으로 이동하면서 전체 입력데이터와 합성곱하여 Feature Map을 만듭니다. &lt;그림 2&gt;는 채널이 1개인 입력 데이터에 대하여 (3, 3) 크기의 필터로 합성곱하는 과정을 설명합니다.</p>
+<p>필터는 이미지의 특징을 찾아내기 위한 공용 파라미터입니다. Filter를 Kernel이라고 하기도 합니다. CNN에서 Filter와 Kernel은 같은 의미입니다. 필터는 일반적으로 (4, 4)이나 (3, 3)과 같은 정사각 행렬로 정의됩니다. &lt;그림 1&gt;과 같이 입력 데이터를 지정된 간격으로 순회하며 채널별로 합성곱을 하고 모든 채널(컬러의 경우 3개)의 합성곱의 합을 Feature Map로 만듭니다. 필터는 지정된 간격으로 이동하면서 전체 입력데이터와 합성곱하여 Feature Map을 만듭니다. &lt;그림 3&gt;은 채널이 1개인 입력 데이터에 대하여 (3, 3) 크기의 필터로 합성곱하는 과정을 설명합니다.</p>
 
 
 <blockquote id="img">
@@ -569,11 +569,11 @@ Fully Connected Layer를 구성하고 마지막 출력층에 Softmax를 적용�
 <li>Stride = 1</li>
 </ul>
 
-<p>입력 이미지에 Shape이 (4, 4)인 필터 20개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 1&gt;과 같습니다.</p>
+<p>입력 이미지에 Shape이 (4, 4)인 필터 20개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 2&gt;과 같습니다.</p>
 
 <blockquote>
 <ul>
-<li>식 1. Convolution Layer 1의 Activation Map 크기 계산
+<li>식 2. Convolution Layer 1의 Activation Map 크기 계산
 $$
 \begin{align}
 Row Size &amp; = \frac{N-F}{Strid} + 1 = \frac{39-4}{1} + 1 = 36 \\<br />
@@ -583,7 +583,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 1&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (36, 28, 20) 입니다. Convolution Layer 1에서 학습시킬 대상은 (4, 4) 필터 20개 입니다. 따라서 이 레이어의 학습 파라미터는 320개 (4X4X20) 입니다.</p>
+<p>&lt;식 2&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (36, 28, 20) 입니다. Convolution Layer 1에서 학습시킬 대상은 (4, 4) 필터 20개 입니다. 따라서 이 레이어의 학습 파라미터는 320개 (4X4X20) 입니다.</p>
 
 <ul>
 <li>출력 데이터(Activation Map) Shape: (36, 28, 20)</li>
@@ -592,11 +592,11 @@ $$</li>
 
 <h4 id="4-1-2-max-pooling-layer-1">4.1.2 Max Pooling Layer 1</h4>
 
-<p>Max Pooling Layer 1의 입력 데이터의 Shape은 (36, 28, 20)입니다. Max Pooling 크기가 (2, 2)이기 때문에 출력 데이터 크기는 &lt;식 2&gt;와 같이 계산될 수 있습니다.</p>
+<p>Max Pooling Layer 1의 입력 데이터의 Shape은 (36, 28, 20)입니다. Max Pooling 크기가 (2, 2)이기 때문에 출력 데이터 크기는 &lt;식 3&gt;와 같이 계산될 수 있습니다.</p>
 
 <blockquote>
 <ul>
-<li>식 2. Max Pooling Layer 1의 출력 데이터 크기 계산
+<li>식 3. Max Pooling Layer 1의 출력 데이터 크기 계산
 $$
 \begin{align}
 Row Size &amp; = \frac{36}{2} = 18 \\<br />
@@ -606,7 +606,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 2&gt;로 계산된 출력 데이터의 Shape은 (18, 14, 20) 입니다.
+<p>&lt;식 3&gt;으로 계산된 출력 데이터의 Shape은 (18, 14, 20) 입니다.
 Max Pooling Layer에서 학습 파라미터가 없습니다.</p>
 
 <ul>
@@ -628,11 +628,11 @@ Max Pooling Layer에서 학습 파라미터가 없습니다.</p>
 <li>Stride = 1</li>
 </ul>
 
-<p>입력 이미지에 Shape이 (3, 3)인 필터 40개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 3&gt;과 같습니다.</p>
+<p>입력 이미지에 Shape이 (3, 3)인 필터 40개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 4&gt;과 같습니다.</p>
 
 <blockquote>
 <ul>
-<li>식 3. Convolution Layer 2의 Activation Map 크기 계산
+<li>식 4. Convolution Layer 2의 Activation Map 크기 계산
 $$
 \begin{align}
 Row Size &amp; = \frac{N-F}{Strid} + 1 = \frac{18-3}{1} + 1 = 16 \\<br />
@@ -642,7 +642,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 3&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (16, 12, 40)입니다. Convolution Layer 1에서 학습시킬 대상은 (3, 3) 필터 40개입니다. 따라서 이 레이어의 학습 파라미터는 360개 (3X3X40) 입니다.</p>
+<p>&lt;식 4&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (16, 12, 40)입니다. Convolution Layer 1에서 학습시킬 대상은 (3, 3) 필터 40개입니다. 따라서 이 레이어의 학습 파라미터는 360개 (3X3X40) 입니다.</p>
 
 <ul>
 <li>출력 데이터(Activation Map) Shape: (16, 12, 40)</li>
@@ -651,11 +651,11 @@ $$</li>
 
 <h4 id="4-2-2-max-pooling-layer-2">4.2.2 Max Pooling Layer 2</h4>
 
-<p>Max Pooling Layer 2의 입력 데이터의 Shape은 (16, 12, 40)입니다. Max Pooling 크기가 (2, 2)이기 때문에 출력 데이터 크기는 &lt;식 4&gt;와 같이 계산될 수 있습니다.</p>
+<p>Max Pooling Layer 2의 입력 데이터의 Shape은 (16, 12, 40)입니다. Max Pooling 크기가 (2, 2)이기 때문에 출력 데이터 크기는 &lt;식 5&gt;와 같이 계산될 수 있습니다.</p>
 
 <blockquote>
 <ul>
-<li>식 4. Max Pooling Layer 2의 출력 데이터 크기 계산
+<li>식 5. Max Pooling Layer 2의 출력 데이터 크기 계산
 $$
 \begin{align}
 Row Size &amp; = \frac{16}{2} = 8 \\<br />
@@ -665,7 +665,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 4&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (8, 6, 40) 입니다.
+<p>&lt;식 5&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (8, 6, 40) 입니다.
 Max Pooling Layer에서 학습 파라미터가 없습니다.</p>
 
 <ul>
@@ -687,11 +687,11 @@ Max Pooling Layer에서 학습 파라미터가 없습니다.</p>
 <li>Stride = 1</li>
 </ul>
 
-<p>입력 이미지에 Shape이 (3, 3)인 필터 60개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 5&gt;과 같습니다.</p>
+<p>입력 이미지에 Shape이 (3, 3)인 필터 60개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 6&gt;과 같습니다.</p>
 
 <blockquote>
 <ul>
-<li>식 5. Convolution Layer 3의 Activation Map 크기 계산
+<li>식 6. Convolution Layer 3의 Activation Map 크기 계산
 $$
 \begin{align}
 Row Size &amp; = \frac{N-F}{Strid} + 1 = \frac{8-2}{1} + 1 = 6 \\<br />
@@ -701,7 +701,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 5&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (6, 4, 60)입니다. Convolution Layer 1에서 학습시킬 대상은 (3, 3) 필터 60개입니다. 따라서 이 레이어의 학습 파라미터는 540개 (3X3X60) 입니다.</p>
+<p>&lt;식 6&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (6, 4, 60)입니다. Convolution Layer 1에서 학습시킬 대상은 (3, 3) 필터 60개입니다. 따라서 이 레이어의 학습 파라미터는 540개 (3X3X60) 입니다.</p>
 
 <ul>
 <li>출력 데이터(Activation Map) Shape: (6, 4, 60)</li>
@@ -710,11 +710,11 @@ $$</li>
 
 <h4 id="4-3-2-max-pooling-layer-3">4.3.2 Max Pooling Layer 3</h4>
 
-<p>Max Pooling Layer 3의 입력 데이터의 Shape은 (6, 4, 60)입니다. Max Pooling 크기가 (2, 2)이기 때문에 출력 데이터 크기는 &lt;식 6&gt;과 같이 계산될 수 있습니다.</p>
+<p>Max Pooling Layer 3의 입력 데이터의 Shape은 (6, 4, 60)입니다. Max Pooling 크기가 (2, 2)이기 때문에 출력 데이터 크기는 &lt;식 7&gt;과 같이 계산될 수 있습니다.</p>
 
 <blockquote>
 <ul>
-<li>식 6. Max Pooling Layer 3의 출력 데이터 크기 계산
+<li>식 7. Max Pooling Layer 3의 출력 데이터 크기 계산
 $$
 \begin{align}
 Row Size &amp; = \frac{6}{2} = 3 \\<br />
@@ -724,7 +724,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 6&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (3, 2, 60)입니다.
+<p>&lt;식 7&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (3, 2, 60)입니다.
 Max Pooling Layer에서 학습 파라미터가 없습니다.</p>
 
 <ul>
@@ -746,11 +746,11 @@ Max Pooling Layer에서 학습 파라미터가 없습니다.</p>
 <li>Stride = 1</li>
 </ul>
 
-<p>입력 이미지에 Shape이 (2, 2)인 필터 80개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 7&gt;과 같습니다.</p>
+<p>입력 이미지에 Shape이 (2, 2)인 필터 80개를 적용할 경우 출력 데이터(Activation Map)의 Shape을 계산하는 과정은 &lt;식 8&gt;과 같습니다.</p>
 
 <blockquote>
 <ul>
-<li>식 7. Convolution Layer 3의 Activation Map 크기 계산
+<li>식 8. Convolution Layer 3의 Activation Map 크기 계산
 $$
 \begin{align}
 Row Size &amp; = \frac{N-F}{Strid} + 1 = \frac{3-2}{1} + 1 = 2 \\<br />
@@ -760,7 +760,7 @@ $$</li>
 </ul>
 </blockquote>
 
-<p>&lt;식 7&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (2, 1, 80)입니다. Convolution Layer 1에서 학습시킬 대상은 (2, 2) 필터 80개입니다. 따라서 이 레이어의 학습 파라미터는 320개 (2X2X80)입니다.</p>
+<p>&lt;식 8&gt;로 계산된 출력 데이터(Activation Map)의 Shape은 (2, 1, 80)입니다. Convolution Layer 1에서 학습시킬 대상은 (2, 2) 필터 80개입니다. 따라서 이 레이어의 학습 파라미터는 320개 (2X2X80)입니다.</p>
 
 <ul>
 <li>출력 데이터(Activation Map) Shape: (2, 1, 80)</li>
@@ -955,7 +955,7 @@ $$</li>
 
 
 
-<p>&lt;그림 6&gt;의 신경망을 계산하면 파라미터는 다음과 같이 계산 가능합니다.</p>
+<p>&lt;그림 10&gt;의 신경망을 계산하면 파라미터는 다음과 같이 계산 가능합니다.</p>
 
 <table>
 <thead>
