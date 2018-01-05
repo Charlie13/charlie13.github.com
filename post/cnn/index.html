@@ -258,7 +258,7 @@
 
 
 
-<p>필터는 입력 데이터를 지정한 간격으로 순회하면서 합성곱을 계산합니다. 여기서 지정된 간격으로 필터를 순회하는 간격을 Stride라고 합니다. &lt;그림 3&gt;는 strid가 1로 필터를 입력 데이터에 순회하는 예제입니다. strid가 2로 설정되면 필터는 2칸씩 이동하면서 합성곱을 합니다.</p>
+<p>필터는 입력 데이터를 지정한 간격으로 순회하면서 합성곱을 계산합니다. 여기서 지정된 간격으로 필터를 순회하는 간격을 Stride라고 합니다. &lt;그림 4&gt;는 strid가 1로 필터를 입력 데이터에 순회하는 예제입니다. strid가 2로 설정되면 필터는 2칸씩 이동하면서 합성곱을 합니다.</p>
 
 
 <blockquote id="img">
@@ -268,7 +268,7 @@
     
     
     <figcaption>
-        <strong>그림 3</strong>:
+        <strong>그림 4</strong>:
         
         Feature Map 과정
         
@@ -282,7 +282,7 @@
 
 
 
-<p>입력 데이터가 여러 채널을 갖을 경우 필터는 각 채널을 순회하며 합성곱을 계산한 후, 채널별 피처 맵을 만듭니다. 그리고 각 채널의 피처 맵을 합산하여 최종 피처 맵으로 반환합니다. 입력 데이터는 채널 수와 상관없이 필터 별로 1개의 피처 맵이 만들어 집니다.</p>
+<p>입력 데이터가 여러 채널을 갖을 경우 필터는 각 채널을 순회하며 합성곱을 계산한 후, 채널별 피처 맵을 만듭니다. 그리고 각 채널의 피처 맵을 합산하여 최종 피처 맵으로 반환합니다. 입력 데이터는 채널 수와 상관없이 필터 별로 1개의 피처 맵이 만들어 집니다. &lt;그림 5 참조&gt;</p>
 
 
 <blockquote id="img">
@@ -292,7 +292,7 @@
     
     
     <figcaption>
-        <strong>그림 3</strong>:
+        <strong>그림 5</strong>:
         
         Filter를 적용한 합성곱
         
@@ -324,7 +324,7 @@ Convolution 레이어의 출력 데이터가 줄어드는 것을 방지하는 �
     
     
     <figcaption>
-        <strong>그림 4</strong>:
+        <strong>그림 6</strong>:
         
         padding 예제: 2pixel 추가
         
@@ -338,7 +338,7 @@ Convolution 레이어의 출력 데이터가 줄어드는 것을 방지하는 �
 
 
 
-<p>&lt;그림 4&gt;는 (32, 32, 3) 데이터를 외각에 2 pixel을 추가하여 (36, 36, 3) 행렬을 만드는 예제입니다.
+<p>&lt;그림 6&gt;은 (32, 32, 3) 데이터를 외각에 2 pixel을 추가하여 (36, 36, 3) 행렬을 만드는 예제입니다.
 Padding을 통해서 Convolution 레이어의 출력 데이터의 사이즈를 조절하는 기능이 외에, 외각을 &ldquo;0&rdquo;값으로 둘러싸는 특징으로 부터 인공 신경망이
 이미지의 외각을 인식하는 학습 효과도 있습니다.</p>
 
@@ -347,7 +347,7 @@ Padding을 통해서 Convolution 레이어의 출력 데이터의 사이즈를 �
 <p>풀링 레이어는 컨볼류션 레이어의 출력 데이터를 입력으로 받아서 출력 데이터(Activation Map)의 크기를 줄이거나 특정 데이터를 강조하는 용도로 사용됩니다.
 플링 레이어를 처리하는 방법으로는 Max Pooling과 Average Pooning, Min Pooling이 있습니다.
 정사각 행렬의 특정 영역 안에 값의 최댓값을 모으거나 특정 영역의 평균을 구하는 방식으로 동작합니다.
-&lt;그림 5&gt;는 Max pooling과 Average Pooling의 동작 방식을 설명합니다.
+&lt;그림 7&gt;은 Max pooling과 Average Pooling의 동작 방식을 설명합니다.
 일반적으로 Pooing 크기와 Stride를 같은 크기로 설정하여 모든 원소가 한 번씩 처리 되도록 설정합니다.</p>
 
 
@@ -358,7 +358,7 @@ Padding을 통해서 Convolution 레이어의 출력 데이터의 사이즈를 �
     
     
     <figcaption>
-        <strong>그림 5</strong>:
+        <strong>그림 7</strong>:
         
         Pooling 예제: Max Pooling, Average Pooling
         
@@ -411,7 +411,7 @@ $$</li>
 
 <h2 id="3-cnn-구성">3. CNN 구성</h2>
 
-<p>&lt;그림 6&gt;은 전형적인 CNN 구성입니다. CNN은 Convolution Layer와 Max Pooling 레이어를 반복적으로 stack을 쌓는 특징 추출(Feature Extraction) 부분과
+<p>&lt;그림 8&gt;은 전형적인 CNN 구성입니다. CNN은 Convolution Layer와 Max Pooling 레이어를 반복적으로 stack을 쌓는 특징 추출(Feature Extraction) 부분과
 Fully Connected Layer를 구성하고 마지막 출력층에 Softmax를 적용한 분류 부분으로 나뉩니다.</p>
 
 
@@ -422,7 +422,7 @@ Fully Connected Layer를 구성하고 마지막 출력층에 Softmax를 적용�
     
     
     <figcaption>
-        <strong>그림 6</strong>:
+        <strong>그림 8</strong>:
         
         전형적인 CNN, 출처: https://www.researchgate.net/figure/Architecture-of-our-unsupervised-CNN-Network-contains-three-stages-each-of-which_283433254
         
@@ -437,7 +437,7 @@ Fully Connected Layer를 구성하고 마지막 출력층에 Softmax를 적용�
 
 
 <p>CNN을 구성하면서 Filter, Stride, Padding을 조절하여 특징 추출(Feature Extraction) 부분의 입력과 출력 크기를 계산하고 맞추는 작업이 중요합니다.
-다음은 keras로 구현한 CNN의 간단한 모델 코드입니다. &lt;코드 1&gt;은 &lt;그림 6&gt;을 Keras로 모델을 구현한 코드입니다.</p>
+다음은 keras로 구현한 CNN의 간단한 모델 코드입니다. &lt;코드 1&gt;은 &lt;그림 8&gt;을 Keras로 모델을 구현한 코드입니다.</p>
 
 <blockquote>
 <p>코드 1. CNN 모델 예제 코드 (Keras)</p>
@@ -905,7 +905,7 @@ $$</li>
 </tbody>
 </table>
 
-<p>이 CNN을 그림 5와 같이 표현할 수 있습니다.</p>
+<p>이 CNN을 그림 9와 같이 표현할 수 있습니다.</p>
 
 
 <blockquote id="img">
@@ -915,7 +915,7 @@ $$</li>
     
     
     <figcaption>
-        <strong>그림 5</strong>:
+        <strong>그림 9</strong>:
         
         예제 CNN 이미지
         
@@ -931,19 +931,19 @@ $$</li>
 
 <h2 id="5-cnn과-fc-neural-network-파라미터-비교">5. CNN과 FC Neural Network 파라미터 비교</h2>
 
-<p>앞에서 다룬 CNN의 총 파라미터 수는 161,540개입니다. 이 CNN과 유사한 4개의 은닉 레이어를 갖는 FC(Fully Connected) Neural Network을 &lt;그림 6&gt;과 같이 만들 수 있습니다.</p>
+<p>앞에서 다룬 CNN의 총 파라미터 수는 161,540개입니다. 이 CNN과 유사한 4개의 은닉 레이어를 갖는 FC(Fully Connected) Neural Network을 &lt;그림 10&gt;과 같이 만들 수 있습니다.</p>
 
 
 <blockquote id="img">
 <figure >
     
-        <img src="https://taewanmerepo.github.io/2018/01/cnn/nc.jpg" alt="비교 신경망" style="border:2px solid black"/>
+        <img src="https://taewanmerepo.github.io/2018/01/cnn/nc.jpg" alt="FC 신경망 - 비교 " style="border:2px solid black"/>
     
     
     <figcaption>
-        <strong>그림 6</strong>:
+        <strong>그림 10</strong>:
         
-        비교 신경망
+        FC 신경망 - 비교 
         
             
         
@@ -1019,7 +1019,7 @@ $$</li>
 </tbody>
 </table>
 
-<p>&lt;그림 6&gt; 인공 신경망의 총 파라미터는 백만 개가 넘습니다. 예제 CNN 파라미터와 비교하면 10배 이상의 학습 파라미터를 갖습니다.
+<p>&lt;그림 10&gt; 인공 신경망의 총 파라미터는 백만 개가 넘습니다. 예제 CNN 파라미터와 비교하면 10배 이상의 학습 파라미터를 갖습니다.
 은닉층을 더 깊게 만들 경우 Fully Connected Neural Network과 CNN과의 학습 파라미터의 차이는 더 급격하게 늘어납니다.
 CNN은 Fully Connected Neural Network과 비교하여 다음과 같은 특징을 갖습니다.</p>
 
