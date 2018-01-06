@@ -707,13 +707,13 @@
   </url>
   
   <url>
-    <loc>/tags/java/</loc>
+    <loc>/categories/java/</loc>
     <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/java/</loc>
+    <loc>/tags/java/</loc>
     <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -815,13 +815,13 @@
   </url>
   
   <url>
-    <loc>/tags/life-story-think/</loc>
+    <loc>/categories/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/life-story-think/</loc>
+    <loc>/tags/life-story-think/</loc>
     <lastmod>2005-07-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -839,13 +839,13 @@
   </url>
   
   <url>
-    <loc>/tags/machine-learning/</loc>
+    <loc>/categories/machine-learning/</loc>
     <lastmod>2018-01-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/machine-learning/</loc>
+    <loc>/tags/machine-learning/</loc>
     <lastmod>2018-01-04T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -959,14 +959,14 @@
   </url>
   
   <url>
-    <loc>/tags/oracle/</loc>
-    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+    <loc>/categories/oracle/</loc>
+    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/oracle/</loc>
-    <lastmod>2017-09-03T08:54:32+09:00</lastmod>
+    <loc>/tags/oracle/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -977,13 +977,13 @@
   </url>
   
   <url>
-    <loc>/tags/oracle-cloud/</loc>
+    <loc>/categories/oracle-cloud/</loc>
     <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/oracle-cloud/</loc>
+    <loc>/tags/oracle-cloud/</loc>
     <lastmod>2017-12-26T21:28:14+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1283,14 +1283,14 @@
   </url>
   
   <url>
-    <loc>/tags/youtube/</loc>
-    <lastmod>2016-03-25T00:17:44+09:00</lastmod>
+    <loc>/categories/youtube/</loc>
+    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/youtube/</loc>
-    <lastmod>2016-03-19T01:50:05+09:00</lastmod>
+    <loc>/tags/youtube/</loc>
+    <lastmod>2016-03-25T00:17:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1343,14 +1343,14 @@
   </url>
   
   <url>
-    <loc>/tags/%EB%B2%88%EC%97%AD/</loc>
-    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+    <loc>/categories/%EB%B2%88%EC%97%AD/</loc>
+    <lastmod>2017-12-27T01:50:05+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/%EB%B2%88%EC%97%AD/</loc>
-    <lastmod>2017-12-27T01:50:05+09:00</lastmod>
+    <loc>/tags/%EB%B2%88%EC%97%AD/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
