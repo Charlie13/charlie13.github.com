@@ -6,10 +6,20 @@
     <description>Recent content in Oracle on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Dec 2017 19:35:14 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jan 2018 19:05:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[번역] JShell 사용자 가이드</title>
+      <link>/post/trans_jshell/</link>
+      <pubDate>Sat, 06 Jan 2018 19:05:14 +0900</pubDate>
+      
+      <guid>/post/trans_jshell/</guid>
+      <description>이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+  원문: https://docs.oracle.com/javase/9/jshell/toc.htm 제목: Java Platform, Standard Edition Java Shell User’s Guide: 1 Introduction to JShell  문서번호: E87478-01 배포: 2017년 09월  라이센스: 원본 문서 라이센스를 준수합니다.  원문: https://docs.oracle.com/javase/9/jshell/title.htm  본 문서의 원본은 github repository로 관리합니다.  github 주소: https://github.com/taewanme/translation-java9-jshell    1. JShell 소개 Java Shell(JShell)은 Java 프로그래밍 학습과 Java 코드 프로토타이핑을 위한 대화식 도구입니다.</description>
+    </item>
     
     <item>
       <title>JShell: 7. JShell 소개</title>
@@ -199,6 +209,16 @@ Oracle Database Cloud Service에는 다음과 같이 4 가지 유형의 패키�
       <description>Oracle Cloud의 트라이얼 계정을 이용하여 무료로 오라클 클라우드를 경험할 수 있습니다. 무료 트라이얼 계정에는 Oracle Database Cloud Service(이하 Cloud Service는 CS로 표기), Java CS, Compute CS, Developer CS, Database Backup CS, Storage CS, Application Container CS, SOA CS 등 11개 서비스와 6개 OCPU와 500GB 스토리지 자원에 대한 사용 권한이 포함됩니다. 트라이얼 계정의 유효 기간은 계정 생성일로부터 30일입니다.
 본 문에서는 Oracle Cloud 계정을 생성하는 방법에 대하여 설명하겠습니다.
 Oracle Cloud 계정 등록 절차 오라클 클라우드의 계정 등록 절차는 다음과 같습니다.</description>
+    </item>
+    
+    <item>
+      <title>[번역]CS231n - 시각 인식을 위한 CNN(Convolutional Neural Networks for Visual Recognition)</title>
+      <link>/trans/cs231n/convolutional-networks/</link>
+      <pubDate>Fri, 06 Jan 2017 19:05:14 +0900</pubDate>
+      
+      <guid>/trans/cs231n/convolutional-networks/</guid>
+      <description>이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+  원문: https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm 제목: Java Platform, Standard Edition Java Shell User’s Guide: 1 Introduction to JShell  문서번호: E87478-01 배포: 2017년 09월  라이센스: 원본 문서 라이센스를 준수합니다.  원문: https://docs.oracle.com/javase/9/jshell/title.htm    CS231n - 시각 인식을 위한 CNN(Convolutional Neural Networks for Visual Recognition)  Table of Contents:  Architecture Overview ConvNet Layers Convolutional Layer Pooling Layer Normalization Layer Fully-Connected Layer Converting Fully-Connected Layers to Convolutional Layers ConvNet Architectures Layer Patterns Layer Sizing Patterns Case Studies (LeNet / AlexNet / ZFNet / GoogLeNet / VGGNet) Computational Considerations Additional References   Convolutional Neural Networks (CNNs / ConvNets) Convolutional Neural Networks are very similar to ordinary Neural Networks from the previous chapter: they are made up of neurons that have learnable weights and biases.</description>
     </item>
     
     <item>

@@ -80,7 +80,7 @@
 		<li class="menu__item "><a class="menu__link" href="/" title="블로그 메인 페이지 " >블로그</a></li>
 		<li class="menu__item "><a class="menu__link" href="/translation/" title="번역 문서를 정리한 페이지입니다." >한글화 작업</a></li>
 		<li class="menu__item "><a class="menu__link" href="/minsu/" title="IaaS 서비스 관련 문서를 정리하는 페이지입니다." >우리 민수</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="블로그 사용자간의 원할한 소통을 위해 준비한 Gitter 채팅 서비스로 이동합니다."target='_blank' >챗팅롬</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://gitter.im/blog-taewanme/Lobby" title="채팅룸으로 이동합니다."target='_blank' >챗팅롬</a></li>
 	</ul>
 </nav>
 
@@ -185,7 +185,7 @@ JShell은 Java9에 새로 추가된 REPL (Read-Evaluate-Print Loop)입니다. �
 
 <h3 id="jshell는-왜-필요한가">JShell는 왜 필요한가?</h3>
 
-<p>JShell에 프로그램밍 요소 하나를 입력하면, 실행 결과를 즉시 확인할 수 있습니다. 필요할 경우 프로그램 요소를 바로 수정할 수도 있습니다.</p>
+<p>JShell에 프로그램밍 요소를 입력하면, 실행 결과를 즉시 확인할 수 있습니다. 필요할 경우 프로그램 요소를 바로 수정할 수도 있습니다.</p>
 
 <p>일반적으로 자바 프로그램은 다음 프로세스를 거쳐 개발됩니다.</p>
 
@@ -198,7 +198,7 @@ JShell은 Java9에 새로 추가된 REPL (Read-Evaluate-Print Loop)입니다. �
 <li>지금까지 개발 절차 반복</li>
 </ul>
 
-<p>자바 프로그램을 개발할 때, JShell을 사용하면 코드 실행과 옵션 탐색이 매우 편리합니다. JShell 세션에서 개별적인 문(Statement)을 실행 및 테스트할 수 있고, 메서드의 다양한 옵션을 시험해볼 수 있으며, 익숙하지 않은 API를 실험할 수 있습니다. JShell이 IDE를 대체하는 것은 아닙니다. 프로그램을 개발할 때, JShell에 코드를 붙여넣고 시험할 수 있습니다. JShell에서 정상적으로 동작하는 코드가 동작하면, JShell의 코드를 복사하여 프로그램 편집기 및 IDE에 붙여넣는 방식으로 작업할 수 있습니다.</p>
+<p>자바 프로그램을 개발할 때, JShell을 사용하면 코드 실행과 옵션 탐색이 매우 편리합니다. JShell 세션에서 개별적인 문(Statement)을 실행하고 테스트할 수 있고, 메서드의 다양한 옵션을 시험해볼 수 있으며, 익숙하지 않은 API를 실험할 수 있습니다. 그러나 JShell이 IDE를 대체하는 것은 아닙니다. 프로그램을 개발할 때, JShell에 코드를 붙여넣고 시험할 수 있습니다. JShell에서 코드가 정상적으로 동작하면, JShell의 코드를 프로그램 편집기 및 IDE에 복사한는 방식으로 작업을 진행할 수 있습니다.</p>
 
 <h3 id="jshell-시작-및-종료">JShell 시작 및 종료</h3>
 
@@ -256,7 +256,7 @@ jshell&gt;
 		<span class="authorbox__name">작성자: 김태완</span>
 	</div>
 	<div class="authorbox__description">
-		한국오라클 빅데이터 팀 소속입니다. 빅데이터와 Machine Learning에 중점을 두고 있습니다. 최근에는 Deep Learning 열공 중입니다.
+		1999년 부터 Java, Framework, Middleware, Enterprise, SOA, DB Replication, Cache, CEP, NoSQL, Big Data, Cloud를 키워드로 살아왔습니다. 현재는 한국오라클 빅데이터 팀 소속으로 빅데이터와 Machine Learning을 중점에 두고 있습니다. 최근에는 Deep Learning을 열공 중입니다.
 	</div>
 	<div class="authorbox__description">
 		E-mail: taewanme@gmail.com
@@ -265,6 +265,9 @@ jshell&gt;
 
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/trans/cs231n/convolutional-networks/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">[번역]CS231n - 시각 인식을 위한 CNN(Convolutional Neural Networks for Visual Recognition)</p></a>
+	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
 		<a class="post-nav__link" href="/trans/jshell/jshell02/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">JShell: 2. 스니펫(Snippets)</p></a>
 	</div>
@@ -329,6 +332,10 @@ jshell&gt;
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
+				<a class="widget__link" href="/post/trans_jshell/" title="[번역] JShell 사용자 가이드">
+							[번역] JShell 사용자 가이드</a>
+		  </li>
+			<li class="widget__item">
 				<a class="widget__link" href="/post/cnn/" title="CNN, Convolution Neural Network 요약">
 							CNN, Convolution Neural Network 요약</a>
 		  </li>
@@ -363,10 +370,6 @@ jshell&gt;
 			<li class="widget__item">
 				<a class="widget__link" href="/post/oracle_blog_fn/" title="[번역]Fn–An Open Source Serverless Functions Platform">
 							[번역]Fn–An Open Source Serverless Fu ......</a>
-		  </li>
-			<li class="widget__item">
-				<a class="widget__link" href="/post/terraform_jupyter_installer/" title="Terraform Jupyter Installer: Machine Learning 환경 프로비저닝 ">
-							Terraform Jupyter Installer: Machin ......</a>
 		  </li>
 		</ul>
 	</div>

@@ -6,10 +6,20 @@
     <description>Recent content in Java on taewan.kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Dec 2017 19:35:14 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jan 2018 19:05:14 +0900</lastBuildDate>
     
 	<atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[번역] JShell 사용자 가이드</title>
+      <link>/post/trans_jshell/</link>
+      <pubDate>Sat, 06 Jan 2018 19:05:14 +0900</pubDate>
+      
+      <guid>/post/trans_jshell/</guid>
+      <description>이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+  원문: https://docs.oracle.com/javase/9/jshell/toc.htm 제목: Java Platform, Standard Edition Java Shell User’s Guide: 1 Introduction to JShell  문서번호: E87478-01 배포: 2017년 09월  라이센스: 원본 문서 라이센스를 준수합니다.  원문: https://docs.oracle.com/javase/9/jshell/title.htm  본 문서의 원본은 github repository로 관리합니다.  github 주소: https://github.com/taewanme/translation-java9-jshell    1. JShell 소개 Java Shell(JShell)은 Java 프로그래밍 학습과 Java 코드 프로토타이핑을 위한 대화식 도구입니다.</description>
+    </item>
     
     <item>
       <title>JShell: 7. JShell 소개</title>
@@ -117,6 +127,16 @@
       <description>10년전 Javaone 컨퍼런스 후기 형식으로 2006년 7월에 마이크로 소프트웨어에 기고했던 기사입니다. 어렵게 원본을 발굴하여 복원한 문서입니다. ^^
  원본: http://www.zdnet.co.kr/news/news_view.asp?artice_id=00000039153641   &amp;ldquo;자바원 2006&amp;rdquo;은 5월 16일부터 19일까지 나흘 동안 센프란시스코에서 개최되었다. 138개 세션으로 구성된 &amp;ldquo;자바원 2006&amp;rdquo;에는 2 만명의 자바 개발자들은 참가했고, 자바의 신기술들과 다양한 이슈를 공유하는 열정적인 자바 축제로 진행되었다. 나흘간의 진행된 축제의 열기와 분위기를 전달하고자 한다.
   김태완 okcode@gmail.com 필자는 프로자바(www.pro-java.com)의 운영자로 활동하고 있으며, 오픈소스 기반 Rapid Development에 관심을 갖고 있다.</description>
+    </item>
+    
+    <item>
+      <title>[번역]CS231n - 시각 인식을 위한 CNN(Convolutional Neural Networks for Visual Recognition)</title>
+      <link>/trans/cs231n/convolutional-networks/</link>
+      <pubDate>Fri, 06 Jan 2017 19:05:14 +0900</pubDate>
+      
+      <guid>/trans/cs231n/convolutional-networks/</guid>
+      <description>이 문서는 Java9의 오라클 공식 문서 중 JShell 사용자 가이드의 한글화 문서입니다. 원문 정보는 다음과 같습니다.
+  원문: https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm 제목: Java Platform, Standard Edition Java Shell User’s Guide: 1 Introduction to JShell  문서번호: E87478-01 배포: 2017년 09월  라이센스: 원본 문서 라이센스를 준수합니다.  원문: https://docs.oracle.com/javase/9/jshell/title.htm    CS231n - 시각 인식을 위한 CNN(Convolutional Neural Networks for Visual Recognition)  Table of Contents:  Architecture Overview ConvNet Layers Convolutional Layer Pooling Layer Normalization Layer Fully-Connected Layer Converting Fully-Connected Layers to Convolutional Layers ConvNet Architectures Layer Patterns Layer Sizing Patterns Case Studies (LeNet / AlexNet / ZFNet / GoogLeNet / VGGNet) Computational Considerations Additional References   Convolutional Neural Networks (CNNs / ConvNets) Convolutional Neural Networks are very similar to ordinary Neural Networks from the previous chapter: they are made up of neurons that have learnable weights and biases.</description>
     </item>
     
     <item>
