@@ -1091,6 +1091,12 @@
   </url>
   
   <url>
+    <loc>/tags/repl/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/row-vector/</loc>
     <lastmod>2017-12-23T21:28:14+09:00</lastmod>
     <priority>0</priority>
@@ -1355,6 +1361,12 @@
   </url>
   
   <url>
+    <loc>/tags/%EC%82%AC%EC%9A%A9%EB%B2%95/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B0%80%EC%9D%B4%EB%93%9C/</loc>
     <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
@@ -1393,6 +1405,12 @@
   <url>
     <loc>/tags/%EC%98%A4%EB%9D%BC%ED%81%B4-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</loc>
     <lastmod>2017-12-26T21:28:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%EC%9E%90%EB%B0%94%EC%89%98/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1452,7 +1470,7 @@
   
   <url>
     <loc>/tags/%ED%95%9C%EA%B8%80%ED%99%94/</loc>
-    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
