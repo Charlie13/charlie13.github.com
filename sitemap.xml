@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/trans/javagc/ch01/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/cnn/</loc>
     <lastmod>2018-01-04T21:28:14+09:00</lastmod>
   </url>
@@ -665,6 +670,18 @@
   </url>
   
   <url>
+    <loc>/tags/garbage-collection/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gc/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/git/</loc>
     <lastmod>2017-09-05T16:50:36+09:00</lastmod>
     <priority>0</priority>
@@ -1218,7 +1235,7 @@
   
   <url>
     <loc>/trans/</loc>
-    <lastmod>2017-12-27T19:35:14+09:00</lastmod>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1231,6 +1248,12 @@
   <url>
     <loc>/tags/trial-account/</loc>
     <lastmod>2017-08-01T04:20:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tunning/</loc>
+    <lastmod>2018-01-06T19:05:14+09:00</lastmod>
     <priority>0</priority>
   </url>
   
